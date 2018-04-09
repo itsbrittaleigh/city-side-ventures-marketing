@@ -1,0 +1,111 @@
+/*
+ * These are variables meant to be used throughout both .scss files and .vue files 
+ * Import this file to the component to leverage the variables, mixins, and functions within the style section of the component
+ *
+ * Table of Contents:
+ *
+ * [01] Colors
+ *   [a] Definitions
+ *   [b] Mixins
+ *   [c] Functions
+ * [02] Layout
+ *   [a] Definitions
+ *   [b] Mixins
+ * [03] Typography
+ *   [a] Definitions
+ */
+
+
+/*
+ * [01] Colors
+ *
+ * color names come from Chirag Mehta's color naming tool
+ * @link http://chir.ag/projects/name-that-color
+ * 
+ * all colors are defined by default as a hex code
+ *
+ */
+
+/*
+ * [a] Definitions
+ */
+
+
+
+/*
+ * [b] Mixins
+ */
+@mixin background-opacity($color, $opacity: 1) {
+  background: rgba($color, $opacity);
+}
+
+/*
+ * [c] Functions
+ */
+@function color-to-rgb($color) {
+  $red: red($color);
+  $green: green($color);
+  $blue: blue($color);
+
+  @return rgb($red, $green, $blue);
+}
+
+@function color-to-hsl($color) {
+  $hue: hue($color);
+  $saturation: saturation($color);
+  $lightness: lightness($color);
+
+  @return hsl($hue, $saturation, $lightness);
+}
+
+/*
+ * [02] Layout
+ * 
+ * Screen size breakpoints are pulled from Bootstrap's media queries
+ */
+
+/*
+ * [a] Definitions
+ */
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$xlarge: 1200px;
+
+/*
+ * [b] Mixins
+ */
+@mixin media-breakpoint-up($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($size) {
+  @media only screen and (max-width: $size - 0.02px) {
+    @content;
+  }
+}
+
+@mixin grid-boxes($columns: auto, $rows: auto, $box_width: auto, $box_height: auto, $gap: 0) {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat($columns, $box_width);
+  grid-template-rows: repeat($rows, $box_height);
+  grid-gap: $gap;
+
+  .box {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+/*
+ * [03] Typography
+ */
+
+/*
+ * [a] Defintions
+ */
+ @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:400,700');
+$font: 'Libre Franklin', 'Verdana', sans-serif;
