@@ -1,0 +1,30 @@
+body,
+html {
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, 
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  main {
+    flex: 1;
+  }
+}
+
+.padded-section {
+  padding: 30px 0;
+  @media only screen and (min-width: $large) {
+    padding: 60px 0;
+  }
+}
+
+@import "container";

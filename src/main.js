@@ -8,6 +8,7 @@ import store from './store';
 Vue.config.productionTip = false;
 
 router.beforeEach((to, from, next) => {
+  store.commit('closeMenu');
   document.title = to.meta.title ? to.meta.title : 'Welcome | CitySide Ventures';
   document.querySelector('meta[name="description"').content = to.meta.description ? to.meta.description : '';
   next();

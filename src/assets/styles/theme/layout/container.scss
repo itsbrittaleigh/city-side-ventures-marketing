@@ -1,0 +1,22 @@
+.container,
+.wide-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  display: block;
+}
+
+@mixin container-width($size) {
+  @media only screen and (min-width: $size) {
+    .container {
+      width: $size - 30px;
+    }
+  }
+}
+
+@include container-width($small);
+@include container-width($medium);
+@include container-width($large);
+@include container-width($xlarge);

@@ -17,6 +17,9 @@ const actions = {
   resizeScreen(context) {
     context.commit('resizeScreen');
   },
+  closeMenu(context) {
+    context.commit('closeMenu');
+  },
 };
 
 const mutations = {
@@ -25,6 +28,9 @@ const mutations = {
   },
   resizeScreen(state) {
     state.menuIsMobile = window.innerWidth < 992;
+  },
+  closeMenu(state) {
+    state.menuIsOpen = false;
   },
 };
 
