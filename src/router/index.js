@@ -5,7 +5,9 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Focus from '../pages/Focus';
+import Funds from '../pages/Funds';
 import Invest from '../pages/Invest';
+import Legal from '../pages/Legal';
 import News from '../pages/News';
 import Pitch from '../pages/Pitch';
 import Portfolio from '../pages/Portfolio';
@@ -58,9 +60,56 @@ export default new Router({
       },
     },
     {
+      path: '/funds',
+      name: 'Funds',
+      component: Funds,
+      meta: {
+        title: '',
+        description: '',
+      },
+      children: [
+        {
+          path: 'greenseed',
+          name: 'Greenseed',
+          component: Greenseed,
+          meta: {
+            title: '',
+            description: '',
+          },
+        },
+        {
+          path: 'venture-248',
+          name: 'Venture248',
+          component: Venture248,
+          meta: {
+            title: '',
+            description: '',
+          },
+        },
+        {
+          path: 'blue-venture',
+          name: 'BlueVenture',
+          component: BlueVenture,
+          meta: {
+            title: '',
+            description: '',
+          },
+        },
+      ],
+    },
+    {
       path: '/invest',
       name: 'Invest',
       component: Invest,
+      meta: {
+        title: '',
+        description: '',
+      },
+    },
+    {
+      path: '/legal',
+      name: 'Legal',
+      component: Legal,
       meta: {
         title: '',
         description: '',
@@ -106,33 +155,6 @@ export default new Router({
       path: '/team',
       name: 'Team',
       component: Team,
-      meta: {
-        title: '',
-        description: '',
-      },
-    },
-    {
-      path: '/funds/blue-venture',
-      name: 'BlueVenture',
-      component: BlueVenture,
-      meta: {
-        title: '',
-        description: '',
-      },
-    },
-    {
-      path: '/funds/greenseed',
-      name: 'Greenseed',
-      component: Greenseed,
-      meta: {
-        title: '',
-        description: '',
-      },
-    },
-    {
-      path: '/funds/venture-248',
-      name: 'Venture248',
-      component: Venture248,
       meta: {
         title: '',
         description: '',
