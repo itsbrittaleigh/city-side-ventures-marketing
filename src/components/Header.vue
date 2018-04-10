@@ -33,7 +33,7 @@ header {
     @media only screen and (min-width: $large) {
       width: 100%;
       max-width: 100%;
-      padding-left: calc((100vw - 992px) / 2); // large width
+      padding-left: calc((100vw - 962px) / 2); // large width - 30
       justify-content: flex-start;
       .menu {
         margin-left: 30px;
@@ -41,7 +41,7 @@ header {
       }
     }
     @media only screen and (min-width: $xlarge) {
-      padding-left: calc((100vw - 1200px) / 2); // xlarge width
+      padding-left: calc((100vw - 1170px) / 2); // xlarge width - 30
     }
   }
   img {
