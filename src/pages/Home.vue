@@ -17,7 +17,12 @@
               confident, aggressive, open-minded drivers
               <strong>with endless energy and passion.</strong>
               <br>
-              <router-link :to="{ name: 'About' }">Learn about City Side Ventures</router-link>
+              <router-link
+                :to="{ name: 'About' }"
+                class="button inverse"
+              >
+                Learn about City Side Ventures
+              </router-link>
             </p>
           </div>
           <img src="https://fillmurray.com/900/700" alt="">
@@ -55,6 +60,51 @@
           <div class="box">
             <p class="large">18x</p>
             <p class="small">return on equity</p>
+          </div>
+        </div>
+      </div>
+      <div class="focus padded-section">
+        <div class="container">
+          <div class="box">
+            <h2>Our Focus</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ipsam deleniti est
+              ut ipsa itaque corrupti, quasi eveniet atque sed possimus inventore. Eius, in
+              corporis temporibus unde ab vel atque.
+              <br>
+              <router-link
+                :to="{ name: 'Focus' }"
+                class="button inverse"
+              >
+                Learn more
+              </router-link>
+            </p>
+          </div>
+          <div class="box foci">
+            <div class="box">
+              <img src="https://fillmurray.com/300/300" alt="">
+              <p>Automotive Tech</p>
+            </div>
+            <div class="box">
+              <img src="https://fillmurray.com/300/300" alt="">
+              <p>B2B, B2C, &amp; H2H Platforms</p>
+            </div>
+            <div class="box">
+              <img src="https://fillmurray.com/300/300" alt="">
+              <p>Fintech</p>
+            </div>
+            <div class="box">
+              <img src="https://fillmurray.com/300/300" alt="">
+              <p>Wearable Tech</p>
+            </div>
+            <div class="box">
+              <img src="https://fillmurray.com/300/300" alt="">
+              <p>Technology in Motion</p>
+            </div>
+            <div class="box">
+              <img src="https://fillmurray.com/300/300" alt="">
+              <p>Medical &amp; Health</p>
+            </div>
           </div>
         </div>
       </div>
@@ -115,16 +165,7 @@ export default {
       font-size: 52px;
     }
     a {
-      padding: 20px;
-      background: white;
-      color: black;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-decoration: none;
-      font-weight: bold;
       margin-top: 20px;
-      display: inline-block;
     }
   }
   @media only screen and (min-width: $small) {
@@ -191,15 +232,53 @@ export default {
         font-size: 48px;
       }
       .small {
-        font-size: 12px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        font-weight: bold;
+        @include title-font;
       }
     }
   }
   @media only screen and (min-width: $large) {
     @include grid-boxes(2, 1, 1fr, 400px, 0);
+  }
+}
+.focus {
+  background: black;
+  h2,
+  p {
+    color: white;
+  }
+  a {
+    margin-top: 20px;
+  }
+  .foci {
+    @include grid-boxes(2, 3, 1fr, auto, 25px);
+    padding: 50px 0;
+    img {
+      width: 60%;
+      max-width: 100px;
+      height: auto;
+      display: block;
+      margin: 0 auto 15px;
+    }
+    p {
+      margin: 5px 0 0;
+      text-align: center;
+      @include title-font;
+    }
+    @media only screen and (min-width: $medium) {
+      @include grid-boxes(3, 2, 1fr, auto, 25px);
+    }
+  }
+  @media only screen and (min-width: $large) {
+    > .container {
+      @include grid-boxes(2, 1, 1fr, auto, 0);
+      align-items: center;
+      width: $large - 30px;
+    }
+  }
+  @media only screen and (min-width: $xlarge) {
+    > .container {
+      width: $xlarge - 30px;
+    }
   }
 }
 </style>

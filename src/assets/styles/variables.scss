@@ -13,6 +13,7 @@
  *   [b] Mixins
  * [03] Typography
  *   [a] Definitions
+ *   [b] Mixins
  */
 
 
@@ -109,3 +110,13 @@ $xlarge: 1200px;
  */
  @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,500');
 $font: 'Libre Franklin', 'Verdana', sans-serif;
+
+/*
+ * [b] Mixins
+ */
+@mixin title-font {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 12px;
+}

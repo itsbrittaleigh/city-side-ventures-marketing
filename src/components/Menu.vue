@@ -140,6 +140,7 @@ button {
   z-index: 101;
   border: none;
   background: none;
+  padding: 0;
   @media only screen and (min-width: $large) {
     display: none;
     visibility: hidden;
@@ -202,6 +203,7 @@ button {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  z-index: 101;
   > .container {
     height: auto;
   }
@@ -210,10 +212,8 @@ button {
     overflow-y: scroll;
   }
   li {
+    @include title-font;
     color: white;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 0.8px;
     text-align: right;
     .heading {
       padding: 15px 0;
@@ -306,7 +306,7 @@ button {
         position: absolute;
         top: 100%;
         left: 0;
-        z-index: 1;
+        z-index: 10;
         background: whitesmoke;
         padding: 0;
         overflow: visible;

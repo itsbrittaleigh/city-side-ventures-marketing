@@ -19,3 +19,11 @@ address {
     font-size: 18px;
   }
 }
+
+h2 {
+  font-size: 36px;
+  margin: 0;
+  & + p {
+    margin-top: 0;
+  }
+}
