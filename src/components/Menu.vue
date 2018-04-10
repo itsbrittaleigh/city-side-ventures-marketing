@@ -295,10 +295,9 @@ button {
       height: 100%;
       text-align: left;
       padding: 0 20px;
-      position: relative;
       display: flex;
       align-items: center;
-      transition: 0.3s;
+      position: relative;
       .heading {
         justify-content: flex-start;
         font-size: 12px;
@@ -307,6 +306,26 @@ button {
         position: absolute;
         top: 100%;
         left: 0;
+        z-index: 1;
+        background: whitesmoke;
+        padding: 0;
+        overflow: visible;
+        li {
+          width: 200px;
+          margin: 0;
+          padding: 0;
+          transition: 0.3s;
+          a {
+            width: 100%;
+            font-size: 12px;
+            padding: 15px 20px;
+            transition: 0.4s;
+            color: black;
+            &:hover {
+              border-left: 5px solid gray;
+            }
+          }
+        }
       }
       a {
         font-size: 12px;
@@ -317,26 +336,6 @@ button {
       }
       &.open {
         background: gray;
-        ul {
-          background: whitesmoke;
-          padding: 0;
-          overflow: visible;
-          li {
-            width: 200px;
-            margin: 0;
-            padding: 0;
-            a {
-              width: 100%;
-              font-size: 12px;
-              padding: 15px 20px;
-              transition: 0.4s;
-              color: black;
-              &:hover {
-                border-left: 5px solid gray;
-              }
-            }
-          }
-        }
       }
     }
     .nav-right {

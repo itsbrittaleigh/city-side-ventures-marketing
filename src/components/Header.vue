@@ -1,7 +1,9 @@
 <template>
   <header>
     <div class="container">
-      <img src="../assets/images/logos/cityside-white.svg" alt="CitySide Ventures logo">
+      <router-link :to="{ name: 'Home' }">
+        <img src="../assets/images/logos/cityside-white.svg" alt="CitySide Ventures logo">
+      </router-link>
       <navigation-menu></navigation-menu>
     </div>
   </header>
