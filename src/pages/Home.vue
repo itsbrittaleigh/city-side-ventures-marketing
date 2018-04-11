@@ -194,6 +194,50 @@
           </div>
         </div>
       </div>
+      <div class="portfolio">
+        <div class="box">
+          <div class="container">
+            <h2>Our current investment portfolio</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <router-link
+              :to="{ name: 'Portfolio' }"
+              class="button inverse"
+            >
+              Learn More
+            </router-link>
+          </div>
+        </div>
+        <div class="box">
+          <div class="upper">
+            <div class="box">
+              <img src="https://fillmurray.com/200/600" alt="">
+            </div>
+            <div class="box">
+              <img src="https://fillmurray.com/600/200" alt="">
+            </div>
+            <div class="box">
+              <img src="https://fillmurray.com/400/400" alt="">
+            </div>
+            <div class="box">
+              <img src="https://fillmurray.com/300/300" alt="">
+            </div>
+          </div>
+          <div class="lower">
+            <div class="box">
+              <img src="https://fillmurray.com/200/600" alt="">
+            </div>
+            <div class="box">
+              <img src="https://fillmurray.com/600/200" alt="">
+            </div>
+            <div class="box">
+              <img src="https://fillmurray.com/400/400" alt="">
+            </div>
+            <div class="box">
+              <img src="https://fillmurray.com/300/300" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
     </template>
   </base-page>
 </template>
@@ -320,7 +364,7 @@ export default {
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.5);
         z-index: 2;
       }
       p {
@@ -491,6 +535,76 @@ export default {
   @media only screen and (min-width: $xlarge) {
     .box:first-of-type {
       padding-left: calc((100vw - 1170px) / 2);
+    }
+  }
+}
+.portfolio {
+  > .box:first-of-type {
+    padding: 40px 0;
+    background: black;
+    color: white;
+  }
+  .upper,
+  .lower {
+    @include grid-boxes(2, 2, 1fr, 200px, 0);
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:nth-child(2),
+      &:nth-child(3) {
+        background: lightgray;
+      }
+    }
+    img {
+      max-width: 80%;
+      max-height: 75px;
+      display: block;
+    }
+  }
+  @media only screen and (min-width: $medium) {
+    .upper,
+    .lower {
+      @include grid-boxes(4, 1, 1fr, 200px, 0);
+    }
+    .upper {
+      .box:nth-child(even) {
+        background: lightgray;
+      }
+      .box:nth-child(odd) {
+        background: white;
+      }
+    }
+    .lower {
+      .box:nth-child(odd) {
+        background: lightgray;
+      }
+      .box:nth-child(even) {
+        background: white;
+      }
+    }
+  }
+  @media only screen and (min-width: $large) {
+    @include grid-boxes(2, 1, 1fr, 400px, 0);
+    grid-template-columns: auto 800px;
+    > .box:first-of-type {
+      .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: calc((100vw - 962px) / 2);
+        padding-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+    }
+  }
+  @media only screen and (min-width: $xlarge) {
+    > .box:first-of-type {
+      .container {
+        padding-left: calc((100vw - 1170px) / 2);
+      }
     }
   }
 }
