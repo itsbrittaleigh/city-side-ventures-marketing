@@ -2,11 +2,15 @@
 *:after,
 *:before {
   font-family: $font;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 strong {
-  font-weight: 500;
+  font-weight: 700;
+}
+
+.font-weight-light {
+  font-weight: 100;
 }
 
 p, 
@@ -22,6 +26,7 @@ address {
 
 h2 {
   font-size: 36px;
+  font-weight: 100;
   margin: 0;
   & + p {
     margin-top: 0;
