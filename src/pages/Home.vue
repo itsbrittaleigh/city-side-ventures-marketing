@@ -1,7 +1,7 @@
 <template>
   <base-page>
     <template slot="content">
-      <div class="hero">
+      <div class="intro">
         <div class="box">
           <div class="container">
             <h1>A different kind of <strong>private equity</strong></h1>
@@ -258,7 +258,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/styles/variables";
-.hero {
+.intro {
   @include grid-boxes(1, 2, 1fr, 300px, 0);
   .box {
     color: white;
