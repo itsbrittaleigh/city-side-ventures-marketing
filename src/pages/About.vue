@@ -7,11 +7,86 @@
           stage hybrid boutique private equity and venture capital firm"
       >
       </hero-section>
+      <section class="about">
+        <div class="box">
+          <div class="container">
+            <p>
+              City Side Venture is a boutique private equity group that is being managed
+              by a unique, distinct, and highly diverse group of seasoned and highly accomplished
+              entrepreneurs. We have a deep understanding and appreciation for building
+              businesses, and we are an ideal partner for early-stage tech-based startup
+              companies. We have established ourselves as a "game changer" in the traditional
+              startup experience. We are more than just traditional investors. We look
+              deeper, wider, and bigger.
+            </p>
+            <p>
+              Unlike most private equity groups that are chasing the next "Unicorns" and
+              looking for larger deals, we like to get involved on the ground floor, in the
+              beginning. We are a venture-operated group. We put our experience, expertise,
+              and capital to work.
+            </p>
+            <p>
+              Our business mindset is that it takes a village to launch a startup. We are not
+              looking to invest in cars, we are looking to invest in drivers. Confident, aggressive,
+              open-minded drivers with endless energy and passion.
+            </p>
+          </div>
+        </div>
+        <div class="box image">
+          <img src="https://fillmurray.com/800/800" alt="">
+        </div>
+      </section>
+      <section class="principles padded-section">
+        <div class="container">
+          <h2>Our Operating Principles</h2>
+          <div class="principles-boxes">
+            <div
+              v-for="(principle, index) in principles"
+              :key="index"
+              class="box"
+            >
+              <span>{{ index + 1}}</span>
+              <p class="title">{{ principle.title }}</p>
+              <p>{{ principle.description }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="partners">
+        <div class="box statistic">
+          <div class="container">
+            <h2>Our Venture Partners</h2>
+            <p class="large">$500M</p>
+            <p class="small">
+              In investment capital. Represented by our global syndication of
+              venture partners
+            </p>
+          </div>
+        </div>
+        <div class="box logos">
+          <div class="box">
+            <img src="https://fillmurray.com/400/200" alt="">
+            <p>Lorem ipsum dolor sit amet consectuer adipiscing</p>
+          </div><div class="box">
+            <img src="https://fillmurray.com/200/400" alt="">
+            <p>Lorem ipsum dolor sit amet consectuer adipiscing</p>
+          </div>
+          <div class="box">
+            <img src="https://fillmurray.com/400/400" alt="">
+            <p>Lorem ipsum dolor sit amet consectuer adipiscing</p>
+          </div>
+          <div class="box">
+            <img src="https://fillmurray.com/400/200" alt="">
+            <p>Lorem ipsum dolor sit amet consectuer adipiscing</p>
+          </div>
+        </div>
+      </section>
     </template>
   </base-page>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import Base from './Base';
 import Hero from '../components/Hero';
 
@@ -24,5 +99,135 @@ export default {
     'base-page': Base,
     'hero-section': Hero,
   },
+  computed: {
+    ...mapGetters([
+      'principles',
+    ]),
+  },
 };
 </script>
+
+<style lang="scss" scoped>
+@import "../assets/styles/variables";
+.about {
+  @include grid-boxes(1, 2, 1fr, auto, 0);
+  .box.image {
+    img {
+      min-width: 100%;
+      min-height: 100%;
+      max-height: 400px;
+      object-fit: cover;
+    }
+  }
+  .box:not(.image) {
+    padding: 40px 0;
+    background: lightgray;
+  }
+  @media only screen and (min-width: $large) {
+    @include grid-boxes(2, 1, 1fr, auto, 0);
+    .box:not(.image) {
+      > .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: calc((100vw - 962px) / 2);
+        padding-right: 25px;
+      }
+    }
+  }
+  @media only screen and (min-width: $xlarge) {
+    .box:not(.image) {
+      > .container {
+        padding-left: calc((100vw - 1170px) / 2);
+        padding-right: 40px;
+      }
+    }
+  }
+}
+.principles {
+  .principles-boxes {
+    margin: 40px auto 0;
+    @include grid-boxes(1, 6, 1fr, 1fr, 25px);
+    .box {
+      padding: 80px 20px 30px;
+      background: lightgray;
+    }
+    p {
+      margin: 0;
+      &.title {
+        @include title-font;
+        margin-bottom: 10px;
+      }
+    }
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: gray;
+      color: white;
+      font-size: 32px;
+    }
+    @media only screen and (min-width: $medium) {
+      @include grid-boxes(2, 3, 1fr, 1fr, 25px);
+    }
+    @media only screen and (min-width: $large) {
+      @include grid-boxes(3, 2, 1fr, 1fr, 25px);
+    }
+  }
+  @media only screen and (min-width: $large) {
+    .container {
+      width: 962px;
+    }
+  }
+}
+.partners {
+  .box.statistic {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    > .container {
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .large {
+      margin: 30px 0 5px;
+      font-size: 70px;
+      font-weight: 100;
+    }
+    .small {
+      @include title-font;
+    }
+  }
+  .logos {
+    padding: 50px 25px;
+    background: lightgray;
+    @include grid-boxes(2, 2, 1fr, 1fr, 30px);
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      max-height: 75px;
+      max-width: 80%;
+      object-fit: contain;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  @media only screen and (min-width: $large) {
+    @include grid-boxes(2, 1, 1fr, auto, 0);
+  }
+}
+</style>
+
