@@ -34,9 +34,27 @@ const state = {
       description: 'We have the vision and the foresight to take on big dreams. We are patient and resilient. WE know it takes a village to launch a business.',
     },
   ],
+  process: [
+    {
+      title: 'The Driver [The Entrepreneur]',
+      tagline: 'We invest in drivers, not cars.',
+      description: 'We will pick the driver regardless of what kind of car they drive. As long is it is a legal, moral and ethical business, - we are all in!',
+    },
+    {
+      title: 'The Car [The Business]',
+      tagline: 'Our philosophy is simple.',
+      description: 'If you put a great driver in an average car, you will get above average performance. A great driver will perform with any car, at any time, in any race.',
+    },
+    {
+      title: 'The Race [The Market]',
+      tagline: 'Finishing the Race.',
+      description: 'We can fix or suit up the car. We are not "Industry" focused we are "Driver" focused. Find the driver, fix him a car, and get him in the race.',
+    },
+  ],
 };
 const getters = {
   principles: state => state.principles,
+  process: state => state.process,
 };
 const actions = {};
 const mutations = {};
