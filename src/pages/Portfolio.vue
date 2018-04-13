@@ -132,8 +132,7 @@ export default {
     }
   }
   @media only screen and (min-width: $large) {
-    @include grid-boxes(6, 3, 1fr, 1fr, 0);
+    @include grid-boxes(6, 3, 100vw / 6, 100vw / 6, 0);
   }
 }
 </style>
-
