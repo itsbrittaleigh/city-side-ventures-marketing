@@ -51,10 +51,58 @@ const state = {
       description: 'We can fix or suit up the car. We are not "Industry" focused we are "Driver" focused. Find the driver, fix him a car, and get him in the race.',
     },
   ],
+  portfolio: [
+    {
+      name: 'Wearli',
+      logo: 'https://fillmurray.com/500/200',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+    },
+    {
+      name: 'Coaching Standard',
+      logo: 'https://fillmurray.com/500/200',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+    },
+    {
+      name: 'Amtech',
+      logo: 'https://fillmurray.com/500/200',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+    },
+    {
+      name: 'TM',
+      logo: 'https://fillmurray.com/500/200',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+    },
+    {
+      name: 'SafeWhistle',
+      logo: 'https://fillmurray.com/500/200',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+    },
+    {
+      name: 'Mtech[IQ]',
+      logo: 'https://fillmurray.com/500/200',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+    },
+    {
+      name: 'Analyteum',
+      logo: 'https://fillmurray.com/500/200',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+    },
+    {
+      name: 'WeConduct',
+      logo: 'https://fillmurray.com/500/200',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+    },
+    {
+      name: 'Argonomo',
+      logo: 'https://fillmurray.com/500/200',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+    },
+  ],
 };
 const getters = {
   principles: state => state.principles,
   process: state => state.process,
+  portfolio: state => state.portfolio,
 };
 const actions = {};
 const mutations = {};
