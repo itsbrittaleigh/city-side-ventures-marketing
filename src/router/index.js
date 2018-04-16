@@ -6,10 +6,8 @@ import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Focus from '../pages/Focus';
 import Funds from '../pages/Funds';
-import Invest from '../pages/Invest';
 import Legal from '../pages/Legal';
 import News from '../pages/News';
-import Pitch from '../pages/Pitch';
 import Portfolio from '../pages/Portfolio';
 import Process from '../pages/Process';
 import Team from '../pages/Team';
@@ -96,15 +94,6 @@ export default new Router({
       },
     },
     {
-      path: '/invest',
-      name: 'Invest',
-      component: Invest,
-      meta: {
-        title: '',
-        description: '',
-      },
-    },
-    {
       path: '/legal',
       name: 'Legal',
       component: Legal,
@@ -117,15 +106,6 @@ export default new Router({
       path: '/news',
       name: 'News',
       component: News,
-      meta: {
-        title: '',
-        description: '',
-      },
-    },
-    {
-      path: '/pitch',
-      name: 'Pitch',
-      component: Pitch,
       meta: {
         title: '',
         description: '',
