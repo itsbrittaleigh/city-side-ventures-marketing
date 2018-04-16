@@ -302,11 +302,15 @@ button {
         justify-content: flex-start;
         font-size: 12px;
       }
+      a.router-link-active {
+        background: lightgray;
+        padding: 0 20px;
+      }
       ul {
         position: absolute;
         top: 100%;
         left: 0;
-        z-index: 10;
+        z-index: 20;
         background: whitesmoke;
         padding: 0;
         overflow: visible;
@@ -323,6 +327,9 @@ button {
             color: black;
             &:hover {
               border-left: 5px solid gray;
+            }
+            &.router-link-active {
+              padding: 15px 20px;
             }
           }
         }
