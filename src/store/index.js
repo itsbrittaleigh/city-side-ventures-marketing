@@ -199,12 +199,55 @@ const state = {
       },
     },
   },
+  team: [
+    {
+      name: 'Doron York',
+      title: 'Chairman / CEO',
+      photo: 'https://fillmurray.com/400/400',
+    },
+    {
+      name: 'Kevin Yang',
+      title: 'President',
+      photo: 'https://fillmurray.com/400/400',
+    },
+    {
+      name: 'Brandon Shamoun',
+      title: 'General Counsel',
+      photo: 'https://fillmurray.com/400/400',
+    },
+    {
+      name: 'Anthony Steffens',
+      title: 'Chief Information Officer',
+      photo: 'https://fillmurray.com/400/400',
+    },
+    {
+      name: 'Bryan Culver',
+      title: 'Chief Technology Officer',
+      photo: 'https://fillmurray.com/400/400',
+    },
+    {
+      name: 'Kendra Corman',
+      title: 'Chief Marketing Officer',
+      photo: 'https://fillmurray.com/400/400',
+    },
+    {
+      name: 'Jay Patel',
+      title: 'SVP / IoT',
+      photo: 'https://fillmurray.com/400/400',
+    },
+    {
+      name: 'Zoe (Ziva) Chen, PhD',
+      title: 'SVP / Intellectual Property',
+      photo: 'https://fillmurray.com/400/400',
+    },
+  ],
 };
 const getters = {
   principles: state => state.principles,
   process: state => state.process,
   portfolio: state => state.portfolio,
   funds: state => state.funds,
+  team: state => state.team,
 };
 const actions = {};
 const mutations = {};

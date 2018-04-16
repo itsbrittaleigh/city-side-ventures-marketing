@@ -9,11 +9,25 @@
           highly diverse with over 100+ years of combined business success."
       >
       </hero-section>
+      <div class="team">
+        <div
+          v-for="(member, index) in team"
+          :key="index"
+          class="member"
+        >
+          <img :src="member.photo" :alt="member.name">
+          <div class="label">
+            <p class="name">{{ member.name }}</p>
+            <p><em>{{ member.title }}</em></p>
+          </div>
+        </div>
+      </div>
     </template>
   </base-page>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import Base from './Base';
 import Hero from '../components/Hero';
 
@@ -26,5 +40,48 @@ export default {
     'base-page': Base,
     'hero-section': Hero,
   },
+  computed: {
+    ...mapGetters([
+      'team',
+    ]),
+  },
 };
 </script>
+
+<style lang="scss" scoped>
+@import "../assets/styles/variables";
+.team {
+  @include grid-boxes(2, auto, 1fr, 1fr, 0);
+  .member {
+    @include grid-boxes(1, 2, 1fr, auto, 0);
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .label {
+      padding: 40px 20px 20px;
+      background: slategray;
+    }
+    p {
+      font-size: 12px;
+      margin: 0;
+      color: white;
+      &.name {
+        @include title-font;
+      }
+    }
+  }
+  @media only screen and (min-width: $medium) {
+    .member {
+      img {
+        height: 300px;
+      }
+    }
+  }
+  @media only screen and (min-width: $large) {
+    @include grid-boxes(4, auto, 1fr, 1fr, 0);
+  }
+}
+</style>
+
