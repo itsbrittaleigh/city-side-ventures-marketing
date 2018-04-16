@@ -65,12 +65,12 @@
       <span class="nav-right">
         <li>
           <span class="container">
-            <router-link :to="{ name: 'Pitch' }">Pitch Us</router-link>
+            <a href="https://app.sidepitch.com/auth/register" target="_blank">Pitch Us</a>
           </span>
         </li>
         <li>
           <span class="container">
-            <router-link :to="{ name: 'Invest' }">Invest with Us</router-link>
+            <a href="https://app.sidepitch.com/auth/register" target="_blank">Invest with Us</a>
           </span>
         </li>
       </span>

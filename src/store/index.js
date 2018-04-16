@@ -4,6 +4,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 
 import NavigationMenu from './modules/NavigationMenu';
+import News from './modules/News';
 
 Vue.use(Vuex);
 
@@ -259,5 +260,6 @@ export default new Vuex.Store({
   mutations,
   modules: {
     NavigationMenu,
+    News,
   },
 });

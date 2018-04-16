@@ -8,7 +8,7 @@
       >
         <em>{{ lead }}</em>
       </p>
-      <p>{{ description }}</p>
+      <p v-if="description">{{ description }}</p>
     </div>
     <div class="overlay"></div>
     <img :src="image" :alt="alt">

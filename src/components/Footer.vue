@@ -27,10 +27,10 @@
               </span>
               <span class="logo">
                 <li>
-                  <router-link :to="{ name: 'Pitch' }">Pitch Us</router-link>
+                  <a href="https://app.sidepitch.com/auth/register" target="_blank">Pitch Us</a>
                 </li>
                 <li>
-                  <router-link :to="{ name: 'Invest' }">Invest With Us</router-link>
+                  <a href="https://app.sidepitch.com/auth/register" target="_blank">Invest with Us</a>
                 </li>
               </span>
             </ul>
