@@ -67,35 +67,33 @@ export default new Router({
         title: '',
         description: '',
       },
-      children: [
-        {
-          path: 'greenseed',
-          name: 'Greenseed',
-          component: Greenseed,
-          meta: {
-            title: '',
-            description: '',
-          },
-        },
-        {
-          path: 'venture-248',
-          name: 'Venture248',
-          component: Venture248,
-          meta: {
-            title: '',
-            description: '',
-          },
-        },
-        {
-          path: 'blue-venture',
-          name: 'BlueVenture',
-          component: BlueVenture,
-          meta: {
-            title: '',
-            description: '',
-          },
-        },
-      ],
+    },
+    {
+      path: '/funds/greenseed',
+      name: 'Greenseed',
+      component: Greenseed,
+      meta: {
+        title: '',
+        description: '',
+      },
+    },
+    {
+      path: '/funds/venture-248',
+      name: 'Venture248',
+      component: Venture248,
+      meta: {
+        title: '',
+        description: '',
+      },
+    },
+    {
+      path: '/funds/blue-venture',
+      name: 'BlueVenture',
+      component: BlueVenture,
+      meta: {
+        title: '',
+        description: '',
+      },
     },
     {
       path: '/invest',

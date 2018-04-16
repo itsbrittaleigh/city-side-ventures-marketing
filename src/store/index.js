@@ -98,11 +98,113 @@ const state = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
     },
   ],
+  funds: {
+    greenseed: {
+      name: 'Greenseed Fund',
+      market: 'Venture Capital Fund, Seed Capital',
+      hero: {
+        image: 'https://fillmurray.com/900/300',
+        alt: '',
+      },
+      icon: {
+        image: 'https://fillmurray.com/100/100',
+        alt: '',
+      },
+      intro: 'Greenseed is an early stage equity based venture capital fund that was created to seed and grow early stage tech based companies. It is our highly attractive hybrid investment model. The fund will match the founder(s) capital investment of up to $150K in mix resources per deal for qualified startups. City Side will provide a full-stack development team, go-to market management team, board of directors, coaching, mentoring and startup capital.',
+      investmentCapital: '$10M',
+      maxInvestmentSize: '$150M',
+      minimumQualifications: [
+        'The company must be in a B2B space',
+        'The company must have a solid use case',
+        'Solid an fully developed business plan',
+        'Must be a for-profit entity',
+        'Must have a fully developed POC and be development-ready',
+      ],
+      fundingRequirements: [
+        'The company must be registered in US',
+        'Must be registered as an LLC',
+        'Have a management team',
+        'Have an advisory board',
+        'Pass the due-diligence process',
+      ],
+      contentImage: {
+        image: 'https://fillmurray.com/500/500',
+        alt: '',
+      },
+    },
+    venture248: {
+      name: 'Venture 248 Fund',
+      market: 'Venture Capital Fund, Series A - B',
+      hero: {
+        image: 'https://fillmurray.com/900/300',
+        alt: '',
+      },
+      icon: {
+        image: 'https://fillmurray.com/100/100',
+        alt: '',
+      },
+      intro: 'Greenseed is an early stage equity based venture capital fund that was created to seed and grow early stage tech based companies. It is our highly attractive hybrid investment model. The fund will match the founder(s) capital investment of up to $150K in mix resources per deal for qualified startups. City Side will provide a full-stack development team, go-to market management team, board of directors, coaching, mentoring and startup capital.',
+      investmentCapital: '$10M',
+      maxInvestmentSize: '$150M',
+      minimumQualifications: [
+        'The company must be in a B2B space',
+        'The company must have a solid use case',
+        'Solid an fully developed business plan',
+        'Must be a for-profit entity',
+        'Must have a fully developed POC and be development-ready',
+      ],
+      fundingRequirements: [
+        'The company must be registered in US',
+        'Must be registered as an LLC',
+        'Have a management team',
+        'Have an advisory board',
+        'Pass the due-diligence process',
+      ],
+      contentImage: {
+        image: 'https://fillmurray.com/500/500',
+        alt: '',
+      },
+    },
+    blueVenture: {
+      name: 'Blue Venture',
+      market: 'Private Equity Fund, Series C & Growth Capital',
+      hero: {
+        image: 'https://fillmurray.com/900/300',
+        alt: '',
+      },
+      icon: {
+        image: 'https://fillmurray.com/100/100',
+        alt: '',
+      },
+      intro: 'Greenseed is an early stage equity based venture capital fund that was created to seed and grow early stage tech based companies. It is our highly attractive hybrid investment model. The fund will match the founder(s) capital investment of up to $150K in mix resources per deal for qualified startups. City Side will provide a full-stack development team, go-to market management team, board of directors, coaching, mentoring and startup capital.',
+      investmentCapital: '$10M',
+      maxInvestmentSize: '$150M',
+      minimumQualifications: [
+        'The company must be in a B2B space',
+        'The company must have a solid use case',
+        'Solid an fully developed business plan',
+        'Must be a for-profit entity',
+        'Must have a fully developed POC and be development-ready',
+      ],
+      fundingRequirements: [
+        'The company must be registered in US',
+        'Must be registered as an LLC',
+        'Have a management team',
+        'Have an advisory board',
+        'Pass the due-diligence process',
+      ],
+      contentImage: {
+        image: 'https://fillmurray.com/500/500',
+        alt: '',
+      },
+    },
+  },
 };
 const getters = {
   principles: state => state.principles,
   process: state => state.process,
   portfolio: state => state.portfolio,
+  funds: state => state.funds,
 };
 const actions = {};
 const mutations = {};

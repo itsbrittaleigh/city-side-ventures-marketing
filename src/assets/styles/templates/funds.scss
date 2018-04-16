@@ -1,0 +1,47 @@
+// container overrides
+.container {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  display: block;
+}
+
+@mixin container-width($size) {
+  @media only screen and (min-width: $size) {
+    .container {
+      width: $size - 30px;
+    }
+  }
+}
+
+@include container-width($small);
+@include container-width($medium);
+@include container-width($large);
+
+// hero overrides
+.hero {
+  &.funds {
+    padding: 0;
+    .information-box {
+      z-index: 2;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: gray;
+      padding: 30px 60px 30px 40px;
+    }
+    p {
+      margin: 0 0 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: $large) {
+  .hero {
+    > .container {
+      max-width: $large - 30px;
+      margin: 0 auto;
+    }
+  }
+}
