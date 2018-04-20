@@ -13,7 +13,7 @@
                   <router-link :to="{ name: 'About' }">About</router-link>
                 </li>
                 <li>
-                  <router-link :to="{ name: 'Funds' }">Investment Funds</router-link>
+                  <router-link :to="{ name: 'Team' }">The Team</router-link>
                 </li>
                 <li>
                   <router-link :to="{ name: 'News' }">News</router-link>

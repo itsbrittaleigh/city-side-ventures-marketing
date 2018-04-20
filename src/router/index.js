@@ -5,7 +5,6 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Focus from '../pages/Focus';
-import Funds from '../pages/Funds';
 import Legal from '../pages/Legal';
 import News from '../pages/News';
 import Portfolio from '../pages/Portfolio';
@@ -53,15 +52,6 @@ export default new Router({
       path: '/focus',
       name: 'Focus',
       component: Focus,
-      meta: {
-        title: '',
-        description: '',
-      },
-    },
-    {
-      path: '/funds',
-      name: 'Funds',
-      component: Funds,
       meta: {
         title: '',
         description: '',
