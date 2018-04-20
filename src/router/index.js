@@ -9,6 +9,7 @@ import Funds from '../pages/Funds';
 import Legal from '../pages/Legal';
 import News from '../pages/News';
 import Portfolio from '../pages/Portfolio';
+import Post from '../pages/Post';
 import Process from '../pages/Process';
 import Team from '../pages/Team';
 
@@ -115,6 +116,15 @@ export default new Router({
       path: '/portfolio',
       name: 'Portfolio',
       component: Portfolio,
+      meta: {
+        title: '',
+        description: '',
+      },
+    },
+    {
+      path: '/post',
+      name: 'Post',
+      component: Post,
       meta: {
         title: '',
         description: '',
