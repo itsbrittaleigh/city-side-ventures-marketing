@@ -112,7 +112,7 @@ export default new Router({
       },
     },
     {
-      path: '/post',
+      path: '/news/:year/:month/:day/:title',
       name: 'Post',
       component: Post,
       meta: {
