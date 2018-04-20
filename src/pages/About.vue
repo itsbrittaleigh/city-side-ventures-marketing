@@ -11,25 +11,24 @@
         <div class="box">
           <div class="container">
             <p>
-              City Side Venture is a boutique private equity group that is being managed
-              by a unique, distinct, and highly diverse group of seasoned and highly accomplished
-              entrepreneurs. We have a deep understanding and appreciation for building
-              businesses, and we are an ideal partner for early-stage tech-based startup
-              companies. We have established ourselves as a "game changer" in the traditional
-              startup experience. We are more than just traditional investors. We look
-              deeper, wider, and bigger.
+              City Side Venture is a boutique investment firm that is being managed by a unique,
+              distinct and highly diverse group of seasoned and accomplished entrepreneurs. We are
+              an ideal partner for early stage tech-based startup companies and have a deep
+              appreciation and understanding of what it takes to build businesses.
             </p>
             <p>
-              Unlike most private equity groups that are chasing the next "Unicorns" and
-              looking for larger deals, we like to get involved on the ground floor, in the
-              beginning. We are a venture-operated group. We put our experience, expertise,
-              and capital to work.
+              We have established ourselves as a “Game Changer” in the traditional startup
+              experience.  Unlike most early stage investment firms that are chasing the next
+              “Unicorn”, we are looking to build them. We want to be involved on the ground floor,
+              in the beginning with the startup companies. By putting our experience, expertise,
+              our sweat, and capital to work, we can succeed in building great companies.
             </p>
             <p>
               Our business mindset is that it takes a village to launch a startup. We are not
-              looking to invest in cars, we are looking to invest in drivers. Confident, aggressive,
-              open-minded drivers with endless energy and passion.
+              looking to invest in cars, we are looking to invest in drivers. Confident,
+              aggressive, open minded drivers, with an endless energy and passion for success.
             </p>
+            <p>If you are this kind of a driver, call us.</p>
           </div>
         </div>
         <div class="box image">

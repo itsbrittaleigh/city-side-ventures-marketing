@@ -15,6 +15,7 @@ import Team from '../pages/Team';
 import BlueVenture from '../pages/funds/BlueVenture';
 import Greenseed from '../pages/funds/Greenseed';
 import Venture248 from '../pages/funds/Venture248';
+import CityX from '../pages/funds/CityX';
 
 Vue.use(Router);
 
@@ -79,6 +80,15 @@ export default new Router({
       path: '/funds/blue-venture',
       name: 'BlueVenture',
       component: BlueVenture,
+      meta: {
+        title: '',
+        description: '',
+      },
+    },
+    {
+      path: '/funds/city-x',
+      name: 'CityX',
+      component: CityX,
       meta: {
         title: '',
         description: '',

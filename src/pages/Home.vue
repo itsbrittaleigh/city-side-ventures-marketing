@@ -4,7 +4,7 @@
       <div class="intro">
         <div class="box">
           <div class="container">
-            <h1>A different kind of <strong>private equity</strong></h1>
+            <h1>A different kind of <strong>venture group</strong></h1>
           </div>
           <img src="https://fillmurray.com/600/800" alt="">
           <div class="overlay"></div>
@@ -12,18 +12,22 @@
         <div class="box">
           <div class="container">
             <p>
-              <strong>It takes a village to launch a startup.</strong>
-              We are not looking to invest in cars. We are looking to invest in drivers &mdash;
-              confident, aggressive, open-minded drivers
-              <strong>with endless energy and passion.</strong>
-              <br>
-              <router-link
-                :to="{ name: 'About' }"
-                class="button inverse"
-              >
-                Learn about City Side Ventures
-              </router-link>
+              We are more than just traditional investors, we are a boutique early stage
+              investment boutique firm that goes by a hybrid model of venture capital with
+              private equity mindset. We are willing to look deeper, wider and bigger with
+              all opportunities!
             </p>
+            <p>
+              City Side Ventures is a driven group of experienced business builders and a
+              combination of serial entrepreneurs, disrupters, innovators, and technologists,
+              all in one – aka a crazy bunch!
+            </p>
+            <router-link
+              :to="{ name: 'About' }"
+              class="button inverse"
+            >
+              Learn about City Side Ventures
+            </router-link>
           </div>
           <img src="https://fillmurray.com/900/700" alt="">
           <div class="overlay"></div>
@@ -108,23 +112,27 @@
           </div>
         </div>
       </div>
+      <div class="padded-section">
+        <div class="container">
+          <h2>Our Investment Platforms</h2>
+          <p class="lead">
+            We have created the following hybrid investment platform to accommodate
+            startup companies to navigate seamlessly between Angel Funding to Seed
+            Capital to Growth Capital.
+          </p>
+        </div>
+      </div>
       <div class="funds">
         <div class="container">
           <div class="box">
-            <h2>Our funds</h2>
-            <p class="lead">
-              We have created the following three investment platforms to accomodate
-              startup companies to navigate seamlessly from seed capital to growth capital.
-            </p>
-          </div>
-          <div class="box">
             <h3>Greenseed</h3>
-            <p class="lead"><em>Venture Capital Fund</em></p>
-            <p class="lead"><em>Seed Capital</em></p>
+            <p class="lead"><em>Angel Fund</em></p>
+            <p class="lead"><em>Pre-Seed Capital</em></p>
             <br>
             <p>
-              Invests in an early stage, equity-based match venture fund created to fund
-              and grow early stage tech-based companies.
+              GREENSEED is an Angel Fund that invests in early stage companies. It is an
+              equity-based fund created to fund and grow early stage, tech-based companies.
+              It is our highly attractive hybrid investment model.
             </p>
             <router-link
               :to="{ name: 'Greenseed' }"
@@ -137,11 +145,12 @@
           <div class="box">
             <h3>Venture (248)</h3>
             <p class="lead"><em>Venture Capital Fund</em></p>
-            <p class="lead"><em>Series A-B</em></p>
+            <p class="lead"><em>Seed Capital</em></p>
             <br>
             <p>
-              Invests in second stage Michigan technology companies to help grow the
-              Michigan tech startup ecosystem.
+              Venture (248) is an equity-based Venture Capital Fund that was created to
+              fund and grow second stage, Michigan-based technology companies. Its sole
+              purpose is to help grow the Michigan tech startup ecosystem.
             </p>
             <router-link
               :to="{ name: 'Venture248' }"
@@ -153,12 +162,31 @@
           </div>
           <div class="box">
             <h3>Blue Venture</h3>
-            <p class="lead"><em>Private Equity Fund</em></p>
-            <p class="lead"><em>Series C &amp; Growth Capital</em></p>
+            <p class="lead"><em>Venture Capital Fund</em></p>
+            <p class="lead"><em>Series A - C</em></p>
             <br>
             <p>
-              Invests in a selected fast-growing and scalable post revenue tech-based
-              companies in the US and North America.
+              Blue Venture is a Michigan-based Venture Capital Fund that was established to
+              invest in fast growing, scalable, and post-revenue tech companies located in
+              the US and North America.
+            </p>
+            <router-link
+              :to="{ name: 'BlueVenture' }"
+              class="button inverse"
+            >
+              Learn More
+            </router-link>
+            <img src="https://fillmurray.com/100/100" alt="">
+          </div>
+          <div class="box">
+            <h3>City[X]</h3>
+            <p class="lead"><em>Private Equity Fund</em></p>
+            <p class="lead"><em>Growth Capital</em></p>
+            <br>
+            <p>
+              CityX is a Michigan-based Private Equity Fund that was established to invest
+              in fast growing, scalable, and post-revenue tech companies located in the US
+              and North America.
             </p>
             <router-link
               :to="{ name: 'BlueVenture' }"
@@ -288,6 +316,7 @@ export default {
       height: 100%;
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       justify-content: center;
       z-index: 3;
     }
@@ -339,7 +368,7 @@ export default {
 }
 .statistics {
   .outer-box {
-    @include grid-boxes(2, 2, 1fr, 200px, 0);
+    @include grid-boxes(2, 2, 50vw, 50vw, 0);
   }
   .box {
     &.image {
@@ -391,12 +420,15 @@ export default {
     }
   }
   @media only screen and (min-width: $large) {
-    @include grid-boxes(2, 1, 1fr, 400px, 0);
+    @include grid-boxes(2, 1, 50vw, 50vw, 0);
+    .outer-box {
+      @include grid-boxes(2, 2, 25vw, 25vw, 0);
+    }
   }
   &.statistics2 {
-    @include grid-boxes(1, 2, 1fr, 400px, 0);
+    @include grid-boxes(1, 2, 100vw, 100vw, 0);
     > .box:nth-child(2) {
-      @include grid-boxes(2, 2, 1fr, 200px, 0);
+      @include grid-boxes(2, 2, 50vw, 50vw, 0);
       align-items: initial;
       .box {
         align-items: center;
@@ -404,9 +436,9 @@ export default {
       }
     }
     @media only screen and (min-width: $medium) {
-      @include grid-boxes(2, 1, 1fr, 400px, 0);
+      @include grid-boxes(2, 1, 50vw, 50vw, 0);
       > .box:nth-child(2) {
-        @include grid-boxes(2, 2, 1fr, 200px, 0);
+        @include grid-boxes(2, 2, 25vw, 25vw, 0);
         width: auto;
       }
     }
@@ -457,20 +489,18 @@ export default {
   .box {
     padding: 20px 20px 120px 20px;
     position: relative;
-    &:first-of-type {
-      padding: 30px 0;
-    }
-    &:not(:first-of-type) {
-      color: white;
-    }
-    &:nth-child(2) {
+    color: white;
+    &:nth-child(1) {
       background: gray;
     }
-    &:nth-child(3) {
+    &:nth-child(2) {
       background: black;
     }
-    &:nth-child(4) {
+    &:nth-child(3) {
       background: lightgray;
+    }
+    &:nth-child(4) {
+      background: gray;
     }
   }
   h3 {
@@ -497,9 +527,6 @@ export default {
       width: 100%;
       max-width: 100%;
       @include grid-boxes(2, 2, 1fr, auto, 0);
-    }
-    .box:first-of-type {
-      padding: 20px;
     }
     .box {
       display: flex;
@@ -528,14 +555,6 @@ export default {
     > .container {
       @include grid-boxes(4, 1, 1fr, auto, 0);
     }
-    .box:first-of-type {
-      padding-left: calc((100vw - 962px) / 2);
-    }
-  }
-  @media only screen and (min-width: $xlarge) {
-    .box:first-of-type {
-      padding-left: calc((100vw - 1170px) / 2);
-    }
   }
 }
 .portfolio {
@@ -546,7 +565,7 @@ export default {
   }
   .upper,
   .lower {
-    @include grid-boxes(2, 2, 1fr, 200px, 0);
+    @include grid-boxes(2, 2, 50vw, 50vw, 0);
     .box {
       display: flex;
       justify-content: center;
@@ -565,7 +584,7 @@ export default {
   @media only screen and (min-width: $medium) {
     .upper,
     .lower {
-      @include grid-boxes(4, 1, 1fr, 200px, 0);
+      @include grid-boxes(4, 1, 25vw, 25vw, 0);
     }
     .upper {
       .box:nth-child(even) {
@@ -587,6 +606,10 @@ export default {
   @media only screen and (min-width: $large) {
     @include grid-boxes(2, 1, 1fr, 400px, 0);
     grid-template-columns: auto 800px;
+    .upper,
+    .lower {
+      @include grid-boxes(4, 1, 200px, 200px, 0);
+    }
     > .box:first-of-type {
       .container {
         width: 100%;
