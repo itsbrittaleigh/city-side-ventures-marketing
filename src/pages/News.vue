@@ -64,7 +64,9 @@
             }"
           >
             <img :src="article.image.image" :alt="article.image.alt">
-            <h2 class="title">{{ article.title }}</h2>
+            <div class="title-container">
+              <h2 class="title">{{ article.title }}</h2>
+            </div>
           </router-link>
         </div>
       </div>
@@ -143,18 +145,22 @@ export default {
 }
 .articles {
   @include grid-boxes(1, 1, 1fr, auto, 0);
-  .title {
+  .title-container {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    text-overflow: ellipsis;
-    @include background-opacity($cod, 0.8);
-    padding: 15px;
+    height: 80px;
     margin: 0;
-    @include title-font;
-    color: $white;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include background-opacity($cod, 0.8);
+    h2 {
+      @include title-font;
+      color: $white;
+      text-align: center;
+    }
   }
   img {
     display: block;

@@ -374,6 +374,22 @@ export default {
       }
     }
   }
+  @media only screen and (min-width: $xxlarge) {
+    .box {
+      > .container {
+        left: calc((100vw - 1410px) / 2);
+        right: calc((100vw - 1410px) / 2);
+      }
+    }
+  }
+  @media only screen and (min-width: $xxxlarge) {
+    .box {
+      > .container {
+        left: calc((100vw - 1570px) / 2);
+        right: calc((100vw - 1570px) / 2);
+      }
+    }
+  }
 }
 .statistics {
   .outer-box {
@@ -422,6 +438,9 @@ export default {
       .large {
         font-size: 48px;
         font-weight: 100;
+        @media only screen and (min-width: $xxlarge) {
+          font-size: 70px;
+        }
       }
       .small {
         @include title-font;
@@ -474,7 +493,7 @@ export default {
     @include grid-boxes(2, 3, 1fr, auto, 25px);
     padding: 50px 0;
     img {
-      height: 100px;
+      height: 80px;
       width: auto;
       display: block;
       margin: 0 auto 15px;
@@ -500,6 +519,16 @@ export default {
       width: $xlarge - 30px;
     }
   }
+  @media only screen and (min-width: $xxlarge) {
+    > .container {
+      width: $xxlarge - 30px;
+    }
+  }
+  @media only screen and (min-width: $xxxlarge) {
+    > .container {
+      width: $xxxlarge - 30px;
+    }
+  }
 }
 .funds {
   .box {
@@ -511,6 +540,9 @@ export default {
     }
     &:nth-child(1) {
       background: $danube;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       h2,
       p {
         color: $white;
@@ -656,10 +688,30 @@ export default {
       }
     }
   }
-  @media only screen and (min-width: $xlarge) {
+  @media only screen and (min-width: $xxlarge) {
+    @include grid-boxes(2, 1, 1fr, 600px, 0);
+    grid-template-columns: auto 1200px;
+    .upper,
+    .lower {
+      @include grid-boxes(4, 1, 300px, 300px, 0);
+    }
     > .box:first-of-type {
       .container {
         padding-left: calc((100vw - 1170px) / 2);
+      }
+    }
+  }
+  @media only screen and (min-width: $xxlarge) {
+    > .box:first-of-type {
+      .container {
+        padding-left: calc((100vw - 1410px) / 2);
+      }
+    }
+  }
+  @media only screen and (min-width: $xxxlarge) {
+    > .box:first-of-type {
+      .container {
+        padding-left: calc((100vw - 1570px) / 2);
       }
     }
   }

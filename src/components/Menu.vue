@@ -311,6 +311,12 @@ button {
       @media only screen and (min-width: $xlarge) {
         padding-right: calc((100vw - 1170px) / 2);
       }
+      @media only screen and (min-width: $xxlarge) {
+        padding-right: calc((100vw - 1410px) / 2);
+      }
+      @media only screen and (min-width: $xxxlarge) {
+        padding-right: calc((100vw - 1570px) / 2);
+      }
     }
     .nav-left {
       display: flex;

@@ -45,6 +45,12 @@ header {
     @media only screen and (min-width: $xlarge) {
       padding-left: calc((100vw - 1170px) / 2); // xlarge width - 30
     }
+    @media only screen and (min-width: $xxlarge) {
+      padding-left: calc((100vw - 1410px) / 2); // xxlarge width - 30
+    }
+    @media only screen and (min-width: $xxxlarge) {
+      padding-left: calc((100vw - 1570px) / 2); // xxxlarge width - 30
+    }
   }
   img {
     display: block;

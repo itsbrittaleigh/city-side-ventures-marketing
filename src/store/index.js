@@ -125,9 +125,10 @@ const state = {
       hero: {
         image: require('../assets/images/covers/greenseed.jpg'),
         alt: '',
+        color: 'yellow',
       },
       icon: {
-        image: 'https://fillmurray.com/100/100',
+        image: require('../assets/images/icons/fund-greenseed-black.svg'),
         alt: '',
       },
       intro: 'GREENSEED is an early stage equity-based venture capital fund that was created to seed and grow early stage tech-based companies. It is our highly attractive hybrid investment model. The fund will match the founder(s) capital investment of up to $150K in mix resources per deal for qualified startups. City Side will provide a Full-Stack development team, Seasoned Go-To-Market management team, Board of Directors, Coaching and Mentoring, and Startup Capital to the companies.',
@@ -157,9 +158,10 @@ const state = {
       hero: {
         image: require('../assets/images/covers/venture248.jpg'),
         alt: '',
+        color: 'red',
       },
       icon: {
-        image: 'https://fillmurray.com/100/100',
+        image: require('../assets/images/icons/fund-venture248-white.svg'),
         alt: '',
       },
       intro: 'Venture (248) is an equity-based Venture Capital Fund that was created to fund and grow second stage, Michigan-based technology companies. Its sole purpose is to help grow the Michigan tech startup ecosystem. Venture (248) is an equity-based Venture Capital Fund that was created to fund and grow Second Stage Michigan Tech companies. Its sole purpose is to grow the Michigan Tech Startup Ecosystem. The fund provides equity-based capital investment of up to $500K per deal for qualified startups.',
@@ -189,9 +191,10 @@ const state = {
       hero: {
         image: require('../assets/images/covers/blueventure.jpg'),
         alt: '',
+        color: 'blue',
       },
       icon: {
-        image: 'https://fillmurray.com/100/100',
+        image: require('../assets/images/icons/fund-blueventure-white.svg'),
         alt: '',
       },
       intro: 'Blue Venture is a Michigan-based Venture Capital Fund that was established to invest in fast growing, scalable, and post-revenue tech companies located in the US and North America. Blue Venture Fund is an equity-based Venture Capital Fund. It was created to provide capital investments for fast-growing scalable post revenue Tech companies in North America. The sole purpose of the Blue Venture Fund is to grow the North American startup ecosystem. The fund will make capital investments up to $5M per deal for qualified companies.',
@@ -223,6 +226,7 @@ const state = {
       hero: {
         image: 'https://fillmurray.com/900/300',
         alt: '',
+        color: 'black',
       },
       icon: {
         image: 'https://fillmurray.com/100/100',
@@ -256,49 +260,49 @@ const state = {
     {
       name: 'Doron York',
       title: 'Chairman / CEO',
-      photo: require('../assets/images/team/doron.png'),
+      photo: require('../assets/images/team/doron.jpg'),
       color: 'yellow',
     },
     {
       name: 'Kevin Yang',
       title: 'President',
-      photo: require('../assets/images/team/kevin.png'),
+      photo: require('../assets/images/team/kevin.jpg'),
       color: 'dark-gray',
     },
     {
       name: 'Brandon Shamoun',
       title: 'General Counsel',
-      photo: require('../assets/images/team/brandon.png'),
+      photo: require('../assets/images/team/brandon.jpg'),
       color: 'blue',
     },
     {
       name: 'Anthony Steffens',
       title: 'Chief Information Officer',
-      photo: require('../assets/images/team/anthony.png'),
+      photo: require('../assets/images/team/anthony.jpg'),
       color: 'light-gray',
     },
     {
       name: 'Bryan Culver',
       title: 'Chief Technology Officer',
-      photo: require('../assets/images/team/bryan.png'),
+      photo: require('../assets/images/team/bryan.jpg'),
       color: 'blue',
     },
     {
       name: 'Kendra Corman',
       title: 'Chief Marketing Officer',
-      photo: require('../assets/images/team/kendra.png'),
+      photo: require('../assets/images/team/default.jpg'),
       color: 'light-gray',
     },
     {
       name: 'Jay Patel',
       title: 'SVP / IoT',
-      photo: require('../assets/images/team/jay.png'),
+      photo: require('../assets/images/team/default.jpg'),
       color: 'yellow',
     },
     {
       name: 'Zoe (Ziva) Chen, PhD',
       title: 'SVP / Intellectual Property',
-      photo: require('../assets/images/team/zoe.png'),
+      photo: require('../assets/images/team/zoe.jpg'),
       color: 'blue',
     },
   ],

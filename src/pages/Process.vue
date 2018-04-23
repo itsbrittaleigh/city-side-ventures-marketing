@@ -179,6 +179,22 @@ export default {
       }
     }
   }
+  @media only screen and (min-width: $xxlarge) {
+    @include grid-boxes(2, 1, 1fr, auto, 0);
+    .box:not(.image) {
+      > .container {
+        padding-left: calc((100vw - 1410px) / 2);
+      }
+    }
+  }
+  @media only screen and (min-width: $xxxlarge) {
+    @include grid-boxes(2, 1, 1fr, auto, 0);
+    .box:not(.image) {
+      > .container {
+        padding-left: calc((100vw - 1570px) / 2);
+      }
+    }
+  }
 }
 .sidepitch {
   @include grid-boxes(1, 2, 1fr, auto, 0);
@@ -222,6 +238,20 @@ export default {
     .box:not(.image) {
       > .container {
         padding-right: calc((100vw - 1170px) / 2);
+      }
+    }
+  }
+  @media only screen and (min-width: $xxlarge) {
+    .box:not(.image) {
+      > .container {
+        padding-right: calc((100vw - 1410px) / 2);
+      }
+    }
+  }
+  @media only screen and (min-width: $xxxlarge) {
+    .box:not(.image) {
+      > .container {
+        padding-right: calc((100vw - 1570px) / 2);
       }
     }
   }

@@ -3,7 +3,9 @@
     <section class="hero funds">
       <img :src="fund.hero.image" :alt="fund.hero.alt">
       <div class="container">
-        <div class="information-box">
+        <div
+          :class="['information-box', `bkg-${fund.hero.color}`]"
+        >
           <img :src="fund.icon.image" :alt="fund.icon.alt">
           <h1>{{ fund.name }}</h1>
           <p><em>{{ fund.market }}</em></p>
@@ -226,6 +228,39 @@ export default {
       }
     }
   }
+  @media only screen and (min-width: $xlarge) {
+    .box {
+      padding: 70px;
+      &:first-of-type {
+        padding-left: calc((100vw - 1170px) / 2);
+      }
+      &:last-of-type {
+        padding-right: calc((100vw - 1170px) / 2);
+      }
+    }
+  }
+  @media only screen and (min-width: $xxlarge) {
+    .box {
+      padding: 70px;
+      &:first-of-type {
+        padding-left: calc((100vw - 1410px) / 2);
+      }
+      &:last-of-type {
+        padding-right: calc((100vw - 1410px) / 2);
+      }
+    }
+  }
+  @media only screen and (min-width: $xxxlarge) {
+    .box {
+      padding: 70px;
+      &:first-of-type {
+        padding-left: calc((100vw - 1570px) / 2);
+      }
+      &:last-of-type {
+        padding-right: calc((100vw - 1570px) / 2);
+      }
+    }
+  }
 }
 .apply {
   @include grid-boxes(1, 2, 1fr, auto, 0);
@@ -260,6 +295,21 @@ export default {
   @media only screen and (min-width: $large) {
     .box:not(.image) {
       padding-left: calc((100vw - 962px) / 2);
+    }
+  }
+  @media only screen and (min-width: $xlarge) {
+    .box:not(.image) {
+      padding-left: calc((100vw - 1170px) / 2);
+    }
+  }
+  @media only screen and (min-width: $large) {
+    .box:not(.image) {
+      padding-left: calc((100vw - 1410px) / 2);
+    }
+  }
+  @media only screen and (min-width: $large) {
+    .box:not(.image) {
+      padding-left: calc((100vw - 1570px) / 2);
     }
   }
 }
