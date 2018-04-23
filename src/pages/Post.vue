@@ -4,6 +4,7 @@
       <hero-section
         :heading="post.title"
         :description="'by ' + post.author"
+        :name="post.image.name"
       >
       </hero-section>
       <div class="container post padded-section" v-html="post.content"></div>

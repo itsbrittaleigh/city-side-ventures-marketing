@@ -3,6 +3,7 @@
     <template slot="content">
       <hero-section
         heading="News, Thoughts, and Updates"
+        name="news"
       >
       </hero-section>
       <div class="news">

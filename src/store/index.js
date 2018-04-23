@@ -123,7 +123,7 @@ const state = {
       name: 'Greenseed Fund',
       market: 'Angel Fund, Pre-Seed Capital',
       hero: {
-        image: 'https://fillmurray.com/900/300',
+        image: require('../assets/images/covers/greenseed.jpg'),
         alt: '',
       },
       icon: {
@@ -147,7 +147,7 @@ const state = {
         'Pass our due-diligence process',
       ],
       contentImage: {
-        image: 'https://fillmurray.com/500/500',
+        image: require('../assets/images/funds/greenseed.jpg'),
         alt: '',
       },
     },
@@ -155,7 +155,7 @@ const state = {
       name: 'Venture 248 Fund',
       market: 'Venture Capital Fund, Seed Capital',
       hero: {
-        image: 'https://fillmurray.com/900/300',
+        image: require('../assets/images/covers/venture248.jpg'),
         alt: '',
       },
       icon: {
@@ -179,7 +179,7 @@ const state = {
         'Pass our due-diligence process.',
       ],
       contentImage: {
-        image: 'https://fillmurray.com/500/500',
+        image: require('../assets/images/funds/venture248.jpg'),
         alt: '',
       },
     },
@@ -187,7 +187,7 @@ const state = {
       name: 'Blue Venture',
       market: 'Venture Capital Fund, Series A - C',
       hero: {
-        image: 'https://fillmurray.com/900/300',
+        image: require('../assets/images/covers/blueventure.jpg'),
         alt: '',
       },
       icon: {
@@ -213,7 +213,7 @@ const state = {
         'Pass our Due-Diligence Process.',
       ],
       contentImage: {
-        image: 'https://fillmurray.com/500/500',
+        image: require('../assets/images/funds/blueventure.jpg'),
         alt: '',
       },
     },

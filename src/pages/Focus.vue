@@ -6,11 +6,12 @@
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        name="focus"
       >
       </hero-section>
       <div class="focus">
         <div class="box label box-dark-gray">
-          <img src="https://fillmurray.com/100/100" alt="">
+          <img src="../assets/images/icons/focus-automotive-white.svg" alt="">
           <p>Automotive Tech</p>
         </div>
         <div class="box content content-gray">
@@ -23,14 +24,14 @@
           </p>
         </div>
         <div class="box image">
-          <img src="https://fillmurray.com/800/800" alt="">
+          <img src="../assets/images/focus/automotive.jpg" alt="">
         </div>
         <div class="box label box-blue">
-          <img src="https://fillmurray.com/100/100" alt="">
+          <img src="../assets/images/icons/focus-b2b-white.svg" alt="">
           <p>B2B, B2C, &amp; H2H Platforms</p>
         </div>
         <div class="box image">
-          <img src="https://fillmurray.com/800/800" alt="">
+          <img src="../assets/images/focus/b2b.jpg" alt="">
         </div>
         <div class="box content content-blue">
           <h2>Headline</h2>
@@ -42,7 +43,7 @@
           </p>
         </div>
         <div class="box label box-yellow">
-          <img src="https://fillmurray.com/100/100" alt="">
+          <img src="../assets/images/icons/focus-fintech-white.svg" alt="">
           <p>FinTech</p>
         </div>
         <div class="box content content-yellow">
@@ -55,14 +56,14 @@
           </p>
         </div>
         <div class="box image">
-          <img src="https://fillmurray.com/800/800" alt="">
+          <img src="../assets/images/focus/fintech.jpg" alt="">
         </div>
         <div class="box label box-light-gray">
-          <img src="https://fillmurray.com/100/100" alt="">
+          <img src="../assets/images/icons/focus-wearable-white.svg" alt="">
           <p>Wearable Tech</p>
         </div>
         <div class="box image">
-          <img src="https://fillmurray.com/800/800" alt="">
+          <img src="../assets/images/focus/wearable.jpg" alt="">
         </div>
         <div class="box content content-light-gray">
           <h2>Headline</h2>
@@ -74,7 +75,7 @@
           </p>
         </div>
         <div class="box label box-dark-gray">
-          <img src="https://fillmurray.com/100/100" alt="">
+          <img src="../assets/images/icons/focus-techinmotion-white.svg" alt="">
           <p>Technology in Motion</p>
         </div>
         <div class="box content content-dark-gray">
@@ -87,14 +88,14 @@
           </p>
         </div>
         <div class="box image">
-          <img src="https://fillmurray.com/800/800" alt="">
+          <img src="../assets/images/focus/techmotion.jpg" alt="">
         </div>
         <div class="box label box-yellow">
-          <img src="https://fillmurray.com/100/100" alt="">
+          <img src="../assets/images/icons/focus-medical-white.svg" alt="">
           <p>Medical &amp; Health</p>
         </div>
         <div class="box image">
-          <img src="https://fillmurray.com/800/800" alt="">
+          <img src="../assets/images/focus/medical.jpg" alt="">
         </div>
         <div class="box content content-yellow">
           <h2>Headline</h2>
@@ -149,6 +150,10 @@ export default {
         font-weight: 100;
         text-align: center;
       }
+      img {
+        height: 100px;
+        width: auto;
+      }
     }
     &.box-dark-gray {
       background: $cod;
@@ -185,8 +190,8 @@ export default {
   }
   .box.image {
     img {
-      min-height: 100%;
-      min-width: 100%;
+      height: 100%;
+      width: 100%;
       object-fit: cover;
     }
   }

@@ -8,6 +8,7 @@
           our online Venture Management System (VMS), we have automated the process
           of investments from start to finish."
         lead="Business + Technologhy + Capital = Success"
+        name="process"
       >
       </hero-section>
       <div class="process">
@@ -31,12 +32,12 @@
           </div>
         </div>
         <div class="box image">
-          <img src="https://fillmurray.com/800/800" alt="">
+          <img src="../assets/images/about-process.jpg" alt="">
         </div>
       </div>
       <div class="sidepitch">
         <div class="box image">
-          <img src="https://fillmurray.com/800/800" alt="">
+          <img src="../assets/images/sidepitch.jpg" alt="">
         </div>
         <div class="box">
           <div class="container">
@@ -61,7 +62,7 @@
               Connect with other investors across the globe and build your own private
               syndication online. Built with privacy and confidentiality in mind.
             </p>
-            <a href="https://sidepitch.com" class="button inverse">Learn More about Sidepitch</a>
+            <a href="https://sidepitch.com" class="button inverse" target="_blank">Learn More about Sidepitch</a>
           </div>
         </div>
       </div>
@@ -147,8 +148,8 @@ export default {
   }
   .box.image {
     img {
-      min-width: 100%;
-      min-height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
   }
@@ -171,6 +172,7 @@ export default {
     }
   }
   @media only screen and (min-width: $xlarge) {
+    @include grid-boxes(2, 1, 1fr, auto, 0);
     .box:not(.image) {
       > .container {
         padding-left: calc((100vw - 1170px) / 2);
@@ -182,8 +184,8 @@ export default {
   @include grid-boxes(1, 2, 1fr, auto, 0);
   .box.image {
     img {
-      min-height: 100%;
-      min-width: 100%;
+      height: 100%;
+      width: 100%;
       object-fit: cover;
     }
   }

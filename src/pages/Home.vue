@@ -6,7 +6,7 @@
           <div class="container">
             <h1>A different kind of <strong>venture group</strong></h1>
           </div>
-          <img src="https://fillmurray.com/600/800" alt="">
+          <img src="../assets/images/home/private-equity.jpg" alt="">
           <div class="overlay"></div>
         </div>
         <div class="box">
@@ -29,7 +29,7 @@
               Learn about City Side Ventures
             </router-link>
           </div>
-          <img src="https://fillmurray.com/900/700" alt="">
+          <img src="../assets/images/home/about.jpg" alt="">
           <div class="overlay"></div>
         </div>
       </div>
@@ -40,10 +40,10 @@
             <p class="small color-yellow">in access capital</p>
           </div>
           <div class="box image">
-            <img src="https://fillmurray.com/200/300" alt="">
+            <img src="../assets/images/home/stats1.jpg" alt="">
           </div>
           <div class="box image">
-            <img src="https://fillmurray.com/200/300" alt="">
+            <img src="../assets/images/home/stats2.jpg" alt="">
           </div>
           <div class="box">
             <p class="large color-blue">24</p>
@@ -56,10 +56,10 @@
             <p class="small color-red">active investments</p>
           </div>
           <div class="box image">
-            <img src="https://fillmurray.com/200/300" alt="">
+            <img src="../assets/images/home/stats3.jpg" alt="">
           </div>
           <div class="box image">
-            <img src="https://fillmurray.com/200/300" alt="">
+            <img src="../assets/images/home/stats4.jpg" alt="">
           </div>
           <div class="box">
             <p class="large color-yellow">18x</p>
@@ -86,27 +86,27 @@
           </div>
           <div class="box foci">
             <div class="box">
-              <img src="https://fillmurray.com/300/300" alt="">
+              <img src="../assets/images/icons/focus-automotive-black.svg" alt="">
               <p>Automotive Tech</p>
             </div>
             <div class="box">
-              <img src="https://fillmurray.com/300/300" alt="">
+              <img src="../assets/images/icons/focus-b2b-black.svg" alt="">
               <p>B2B, B2C, &amp; H2H Platforms</p>
             </div>
             <div class="box">
-              <img src="https://fillmurray.com/300/300" alt="">
+              <img src="../assets/images/icons/focus-fintech-black.svg" alt="">
               <p>Fintech</p>
             </div>
             <div class="box">
-              <img src="https://fillmurray.com/300/300" alt="">
+              <img src="../assets/images/icons/focus-wearable-black.svg" alt="">
               <p>Wearable Tech</p>
             </div>
             <div class="box">
-              <img src="https://fillmurray.com/300/300" alt="">
+              <img src="../assets/images/icons/focus-techinmotion-black.svg" alt="">
               <p>Technology in Motion</p>
             </div>
             <div class="box">
-              <img src="https://fillmurray.com/300/300" alt="">
+              <img src="../assets/images/icons/focus-medical-black.svg" alt="">
               <p>Medical &amp; Health</p>
             </div>
           </div>
@@ -138,7 +138,7 @@
             >
               Learn More
             </router-link>
-            <img src="https://fillmurray.com/100/100" alt="">
+            <img src="../assets/images/icons/fund-greenseed-black.svg" alt="">
           </div>
           <div class="box">
             <h3>Venture (248)</h3>
@@ -156,7 +156,7 @@
             >
               Learn More
             </router-link>
-            <img src="https://fillmurray.com/100/100" alt="">
+            <img src="../assets/images/icons/fund-venture248-black.svg" alt="">
           </div>
           <div class="box">
             <h3>Blue Venture</h3>
@@ -174,7 +174,7 @@
             >
               Learn More
             </router-link>
-            <img src="https://fillmurray.com/100/100" alt="">
+            <img src="../assets/images/icons/fund-blueventure-black.svg" alt="">
           </div>
           <div class="box">
             <h3>City[X]</h3>
@@ -198,14 +198,14 @@
       </div>
       <div class="statistics statistics2">
         <div class="box image-background large">
-          <img src="https://fillmurray.com/600/600" alt="">
+          <img src="../assets/images/home/stats5.jpg" alt="">
           <div class="overlay"></div>
           <p class="large">246%</p>
           <p class="small">return on investment</p>
         </div>
         <div class="box">
           <div class="box image">
-            <img src="https://fillmurray.com/200/300" alt="">
+            <img src="../assets/images/home/stats6.jpg" alt="">
           </div>
           <div class="box box-yellow">
             <p class="large">6</p>
@@ -216,7 +216,7 @@
             <p class="small">in access capital</p>
           </div>
           <div class="box image">
-            <img src="https://fillmurray.com/200/300" alt="">
+            <img src="../assets/images/home/stats7.jpg" alt="">
           </div>
         </div>
       </div>
@@ -291,8 +291,8 @@ export default {
       position: absolute;
       top: 0;
       left: 0;
-      min-height: 100%;
-      min-width: 100%;
+      height: 100%;
+      width: 100%;
       object-fit: cover;
       z-index: 1;
     }
@@ -382,8 +382,8 @@ export default {
   .box {
     &.image {
       img {
-        min-height: 100%;
-        min-width: 100%;
+        height: 100%;
+        width: 100%;
         object-fit: cover;
       }
     }
@@ -474,9 +474,8 @@ export default {
     @include grid-boxes(2, 3, 1fr, auto, 25px);
     padding: 50px 0;
     img {
-      width: 60%;
-      max-width: 100px;
-      height: auto;
+      height: 100px;
+      width: auto;
       display: block;
       margin: 0 auto 15px;
     }

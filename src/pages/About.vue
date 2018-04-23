@@ -5,6 +5,7 @@
         heading="About Us"
         description="Our venture group is more than just traditional investors, we are an early
           stage hybrid boutique private equity and venture capital firm"
+        name="about"
       >
       </hero-section>
       <section class="about">
@@ -32,7 +33,7 @@
           </div>
         </div>
         <div class="box image">
-          <img src="https://fillmurray.com/800/800" alt="">
+          <img src="../assets/images/about.jpg" alt="">
         </div>
       </section>
       <section class="principles padded-section">
@@ -150,19 +151,27 @@ export default {
       padding: 80px 20px 30px;
       &.box-yellow {
         background: $goldendream;
-        color: $cod;
+        p {
+          color: $cod;
+        }
       }
       &.box-dark-gray {
         background: $cod;
-        color: $white;
+        p {
+          color: $white;
+        }
       }
       &.box-blue {
         background: $danube;
-        color: $white;
+        p {
+          color: $white;
+        }
       }
       &.box-light-gray {
         background: $gray;
-        color: $white;
+        p {
+          color: $white;
+        }
       }
     }
     p {

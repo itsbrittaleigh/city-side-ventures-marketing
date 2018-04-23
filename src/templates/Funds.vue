@@ -237,8 +237,8 @@ export default {
   .box.image {
     max-height: 350px;
     img {
-      min-height: 100%;
-      min-width: 100%;
+      height: 100%;
+      width: 100%;
       object-fit: cover;
     }
   }
