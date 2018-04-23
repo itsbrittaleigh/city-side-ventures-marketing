@@ -236,30 +236,30 @@
         <div class="box">
           <div class="upper">
             <div class="box">
-              <img src="https://fillmurray.com/200/600" alt="">
+              <img src="../assets/images/logos/wearli.png" alt="">
             </div>
             <div class="box">
-              <img src="https://fillmurray.com/600/200" alt="">
+              <img src="../assets/images/logos/coaching-standard.png" alt="">
             </div>
             <div class="box">
-              <img src="https://fillmurray.com/400/400" alt="">
+              <img src="../assets/images/logos/amtech.png" alt="">
             </div>
             <div class="box">
-              <img src="https://fillmurray.com/300/300" alt="">
+              <img src="../assets/images/logos/analyteum.png" alt="">
             </div>
           </div>
           <div class="lower">
             <div class="box">
-              <img src="https://fillmurray.com/200/600" alt="">
+              <img src="../assets/images/logos/tm.png" alt="">
             </div>
             <div class="box">
-              <img src="https://fillmurray.com/600/200" alt="">
+              <img src="../assets/images/logos/safewhistle.png" alt="">
             </div>
             <div class="box">
-              <img src="https://fillmurray.com/400/400" alt="">
+              <img src="../assets/images/logos/argonomo-black.svg" alt="">
             </div>
             <div class="box">
-              <img src="https://fillmurray.com/300/300" alt="">
+              <img src="../assets/images/logos/we-conduct.png" alt="">
             </div>
           </div>
         </div>

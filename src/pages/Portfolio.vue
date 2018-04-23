@@ -75,15 +75,21 @@ export default {
 .portfolio {
   .box-blue {
     background: $danube;
-    color: $white;
+    p {
+      color: $white;
+    }
   }
   .box-yellow {
     background: $goldendream;
-    color: $cod;
+    p {
+      color: $cod;
+    }
   }
   .box-gray {
     background: $gray;
-    color: $white;
+    p {
+      color: $white;
+    }
   }
   .box.logo {
     display: flex;
