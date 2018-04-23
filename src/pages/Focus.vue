@@ -198,6 +198,13 @@ export default {
   @media only screen and (min-width: $medium) {
     @include grid-boxes(3, 6, (100vw / 3), (100vw / 3), 0);
   }
+  @media only screen and (min-width: $xxlarge) {
+    .box:not(.image) {
+      &.content {
+        padding: 70px 45px;
+      }
+    }
+  }
 }
 </style>
 

@@ -176,6 +176,9 @@ export default {
     .box:not(.image) {
       > .container {
         padding-left: calc((100vw - 1170px) / 2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
     }
   }
@@ -183,15 +186,16 @@ export default {
     @include grid-boxes(2, 1, 1fr, auto, 0);
     .box:not(.image) {
       > .container {
-        padding-left: calc((100vw - 1410px) / 2);
+        padding: 0;
+        width: 650px;
+        margin: 0 auto;
       }
     }
   }
   @media only screen and (min-width: $xxxlarge) {
-    @include grid-boxes(2, 1, 1fr, auto, 0);
     .box:not(.image) {
       > .container {
-        padding-left: calc((100vw - 1570px) / 2);
+        width: 800px;
       }
     }
   }

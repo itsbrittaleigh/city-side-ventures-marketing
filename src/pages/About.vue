@@ -216,9 +216,9 @@ export default {
       @include grid-boxes(3, 2, 1fr, 1fr, 25px);
     }
   }
-  @media only screen and (min-width: $large) {
+  @media only screen and (min-width: $xxlarge) {
     .container {
-      width: 962px;
+      width: 1170px;
     }
   }
 }

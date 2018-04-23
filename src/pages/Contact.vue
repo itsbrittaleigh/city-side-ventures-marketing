@@ -78,8 +78,8 @@ h2 {
 }
 .container {
   height: auto;
-  @media only screen and (min-width: $xlarge) {
-    width: 992px;
+  @media only screen and (min-width: $xxlarge) {
+    width: 1170px;
   }
 }
 .contact-methods {

@@ -237,6 +237,9 @@ export default {
       &:last-of-type {
         padding-right: calc((100vw - 1170px) / 2);
       }
+      p, ul, li {
+        font-size: 18px;
+      }
     }
   }
   @media only screen and (min-width: $xxlarge) {
