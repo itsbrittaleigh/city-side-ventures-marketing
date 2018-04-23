@@ -65,18 +65,18 @@
         </div>
         <div class="box logos">
           <div class="box">
-            <img src="https://fillmurray.com/400/200" alt="">
+            <img src="../assets/images/partners/blue-venture-fund.png" alt="">
             <p>Lorem ipsum dolor sit amet consectuer adipiscing</p>
           </div><div class="box">
-            <img src="https://fillmurray.com/200/400" alt="">
+            <img src="../assets/images/partners/bss-capital-ventures.png" alt="">
             <p>Lorem ipsum dolor sit amet consectuer adipiscing</p>
           </div>
           <div class="box">
-            <img src="https://fillmurray.com/400/400" alt="">
+            <img src="../assets/images/partners/sidepitch.png" alt="">
             <p>Lorem ipsum dolor sit amet consectuer adipiscing</p>
           </div>
           <div class="box">
-            <img src="https://fillmurray.com/400/200" alt="">
+            <img src="../assets/images/partners/venture-248.png" alt="">
             <p>Lorem ipsum dolor sit amet consectuer adipiscing</p>
           </div>
         </div>
