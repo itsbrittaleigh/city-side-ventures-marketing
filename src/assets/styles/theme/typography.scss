@@ -19,13 +19,32 @@ a,
 address {
   line-height: 1.5;
   font-size: 16px;
+  color: $cod;
+}
+
+h1 {
+  font-size: 53px;
+  color: $goldendream;
 }
 
 h2 {
   font-size: 36px;
   font-weight: 100;
   margin: 0;
+  color: $cod;
   & + p {
     margin-top: 0;
   }
+}
+
+.color-yellow {
+  color: $goldendream;
+}
+
+.color-blue {
+  color: $danube;
+}
+
+.color-red {
+  color: $cerise;
 }

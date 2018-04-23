@@ -11,20 +11,29 @@ button,
   letter-spacing: 1px;
   text-decoration: none;
   transition: 0.4s;
-  color: white;
-  background: black;
-  border: 1px solid black;
+  color: $cod;
+  background: $white;
+  border: 1px solid $white;
   &:hover {
-    color: black;
-    background: white;
+    color: $white;
+    background: $cod;
   }
-  &.inverse {
-    color: black;
-    background: white;
-    border: 1px solid white;
+  &.button-blue {
+    background: $danube;
+    color: $white;
+    border: 1px solid $danube;
     &:hover {
-      color: white;
-      background: black;
+      background: $white;
+      color: $danube;
+    }
+  }
+  &.button-red {
+    background: $nightshadz;
+    color: $white;
+    border: 1px solid $nightshadz;
+    &:hover {
+      background: $white;
+      color: $nightshadz;
     }
   }
 }

@@ -11,7 +11,10 @@
       <section class="portfolio">
         <template v-for="(project, index) in portfolio">
           <div
-            :class="{'box logo': true, 'bkg-offset-desktop': isEvenRowedOnDesktop(index + 1)}"
+            :class="{
+              'box logo': true,
+              'bkg-offset-desktop': isEvenRowedOnDesktop(index + 1),
+            }"
             :key="index"
           >
             <img
@@ -21,7 +24,12 @@
             >
           </div>
           <div
-            class="box content"
+            :class="{
+              'box content': true,
+              'box-blue': project.color === 'blue',
+              'box-yellow': project.color === 'yellow',
+              'box-gray': project.color === 'gray',
+            }"
             :key="index"
           >
             <div class="container">
@@ -65,8 +73,17 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/styles/variables";
 .portfolio {
-  .box:nth-child(even) {
-    background: lightgray;
+  .box-blue {
+    background: $danube;
+    color: $white;
+  }
+  .box-yellow {
+    background: $goldendream;
+    color: $cod;
+  }
+  .box-gray {
+    background: $gray;
+    color: $white;
   }
   .box.logo {
     display: flex;
@@ -98,15 +115,6 @@ export default {
   }
   @media only screen and (min-width: $medium) {
     @include grid-boxes(2, 9, 1fr, 200px, 0);
-    .box:nth-child(even) {
-      background: none;
-    }
-    .box:nth-child(4n + 1) {
-      background: lightgray;
-    }
-    .box:nth-child(4n) {
-      background: lightgray;
-    }
     .box.content {
       padding: 20px;
       > .container {
@@ -120,15 +128,8 @@ export default {
   }
   @media only screen and (min-width: $large) {
     @include grid-boxes(6, 3, 1fr, 300px, 0);
-    .box:nth-child(4n + 1),
-    .box:nth-child(4n) {
-      background: none;
-    }
-    .box:nth-child(even) {
-      background: lightgray;
-    }
     .box.bkg-offset-desktop {
-      background: gray;
+      background: $wildsand;
     }
   }
   @media only screen and (min-width: $large) {

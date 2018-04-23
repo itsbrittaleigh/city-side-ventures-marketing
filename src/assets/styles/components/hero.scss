@@ -19,7 +19,7 @@
     z-index: 1;
   }
   .overlay {
-    background: rgba(0, 0, 0, 0.9);
+    @include background-opacity($goldendream, 0.9);
     position: absolute;
     top: 0;
     left: 0;
@@ -31,11 +31,11 @@
     @include title-font;
     font-size: 46px;
     margin: 0;
-    color: white;
+    color: $cod;
   }
   p {
     margin: 0;
-    color: white;
+    color: $cod;
     font-size: 19px;
     &.large {
       font-size: 22px;

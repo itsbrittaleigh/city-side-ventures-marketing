@@ -19,11 +19,11 @@
               We go all in or not at all.
             </p>
             <div
-              class="step"
               v-for="(step, index) in process"
               :key="index"
+              :class="'step step-' + (index + 1)"
             >
-              <img src="../assets/images/icons/bullet.svg" alt="">
+              <img :src="step.bullet" alt="">
               <p class="title">{{ step.title }}</p>
               <p class="lead"><em>{{ step.tagline }}</em></p>
               <p>{{ step.description }}</p>
@@ -117,6 +117,21 @@ export default {
         border-left: 2px solid lightgray;
       }
     }
+    .step-1 {
+      .title {
+        color: $goldendream;
+      }
+    }
+    .step-2 {
+      .title {
+        color: $danube;
+      }
+    }
+    .step-3 {
+      .title {
+        color: $gray;
+      }
+    }
     p {
       margin: 0;
       &.title {
@@ -126,6 +141,7 @@ export default {
       &.lead {
         font-size: 18px;
         margin-bottom: 20px;
+        color: $mineshaft;
       }
     }
   }
@@ -172,8 +188,8 @@ export default {
     }
   }
   .box:not(.image) {
-    background: black;
-    color: white;
+    background: $goldendream;
+    color: $cod;
     padding: 40px 0;
   }
   p {

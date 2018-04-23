@@ -36,8 +36,8 @@
       <div class="statistics">
         <div class="outer-box">
           <div class="box">
-            <p class="large">$100M</p>
-            <p class="small">in access capital</p>
+            <p class="large color-yellow">$100M</p>
+            <p class="small color-yellow">in access capital</p>
           </div>
           <div class="box image">
             <img src="https://fillmurray.com/200/300" alt="">
@@ -46,14 +46,14 @@
             <img src="https://fillmurray.com/200/300" alt="">
           </div>
           <div class="box">
-            <p class="large">24</p>
-            <p class="small">venture partners</p>
+            <p class="large color-blue">24</p>
+            <p class="small color-blue">venture partners</p>
           </div>
         </div>
         <div class="outer-box">
           <div class="box">
-            <p class="large">16</p>
-            <p class="small">active investments</p>
+            <p class="large color-red">16</p>
+            <p class="small color-red">active investments</p>
           </div>
           <div class="box image">
             <img src="https://fillmurray.com/200/300" alt="">
@@ -62,8 +62,8 @@
             <img src="https://fillmurray.com/200/300" alt="">
           </div>
           <div class="box">
-            <p class="large">18x</p>
-            <p class="small">return on equity</p>
+            <p class="large color-yellow">18x</p>
+            <p class="small color-yellow">return on equity</p>
           </div>
         </div>
       </div>
@@ -112,7 +112,7 @@
           </div>
         </div>
       </div>
-      <div class="padded-section">
+      <div class="funds-intro padded-section">
         <div class="container">
           <h2>Our Investment Platforms</h2>
           <p class="lead">
@@ -136,7 +136,7 @@
             </p>
             <router-link
               :to="{ name: 'Greenseed' }"
-              class="button inverse"
+              class="button button-red"
             >
               Learn More
             </router-link>
@@ -154,7 +154,7 @@
             </p>
             <router-link
               :to="{ name: 'Venture248' }"
-              class="button inverse"
+              class="button button-red"
             >
               Learn More
             </router-link>
@@ -172,7 +172,7 @@
             </p>
             <router-link
               :to="{ name: 'BlueVenture' }"
-              class="button inverse"
+              class="button button-red"
             >
               Learn More
             </router-link>
@@ -190,7 +190,7 @@
             </p>
             <router-link
               :to="{ name: 'BlueVenture' }"
-              class="button inverse"
+              class="button button-red"
             >
               Learn More
             </router-link>
@@ -209,11 +209,11 @@
           <div class="box image">
             <img src="https://fillmurray.com/200/300" alt="">
           </div>
-          <div class="box">
+          <div class="box box-yellow">
             <p class="large">6</p>
             <p class="small">on-boarding investments</p>
           </div>
-          <div class="box">
+          <div class="box box-blue">
             <p class="large">$100M</p>
             <p class="small">in access capital</p>
           </div>
@@ -287,9 +287,8 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/styles/variables";
 .intro {
-  @include grid-boxes(1, 2, 1fr, 300px, 0);
+  @include grid-boxes(1, 2, 1fr, 450px, 0);
   .box {
-    color: white;
     img {
       position: absolute;
       top: 0;
@@ -306,7 +305,18 @@ export default {
       top: 0;
       left: 0;
       z-index: 2;
-      background: rgba(0, 0, 0, 0.8);
+    }
+    &:nth-child(1) {
+      color: $goldendream;
+      .overlay {
+        @include background-opacity($cod, 0.9);
+      }
+    }
+    &:nth-child(2) {
+      color: white;
+      .overlay {
+        @include background-opacity($goldendream, 0.9);
+      }
     }
     > .container {
       position: absolute;
@@ -321,7 +331,8 @@ export default {
       z-index: 3;
     }
     h1 {
-      font-size: 52px;
+      font-size: 53px;
+      font-weight: 100;
     }
     a {
       margin-top: 20px;
@@ -346,7 +357,7 @@ export default {
     }
   }
   @media only screen and (min-width: $large) {
-    @include grid-boxes(2, 1, 1fr, calc(100vh - (70px + 25vh)), 0);
+    @include grid-boxes(2, 1, 50vw, 50vw, 0);
     .box {
       h1 {
         font-size: 64px;
@@ -435,6 +446,14 @@ export default {
         justify-content: center;
       }
     }
+    .box-yellow {
+      background: $goldendream;
+      color: $white;
+    }
+    .box-blue {
+      background: $danube;
+      color: $white;
+    }
     @media only screen and (min-width: $medium) {
       @include grid-boxes(2, 1, 50vw, 50vw, 0);
       > .box:nth-child(2) {
@@ -445,10 +464,10 @@ export default {
   }
 }
 .focus {
-  background: black;
+  background: $goldendream;
   h2,
   p {
-    color: white;
+    color: $cod;
   }
   a {
     margin-top: 20px;
@@ -474,7 +493,7 @@ export default {
   }
   @media only screen and (min-width: $large) {
     > .container {
-      @include grid-boxes(2, 1, 1fr, auto, 0);
+      @include grid-boxes(2, 1, 1fr, auto, 50px);
       align-items: center;
       width: $large - 30px;
     }
@@ -485,22 +504,17 @@ export default {
     }
   }
 }
+.funds-intro {
+  background: $danube;
+  color: $white;
+}
 .funds {
   .box {
     padding: 20px 20px 120px 20px;
     position: relative;
-    color: white;
-    &:nth-child(1) {
-      background: gray;
-    }
-    &:nth-child(2) {
-      background: black;
-    }
-    &:nth-child(3) {
-      background: lightgray;
-    }
-    &:nth-child(4) {
-      background: gray;
+    color: $cod;
+    &:nth-child(even) {
+      background: $wildsand;
     }
   }
   h3 {
@@ -560,8 +574,8 @@ export default {
 .portfolio {
   > .box:first-of-type {
     padding: 40px 0;
-    background: black;
-    color: white;
+    background: $goldendream;
+    color: $cod;
   }
   .upper,
   .lower {

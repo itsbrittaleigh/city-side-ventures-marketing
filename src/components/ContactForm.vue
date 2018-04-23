@@ -23,7 +23,7 @@
       </div>
       <p v-if="showSuccess">Your message was sent successfully</p>
       <p v-if="showError">There was an error, please try again later.</p>
-      <button type="submit" class="button">Submit</button>
+      <button type="submit" class="button button-red">Submit</button>
     </div>
   </form>
 </template>
@@ -64,7 +64,8 @@ form {
 }
 input,
 textarea {
-  background: lightgray;
+  background: $wildsand;
+  border: 1px solid #d7d7d7;
 }
 button {
   position: absolute;

@@ -75,7 +75,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/styles/variables";
 .primary {
-  background: gray;
+  background: $mineshaft;
   padding: 30px 0;
   .content {
     display: flex;
@@ -90,7 +90,7 @@ ul {
   li {
     a {
       text-decoration: none;
-      color: white;
+      color: $goldendream;
       font-size: 14px;
       padding: 10px 0;
       display: block;
@@ -115,7 +115,7 @@ ul {
   }
   a {
     font-size: 12px;
-    color: white;
+    color: $white;
     text-decoration: none;
     padding: 5px 0;
     display: block;
@@ -123,9 +123,9 @@ ul {
 }
 .secondary {
   padding: 20px 0;
-  background: black;
+  background: $cod;
   p {
-    color: white;
+    color: $white;
     font-size: 12px;
     text-align: center;
   }

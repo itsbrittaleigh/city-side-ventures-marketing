@@ -7,7 +7,13 @@
           <img :src="fund.icon.image" :alt="fund.icon.alt">
           <h1>{{ fund.name }}</h1>
           <p><em>{{ fund.market }}</em></p>
-          <a href="#" class="button inverse">Apply with City Side</a>
+          <a
+            href="https://app.sidepitch.com/auth/register"
+            class="button inverse"
+            target="_blank"
+          >
+            Apply with City Side
+          </a>
         </div>
       </div>
     </section>
@@ -16,12 +22,12 @@
         <p>{{ fund.intro }}</p>
         <div class="statistics">
           <div class="box">
-            <p class="large">{{ fund.investmentCapital }}</p>
-            <p class="small">in investment capital</p>
+            <p class="large color-blue">{{ fund.investmentCapital }}</p>
+            <p class="small color-blue">in investment capital</p>
           </div>
           <div class="box">
-            <p class="large">{{ fund.maxInvestmentSize }}</p>
-            <p class="small">maximum investment size</p>
+            <p class="large color-red">{{ fund.maxInvestmentSize }}</p>
+            <p class="small color-red">maximum investment size</p>
           </div>
         </div>
       </div>
@@ -29,7 +35,7 @@
     <section class="qualifications">
       <div class="box">
         <div class="container">
-          <h2>Minimum Qualifications</h2>
+          <h2 class="color-blue">Minimum Qualifications</h2>
           <p>
             <em>
               Companies that are considering applying must be qualified based on the following:
@@ -47,7 +53,7 @@
       </div>
       <div class="box">
         <div class="container">
-          <h2>Funding Requirements</h2>
+          <h2 class="color-blue">Funding Requirements</h2>
           <p>
             <em>
               Companies that will qualify for the fund will agree to the following conditions:
@@ -96,7 +102,7 @@
             :key="index"
             class="section"
           >
-            <img src="../assets/images/icons/bullet.svg" alt="bullet point">
+            <img src="../assets/images/icons/bullet-step-1.svg" alt="bullet point">
             <div class="step">
               <p
                 v-if="step.days"
@@ -179,9 +185,9 @@ export default {
 .qualifications {
   .box {
     padding: 40px 0;
-    background: lightslategray;
+    background: #f9f9f9;
     &:first-of-type {
-      background: lightgray;
+      background: #f3f3f3;
     }
   }
   h2 {
@@ -224,8 +230,8 @@ export default {
 .apply {
   @include grid-boxes(1, 2, 1fr, auto, 0);
   .box:not(.image) {
-    background: gray;
-    color: white;
+    background: $goldendream;
+    color: $cod;
     padding: 30px 0;
   }
   .box.image {
@@ -263,7 +269,7 @@ export default {
     width: 220px;
     margin: $bullet_width auto 0;
     .section {
-      border-left: 2px solid gray;
+      border-left: 2px solid $goldendream;
       position: relative;
       margin-left: ($bullet_width / 2);
       padding: 0 0 60px $bullet_width;
@@ -282,6 +288,7 @@ export default {
         &.days {
           @include title-font;
           font-size: 14px;
+          color: $danube;
         }
       }
     }
@@ -292,7 +299,7 @@ export default {
       width: 100%;
       margin: 80px 0 0;
       .section {
-        border-top: 2px solid gray;
+        border-top: 2px solid $goldendream;
         border-left: none;
         padding: $bullet_width 10px 0;
         margin: 0;

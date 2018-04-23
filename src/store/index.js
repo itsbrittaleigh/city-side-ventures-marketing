@@ -1,4 +1,5 @@
 /* eslint-disable no-shadow */
+/* eslint-disable global-require */
 
 import Vue from 'vue';
 import Vuex from 'vuex';
@@ -13,26 +14,32 @@ const state = {
     {
       title: 'Integrity',
       description: 'Doing business in an open, honest, and transparent way that is completely visible to our stakeholders and venture partners.',
+      class: 'box-yellow',
     },
     {
       title: 'Courage and Drive',
       description: 'Boldly forging companies and moving ahead with full force and high velocity. We take bold and calculated risks that will yield a high level of return on equity.',
+      class: 'box-dark-gray',
     },
     {
       title: 'Making an Impact',
       description: 'Positively influencing communities across the globe. Investing in businesses that create an economic impact, creating jobs, and expanding ecosystems across the country is our mission.',
+      class: 'box-blue',
     },
     {
       title: 'Fiscal Responsibility',
       description: 'To be aggressive while watching the bottom-line. By being calculative, we are responsible with our decision-making process and provide the most progressive risk management output.',
+      class: 'box-light-gray',
     },
     {
       title: 'Doing the Impossible',
       description: 'Moving beyond "impossible" with power and ease. Taking on an industry with game-changing companies. We operate inside a “can do” mindset. if it is impossible, we “can do” it.',
+      class: 'box-blue',
     },
     {
       title: 'We Think Big!',
       description: 'We have the vision and the foresight to take on big dreams. Patient and resilient, we know that it takes a village to launch a successful business.',
+      class: 'box-yellow',
     },
   ],
   process: [
@@ -40,16 +47,19 @@ const state = {
       title: 'The Driver [The Entrepreneur]',
       tagline: 'We invest in drivers, not cars.',
       description: 'We will pick the driver regardless of what kind of car they drive. As long is it is a legal, moral and ethical business, - we are all in!',
+      bullet: require('../assets/images/icons/bullet-step-1.svg'),
     },
     {
       title: 'The Car [The Business]',
       tagline: 'Our philosophy is simple.',
       description: 'If you put a great driver in an average car, you will get above average performance. A great driver will perform with any car, at any time, in any race.',
+      bullet: require('../assets/images/icons/bullet-step-2.svg'),
     },
     {
       title: 'The Race [The Market]',
       tagline: 'Finishing the Race.',
       description: 'We can fix or suit up the car. We are not "Industry" focused we are "Driver" focused. Find the driver, fix him a car, and get him in the race.',
+      bullet: require('../assets/images/icons/bullet-step-3.svg'),
     },
   ],
   portfolio: [
@@ -57,46 +67,55 @@ const state = {
       name: 'Wearli',
       logo: 'https://fillmurray.com/500/200',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+      color: 'blue',
     },
     {
       name: 'Coaching Standard',
       logo: 'https://fillmurray.com/500/200',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+      color: 'gray',
     },
     {
       name: 'Amtech',
       logo: 'https://fillmurray.com/500/200',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+      color: 'blue',
     },
     {
       name: 'TM',
       logo: 'https://fillmurray.com/500/200',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+      color: 'yellow',
     },
     {
       name: 'SafeWhistle',
       logo: 'https://fillmurray.com/500/200',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+      color: 'blue',
     },
     {
       name: 'Mtech[IQ]',
       logo: 'https://fillmurray.com/500/200',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+      color: 'yellow',
     },
     {
       name: 'Analyteum',
       logo: 'https://fillmurray.com/500/200',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+      color: 'gray',
     },
     {
       name: 'WeConduct',
       logo: 'https://fillmurray.com/500/200',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+      color: 'yellow',
     },
     {
       name: 'Argonomo',
       logo: 'https://fillmurray.com/500/200',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
+      color: 'gray',
     },
   ],
   funds: {
@@ -238,41 +257,49 @@ const state = {
       name: 'Doron York',
       title: 'Chairman / CEO',
       photo: 'https://fillmurray.com/400/400',
+      color: 'yellow',
     },
     {
       name: 'Kevin Yang',
       title: 'President',
       photo: 'https://fillmurray.com/400/400',
+      color: 'dark-gray',
     },
     {
       name: 'Brandon Shamoun',
       title: 'General Counsel',
       photo: 'https://fillmurray.com/400/400',
+      color: 'blue',
     },
     {
       name: 'Anthony Steffens',
       title: 'Chief Information Officer',
       photo: 'https://fillmurray.com/400/400',
+      color: 'light-gray',
     },
     {
       name: 'Bryan Culver',
       title: 'Chief Technology Officer',
       photo: 'https://fillmurray.com/400/400',
+      color: 'blue',
     },
     {
       name: 'Kendra Corman',
       title: 'Chief Marketing Officer',
       photo: 'https://fillmurray.com/400/400',
+      color: 'light-gray',
     },
     {
       name: 'Jay Patel',
       title: 'SVP / IoT',
       photo: 'https://fillmurray.com/400/400',
+      color: 'yellow',
     },
     {
       name: 'Zoe (Ziva) Chen, PhD',
       title: 'SVP / Intellectual Property',
       photo: 'https://fillmurray.com/400/400',
+      color: 'blue',
     },
   ],
 };

@@ -12,67 +12,68 @@
 
     <ul :class="{'base-menu': true, 'open': menuIsOpen}">
       <span class="container">
-        <li
-          @click="toggleAbout"
-          :class="{'open': aboutIsOpen}"
-        >
-          <span class="heading" v-click-outside="closeAbout">
-            About Us
-            <img src="../assets/images/icons/arrow-down.svg" alt="down arrow">
-          </span>
-          <ul>
-            <li>
-              <router-link :to="{ name: 'About' }">About City Side</router-link>
-            </li>
-            <li>
-              <router-link :to="{ name: 'Process' }">Our Process</router-link>
-            </li>
-            <li>
-              <router-link :to="{ name: 'Focus' }">Our Focus</router-link>
-            </li>
-            <li>
-              <router-link :to="{ name: 'Team' }">The Team</router-link>
-            </li>
-          </ul>
-        </li>
-        <li
-          @click="toggleFunds"
-          :class="{'open': fundsAreOpen}"
-        >
-          <span class="heading" v-click-outside="closeFunds">
-            Investment Funds
-            <img src="../assets/images/icons/arrow-down.svg" alt="down arrow">
-          </span>
-          <ul>
-            <li>
-              <router-link :to="{ name: 'Greenseed' }">Greenseed Fund</router-link>
-            </li>
-            <li>
-              <router-link :to="{ name: 'Venture248' }">Venture 248 Fund</router-link>
-            </li>
-            <li>
-              <router-link :to="{ name: 'BlueVenture' }">Blue Venture Fund</router-link>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <router-link :to="{ name: 'News' }">News</router-link>
-        </li>
-        <li>
-          <router-link :to="{ name: 'Contact' }">Contact Us</router-link>
-        </li>
-      </span>
-      <span class="nav-right">
-        <li>
-          <span class="container">
-            <a href="https://app.sidepitch.com/auth/register" target="_blank">Pitch Us</a>
-          </span>
-        </li>
-        <li>
-          <span class="container">
-            <a href="https://app.sidepitch.com/auth/register" target="_blank">Invest with Us</a>
-          </span>
-        </li>
+        <span class="nav-left">
+          <li
+            @click="toggleAbout"
+            :class="{'open': aboutIsOpen}"
+          >
+            <span class="heading" v-click-outside="closeAbout">
+              About Us
+              <img src="../assets/images/icons/arrow-down.svg" alt="down arrow">
+            </span>
+            <ul>
+              <li>
+                <router-link :to="{ name: 'About' }">About City Side</router-link>
+              </li>
+              <li>
+                <router-link :to="{ name: 'Process' }">Our Process</router-link>
+              </li>
+              <li>
+                <router-link :to="{ name: 'Focus' }">Our Focus</router-link>
+              </li>
+              <li>
+                <router-link :to="{ name: 'Team' }">The Team</router-link>
+              </li>
+            </ul>
+          </li>
+          <li
+            @click="toggleFunds"
+            :class="{'open': fundsAreOpen}"
+          >
+            <span class="heading" v-click-outside="closeFunds">
+              Investment Funds
+              <img src="../assets/images/icons/arrow-down.svg" alt="down arrow">
+            </span>
+            <ul>
+              <li>
+                <router-link :to="{ name: 'Greenseed' }">Greenseed Fund</router-link>
+              </li>
+              <li>
+                <router-link :to="{ name: 'Venture248' }">Venture 248 Fund</router-link>
+              </li>
+              <li>
+                <router-link :to="{ name: 'BlueVenture' }">Blue Venture Fund</router-link>
+              </li>
+              <li>
+                <router-link :to="{ name: 'CityX' }">City[X]</router-link>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <router-link :to="{ name: 'News' }">News</router-link>
+          </li>
+          <li>
+            <router-link :to="{ name: 'Contact' }">Contact Us</router-link>
+          </li>
+        </span>
+        <span class="nav-right">
+          <li>
+            <a href="https://app.sidepitch.com/auth/register" target="_blank" class="button button-blue">Pitch Us</a>
+          </li>
+          <li>
+            <a href="https://app.sidepitch.com/auth/register" target="_blank" class="button button-red">Invest with Us</a>
+          </li>
+        </span>
       </span>
     </ul>
   </div>
@@ -150,7 +151,7 @@ button {
     position: absolute;
     height: 2px;
     width: 100%;
-    background-color: white;
+    background-color: $cod;
     border-radius: 2px;
     opacity: 1;
     left: 0;
@@ -199,7 +200,7 @@ button {
   right: 0;
   transition: 0.4s;
   overflow: hidden;
-  background: black;
+  background: $white;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -213,7 +214,7 @@ button {
   }
   li {
     @include title-font;
-    color: white;
+    color: $cod;
     text-align: right;
     .heading {
       padding: 15px 0;
@@ -231,7 +232,7 @@ button {
     a {
       font-weight: 500;
       text-decoration: none;
-      color: white;
+      color: $cod;
       padding: 15px 0;
       display: block;
       font-size: 12px;
@@ -260,16 +261,31 @@ button {
     }
   }
 }
-// right navigation (buttons)
-.nav-right {
-  li a {
-    color: black;
-  }
-  li:nth-child(1) {
-    background: lightgray;
-  }
-  li:nth-child(2) {
-    background: white;
+// nav-right
+.base-menu {
+  .nav-right {
+    li {
+      a {
+        height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: $white;
+        &.button-red:hover {
+          color: $nightshadz;
+        }
+        &.button-blue:hover {
+          color: $danube;
+        }
+      }
+      &:nth-child(1) {
+        margin-bottom: 15px;
+      }
+    }
   }
 }
 // desktop
@@ -287,9 +303,18 @@ button {
     > .container {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       height: 100%;
       width: 100%;
       flex: 1;
+      padding-right: calc((100vw - 962px) / 2);
+      @media only screen and (min-width: $xlarge) {
+        padding-right: calc((100vw - 1170px) / 2);
+      }
+    }
+    .nav-left {
+      display: flex;
+      height: 100%;
     }
     li {
       height: 100%;
@@ -303,7 +328,7 @@ button {
         font-size: 12px;
       }
       a.router-link-active {
-        background: lightgray;
+        background: $wildsand;
         padding: 0 20px;
       }
       ul {
@@ -311,7 +336,7 @@ button {
         top: 100%;
         left: 0;
         z-index: 20;
-        background: whitesmoke;
+        background: $wildsand;
         padding: 0;
         overflow: visible;
         li {
@@ -324,9 +349,9 @@ button {
             font-size: 12px;
             padding: 15px 20px;
             transition: 0.4s;
-            color: black;
+            color: $cod;
             &:hover {
-              border-left: 5px solid gray;
+              border-left: 5px solid $gray;
             }
             &.router-link-active {
               padding: 15px 20px;
@@ -342,29 +367,18 @@ button {
         width: 100%;
       }
       &.open {
-        background: gray;
+        background: $wildsand;
       }
     }
     .nav-right {
-      width: 300px;
-      height: 100%;
       display: flex;
+      justify-content: space-between;
       li {
-        width: 50%;
-        height: 100%;
+        width: 150px;
         margin: 0;
         padding: 0;
-        span {
-          width: 100%;
-        }
-        a {
-          height: 100%;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          font-size: 12px;
+        &:first-of-type {
+          margin: 0 20px 0 0;
         }
       }
     }

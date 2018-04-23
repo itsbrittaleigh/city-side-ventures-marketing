@@ -21,6 +21,7 @@
 
 // hero overrides
 .hero {
+  height: 500px;
   &.funds {
     padding: 0;
     .information-box {
@@ -28,7 +29,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      background: gray;
+      background: $goldendream;
       padding: 30px 60px 30px 40px;
     }
     p {

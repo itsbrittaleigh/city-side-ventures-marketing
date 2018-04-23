@@ -1,15 +1,16 @@
 <template>
   <base-page>
     <template slot="content">
-      <div class="container padded-section">
-        <h1>Contact Us</h1>
-        <p>
-          Our team of experienced, energetic and passionate serial entrepreneurs,
+      <hero-section
+        heading="Contact Us"
+        description="Our team of experienced, energetic and passionate serial entrepreneurs,
           know how to execute and do it well. We will go where no investor has gone
-          before. Let’s get in touch.
-        </p>
+          before. Let’s get in touch."
+      >
+      </hero-section>
+      <div class="container padded-section">
         <div class="contact-methods">
-          <div class="box">
+          <div class="box box-gray">
             <img src="https://fillmurray.com/100/100" alt="location pin icon">
             <h3>Headquarters</h3>
             <address>
@@ -23,14 +24,14 @@
               Chicago | Tel Aviv
             </p>
           </div>
-          <div class="box">
+          <div class="box box-yellow">
             <img src="https://fillmurray.com/100/100" alt="cell phone icon">
             <h3>Phone</h3>
             <a href="tel:+12484304336">(248) 430 - 4336</a>
             <h3>Email</h3>
             <a href="mailto:contact@citysideventures.com">contact@citysideventures.com</a>
           </div>
-          <div class="box">
+          <div class="box box-blue">
             <img src="https://fillmurray.com/100/100" alt="email icon">
             <h3>Newsletter</h3>
             <p>Sign up to receive updates about City Side Ventures</p>
@@ -48,6 +49,7 @@
 
 <script>
 import Base from './Base';
+import Hero from '../components/Hero';
 import NewsletterForm from '../components/NewsletterForm';
 import ContactForm from '../components/ContactForm';
 
@@ -58,6 +60,7 @@ export default {
   },
   components: {
     'base-page': Base,
+    'hero-section': Hero,
     'newsletter-form': NewsletterForm,
     'contact-form': ContactForm,
   },
@@ -83,14 +86,23 @@ h2 {
   @include grid-boxes(1, 3, 1fr, 1fr, 0);
   .box {
     padding: 150px 30px 30px;
-    &:nth-child(1) {
-      background: gray;
+    &.box-gray {
+      background: $cod;
+      h3, p, address, a {
+        color: $white;
+      }
     }
-    &:nth-child(2) {
-      background: lightgray;
+    &.box-yellow {
+      background: $goldendream;
+      h3, p, address, a {
+        color: $cod;
+      }
     }
-    &:nth-child(3) {
-      background: gray;
+    &.box-blue {
+      background: $danube;
+      h3, p, address, a {
+        color: $white;
+      }
     }
     img {
       position: absolute;
@@ -99,13 +111,11 @@ h2 {
     }
     h3 {
       @include title-font;
-      color: white;
       margin: 20px 0 5px;
     }
     p, address, a {
       font-size: 14px;
       font-style: normal;
-      color: white;
       text-decoration: none;
       margin: 0;
     }

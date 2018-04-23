@@ -9,11 +9,11 @@
       >
       </hero-section>
       <div class="focus">
-        <div class="box label">
+        <div class="box label box-dark-gray">
           <img src="https://fillmurray.com/100/100" alt="">
           <p>Automotive Tech</p>
         </div>
-        <div class="box content">
+        <div class="box content content-gray">
           <h2>Headline</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus labore
@@ -25,14 +25,14 @@
         <div class="box image">
           <img src="https://fillmurray.com/800/800" alt="">
         </div>
-        <div class="box label">
+        <div class="box label box-blue">
           <img src="https://fillmurray.com/100/100" alt="">
           <p>B2B, B2C, &amp; H2H Platforms</p>
         </div>
         <div class="box image">
           <img src="https://fillmurray.com/800/800" alt="">
         </div>
-        <div class="box content">
+        <div class="box content content-blue">
           <h2>Headline</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus labore
@@ -41,11 +41,11 @@
             deleniti!
           </p>
         </div>
-        <div class="box label">
+        <div class="box label box-yellow">
           <img src="https://fillmurray.com/100/100" alt="">
           <p>FinTech</p>
         </div>
-        <div class="box content">
+        <div class="box content content-yellow">
           <h2>Headline</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus labore
@@ -57,14 +57,14 @@
         <div class="box image">
           <img src="https://fillmurray.com/800/800" alt="">
         </div>
-        <div class="box label">
+        <div class="box label box-light-gray">
           <img src="https://fillmurray.com/100/100" alt="">
           <p>Wearable Tech</p>
         </div>
         <div class="box image">
           <img src="https://fillmurray.com/800/800" alt="">
         </div>
-        <div class="box content">
+        <div class="box content content-light-gray">
           <h2>Headline</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus labore
@@ -73,11 +73,11 @@
             deleniti!
           </p>
         </div>
-        <div class="box label">
+        <div class="box label box-dark-gray">
           <img src="https://fillmurray.com/100/100" alt="">
           <p>Technology in Motion</p>
         </div>
-        <div class="box content">
+        <div class="box content content-dark-gray">
           <h2>Headline</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus labore
@@ -89,14 +89,14 @@
         <div class="box image">
           <img src="https://fillmurray.com/800/800" alt="">
         </div>
-        <div class="box label">
+        <div class="box label box-yellow">
           <img src="https://fillmurray.com/100/100" alt="">
           <p>Medical &amp; Health</p>
         </div>
         <div class="box image">
           <img src="https://fillmurray.com/800/800" alt="">
         </div>
-        <div class="box content">
+        <div class="box content content-yellow">
           <h2>Headline</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus labore
@@ -143,12 +143,43 @@ export default {
     &.label {
       justify-content: center;
       align-items: center;
-      background: gray;
       p {
         font-size: 36px;
-        color: white;
+        color: $white;
         font-weight: 100;
         text-align: center;
+      }
+    }
+    &.box-dark-gray {
+      background: $cod;
+    }
+    &.box-yellow {
+      background: $goldendream;
+    }
+    &.box-light-gray {
+      background: $gray;
+    }
+    &.box-blue {
+      background: $danube;
+    }
+    &.content-dark-gray {
+      h2 {
+        color: $cod;
+      }
+    }
+    &.content-yellow {
+      h2 {
+        color: $goldendream;
+      }
+    }
+    &.content-light-gray {
+      h2 {
+        color: $gray;
+      }
+    }
+    &.content-blue {
+      h2 {
+        color: $danube;
       }
     }
   }

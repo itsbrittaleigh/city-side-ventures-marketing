@@ -16,7 +16,7 @@
           class="member"
         >
           <img :src="member.photo" :alt="member.name">
-          <div class="label">
+          <div :class="`label label-${member.color}`">
             <p class="name">{{ member.name }}</p>
             <p><em>{{ member.title }}</em></p>
           </div>
@@ -61,12 +61,23 @@ export default {
     }
     .label {
       padding: 40px 20px 20px;
-      background: slategray;
+      &.label-yellow {
+        background: $goldendream;
+      }
+      &.label-dark-gray {
+        background: $cod;
+      }
+      &.label-blue {
+        background: $danube;
+      }
+      &.label-light-gray {
+        background: $gray;
+      }
     }
     p {
       font-size: 12px;
       margin: 0;
-      color: white;
+      color: $white;
       &.name {
         @include title-font;
       }

@@ -42,7 +42,7 @@
             <div
               v-for="(principle, index) in principles"
               :key="index"
-              class="box"
+              :class="['box', principle.class]"
             >
               <span>{{ index + 1}}</span>
               <p class="title">{{ principle.title }}</p>
@@ -120,7 +120,7 @@ export default {
   }
   .box:not(.image) {
     padding: 40px 0;
-    background: lightgray;
+    background: $wildsand;
   }
   @media only screen and (min-width: $large) {
     @include grid-boxes(2, 1, 1fr, auto, 0);
@@ -148,7 +148,22 @@ export default {
     @include grid-boxes(1, 6, 1fr, 1fr, 25px);
     .box {
       padding: 80px 20px 30px;
-      background: lightgray;
+      &.box-yellow {
+        background: $goldendream;
+        color: $cod;
+      }
+      &.box-dark-gray {
+        background: $cod;
+        color: $white;
+      }
+      &.box-blue {
+        background: $danube;
+        color: $white;
+      }
+      &.box-light-gray {
+        background: $gray;
+        color: $white;
+      }
     }
     p {
       margin: 0;
@@ -166,7 +181,7 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
-      background: gray;
+      @include background-opacity(black, 0.25);
       color: white;
       font-size: 32px;
     }
@@ -185,8 +200,8 @@ export default {
 }
 .partners {
   .box.statistic {
-    background: black;
-    color: white;
+    background: $goldendream;
+    color: $cod;
     text-align: center;
     padding: 40px 0;
     > .container {

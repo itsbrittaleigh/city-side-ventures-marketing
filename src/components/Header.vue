@@ -2,7 +2,7 @@
   <header>
     <div class="container">
       <router-link :to="{ name: 'Home' }">
-        <img src="../assets/images/logos/cityside-white.svg" alt="CitySide Ventures logo">
+        <img src="../assets/images/logos/cityside-black.svg" alt="CitySide Ventures logo">
       </router-link>
       <navigation-menu></navigation-menu>
     </div>
@@ -26,7 +26,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/styles/variables";
 header {
-  background: black;
+  background: $white;
   height: 70px;
   > .container {
     display: flex;
