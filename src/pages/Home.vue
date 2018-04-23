@@ -112,18 +112,16 @@
           </div>
         </div>
       </div>
-      <div class="funds-intro padded-section">
-        <div class="container">
-          <h2>Our Investment Platforms</h2>
-          <p class="lead">
-            We have created the following hybrid investment platform to accommodate
-            startup companies to navigate seamlessly between Angel Funding to Seed
-            Capital to Growth Capital.
-          </p>
-        </div>
-      </div>
       <div class="funds">
         <div class="container">
+          <div class="box">
+            <h2>Our Investment Platforms</h2>
+            <p class="lead">
+              We have created the following hybrid investment platform to accommodate
+              startup companies to navigate seamlessly between Angel Funding to Seed
+              Capital to Growth Capital.
+            </p>
+          </div>
           <div class="box">
             <h3>Greenseed</h3>
             <p class="lead"><em>Angel Fund</em></p>
@@ -504,17 +502,20 @@ export default {
     }
   }
 }
-.funds-intro {
-  background: $danube;
-  color: $white;
-}
 .funds {
   .box {
     padding: 20px 20px 120px 20px;
     position: relative;
     color: $cod;
-    &:nth-child(even) {
+    &:nth-child(odd) {
       background: $wildsand;
+    }
+    &:nth-child(1) {
+      background: $danube;
+      h2,
+      p {
+        color: $white;
+      }
     }
   }
   h3 {
@@ -545,7 +546,11 @@ export default {
     .box {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      &:nth-child(1) {
+        h2 {
+          font-size: 34px;
+        }
+      }
       img {
         position: static;
       }
@@ -567,7 +572,12 @@ export default {
   }
   @media only screen and (min-width: $large) {
     > .container {
-      @include grid-boxes(4, 1, 1fr, auto, 0);
+      @include grid-boxes(5, 1, 1fr, auto, 0);
+      .box {
+        h3 {
+          font-size: 20px;
+        }
+      }
     }
   }
 }
@@ -576,6 +586,16 @@ export default {
     padding: 40px 0;
     background: $goldendream;
     color: $cod;
+    .box {
+      &:nth-child(1) {
+        h2 {
+          font-size: 36px;
+        }
+      }
+      h3 {
+        font-size: 24px;
+      }
+    }
   }
   .upper,
   .lower {

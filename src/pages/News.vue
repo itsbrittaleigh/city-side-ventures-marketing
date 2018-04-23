@@ -12,40 +12,59 @@
             <li
               v-for="(category, index) in categories"
               :key="index"
-              @click="filterByCategory(index)"
+              @click="filterByCategory(category)"
             >
               {{ category }}
             </li>
           </ul>
           <h3>Recent Posts</h3>
-          <ul>
+          <ul class="recent">
             <li
               v-for="(article, index) in recentArticles"
               :key="index"
             >
-              <router-link :to="{ name: 'News' }">{{ article.name }}</router-link>
+              <router-link :to="{
+                name: 'Post',
+                params: {
+                  year: getYear(article.date),
+                  month: getMonth(article.date),
+                  date: getDate(article.date),
+                  title: slugify(article.title),
+                },
+              }">
+                {{ article.title }}
+              </router-link>
             </li>
           </ul>
           <h3>Archives</h3>
           <ul>
             <li
-              v-for="(month, index) in archivedArticleMonths"
-              :key="index"
-              @click="filterByArchiveDate(index)"
+              v-for="(value, key) in archives"
+              :key="key"
+              @click="filterByMonth(key)"
             >
-              {{ month }} ({{ month.length }})
+              {{ key }} ({{ value.length }})
             </li>
           </ul>
         </aside>
         <div class="box articles">
-          <div
+          <router-link
             v-for="(article, index) in articles"
             :key="index"
             class="box"
+            :to="{
+              name: 'Post',
+              params: {
+                year: getYear(article.date),
+                month: getMonth(article.date),
+                date: getDate(article.date),
+                title: slugify(article.title),
+              },
+            }"
           >
             <img :src="article.image.image" :alt="article.image.alt">
             <h2 class="title">{{ article.title }}</h2>
-          </div>
+          </router-link>
         </div>
       </div>
     </template>
@@ -54,16 +73,14 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
+import moment from 'moment';
 import Base from './Base';
 import Hero from '../components/Hero';
 
 export default {
   name: 'News',
   data() {
-    return {
-      recentArticles: [],
-      archivedArticleMonths: [],
-    };
+    return {};
   },
   components: {
     'base-page': Base,
@@ -73,12 +90,41 @@ export default {
     ...mapGetters([
       'articles',
       'categories',
+      'recentArticles',
+      'archives',
     ]),
   },
   methods: {
     ...mapActions([
       'filterByCategory',
+      'filterByMonth',
     ]),
+    getYear(datetime) {
+      return moment(datetime, 'YYYY-MM-DD').year();
+    },
+    getMonth(datetime) {
+      const month = moment(datetime, 'YYYY-MM-DD').month() + 1;
+      if (month < 10) {
+        return `0${month}`;
+      }
+      return month;
+    },
+    getDate(datetime) {
+      const date = moment(datetime, 'YYYY-MM-DD').date();
+      if (date < 10) {
+        return `0${date}`;
+      }
+      return date;
+    },
+    slugify(text) {
+      /* eslint-disable no-useless-escape */
+      return text.toString().toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w\-]+/g, '')
+        .replace(/\-\-+/g, '-')
+        .replace(/^-+/, '')
+        .replace(/-+$/, '');
+    },
   },
 };
 </script>
@@ -102,11 +148,11 @@ export default {
     left: 0;
     right: 0;
     text-overflow: ellipsis;
-    background: black;
+    @include background-opacity($cod, 0.8);
     padding: 15px;
     margin: 0;
     @include title-font;
-    color: white;
+    color: $white;
     text-align: center;
   }
   img {
@@ -124,14 +170,21 @@ export default {
 }
 .navigation {
   padding: 20px;
-  background: lightgray;
+  background: $wildsand;
   h3 {
     @include title-font;
+    color: $danube;
     margin-bottom: 5px;
   }
   ul {
     padding-left: 15px;
     margin: 5px 0 50px;
+    li {
+      margin-bottom: 10px;
+    }
+    a {
+      text-decoration: none;
+    }
   }
 }
 </style>

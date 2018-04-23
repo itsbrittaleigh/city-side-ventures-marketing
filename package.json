@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "vue": "^2.5.2",
+    "vue-markdown-loader": "^2.4.1",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
@@ -41,7 +42,11 @@
     "file-loader": "^1.1.4",
     "form-urlencoded": "^2.0.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^2.30.1",
+    "lodash": "^4.17.5",
+    "markdown-loader": "^2.0.2",
+    "moment": "^2.22.1",
     "node-notifier": "^5.1.2",
     "node-sass": "^4.8.3",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
@@ -59,7 +64,6 @@
     "url-loader": "^0.5.8",
     "vue-click-outside": "^1.0.7",
     "vue-loader": "^13.3.0",
-    "vue-markdown-loader": "^2.4.1",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
     "vuex": "^3.0.1",
