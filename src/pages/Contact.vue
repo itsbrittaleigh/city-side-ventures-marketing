@@ -8,35 +8,33 @@
           before. Let’s get in touch."
       >
       </hero-section>
-      <div class="container padded-section">
-        <div class="contact-methods">
-          <div class="box box-gray">
-            <img src="https://fillmurray.com/100/100" alt="location pin icon">
-            <h3>Headquarters</h3>
-            <address>
-              37000 Grand River Avenue<br>
-              Suite #310<br>
-              Farmington Hills, MI 48335
-            </address>
-            <h3>Offices Worldwide</h3>
-            <p>
-              Detroit | Palo Alto<br>
-              Chicago | Tel Aviv
-            </p>
-          </div>
-          <div class="box box-yellow">
-            <img src="https://fillmurray.com/100/100" alt="cell phone icon">
-            <h3>Phone</h3>
-            <a href="tel:+12484304336">(248) 430 - 4336</a>
-            <h3>Email</h3>
-            <a href="mailto:contact@citysideventures.com">contact@citysideventures.com</a>
-          </div>
-          <div class="box box-blue">
-            <img src="https://fillmurray.com/100/100" alt="email icon">
-            <h3>Newsletter</h3>
-            <p>Sign up to receive updates about City Side Ventures</p>
-            <newsletter-form></newsletter-form>
-          </div>
+      <div class="contact-methods">
+        <div class="box box-gray">
+          <img src="https://fillmurray.com/100/100" alt="location pin icon">
+          <h3>Headquarters</h3>
+          <address>
+            37000 Grand River Avenue<br>
+            Suite #310<br>
+            Farmington Hills, MI 48335
+          </address>
+          <h3>Offices Worldwide</h3>
+          <p>
+            Detroit | Palo Alto<br>
+            Chicago | Tel Aviv
+          </p>
+        </div>
+        <div class="box box-yellow">
+          <img src="https://fillmurray.com/100/100" alt="cell phone icon">
+          <h3>Phone</h3>
+          <a href="tel:+12484304336">(248) 430 - 4336</a>
+          <h3>Email</h3>
+          <a href="mailto:contact@citysideventures.com">contact@citysideventures.com</a>
+        </div>
+        <div class="box box-blue">
+          <img src="https://fillmurray.com/100/100" alt="email icon">
+          <h3>Newsletter</h3>
+          <p>Sign up to receive updates about City Side Ventures</p>
+          <newsletter-form></newsletter-form>
         </div>
       </div>
       <div class="container padded-section">
@@ -122,6 +120,18 @@ h2 {
   }
   @media only screen and (min-width: $medium) {
     @include grid-boxes(3, 1, 1fr, auto, 0);
+  }
+  @media only screen and (min-width: $xlarge) {
+    .box {
+      padding: 170px 50px 50px;
+      h3, p, address, a {
+        font-size: 16px;
+      }
+      img {
+        left: 50px;
+        top: 50px;
+      }
+    }
   }
 }
 </style>

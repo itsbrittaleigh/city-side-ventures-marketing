@@ -187,7 +187,7 @@
               and North America.
             </p>
             <router-link
-              :to="{ name: 'BlueVenture' }"
+              :to="{ name: 'CityX' }"
               class="button button-red"
             >
               Learn More

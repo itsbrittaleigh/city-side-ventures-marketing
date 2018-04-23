@@ -133,7 +133,7 @@ const state = {
       },
       intro: 'GREENSEED is an early stage equity-based venture capital fund that was created to seed and grow early stage tech-based companies. It is our highly attractive hybrid investment model. The fund will match the founder(s) capital investment of up to $150K in mix resources per deal for qualified startups. City Side will provide a Full-Stack development team, Seasoned Go-To-Market management team, Board of Directors, Coaching and Mentoring, and Startup Capital to the companies.',
       investmentCapital: '$10M',
-      maxInvestmentSize: '$150M',
+      maxInvestmentSize: '$150K',
       minimumQualifications: [
         'The company must be a tech-based company',
         'The company must have a viable business use case',
@@ -166,7 +166,7 @@ const state = {
       },
       intro: 'Venture (248) is an equity-based Venture Capital Fund that was created to fund and grow second stage, Michigan-based technology companies. Its sole purpose is to help grow the Michigan tech startup ecosystem. Venture (248) is an equity-based Venture Capital Fund that was created to fund and grow Second Stage Michigan Tech companies. Its sole purpose is to grow the Michigan Tech Startup Ecosystem. The fund provides equity-based capital investment of up to $500K per deal for qualified startups.',
       investmentCapital: '$20M',
-      maxInvestmentSize: '$500M',
+      maxInvestmentSize: '$500K',
       minimumQualifications: [
         'The company must be a tech-based company',
         'The company must have a viable business use case',

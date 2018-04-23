@@ -91,9 +91,12 @@ ul {
     a {
       text-decoration: none;
       color: $goldendream;
-      font-size: 14px;
       padding: 10px 0;
       display: block;
+      font-size: 14px;
+      @media only screen and (min-width: $xlarge) {
+        font-size: 18px;
+      }
     }
   }
 }
@@ -102,23 +105,32 @@ ul {
   h6 {
     color: white;
     font-weight: bold;
-    font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin: 0 0 5px 0;
+    font-size: 12px;
+    @media only screen and (min-width: $xlarge) {
+      font-size: 14px;
+    }
   }
   address {
     color: white;
-    font-size: 12px;
     line-height: 1.8;
     font-style: normal;
+    font-size: 12px;
+    @media only screen and (min-width: $xlarge) {
+      font-size: 14px;
+    }
   }
   a {
-    font-size: 12px;
     color: $white;
     text-decoration: none;
     padding: 5px 0;
     display: block;
+    font-size: 12px;
+    @media only screen and (min-width: $xlarge) {
+      font-size: 14px;
+    }
   }
 }
 .secondary {
@@ -158,7 +170,19 @@ ul {
     @media only screen and (min-width: $large) {
       margin-right: 100px;
     }
+    @media only screen and (min-width: $xlarge) {
+      margin-right: 150px;
+      ul {
+        li {
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    @media only screen and (min-width: $xxlarge) {
+      margin-right: 200px;
+    }
   }
 }
 </style>
-

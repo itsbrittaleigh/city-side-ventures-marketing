@@ -36,19 +36,19 @@
           <img src="../assets/images/about.jpg" alt="">
         </div>
       </section>
-      <section class="principles padded-section">
-        <div class="container">
-          <h2>Our Operating Principles</h2>
-          <div class="principles-boxes">
-            <div
-              v-for="(principle, index) in principles"
-              :key="index"
-              :class="['box', principle.class]"
-            >
-              <span>{{ index + 1}}</span>
-              <p class="title">{{ principle.title }}</p>
-              <p>{{ principle.description }}</p>
-            </div>
+      <section class="principles">
+        <div class="principles-boxes">
+          <div class="box box-light-gray intro">
+            <h2>Our Operating Principles</h2>
+          </div>
+          <div
+            v-for="(principle, index) in principles"
+            :key="index"
+            :class="['box', principle.class]"
+          >
+            <span>{{ index + 1}}</span>
+            <p class="title">{{ principle.title }}</p>
+            <p>{{ principle.description }}</p>
           </div>
         </div>
       </section>
@@ -66,18 +66,15 @@
         <div class="box logos">
           <div class="box">
             <img src="../assets/images/partners/blue-venture-fund.png" alt="">
-            <p>Lorem ipsum dolor sit amet consectuer adipiscing</p>
-          </div><div class="box">
+          </div>
+          <div class="box">
             <img src="../assets/images/partners/bss-capital-ventures.png" alt="">
-            <p>Lorem ipsum dolor sit amet consectuer adipiscing</p>
           </div>
           <div class="box">
             <img src="../assets/images/partners/sidepitch.png" alt="">
-            <p>Lorem ipsum dolor sit amet consectuer adipiscing</p>
           </div>
           <div class="box">
             <img src="../assets/images/partners/venture-248.png" alt="">
-            <p>Lorem ipsum dolor sit amet consectuer adipiscing</p>
           </div>
         </div>
       </section>
@@ -160,8 +157,7 @@ export default {
 }
 .principles {
   .principles-boxes {
-    margin: 40px auto 0;
-    @include grid-boxes(1, 6, 1fr, 1fr, 25px);
+    @include grid-boxes(1, 7, 1fr, 1fr, 0);
     .box {
       padding: 80px 20px 30px;
       &.box-yellow {
@@ -184,6 +180,7 @@ export default {
       }
       &.box-light-gray {
         background: $gray;
+        h2,
         p {
           color: $white;
         }
@@ -210,10 +207,20 @@ export default {
       font-size: 32px;
     }
     @media only screen and (min-width: $medium) {
-      @include grid-boxes(2, 3, 1fr, 1fr, 25px);
+      @include grid-boxes(2, 4, 1fr, 1fr, 0);
     }
     @media only screen and (min-width: $large) {
-      @include grid-boxes(3, 2, 1fr, 1fr, 25px);
+      @include grid-boxes(3, 3, 1fr, 1fr, 0);
+    }
+    @media only screen and (min-width: $xlarge) {
+      @include grid-boxes(4, 2, 1fr, auto, 0);
+      .box {
+        padding: 120px 40px 60px;
+      }
+      .intro {
+        grid-row: 1 / 3;
+        background: $danube !important;
+      }
     }
   }
   @media only screen and (min-width: $xxlarge) {
