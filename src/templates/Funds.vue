@@ -305,12 +305,12 @@ export default {
       padding-left: calc((100vw - 1170px) / 2);
     }
   }
-  @media only screen and (min-width: $large) {
+  @media only screen and (min-width: $xxlarge) {
     .box:not(.image) {
       padding-left: calc((100vw - 1410px) / 2);
     }
   }
-  @media only screen and (min-width: $large) {
+  @media only screen and (min-width: $xxxlarge) {
     .box:not(.image) {
       padding-left: calc((100vw - 1570px) / 2);
     }

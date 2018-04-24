@@ -29,6 +29,9 @@
                 <router-link :to="{ name: 'Process' }">Our Process</router-link>
               </li>
               <li>
+                <router-link :to="{ name: 'Portfolio' }">Our Portfolio</router-link>
+              </li>
+              <li>
                 <router-link :to="{ name: 'Focus' }">Our Focus</router-link>
               </li>
               <li>

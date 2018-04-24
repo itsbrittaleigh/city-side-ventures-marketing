@@ -17,13 +17,20 @@
 
 <script>
 const defaultPhoto = require('../assets/images/covers/detroit.jpg');
-const newsPhoto = require('../assets/images/covers/news.jpg');
+
 const aboutPhoto = require('../assets/images/covers/about.jpg');
-const blueVenturePhoto = require('../assets/images/covers/blueventure.jpg');
+const contactPhoto = require('../assets/images/covers/contact.jpg');
 const focusPhoto = require('../assets/images/covers/focus.jpg');
+const newsPhoto = require('../assets/images/covers/news.jpg');
+const portfolioPhoto = require('../assets/images/covers/portfolio.jpg');
 const processPhoto = require('../assets/images/covers/process.jpg');
-const venture248Photo = require('../assets/images/covers/venture248.jpg');
+const teamPhoto = require('../assets/images/covers/team.jpg');
+
+const blueVenturePhoto = require('../assets/images/covers/blueventure.jpg');
+const cityXPhoto = require('../assets/images/covers/cityx.jpg');
 const greenseedPhoto = require('../assets/images/covers/greenseed.jpg');
+const venture248Photo = require('../assets/images/covers/venture248.jpg');
+
 const cashPostPhoto = require('../assets/images/covers/news/cash.jpg');
 const dominoPostPhoto = require('../assets/images/covers/news/domino.jpeg');
 const newsPostPhoto = require('../assets/images/covers/news/news.jpg');
@@ -53,9 +60,9 @@ export default {
   data() {
     return {
       images: {
+        about: aboutPhoto,
         news: newsPhoto,
         default: defaultPhoto,
-        about: aboutPhoto,
         blueVenture: blueVenturePhoto,
         focus: focusPhoto,
         process: processPhoto,
@@ -67,6 +74,10 @@ export default {
         weatherPost: weatherPostPhoto,
         savePost: savePostPhoto,
         dominoPost: dominoPostPhoto,
+        contact: contactPhoto,
+        portfolio: portfolioPhoto,
+        team: teamPhoto,
+        cityX: cityXPhoto,
       },
     };
   },

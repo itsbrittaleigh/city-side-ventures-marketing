@@ -4,8 +4,9 @@
       <hero-section
         heading="Our Investment Portfolio"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        name="portfolio"
       >
       </hero-section>
       <section class="portfolio">
@@ -120,7 +121,7 @@ export default {
     }
   }
   @media only screen and (min-width: $medium) {
-    @include grid-boxes(2, 9, 1fr, 200px, 0);
+    @include grid-boxes(2, 12, 1fr, 200px, 0);
     .box.content {
       padding: 20px;
       > .container {
@@ -133,13 +134,13 @@ export default {
     }
   }
   @media only screen and (min-width: $large) {
-    @include grid-boxes(6, 3, 1fr, 300px, 0);
+    @include grid-boxes(6, 4, 1fr, 300px, 0);
     .box.bkg-offset-desktop {
       background: $wildsand;
     }
   }
   @media only screen and (min-width: $large) {
-    @include grid-boxes(6, 3, 100vw / 6, 100vw / 6, 0);
+    @include grid-boxes(6, 4, 100vw / 6, 100vw / 6, 0);
   }
 }
 </style>

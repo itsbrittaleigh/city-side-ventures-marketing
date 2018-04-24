@@ -192,7 +192,7 @@
             >
               Learn More
             </router-link>
-            <img src="https://fillmurray.com/100/100" alt="">
+            <img src="../assets/images/icons/fund-cityx-black.svg" alt="">
           </div>
         </div>
       </div>
@@ -256,7 +256,7 @@
               <img src="../assets/images/logos/safewhistle.png" alt="">
             </div>
             <div class="box">
-              <img src="../assets/images/logos/argonomo-black.svg" alt="">
+              <img src="../assets/images/logos/argonomo.png" alt="">
             </div>
             <div class="box">
               <img src="../assets/images/logos/we-conduct.png" alt="">

@@ -7,6 +7,7 @@
           entrpreneurs ready to go to work with you in the trenches, in the mud,
           and on the grind. Our managing partners are multi-generational and
           highly diverse with over 100+ years of combined business success."
+        name="team"
       >
       </hero-section>
       <div class="team">

@@ -65,16 +65,31 @@
         </div>
         <div class="box logos">
           <div class="box">
-            <img src="../assets/images/partners/blue-venture-fund.png" alt="">
+            <img src="../assets/images/logos/argonomo-ventures.png" alt="">
           </div>
           <div class="box">
-            <img src="../assets/images/partners/bss-capital-ventures.png" alt="">
+            <img src="../assets/images/logos/blue-venture-fund.png" alt="">
           </div>
           <div class="box">
-            <img src="../assets/images/partners/sidepitch.png" alt="">
+            <img src="../assets/images/logos/bss-capital-ventures.png" alt="">
           </div>
           <div class="box">
-            <img src="../assets/images/partners/venture-248.png" alt="">
+            <img src="../assets/images/logos/cynthetik-ventures.png" alt="">
+          </div>
+          <div class="box">
+            <img src="../assets/images/logos/eiconica-ventures.png" alt="">
+          </div>
+          <div class="box">
+            <img src="../assets/images/logos/ksy-ventures.png" alt="">
+          </div>
+          <div class="box">
+            <img src="../assets/images/logos/motor-city-venture-fund.png" alt="">
+          </div>
+          <div class="box">
+            <img src="../assets/images/logos/sidepitch.png" alt="">
+          </div>
+          <div class="box">
+            <img src="../assets/images/logos/venture-248.png" alt="">
           </div>
         </div>
       </section>
@@ -254,7 +269,7 @@ export default {
   .logos {
     padding: 50px 25px;
     background: lightgray;
-    @include grid-boxes(2, 2, 1fr, 1fr, 30px);
+    @include grid-boxes(3, 3, 1fr, 1fr, 30px);
     .box {
       display: flex;
       flex-direction: column;
@@ -265,6 +280,7 @@ export default {
       max-height: 75px;
       max-width: 80%;
       object-fit: contain;
+      filter: grayscale(1);
     }
     p {
       text-align: center;
