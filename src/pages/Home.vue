@@ -336,57 +336,14 @@ export default {
       margin-top: 20px;
     }
   }
-  @media only screen and (min-width: $small) {
-    .box {
-      > .container {
-        width: $small - 30px;
-        left: calc((100vw - 576px) / 2);
-      }
-    }
-  }
   @media only screen and (min-width: $medium) {
-    @include grid-boxes(2, 1, 1fr, calc((100vh - 70px) / 2), 0);
-    .box {
-      > .container {
-        width: auto;
-        left: calc((100vw - 738px) / 2);
-        right: calc((100vw - 738px) / 2);
-      }
-    }
+    @include grid-boxes(2, 1, 1fr, 500px, 0);
   }
   @media only screen and (min-width: $large) {
     @include grid-boxes(2, 1, 50vw, 50vw, 0);
     .box {
       h1 {
         font-size: 64px;
-      }
-      > .container {
-        left: calc((100vw - 962px) / 2);
-        right: calc((100vw - 962px) / 2);
-      }
-    }
-  }
-  @media only screen and (min-width: $xlarge) {
-    .box {
-      > .container {
-        left: calc((100vw - 1170px) / 2);
-        right: calc((100vw - 1170px) / 2);
-      }
-    }
-  }
-  @media only screen and (min-width: $xxlarge) {
-    .box {
-      > .container {
-        left: calc((100vw - 1410px) / 2);
-        right: calc((100vw - 1410px) / 2);
-      }
-    }
-  }
-  @media only screen and (min-width: $xxxlarge) {
-    .box {
-      > .container {
-        left: calc((100vw - 1570px) / 2);
-        right: calc((100vw - 1570px) / 2);
       }
     }
   }
@@ -559,6 +516,8 @@ export default {
     position: absolute;
     bottom: 20px;
     right: 20px;
+    height: 100px;
+    width: 100px;
   }
   p {
     margin: 0;
@@ -587,8 +546,6 @@ export default {
       }
       img {
         order: 0;
-        height: 100px;
-        width: 100px;
         margin-bottom: 40px;
       }
       h3,
@@ -669,23 +626,30 @@ export default {
     }
   }
   @media only screen and (min-width: $large) {
-    @include grid-boxes(2, 1, 1fr, 400px, 0);
-    grid-template-columns: auto 800px;
+    @include grid-boxes(2, 1, 1fr, 300px, 0);
+    grid-template-columns: auto 600px;
     .upper,
     .lower {
-      @include grid-boxes(4, 1, 200px, 200px, 0);
+      @include grid-boxes(4, 1, 150px, 150px, 0);
     }
     > .box:first-of-type {
       .container {
         width: 100%;
         max-width: 100%;
-        padding-left: calc((100vw - 962px) / 2);
-        padding-right: 20px;
+        padding: 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
       }
+    }
+  }
+  @media only screen and (min-width: $xlarge) {
+    @include grid-boxes(2, 1, 1fr, 400px, 0);
+    grid-template-columns: auto 800px;
+    .upper,
+    .lower {
+      @include grid-boxes(4, 1, 200px, 200px, 0);
     }
   }
   @media only screen and (min-width: $xxlarge) {
@@ -694,25 +658,6 @@ export default {
     .upper,
     .lower {
       @include grid-boxes(4, 1, 300px, 300px, 0);
-    }
-    > .box:first-of-type {
-      .container {
-        padding-left: calc((100vw - 1170px) / 2);
-      }
-    }
-  }
-  @media only screen and (min-width: $xxlarge) {
-    > .box:first-of-type {
-      .container {
-        padding-left: calc((100vw - 1410px) / 2);
-      }
-    }
-  }
-  @media only screen and (min-width: $xxxlarge) {
-    > .box:first-of-type {
-      .container {
-        padding-left: calc((100vw - 1570px) / 2);
-      }
     }
   }
 }

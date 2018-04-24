@@ -166,8 +166,7 @@ export default {
     .box:not(.image) {
       > .container {
         width: 100%;
-        padding-left: calc((100vw - 962px) / 2);
-        padding-right: 30px;
+        padding: 0 30px;
       }
     }
   }
@@ -175,7 +174,6 @@ export default {
     @include grid-boxes(2, 1, 1fr, auto, 0);
     .box:not(.image) {
       > .container {
-        padding-left: calc((100vw - 1170px) / 2);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -229,33 +227,11 @@ export default {
     .box:not(.image) {
       > .container {
         width: 100%;
-        padding-left: 40px;
-        padding-right: calc((100vw - 962px) / 2);
+        padding: 0 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-      }
-    }
-  }
-  @media only screen and (min-width: $xlarge) {
-    .box:not(.image) {
-      > .container {
-        padding-right: calc((100vw - 1170px) / 2);
-      }
-    }
-  }
-  @media only screen and (min-width: $xxlarge) {
-    .box:not(.image) {
-      > .container {
-        padding-right: calc((100vw - 1410px) / 2);
-      }
-    }
-  }
-  @media only screen and (min-width: $xxxlarge) {
-    .box:not(.image) {
-      > .container {
-        padding-right: calc((100vw - 1570px) / 2);
       }
     }
   }

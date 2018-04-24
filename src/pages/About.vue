@@ -141,31 +141,7 @@ export default {
       > .container {
         width: 100%;
         max-width: 100%;
-        padding-left: calc((100vw - 962px) / 2);
-        padding-right: 25px;
-      }
-    }
-  }
-  @media only screen and (min-width: $xlarge) {
-    .box:not(.image) {
-      > .container {
-        padding-left: calc((100vw - 1170px) / 2);
-        padding-right: 40px;
-      }
-    }
-  }
-  @media only screen and (min-width: $xxlarge) {
-    .box:not(.image) {
-      > .container {
-        padding-left: calc((100vw - 1410px) / 2);
-      }
-    }
-  }
-  @media only screen and (min-width: $xxxlarge) {
-    .box:not(.image) {
-      > .container {
-        padding-left: calc((100vw - 1570px) / 2);
-        padding-right: 40px;
+        padding: 0 40px;
       }
     }
   }
