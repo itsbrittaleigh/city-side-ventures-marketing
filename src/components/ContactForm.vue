@@ -22,7 +22,6 @@
         <textarea name="message" id="message" rows="10" v-model="message"></textarea>
       </div>
       <p v-if="showSuccess">Your message was sent successfully</p>
-      <p v-if="showError">There was an error, please try again later.</p>
       <button type="submit" class="button button-red">Submit</button>
     </div>
   </form>
@@ -30,27 +29,31 @@
 
 <script>
 import axios from 'axios';
-import formurlencoded from 'form-urlencoded';
 
 export default {
   name: 'ContactForm',
   data() {
     return {
-      name: '',
-      phone: '',
-      email: '',
-      company: '',
-      message: '',
-      showError: false,
+      contact: {
+        name: '',
+        phone: '',
+        email: '',
+        company: '',
+        message: '',
+      },
       showSuccess: false,
     };
   },
   methods: {
-    submitForm(data) {
-      const config = { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } };
-      axios.post('', formurlencoded(data), config)
-        .then(this.showSuccess = true)
-        .catch(this.showError = true);
+    submitForm() {
+      const config = { headers: { 'Content-Type': 'application/json' } };
+      axios
+        .post(
+          'https://aiol4k13t1.execute-api.us-east-1.amazonaws.com/prod',
+          JSON.stringify(this.contact),
+          config,
+        )
+        .then((this.showSuccess = true));
     },
   },
 };
