@@ -3,7 +3,7 @@
     <div class="primary">
       <div class="container">
         <router-link :to="{ name: 'Home' }" class="logo">
-          <img src="../assets/images/logos/cityside-white.svg" alt="CitySide Ventures logo">
+          <img src="../assets/images/logos/cityside-white.png" alt="CitySide Ventures logo">
         </router-link>
         <div class="content">
           <nav>
