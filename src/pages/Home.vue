@@ -407,9 +407,15 @@ export default {
       .large {
         font-size: 48px;
         font-weight: 100;
+        @media only screen and (min-width: 1800px) {
+          font-size: 68px;
+        }
       }
       .small {
         @include title-font;
+        @media only screen and (min-width: 1800px) {
+          font-size: 15px;
+        }
       }
     }
   }
