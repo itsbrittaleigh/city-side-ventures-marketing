@@ -20,9 +20,6 @@ address {
   font-size: 15px;
   line-height: 1.7;
   color: $cod;
-  @media only screen and (min-width: $xxlarge) {
-    font-size: 20px;
-  }
 }
 
 h1 {
