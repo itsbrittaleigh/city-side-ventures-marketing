@@ -24,14 +24,14 @@
             Chicago | Tel Aviv
           </p>
         </div>
-        <div class="box box-yellow">
-          <img src="../assets/images/icons/phone-black.svg" alt="cell phone icon">
+        <div class="box box-blue">
+          <img src="../assets/images/icons/phone-white.svg" alt="cell phone icon">
           <h3>Phone</h3>
           <a href="tel:+12484304336">(248) 430 - 4336</a>
           <h3>Email</h3>
           <a href="mailto:contact@citysideventures.com">contact@citysideventures.com</a>
         </div>
-        <div class="box box-blue">
+        <div class="box box-light-gray">
           <img src="../assets/images/icons/letter-white.svg" alt="email icon">
           <h3>Newsletter</h3>
           <p>Sign up to receive updates about City Side Ventures</p>
@@ -95,10 +95,10 @@ h2 {
         color: $white;
       }
     }
-    &.box-yellow {
-      background: $goldendream;
+    &.box-light-gray {
+      background: $gray;
       h3, p, address, a {
-        color: $cod;
+        color: $white;
       }
     }
     &.box-blue {

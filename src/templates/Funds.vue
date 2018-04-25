@@ -162,6 +162,15 @@ export default {
 @import "../assets/styles/components/hero";
 @import "../assets/styles/templates/funds";
 .introduction {
+  p {
+    color: #747474;
+    &.color-red {
+      color: $nightshadz;
+    }
+    &.color-blue {
+      color: $danube;
+    }
+  }
   .statistics {
     p.large {
       font-size: 70px;
@@ -172,6 +181,7 @@ export default {
     p.small {
       @include title-font;
       text-align: center;
+      margin: 0;
     }
   }
   @media only screen and (min-width: $medium) {
@@ -197,6 +207,7 @@ export default {
   }
   p, ul, li {
     font-size: 14px;
+    color: #747474;
   }
   ul {
     padding-left: 15px;

@@ -1,6 +1,5 @@
 @import "../variables";
 .hero {
-  min-height: calc(60vh - 60px); // 60px - header height
   padding: 60px 0 40px;
   position: relative;
   display: flex;
@@ -31,24 +30,22 @@
     @include title-font;
     font-size: 46px;
     margin: 0;
-    color: $cod;
+    color: #313131;
   }
   p {
     margin: 0;
-    color: $cod;
+    color: #313131;
     font-size: 19px;
     &.large {
       font-size: 22px;
-    }
-    &:not(.large) {
-      margin-top: 20px;
+      margin-bottom: 15px;
     }
   }
 }
 
 @media only screen and (min-width: $medium) {
   .hero {
-    padding: 120px 0 80px;
+    padding: 120px 0 60px;
     > .container {
       max-width: 680px;
       margin-left: calc((100vw - 680px) / 3);

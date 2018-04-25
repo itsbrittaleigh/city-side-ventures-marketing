@@ -137,7 +137,7 @@
             >
               Learn More
             </router-link>
-            <img src="../assets/images/icons/fund-greenseed-black.svg" alt="">
+            <img src="../assets/images/icons/fund-greenseed-gray.svg" alt="">
           </div>
           <div class="box">
             <h3>Venture (248)</h3>
@@ -154,7 +154,7 @@
             >
               Learn More
             </router-link>
-            <img src="../assets/images/icons/fund-venture248-black.svg" alt="">
+            <img src="../assets/images/icons/fund-venture248-gray.svg" alt="">
           </div>
           <div class="box">
             <h3>Blue Venture</h3>
@@ -171,7 +171,7 @@
             >
               Learn More
             </router-link>
-            <img src="../assets/images/icons/fund-blueventure-black.svg" alt="">
+            <img src="../assets/images/icons/fund-blueventure-gray.svg" alt="">
           </div>
           <div class="box">
             <h3>City[X]</h3>
@@ -188,7 +188,7 @@
             >
               Learn More
             </router-link>
-            <img src="../assets/images/icons/fund-cityx-black.svg" alt="">
+            <img src="../assets/images/icons/fund-cityx-gray.svg" alt="">
           </div>
         </div>
       </div>

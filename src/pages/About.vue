@@ -4,7 +4,8 @@
       <hero-section
         heading="About Us"
         description="Our venture group is more than just traditional investors, we are an early
-          stage hybrid boutique private equity and venture capital firm"
+          stage hybrid boutique private equity and venture capital firm that is willing to look
+          deeper, wider, and bigger."
         name="about"
       >
       </hero-section>
@@ -133,15 +134,19 @@ export default {
   }
   .box:not(.image) {
     padding: 40px 0;
-    background: $wildsand;
+    background: #f2f2f2;
+    p {
+      color: #747474;
+    }
   }
   @media only screen and (min-width: $large) {
     @include grid-boxes(2, 1, 1fr, auto, 0);
     .box:not(.image) {
+      padding: 0;
       > .container {
         width: 100%;
         max-width: 100%;
-        padding: 0 40px;
+        padding: 100px 80px;
       }
     }
   }
@@ -154,7 +159,7 @@ export default {
       &.box-yellow {
         background: $goldendream;
         p {
-          color: $cod;
+          color: #313131;
         }
       }
       &.box-dark-gray {
@@ -223,7 +228,6 @@ export default {
 .partners {
   .box.statistic {
     background: $goldendream;
-    color: $cod;
     text-align: center;
     padding: 40px 0;
     > .container {
@@ -261,9 +265,15 @@ export default {
     p {
       text-align: center;
     }
+    @media only screen and (min-width: $large) {
+      @include grid-boxes(3, 3, 1fr, 1fr, 50px);
+    }
   }
   @media only screen and (min-width: $large) {
     @include grid-boxes(2, 1, 1fr, auto, 0);
+    .box.statistic {
+      padding: 80px 0;
+    }
   }
 }
 </style>

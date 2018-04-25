@@ -331,7 +331,7 @@ button {
         font-size: 12px;
       }
       a.router-link-active {
-        background: $wildsand;
+        background: #cfcfcf;
         padding: 0 20px;
       }
       ul {
@@ -339,7 +339,7 @@ button {
         top: 100%;
         left: 0;
         z-index: 20;
-        background: $wildsand;
+        background: #f5f5f5;
         padding: 0;
         overflow: visible;
         li {
@@ -352,12 +352,14 @@ button {
             font-size: 12px;
             padding: 15px 20px;
             transition: 0.4s;
-            color: $cod;
+            color: #353532;
             &:hover {
-              border-left: 5px solid $gray;
+              border-left: 5px solid #cfcfcf;
             }
             &.router-link-active {
               padding: 15px 20px;
+              background: transparent;
+              border-left: 5px solid #cfcfcf;
             }
           }
         }
@@ -370,7 +372,7 @@ button {
         width: 100%;
       }
       &.open {
-        background: $wildsand;
+        background: #cfcfcf;
       }
     }
     .nav-right {

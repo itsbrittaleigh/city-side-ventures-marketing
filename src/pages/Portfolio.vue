@@ -98,8 +98,8 @@ export default {
     justify-content: center;
     padding: 10px;
     .logo {
-      max-height: 75px;
-      max-width: 75%;
+      max-height: 50px;
+      max-width: 55%;
       object-fit: contain;
       filter: grayscale(100%);
       transition: 0.3s;
@@ -114,7 +114,8 @@ export default {
   .box.content {
     padding: 30px 0;
     p {
-      margin: 5px;
+      font-size: 15px;
+      margin: 0;
       &.title {
         @include title-font;
       }

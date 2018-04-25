@@ -18,7 +18,6 @@
 @include container-width($small);
 @include container-width($medium);
 @include container-width($large);
-@include container-width($xlarge);
 
 // hero overrides
 .hero {
@@ -34,6 +33,7 @@
       img {
         height: 100px;
         width: auto;
+        margin-bottom: 15px;
       }
       &.bkg-yellow {
         background: $goldendream;
@@ -74,7 +74,7 @@
         margin: 0 auto;
       }
       .information-box {
-        width: 700px;
+        width: 670px;
       }
     }
   }

@@ -164,9 +164,18 @@ export default {
   @media only screen and (min-width: $large) {
     @include grid-boxes(2, 1, 1fr, auto, 0);
     .box:not(.image) {
+      padding: 80px 80px 60px 40px;
+      h2,
+      p {
+        padding-left: 82px;
+      }
       > .container {
         width: 100%;
-        padding: 0 30px;
+      }
+      .step {
+        p {
+          padding-left: 0;
+        }
       }
     }
   }
@@ -209,14 +218,17 @@ export default {
   }
   .box:not(.image) {
     background: $goldendream;
-    color: $cod;
     padding: 40px 0;
+    h2,
+    p {
+      color: $cod;
+    }
   }
   p {
     margin-top: 5px;
     &.title {
       @include title-font;
-      margin: 20px 0 0;
+      margin: 0;
     }
   }
   a {
@@ -225,9 +237,9 @@ export default {
   @media only screen and (min-width: $large) {
     @include grid-boxes(2, 1, 1fr, auto, 0);
     .box:not(.image) {
+      padding: 80px;
       > .container {
         width: 100%;
-        padding: 0 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
