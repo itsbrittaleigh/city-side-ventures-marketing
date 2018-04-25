@@ -67,7 +67,7 @@
           </div>
         </div>
       </div>
-      <div class="focus padded-section">
+      <div class="focus">
         <div class="container">
           <div class="box">
             <h2>Our Focus</h2>
@@ -128,9 +128,8 @@
             <p class="lead"><em>Pre-Seed Capital</em></p>
             <br>
             <p>
-              GREENSEED is an Angel Fund that invests in early stage companies. It is an
-              equity-based fund created to fund and grow early stage, tech-based companies.
-              It is our highly attractive hybrid investment model.
+              Greenseed is an equity-based Angel Fund created to fund and grow early stage,
+              tech-based companies.
             </p>
             <router-link
               :to="{ name: 'Greenseed' }"
@@ -147,8 +146,7 @@
             <br>
             <p>
               Venture (248) is an equity-based Venture Capital Fund that was created to
-              fund and grow second stage, Michigan-based technology companies. Its sole
-              purpose is to help grow the Michigan tech startup ecosystem.
+              fund and grow second stage, Michigan-based technology companies.
             </p>
             <router-link
               :to="{ name: 'Venture248' }"
@@ -164,9 +162,8 @@
             <p class="lead"><em>Series A - C</em></p>
             <br>
             <p>
-              Blue Venture is a Michigan-based Venture Capital Fund that was established to
-              invest in fast growing, scalable, and post-revenue tech companies located in
-              the US and North America.
+              Blue Venture was established to invest in fast growing, scalable, and
+              post-revenue tech companies.
             </p>
             <router-link
               :to="{ name: 'BlueVenture' }"
@@ -182,9 +179,8 @@
             <p class="lead"><em>Growth Capital</em></p>
             <br>
             <p>
-              CityX is a Michigan-based Private Equity Fund that was established to invest
-              in fast growing, scalable, and post-revenue tech companies located in the US
-              and North America.
+              CityX was established to invest in fast growing, scalable, and post-revenue
+              tech companies.
             </p>
             <router-link
               :to="{ name: 'CityX' }"
@@ -229,7 +225,7 @@
               :to="{ name: 'Portfolio' }"
               class="button inverse"
             >
-              Learn More
+              View our Portfolio
             </router-link>
           </div>
         </div>
@@ -307,11 +303,13 @@ export default {
     &:nth-child(1) {
       color: $goldendream;
       .overlay {
-        @include background-opacity($cod, 0.9);
+        @include background-opacity(#343434, 0.9);
       }
     }
     &:nth-child(2) {
-      color: white;
+      p {
+        color: $white;
+      }
       .overlay {
         @include background-opacity($goldendream, 0.9);
       }
@@ -342,6 +340,10 @@ export default {
   @media only screen and (min-width: $large) {
     @include grid-boxes(2, 1, 50vw, 50vw, 0);
     .box {
+      > .container {
+        width: 80%;
+        padding-left: 10%;
+      }
       h1 {
         font-size: 64px;
       }
@@ -422,11 +424,15 @@ export default {
     }
     .box-yellow {
       background: $goldendream;
-      color: $white;
+      p {
+        color: $white;
+      }
     }
     .box-blue {
       background: $danube;
-      color: $white;
+      p {
+        color: $white;
+      }
     }
     @media only screen and (min-width: $medium) {
       @include grid-boxes(2, 1, 50vw, 50vw, 0);
@@ -439,26 +445,31 @@ export default {
 }
 .focus {
   background: $goldendream;
-  h2,
+  h2 {
+    color: #323232;
+  }
   p {
-    color: $cod;
+    color: #313131;
   }
   a {
     margin-top: 20px;
+    height: 44px;
   }
   .foci {
     @include grid-boxes(2, 3, 1fr, auto, 25px);
     padding: 50px 0;
     img {
-      height: 80px;
+      height: 60px;
       width: auto;
       display: block;
       margin: 0 auto 15px;
     }
     p {
-      margin: 5px 0 0;
+      margin: 5px auto 0;
+      max-width: 150px;
       text-align: center;
       @include title-font;
+      color: #313131;
     }
     @media only screen and (min-width: $medium) {
       @include grid-boxes(3, 2, 1fr, auto, 25px);
@@ -466,30 +477,16 @@ export default {
   }
   @media only screen and (min-width: $large) {
     > .container {
-      @include grid-boxes(2, 1, 1fr, auto, 50px);
+      @include grid-boxes(2, 1, 1fr, auto, 100px);
+      grid-template-columns: 2fr 3fr;
       align-items: center;
-      width: $large - 30px;
-    }
-  }
-  @media only screen and (min-width: $xlarge) {
-    > .container {
-      width: $xlarge - 30px;
-    }
-  }
-  @media only screen and (min-width: $xxlarge) {
-    > .container {
-      width: $xxlarge - 30px;
-    }
-  }
-  @media only screen and (min-width: $xxxlarge) {
-    > .container {
-      width: $xxxlarge - 30px;
+      width: 90%;
     }
   }
 }
 .funds {
   .box {
-    padding: 20px 20px 120px 20px;
+    padding: 20px 30px 120px 30px;
     position: relative;
     color: $cod;
     &:nth-child(odd) {
@@ -500,6 +497,7 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding: 30px;
       h2,
       p {
         color: $white;
@@ -507,25 +505,28 @@ export default {
     }
   }
   h3 {
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase;
-    margin: 0;
+    margin: 0 0 8px;
     font-size: 24px;
+    color: #565656;
   }
   img {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: auto;
   }
   p {
     margin: 0;
+    color: #5b5b5b;
   }
   .button {
     margin-top: 20px;
     position: absolute;
     bottom: 50px;
+    height: 40px;
   }
   @media only screen and (min-width: $medium) {
     > .container {
@@ -536,6 +537,7 @@ export default {
     .box {
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       &:nth-child(1) {
         h2 {
           font-size: 34px;
@@ -594,12 +596,12 @@ export default {
       align-items: center;
       &:nth-child(2),
       &:nth-child(3) {
-        background: lightgray;
+        background: #f5f5f5;
       }
     }
     img {
-      max-width: 80%;
-      max-height: 75px;
+      max-width: 55%;
+      max-height: 45px;
       display: block;
     }
   }
@@ -610,7 +612,7 @@ export default {
     }
     .upper {
       .box:nth-child(even) {
-        background: lightgray;
+        background: #f5f5f5;
       }
       .box:nth-child(odd) {
         background: white;
@@ -618,7 +620,7 @@ export default {
     }
     .lower {
       .box:nth-child(odd) {
-        background: lightgray;
+        background: #f5f5f5;
       }
       .box:nth-child(even) {
         background: white;

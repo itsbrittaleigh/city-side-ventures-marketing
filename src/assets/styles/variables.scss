@@ -35,7 +35,7 @@ $mineshaft: #313131;
 $gray: #808080;
 $wildsand: #f5f5f5;
 $white: #ffffff;
-$goldendream: #f1cf2e;
+$goldendream: #f1c12e;
 $danube: #5a91cd;
 $nightshadz: #9b2859;
 $cerise: #ce2c71;
@@ -117,7 +117,7 @@ $xxxlarge: 1600px;
 /*
  * [a] Defintions
  */
-@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,400,700');
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,400,600');
 $font: 'Libre Franklin', 'Verdana', sans-serif;
 
 /*
@@ -126,7 +126,7 @@ $font: 'Libre Franklin', 'Verdana', sans-serif;
 @mixin title-font {
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 12px;
   @media only screen and (min-width: $xxlarge) {
     font-size: 16px;

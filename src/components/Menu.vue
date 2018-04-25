@@ -275,7 +275,7 @@ button {
         justify-content: center;
         padding: 0 10px;
         text-transform: uppercase;
-        font-weight: bold;
+        font-weight: 600;
         letter-spacing: 1px;
         color: $white;
         &.button-red:hover {
@@ -310,16 +310,7 @@ button {
       height: 100%;
       width: 100%;
       flex: 1;
-      padding-right: calc((100vw - 962px) / 2);
-      @media only screen and (min-width: $xlarge) {
-        padding-right: calc((100vw - 1170px) / 2);
-      }
-      @media only screen and (min-width: $xxlarge) {
-        padding-right: calc((100vw - 1410px) / 2);
-      }
-      @media only screen and (min-width: $xxxlarge) {
-        padding-right: calc((100vw - 1570px) / 2);
-      }
+      padding-right: 5%;
     }
     .nav-left {
       display: flex;
@@ -332,6 +323,9 @@ button {
       display: flex;
       align-items: center;
       position: relative;
+      @media only screen and (min-width: $xlarge) {
+        padding: 0 30px;
+      }
       .heading {
         justify-content: flex-start;
         font-size: 12px;

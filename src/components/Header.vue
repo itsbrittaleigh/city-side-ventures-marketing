@@ -32,24 +32,25 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media only screen and (min-width: $large) {
+  }
+  @media only screen and (min-width: $large) {
+    height: 90px;
+    > .container {
       width: 100%;
       max-width: 100%;
-      padding-left: calc((100vw - 962px) / 2); // large width - 30
+      padding-left: 5%;
       justify-content: flex-start;
       .menu {
         margin-left: 30px;
         flex: 1;
       }
     }
-    @media only screen and (min-width: $xlarge) {
-      padding-left: calc((100vw - 1170px) / 2); // xlarge width - 30
-    }
-    @media only screen and (min-width: $xxlarge) {
-      padding-left: calc((100vw - 1410px) / 2); // xxlarge width - 30
-    }
-    @media only screen and (min-width: $xxxlarge) {
-      padding-left: calc((100vw - 1570px) / 2); // xxxlarge width - 30
+  }
+  @media only screen and (min-width: $xlarge) {
+    > .container {
+      .menu {
+        margin-left: 40px;
+      }
     }
   }
   img {

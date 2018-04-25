@@ -94,7 +94,7 @@ ul {
       padding: 10px 0;
       display: block;
       font-size: 14px;
-      @media only screen and (min-width: $xlarge) {
+      @media only screen and (min-width: $xxlarge) {
         font-size: 18px;
       }
     }
@@ -103,32 +103,32 @@ ul {
 .contact-info {
   padding-top: 10px;
   h6 {
-    color: white;
-    font-weight: bold;
+    color: #5e5e5e;
+    font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin: 0 0 5px 0;
     font-size: 12px;
-    @media only screen and (min-width: $xlarge) {
+    @media only screen and (min-width: $xxlarge) {
       font-size: 14px;
     }
   }
   address {
-    color: white;
+    color: #c9d8de;
     line-height: 1.8;
     font-style: normal;
     font-size: 12px;
-    @media only screen and (min-width: $xlarge) {
+    @media only screen and (min-width: $xxlarge) {
       font-size: 14px;
     }
   }
   a {
-    color: $white;
+    color: #c9d8de;
     text-decoration: none;
     padding: 5px 0;
     display: block;
     font-size: 12px;
-    @media only screen and (min-width: $xlarge) {
+    @media only screen and (min-width: $xxlarge) {
       font-size: 14px;
     }
   }
@@ -137,7 +137,7 @@ ul {
   padding: 20px 0;
   background: $cod;
   p {
-    color: $white;
+    color: #c9d8de;
     font-size: 12px;
     text-align: center;
   }
