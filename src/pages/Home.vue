@@ -347,6 +347,16 @@ export default {
       h1 {
         font-size: 68px;
       }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+  @media only screen and (min-width: 1400px) {
+    .box {
+      h1 {
+        font-size: 90px;
+      }
     }
   }
 }
