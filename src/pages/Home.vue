@@ -345,7 +345,7 @@ export default {
         padding-left: 10%;
       }
       h1 {
-        font-size: 64px;
+        font-size: 68px;
       }
     }
   }

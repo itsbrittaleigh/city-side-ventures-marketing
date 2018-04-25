@@ -17,8 +17,8 @@ p,
 li, 
 a,
 address {
-  line-height: 1.5;
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 1.7;
   color: $cod;
   @media only screen and (min-width: $xxlarge) {
     font-size: 20px;
@@ -33,7 +33,7 @@ h1 {
 h2 {
   font-size: 36px;
   font-weight: 100;
-  margin: 0;
+  margin: 0 0 5px;
   color: $cod;
   & + p {
     margin-top: 0;

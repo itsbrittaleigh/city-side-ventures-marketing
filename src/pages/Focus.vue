@@ -140,6 +140,7 @@ export default {
     flex-direction: column;
     &.content {
       justify-content: flex-end;
+      padding: 40px;
     }
     &.label {
       justify-content: center;

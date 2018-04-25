@@ -135,6 +135,7 @@ export default {
     }
     p {
       margin: 0;
+      color: #747474;
       &.title {
         @include title-font;
         font-size: 18px;
@@ -142,7 +143,6 @@ export default {
       &.lead {
         font-size: 18px;
         margin-bottom: 20px;
-        color: $mineshaft;
       }
     }
   }
