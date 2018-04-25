@@ -73,7 +73,7 @@
       </div>
     </section>
     <section class="apply">
-      <div class="box">
+      <div :class="['box', `bkg-${fund.hero.color}`]">
         <div class="container">
           <h2>How to Apply</h2>
           <p>
@@ -102,9 +102,9 @@
           <div
             v-for="(step, index) in processSteps"
             :key="index"
-            class="section"
+            :class="['section', `border-${fund.hero.color}`]"
           >
-            <img src="../assets/images/icons/bullet-step-1.svg" alt="bullet point">
+            <img :src="icon[fund.hero.color]" alt="bullet point">
             <div class="step">
               <p
                 v-if="step.days"
@@ -122,6 +122,11 @@
 </template>
 
 <script>
+const blueIcon = require('../assets/images/icons/bullet-blue.svg');
+const redIcon = require('../assets/images/icons/bullet-red.svg');
+const yellowIcon = require('../assets/images/icons/bullet-yellow.svg');
+const grayIcon = require('../assets/images/icons/bullet-dark-gray.svg');
+
 export default {
   name: 'FundsTemplate',
   props: ['fund'],
@@ -152,6 +157,12 @@ export default {
           label: 'Deal Closure',
         },
       ],
+      icon: {
+        blue: blueIcon,
+        red: redIcon,
+        black: grayIcon,
+        yellow: yellowIcon,
+      },
     };
   },
 };
@@ -206,7 +217,6 @@ export default {
     @include title-font;
   }
   p, ul, li {
-    font-size: 14px;
     color: #747474;
   }
   ul {
@@ -216,12 +226,6 @@ export default {
     @include grid-boxes(2, 1, 1fr, auto, 0);
     .box {
       padding: 40px;
-      &:first-of-type {
-        padding-left: calc((100vw - 738px) / 2);
-      }
-      &:last-of-type {
-        padding-right: calc((100vw - 738px) / 2);
-      }
       > .container {
         width: 100%;
         max-width: 100%;
@@ -231,60 +235,15 @@ export default {
   @media only screen and (min-width: $large) {
     .box {
       padding: 70px;
-      &:first-of-type {
-        padding-left: calc((100vw - 962px) / 2);
-      }
-      &:last-of-type {
-        padding-right: calc((100vw - 962px) / 2);
-      }
-    }
-  }
-  @media only screen and (min-width: $xlarge) {
-    .box {
-      padding: 70px;
-      &:first-of-type {
-        padding-left: calc((100vw - 1170px) / 2);
-      }
-      &:last-of-type {
-        padding-right: calc((100vw - 1170px) / 2);
-      }
-      p, ul, li {
-        font-size: 18px;
-      }
-    }
-  }
-  @media only screen and (min-width: $xxlarge) {
-    .box {
-      padding: 70px;
-      &:first-of-type {
-        padding-left: calc((100vw - 1410px) / 2);
-      }
-      &:last-of-type {
-        padding-right: calc((100vw - 1410px) / 2);
-      }
-    }
-  }
-  @media only screen and (min-width: $xxxlarge) {
-    .box {
-      padding: 70px;
-      &:first-of-type {
-        padding-left: calc((100vw - 1570px) / 2);
-      }
-      &:last-of-type {
-        padding-right: calc((100vw - 1570px) / 2);
-      }
     }
   }
 }
 .apply {
   @include grid-boxes(1, 2, 1fr, auto, 0);
   .box:not(.image) {
-    background: $goldendream;
-    color: $cod;
     padding: 30px 0;
   }
   .box.image {
-    max-height: 350px;
     img {
       height: 100%;
       width: 100%;
@@ -294,8 +253,7 @@ export default {
   @media only screen and (min-width: $medium) {
     @include grid-boxes(2, 1, 1fr, auto, 0);
     .box:not(.image) {
-      padding-left: calc((100vw - 738px) / 2);
-      padding-right: 40px;
+      padding: 40px;
       > .container {
         width: 100%;
         max-width: 100%;
@@ -308,22 +266,7 @@ export default {
   }
   @media only screen and (min-width: $large) {
     .box:not(.image) {
-      padding-left: calc((100vw - 962px) / 2);
-    }
-  }
-  @media only screen and (min-width: $xlarge) {
-    .box:not(.image) {
-      padding-left: calc((100vw - 1170px) / 2);
-    }
-  }
-  @media only screen and (min-width: $xxlarge) {
-    .box:not(.image) {
-      padding-left: calc((100vw - 1410px) / 2);
-    }
-  }
-  @media only screen and (min-width: $xxxlarge) {
-    .box:not(.image) {
-      padding-left: calc((100vw - 1570px) / 2);
+      padding: 70px;
     }
   }
 }
@@ -333,7 +276,30 @@ export default {
     width: 220px;
     margin: $bullet_width auto 0;
     .section {
-      border-left: 2px solid $goldendream;
+      &.border-yellow {
+        border-left: 2px solid $goldendream;
+        p.days {
+          color: $goldendream;
+        }
+      }
+      &.border-red {
+        border-left: 2px solid $nightshadz;
+        p.days {
+          color: $nightshadz;
+        }
+      }
+      &.border-gray {
+        border-left: 2px solid $cod;
+        p.days {
+          color: $cod;
+        }
+      }
+      &.border-blue {
+        border-left: 2px solid $danube;
+        p.days {
+          color: $danube;
+        }
+      }
       position: relative;
       margin-left: ($bullet_width / 2);
       padding: 0 0 60px $bullet_width;
@@ -352,7 +318,6 @@ export default {
         &.days {
           @include title-font;
           font-size: 14px;
-          color: $danube;
         }
       }
     }
@@ -363,8 +328,22 @@ export default {
       width: 100%;
       margin: 80px 0 0;
       .section {
-        border-top: 2px solid $goldendream;
-        border-left: none;
+        &.border-yellow {
+          border-top: 2px solid $goldendream;
+          border-left: none;
+        }
+        &.border-red {
+          border-top: 2px solid $nightshadz;
+          border-left: none;
+        }
+        &.border-blue {
+          border-top: 2px solid $danube;
+          border-left: none;
+        }
+        &.border-black {
+          border-top: 2px solid $cod;
+          border-left: none;
+        }
         padding: $bullet_width 10px 0;
         margin: 0;
         width: calc(100% / 6);
@@ -380,5 +359,29 @@ export default {
       }
     }
   }
+}
+.bkg-red {
+  background: $nightshadz;
+  h2,
+  p {
+    color: $white;
+  }
+}
+.bkg-blue {
+  background: $danube;
+  h2,
+  p {
+    color: $white;
+  }
+}
+.bkg-black {
+  background: $cod;
+  h2,
+  p {
+    color: $white;
+  }
+}
+.bkg-yellow {
+  background: $goldendream;
 }
 </style>

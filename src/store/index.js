@@ -19,7 +19,7 @@ const state = {
     {
       title: 'Courage and Drive',
       description: 'Boldly forging companies and moving ahead with full force and high velocity. We take bold and calculated risks that will yield a high level of return on equity.',
-      class: 'box-dark-gray',
+      class: 'box-light-gray',
     },
     {
       title: 'Making an Impact',

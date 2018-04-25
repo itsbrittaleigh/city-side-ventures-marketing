@@ -117,7 +117,7 @@ $xxxlarge: 1600px;
 /*
  * [a] Defintions
  */
-@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,400,600');
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,400,700');
 $font: 'Libre Franklin', 'Verdana', sans-serif;
 
 /*
@@ -126,7 +126,7 @@ $font: 'Libre Franklin', 'Verdana', sans-serif;
 @mixin title-font {
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 12px;
   line-height: 1.3;
 }

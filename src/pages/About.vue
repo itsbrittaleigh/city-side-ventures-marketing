@@ -39,8 +39,13 @@
       </section>
       <section class="principles">
         <div class="principles-boxes">
-          <div class="box box-light-gray intro">
+          <div class="box box-dark-gray intro">
             <h2>Our Operating Principles</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, maiores
+              corrupti recusandae quos hic facilis ut soluta asperiores, ex iusto minus,
+              suscipit beatae officiis sit dicta voluptas nemo ipsam vero.
+            </p>
           </div>
           <div
             v-for="(principle, index) in principles"
@@ -164,6 +169,7 @@ export default {
       }
       &.box-dark-gray {
         background: $cod;
+        h2,
         p {
           color: $white;
         }
@@ -176,7 +182,6 @@ export default {
       }
       &.box-light-gray {
         background: $gray;
-        h2,
         p {
           color: $white;
         }
@@ -215,7 +220,6 @@ export default {
       }
       .intro {
         grid-row: 1 / 3;
-        background: $danube !important;
       }
     }
   }
@@ -227,7 +231,7 @@ export default {
 }
 .partners {
   .box.statistic {
-    background: $goldendream;
+    background: $danube;
     text-align: center;
     padding: 40px 0;
     > .container {
@@ -236,6 +240,10 @@ export default {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+    h2,
+    p {
+      color: $white;
     }
     .large {
       margin: 30px 0 5px;
@@ -248,7 +256,6 @@ export default {
   }
   .logos {
     padding: 50px 25px;
-    background: lightgray;
     @include grid-boxes(3, 3, 1fr, 1fr, 30px);
     .box {
       display: flex;

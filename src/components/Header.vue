@@ -34,7 +34,7 @@ header {
     align-items: center;
   }
   @media only screen and (min-width: $large) {
-    height: 90px;
+    height: 100px;
     > .container {
       width: 100%;
       max-width: 100%;

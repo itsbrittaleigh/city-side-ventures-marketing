@@ -104,7 +104,7 @@ ul {
   padding-top: 10px;
   h6 {
     color: #5e5e5e;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin: 0 0 5px 0;
@@ -172,13 +172,6 @@ ul {
     }
     @media only screen and (min-width: $xlarge) {
       margin-right: 150px;
-      ul {
-        li {
-          a {
-            font-size: 18px;
-          }
-        }
-      }
     }
     @media only screen and (min-width: $xxlarge) {
       margin-right: 200px;

@@ -458,6 +458,7 @@ export default {
 }
 .focus {
   background: $goldendream;
+  padding: 30px 0;
   h2 {
     color: #323232;
   }
@@ -493,11 +494,12 @@ export default {
       @include grid-boxes(2, 1, 1fr, auto, 100px);
       grid-template-columns: 2fr 3fr;
       align-items: center;
-      width: 90%;
+      width: calc(100vw - 60px);
     }
   }
 }
 .funds {
+  background: $danube;
   .box {
     padding: 20px 30px 120px 30px;
     position: relative;
@@ -505,12 +507,15 @@ export default {
     &:nth-child(odd) {
       background: $wildsand;
     }
+    &:nth-child(even) {
+      background: $white;
+    }
     &:nth-child(1) {
       background: $danube;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 30px;
+      padding: 30px 0;
       h2,
       p {
         color: $white;
@@ -518,10 +523,10 @@ export default {
     }
   }
   h3 {
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     margin: 0 0 8px;
-    font-size: 24px;
+    font-size: 27px;
     color: #565656;
   }
   img {
@@ -552,6 +557,7 @@ export default {
       flex-direction: column;
       align-items: flex-start;
       &:nth-child(1) {
+        padding: 30px;
         h2 {
           font-size: 34px;
         }
@@ -586,7 +592,7 @@ export default {
 }
 .portfolio {
   > .box:first-of-type {
-    padding: 40px 0;
+    padding: 30px 0;
     background: $goldendream;
     color: $cod;
     .box {
@@ -651,7 +657,7 @@ export default {
       .container {
         width: 100%;
         max-width: 100%;
-        padding: 40px;
+        padding: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;

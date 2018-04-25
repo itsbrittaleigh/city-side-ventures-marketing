@@ -228,7 +228,7 @@ export default {
     margin-top: 5px;
     &.title {
       @include title-font;
-      margin: 0;
+      margin: 10px 0 0;
     }
   }
   a {

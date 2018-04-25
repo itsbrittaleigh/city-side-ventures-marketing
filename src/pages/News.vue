@@ -15,6 +15,7 @@
               :key="index"
               @click="filterByCategory(category)"
             >
+              <img src="../assets/images/icons/bullet-small.svg" alt="">
               {{ category }}
             </li>
           </ul>
@@ -24,6 +25,7 @@
               v-for="(article, index) in recentArticles"
               :key="index"
             >
+              <img src="../assets/images/icons/bullet-small.svg" alt="">
               <router-link :to="{
                 name: 'Post',
                 params: {
@@ -44,6 +46,7 @@
               :key="key"
               @click="filterByMonth(key)"
             >
+              <img src="../assets/images/icons/bullet-small.svg" alt="">
               {{ key }} ({{ value.length }})
             </li>
           </ul>
@@ -155,6 +158,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5px 10px;
     @include background-opacity($cod, 0.8);
     h2 {
       @include title-font;
@@ -184,13 +188,31 @@ export default {
     margin-bottom: 5px;
   }
   ul {
-    padding-left: 15px;
+    padding-left: 5px;
     margin: 5px 0 50px;
+    list-style-type: none;
     li {
       margin-bottom: 10px;
+      display: flex;
+      cursor: pointer;
+      transition: 0.4s;
+      img {
+        width: 3px;
+        height: 3px;
+        display: block;
+        margin-top: 12px;
+        margin-right: 10px;
+      }
+      &:hover {
+        color: $nightshadz;
+      }
     }
     a {
       text-decoration: none;
+      transition: 0.4s;
+      &:hover {
+        color: $nightshadz;
+      }
     }
   }
 }

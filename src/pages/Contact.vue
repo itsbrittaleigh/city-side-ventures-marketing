@@ -89,23 +89,20 @@ h2 {
       height: 50px;
       width: auto;
     }
+    p, address, a {
+      color: $white;
+    }
+    h3 {
+      color: #e8e8e8;
+    }
     &.box-gray {
       background: $cod;
-      h3, p, address, a {
-        color: $white;
-      }
     }
     &.box-light-gray {
       background: $gray;
-      h3, p, address, a {
-        color: $white;
-      }
     }
     &.box-blue {
       background: $danube;
-      h3, p, address, a {
-        color: $white;
-      }
     }
     img {
       position: absolute;

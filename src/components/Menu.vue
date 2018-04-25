@@ -15,7 +15,7 @@
         <span class="nav-left">
           <li
             @click="toggleAbout"
-            :class="{'open': aboutIsOpen}"
+            :class="{'open': aboutIsOpen, 'router-link-active': aboutIsActive}"
           >
             <span class="heading" v-click-outside="closeAbout">
               About Us
@@ -41,7 +41,7 @@
           </li>
           <li
             @click="toggleFunds"
-            :class="{'open': fundsAreOpen}"
+            :class="{'open': fundsAreOpen, 'router-link-active': fundsAreActive}"
           >
             <span class="heading" v-click-outside="closeFunds">
               Investment Funds
@@ -99,6 +99,23 @@ export default {
       'menuIsMobile',
       'menuIsOpen',
     ]),
+    aboutIsActive() {
+      return (
+        this.$route.name === 'About' ||
+        this.$route.name === 'Process' ||
+        this.$route.name === 'Portfolio' ||
+        this.$route.name === 'Focus' ||
+        this.$route.name === 'Team'
+      );
+    },
+    fundsAreActive() {
+      return (
+        this.$route.name === 'Greenseed' ||
+        this.$route.name === 'BlueVenture' ||
+        this.$route.name === 'Venture248' ||
+        this.$route.name === 'CityX'
+      );
+    },
   },
   methods: {
     ...mapActions([
@@ -219,6 +236,7 @@ button {
     @include title-font;
     color: $cod;
     text-align: right;
+    cursor: pointer;
     .heading {
       padding: 15px 0;
       display: flex;
@@ -275,7 +293,7 @@ button {
         justify-content: center;
         padding: 0 10px;
         text-transform: uppercase;
-        font-weight: 600;
+        font-weight: 700;
         letter-spacing: 1px;
         color: $white;
         &.button-red:hover {
@@ -330,8 +348,9 @@ button {
         justify-content: flex-start;
         font-size: 12px;
       }
-      a.router-link-active {
-        background: #cfcfcf;
+      .router-link-active,
+      &.router-link-active {
+        background: #e8e8e8;
         padding: 0 20px;
       }
       ul {
@@ -359,7 +378,7 @@ button {
             &.router-link-active {
               padding: 15px 20px;
               background: transparent;
-              border-left: 5px solid #cfcfcf;
+              border-left: 5px solid #e8e8e8;
             }
           }
         }
