@@ -94,9 +94,6 @@ ul {
       padding: 10px 0;
       display: block;
       font-size: 14px;
-      @media only screen and (min-width: $xxlarge) {
-        font-size: 18px;
-      }
     }
   }
 }
@@ -109,18 +106,12 @@ ul {
     text-transform: uppercase;
     margin: 0 0 5px 0;
     font-size: 12px;
-    @media only screen and (min-width: $xxlarge) {
-      font-size: 14px;
-    }
   }
   address {
     color: #c9d8de;
     line-height: 1.8;
     font-style: normal;
     font-size: 12px;
-    @media only screen and (min-width: $xxlarge) {
-      font-size: 14px;
-    }
   }
   a {
     color: #c9d8de;
@@ -128,9 +119,6 @@ ul {
     padding: 5px 0;
     display: block;
     font-size: 12px;
-    @media only screen and (min-width: $xxlarge) {
-      font-size: 14px;
-    }
   }
 }
 .secondary {

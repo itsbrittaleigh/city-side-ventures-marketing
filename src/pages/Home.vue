@@ -679,11 +679,11 @@ export default {
     }
   }
   @media only screen and (min-width: $xxlarge) {
-    @include grid-boxes(2, 1, 1fr, 600px, 0);
-    grid-template-columns: auto 1200px;
+    @include grid-boxes(2, 1, 1fr, 500px, 0);
+    grid-template-columns: auto 1000px;
     .upper,
     .lower {
-      @include grid-boxes(4, 1, 300px, 300px, 0);
+      @include grid-boxes(4, 1, 250px, 250px, 0);
     }
   }
   @media only screen and (min-width: $xxlarge) {
