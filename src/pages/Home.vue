@@ -219,7 +219,7 @@
       <div class="portfolio">
         <div class="box">
           <div class="container">
-            <h2>Our current investment portfolio</h2>
+            <h2>Our Current Investment Portfolio</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <router-link
               :to="{ name: 'Portfolio' }"
@@ -347,15 +347,15 @@ export default {
       h1 {
         font-size: 68px;
       }
-      p {
-        font-size: 20px;
-      }
     }
   }
   @media only screen and (min-width: 1400px) {
     .box {
       h1 {
         font-size: 90px;
+      }
+      p {
+        font-size: 20px;
       }
     }
   }
@@ -497,6 +497,11 @@ export default {
       width: calc(100vw - 60px);
     }
   }
+  @media only screen and (min-width: $xxlarge) {
+    > .container {
+      width: calc(100vw - 120px);
+    }
+  }
 }
 .funds {
   background: $danube;
@@ -582,11 +587,11 @@ export default {
   @media only screen and (min-width: $large) {
     > .container {
       @include grid-boxes(5, 1, 1fr, auto, 0);
-      .box {
-        h3 {
-          font-size: 20px;
-        }
-      }
+    }
+  }
+  @media only screen and (min-width: $xxlarge) {
+    .box:nth-child(1) {
+      padding-left: 60px;
     }
   }
 }
@@ -679,6 +684,13 @@ export default {
     .upper,
     .lower {
       @include grid-boxes(4, 1, 300px, 300px, 0);
+    }
+  }
+  @media only screen and (min-width: $xxlarge) {
+    > .box:first-of-type {
+      .container {
+        padding-left: 60px;
+      }
     }
   }
 }

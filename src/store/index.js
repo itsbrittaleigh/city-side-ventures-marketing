@@ -285,7 +285,7 @@ const state = {
       name: 'Kevin Yang',
       title: 'President',
       photo: require('../assets/images/team/kevin.jpg'),
-      color: 'dark-gray',
+      color: 'light-gray',
     },
     {
       name: 'Brandon Shamoun',
