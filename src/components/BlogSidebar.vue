@@ -1,21 +1,10 @@
 <!-- eslint-disable max-len -->
 <template>
   <aside class="box navigation">
-    <h3>News Menu</h3>
+    <h3 class="color-blue">Business</h3>
     <ul>
       <li
-        v-for="(category, index) in categories"
-        :key="index"
-        @click="redirectTo(`/news?tag=${category.slug}`)"
-      >
-        <img src="../assets/images/icons/bullet-small.svg" alt="">
-        {{ category.name }}
-      </li>
-    </ul>
-    <h3>Recent Posts</h3>
-    <ul class="recent">
-      <li
-        v-for="(article, index) in recentArticles"
+        v-for="(article, index) in businessArticles.splice(0, 3)"
         :key="index"
         @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
       >
@@ -23,7 +12,29 @@
         {{ article.title }}
       </li>
     </ul>
-    <h3>Archives</h3>
+    <h3 class="color-yellow">Management</h3>
+    <ul>
+      <li
+        v-for="(article, index) in managementArticles.splice(0, 3)"
+        :key="index"
+        @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
+      >
+        <img src="../assets/images/icons/bullet-small.svg" alt="">
+        {{ article.title }}
+      </li>
+    </ul>
+    <h3 class="color-red">Press Room &amp; News</h3>
+    <ul>
+      <li
+        v-for="(article, index) in pressArticles.splice(0, 3)"
+        :key="index"
+        @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
+      >
+        <img src="../assets/images/icons/bullet-small.svg" alt="">
+        {{ article.title }}
+      </li>
+    </ul>
+    <h3 class="color-gray">Archives</h3>
     <ul>
       <li
         v-for="(value, key) in archives"
@@ -50,13 +61,14 @@ export default {
     ...mapGetters([
       'articles',
       'categories',
-      'recentArticles',
       'archives',
+      'businessArticles',
+      'managementArticles',
+      'pressArticles',
     ]),
   },
   methods: {
     ...mapActions([
-      'filterByCategory',
       'filterByMonth',
     ]),
     getYear(datetime) {
@@ -98,8 +110,19 @@ export default {
   padding: 20px;
   h3 {
     @include title-font;
-    color: $danube;
     margin-bottom: 5px;
+    &.color-red {
+      color: $nightshadz;
+    }
+    &.color-yellow {
+      color: $goldendream;
+    }
+    &.color-blue {
+      color: $danube;
+    }
+    &.color-gray {
+      color: #808080;
+    }
   }
   ul {
     padding-left: 5px;
@@ -110,6 +133,7 @@ export default {
       display: flex;
       cursor: pointer;
       transition: 0.4s;
+      color: #808080;
       img {
         width: 3px;
         height: 3px;

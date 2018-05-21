@@ -197,7 +197,6 @@ const state = {
   categories: CATEGORIES,
   articles: INITIAL_ARTICLES,
   initialArticles: INITIAL_ARTICLES,
-  recentArticles: [],
   archives: {},
 };
 
@@ -223,6 +222,9 @@ const getters = {
     });
     return archives;
   },
+  businessArticles: state => _.filter(state.initialArticles, article => article.category.slug === 'business'),
+  managementArticles: state => _.filter(state.initialArticles, article => article.category.slug === 'management'),
+  pressArticles: state => _.filter(state.initialArticles, article => article.category.slug === 'press-room-and-news'),
 };
 
 const actions = {
