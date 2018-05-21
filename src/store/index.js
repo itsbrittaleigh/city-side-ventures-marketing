@@ -312,11 +312,11 @@ const state = {
       title: 'Chief Technology Officer',
       photo: require('../assets/images/team/bryan.jpg'),
     },
-    {
-      name: 'Kendra Corman',
-      title: 'Chief Marketing Officer',
-      photo: require('../assets/images/team/default.jpg'),
-    },
+    // {
+    //   name: 'Kendra Corman',
+    //   title: 'Chief Marketing Officer',
+    //   photo: require('../assets/images/team/default.jpg'),
+    // },
     {
       name: 'Jay Patel',
       title: 'SVP / IoT',
