@@ -1,11 +1,10 @@
 <template>
   <div class="funds-template">
-    <section class="hero funds">
+    <section :class="['hero', 'funds', `bkg-${fund.hero.color}`]">
       <img :src="fund.hero.image" :alt="fund.hero.alt">
+      <div class="overlay"></div>
       <div class="container">
-        <div
-          :class="['information-box', `bkg-${fund.hero.color}`]"
-        >
+        <div class="information-box">
           <img :src="fund.icon.image" :alt="fund.icon.alt">
           <h1>{{ fund.name }}</h1>
           <p><em>{{ fund.market }}</em></p>

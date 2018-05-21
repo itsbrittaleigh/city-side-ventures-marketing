@@ -7,50 +7,7 @@
       >
       </hero-section>
       <div class="news">
-        <aside class="box navigation">
-          <h3>News Menu</h3>
-          <ul>
-            <li
-              v-for="(category, index) in categories"
-              :key="index"
-              @click="filterByCategory(category)"
-            >
-              <img src="../assets/images/icons/bullet-small.svg" alt="">
-              {{ category }}
-            </li>
-          </ul>
-          <h3>Recent Posts</h3>
-          <ul class="recent">
-            <li
-              v-for="(article, index) in recentArticles"
-              :key="index"
-            >
-              <img src="../assets/images/icons/bullet-small.svg" alt="">
-              <router-link :to="{
-                name: 'Post',
-                params: {
-                  year: getYear(article.date),
-                  month: getMonth(article.date),
-                  date: getDate(article.date),
-                  title: slugify(article.title),
-                },
-              }">
-                {{ article.title }}
-              </router-link>
-            </li>
-          </ul>
-          <h3>Archives</h3>
-          <ul>
-            <li
-              v-for="(value, key) in archives"
-              :key="key"
-              @click="filterByMonth(key)"
-            >
-              <img src="../assets/images/icons/bullet-small.svg" alt="">
-              {{ key }} ({{ value.length }})
-            </li>
-          </ul>
-        </aside>
+        <blog-sidebar></blog-sidebar>
         <div class="box articles">
           <router-link
             v-for="(article, index) in articles"
@@ -82,6 +39,7 @@ import { mapGetters, mapActions } from 'vuex';
 import moment from 'moment';
 import Base from './Base';
 import Hero from '../components/Hero';
+import Sidebar from '../components/BlogSidebar';
 
 export default {
   name: 'News',
@@ -91,13 +49,11 @@ export default {
   components: {
     'base-page': Base,
     'hero-section': Hero,
+    'blog-sidebar': Sidebar,
   },
   computed: {
     ...mapGetters([
       'articles',
-      'categories',
-      'recentArticles',
-      'archives',
     ]),
   },
   methods: {
@@ -131,6 +87,11 @@ export default {
         .replace(/^-+/, '')
         .replace(/-+$/, '');
     },
+  },
+  mounted() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('tag')) this.filterByCategory(urlParams.get('tag'));
+    if (urlParams.has('month')) this.filterByMonth(urlParams.get('month'));
   },
 };
 </script>
@@ -177,43 +138,6 @@ export default {
   }
   @media only screen and (min-width: $large) {
     @include grid-boxes(3, auto, 1fr, auto, 0);
-  }
-}
-.navigation {
-  padding: 20px;
-  background: $wildsand;
-  h3 {
-    @include title-font;
-    color: $danube;
-    margin-bottom: 5px;
-  }
-  ul {
-    padding-left: 5px;
-    margin: 5px 0 50px;
-    list-style-type: none;
-    li {
-      margin-bottom: 10px;
-      display: flex;
-      cursor: pointer;
-      transition: 0.4s;
-      img {
-        width: 3px;
-        height: 3px;
-        display: block;
-        margin-top: 12px;
-        margin-right: 10px;
-      }
-      &:hover {
-        color: $nightshadz;
-      }
-    }
-    a {
-      text-decoration: none;
-      transition: 0.4s;
-      &:hover {
-        color: $nightshadz;
-      }
-    }
   }
 }
 </style>

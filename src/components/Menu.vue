@@ -49,7 +49,7 @@
             </span>
             <ul>
               <li>
-                <router-link :to="{ name: 'Greenseed' }">Greenseed Fund</router-link>
+                <router-link :to="{ name: 'GreatLakes' }">Great Lakes Angels Fund</router-link>
               </li>
               <li>
                 <router-link :to="{ name: 'Venture248' }">Venture 248 Fund</router-link>
@@ -110,7 +110,7 @@ export default {
     },
     fundsAreActive() {
       return (
-        this.$route.name === 'Greenseed' ||
+        this.$route.name === 'GreatLakes' ||
         this.$route.name === 'BlueVenture' ||
         this.$route.name === 'Venture248' ||
         this.$route.name === 'CityX'

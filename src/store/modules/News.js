@@ -3,9 +3,18 @@
 import _ from 'lodash';
 
 const CATEGORIES = [
-  'Business',
-  'Management',
-  'Press Room & News',
+  {
+    name: 'Business',
+    slug: 'business',
+  },
+  {
+    name: 'Management',
+    slug: 'management',
+  },
+  {
+    name: 'Press Room & News',
+    slug: 'press-room-and-news',
+  },
 ];
 const INITIAL_ARTICLES = [
   {
@@ -228,7 +237,7 @@ const actions = {
 const mutations = {
   filterByCategory(context, category) {
     state.articles = state.initialArticles;
-    state.articles = state.articles.filter(article => category === article.category);
+    state.articles = state.articles.filter(article => category === article.category.slug);
   },
   filterByMonth(context, time) {
     const month = time.substr(0, time.length - 5);

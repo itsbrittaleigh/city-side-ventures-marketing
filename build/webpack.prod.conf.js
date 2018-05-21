@@ -128,7 +128,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         '/focus',
         '/funds',
         '/funds/blue-venture',
-        '/funds/greenseed',
+        '/funds/great-lakes-angels-fund',
         '/funds/venture-248',
         '/legal',
         '/news',

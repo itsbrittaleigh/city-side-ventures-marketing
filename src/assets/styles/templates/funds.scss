@@ -40,28 +40,55 @@
       }
       &.bkg-blue {
         background: $danube;
-        h1,
-        p {
-          color: $white;
-        }
       }
       &.bkg-red {
         background: $nightshadz;
-        h1,
-        p {
-          color: $white;
-        }
       }
       &.bkg-black {
         background: $cod;
-        h1,
-        p {
-          color: $white;
-        }
       }
     }
     p {
       margin: 0 0 20px;
+    }
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &.bkg-yellow {
+    .overlay {
+      background: rgba($goldendream, 0.9);
+    }
+  }
+  &.bkg-blue {
+    .overlay {
+      background: rgba($danube, 0.9);
+    }
+    h1,
+    p {
+      color: $white;
+    }
+  }
+  &.bkg-black {
+    .overlay {
+      background: rgba($cod, 0.9);
+    }
+    h1,
+    p {
+      color: $white;
+    }
+  }
+  &.bkg-red {
+    .overlay {
+      background: rgba($nightshadz, 0.9);
+    }
+    h1,
+    p {
+      color: $white;
     }
   }
 }

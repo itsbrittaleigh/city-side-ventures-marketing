@@ -28,7 +28,7 @@ const teamPhoto = require('../assets/images/covers/team.jpg');
 
 const blueVenturePhoto = require('../assets/images/covers/blueventure.jpg');
 const cityXPhoto = require('../assets/images/covers/cityx.jpg');
-const greenseedPhoto = require('../assets/images/covers/greenseed.jpg');
+const greatLakesPhoto = require('../assets/images/covers/greatlakes.jpg');
 const venture248Photo = require('../assets/images/covers/venture248.jpg');
 
 const cashPostPhoto = require('../assets/images/covers/news/cash.jpg');
@@ -67,7 +67,7 @@ export default {
         focus: focusPhoto,
         process: processPhoto,
         venture248: venture248Photo,
-        greenseed: greenseedPhoto,
+        greatLakes: greatLakesPhoto,
         newsPost: newsPostPhoto,
         pressPost: pressPostPhoto,
         cashPost: cashPostPhoto,

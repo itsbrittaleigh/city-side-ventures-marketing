@@ -38,9 +38,11 @@
           <newsletter-form></newsletter-form>
         </div>
       </div>
-      <div class="container padded-section">
-        <h2>We would like to hear from you</h2>
-        <contact-form></contact-form>
+      <div class="bkg-yellow">
+        <div class="container padded-section">
+          <h2>We would like to hear from you</h2>
+          <contact-form></contact-form>
+        </div>
       </div>
     </template>
   </base-page>
@@ -74,6 +76,9 @@ h1 {
 }
 h2 {
   margin-bottom: 20px;
+}
+.bkg-yellow {
+  background: $goldendream;
 }
 .container {
   height: auto;

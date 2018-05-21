@@ -31,14 +31,10 @@
             </div>
           </div>
         </div>
-        <div class="box image">
-          <img src="../assets/images/about-process.jpg" alt="">
-        </div>
+        <div class="box image"></div>
       </div>
       <div class="sidepitch">
-        <div class="box image">
-          <img src="../assets/images/sidepitch.jpg" alt="">
-        </div>
+        <div class="box image"></div>
         <div class="box">
           <div class="container">
             <h2>The Sidepitch Platform</h2>
@@ -47,21 +43,30 @@
               a new category within the financial technology market by leveraging a high-tech
               approach to the traditional venture capital market worldwide.
             </p>
-            <p class="title">Deal flow highlighting the hottest startups</p>
-            <p>
-              Find, screen, qualify, vet, and select investment opportunities across the
-              globe all from one platform from the contingency of your computer.
-            </p>
-            <p class="title">Collaborative Due Diligence For Investors and Startups</p>
-            <p>
-              Our progressive online platform allows investors to manage their entire
-              due-diligence process online, in a dynamic, efficient, and collaborative fashion.
-            </p>
-            <p class="title">Syndicated investments with other venture capitalists</p>
-            <p>
-              Connect with other investors across the globe and build your own private
-              syndication online. Built with privacy and confidentiality in mind.
-            </p>
+            <div class="step">
+              <img src="../assets/images/icons/bullet-darkgray.svg" alt="">
+              <p class="title">Deal flow highlighting the hottest startups</p>
+              <p>
+                Find, screen, qualify, vet, and select investment opportunities across the
+                globe all from one platform from the contingency of your computer.
+              </p>
+            </div>
+            <div class="step">
+              <img src="../assets/images/icons/bullet-darkgray.svg" alt="">
+              <p class="title">Collaborative Due Diligence For Investors and Startups</p>
+              <p>
+                Our progressive online platform allows investors to manage their entire
+                due-diligence process online, in a dynamic, efficient, and collaborative fashion.
+              </p>
+            </div>
+            <div class="step">
+              <img src="../assets/images/icons/bullet-darkgray.svg" alt="">
+              <p class="title">Syndicated investments with other venture capitalists</p>
+              <p>
+                Connect with other investors across the globe and build your own private
+                syndication online. Built with privacy and confidentiality in mind.
+              </p>
+            </div>
             <a href="https://sidepitch.com" class="button inverse" target="_blank">Learn More about Sidepitch</a>
           </div>
         </div>
@@ -94,8 +99,8 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/styles/variables";
+$bullet_width: 50px;
 .process {
-  $bullet_width: 50px;
   @include grid-boxes(1, 2, 1fr, auto, 0);
   .box:not(.image) {
     padding: 40px 0;
@@ -147,24 +152,23 @@ export default {
     }
   }
   .box.image {
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    background: url('../assets/images/about-process.jpg') no-repeat center center;
+    background-size: cover;
   }
   @media only screen and (min-width: $medium) {
     .box:not(.image) {
-      padding: 40px 0;
+      padding: 40px 20px;
       .step {
         padding-left: $bullet_width / 2 + 30;
+        &:last-of-type {
+          padding-bottom: 0;
+        }
       }
     }
   }
   @media only screen and (min-width: $large) {
     @include grid-boxes(2, 1, 1fr, auto, 0);
     .box:not(.image) {
-      padding: 80px 80px 60px 40px;
       h2,
       p {
         padding-left: 82px;
@@ -210,34 +214,66 @@ export default {
 .sidepitch {
   @include grid-boxes(1, 2, 1fr, auto, 0);
   .box.image {
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
+    background: url('../assets/images/sidepitch.jpg') no-repeat center center;
+    background-size: cover;
   }
   .box:not(.image) {
     background: $goldendream;
-    padding: 40px 0;
+    padding: 40px 20px;
     h2,
     p {
       color: $cod;
+    }
+    .step {
+      position: relative;
+      padding-bottom: 40px;
+      margin-left: $bullet_width / 2;
+      padding-left: $bullet_width / 2 + 10;
+      img {
+        position: absolute;
+        top: 0;
+        left: -($bullet_width / 2);
+        height: $bullet_width;
+        width: $bullet_width;
+      }
+      &:first-of-type {
+        margin-top: 40px;
+      }
+      &:not(:last-of-type) {
+        border-left: 2px solid $cod;
+      }
     }
   }
   p {
     margin-top: 5px;
     &.title {
       @include title-font;
-      margin: 10px 0 0;
+      margin: 0;
     }
   }
   a {
     margin-top: 20px;
   }
+  @media only screen and (min-width: $medium) {
+    .box:not(.image) {
+      .step {
+        padding-left: $bullet_width / 2 + 30;
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
   @media only screen and (min-width: $large) {
     @include grid-boxes(2, 1, 1fr, auto, 0);
     .box:not(.image) {
-      padding: 80px;
+      h2,
+      p {
+        padding-left: 82px;
+      }
+      .step p {
+        padding-left: 0;
+      }
       > .container {
         width: 100%;
         display: flex;

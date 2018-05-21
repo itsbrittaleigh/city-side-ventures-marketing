@@ -36,6 +36,12 @@
             <div class="container">
               <p class="title">{{ project.name }}</p>
               <p>{{ project.description }}</p>
+              <a
+                :href="project.link"
+                class="button"
+              >
+                Visit {{ project.name }} &rarr;
+              </a>
             </div>
           </div>
         </template>
@@ -120,6 +126,11 @@ export default {
         @include title-font;
       }
     }
+    .button {
+      height: 32px;
+      padding: 0 10px;
+      margin-top: 15px;
+    }
   }
   @media only screen and (min-width: $medium) {
     @include grid-boxes(2, 12, 1fr, 200px, 0);
@@ -131,6 +142,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        align-items: flex-start;
       }
     }
   }

@@ -2,7 +2,7 @@
   <base-page>
     <template slot="content">
       <funds-template
-        :fund="funds.greenseed"
+        :fund="funds.greatLakes"
       >
       </funds-template>
     </template>
@@ -15,7 +15,7 @@ import Base from '../Base';
 import Funds from '../../templates/Funds';
 
 export default {
-  name: 'Greenseed',
+  name: 'GreatLakes',
   data() {
     return {};
   },

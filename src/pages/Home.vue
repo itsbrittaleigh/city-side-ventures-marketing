@@ -123,16 +123,16 @@
             </p>
           </div>
           <div class="box">
-            <h3>Greenseed</h3>
+            <h3>Great Lakes Angels Fund</h3>
             <p class="lead"><em>Angel Fund</em></p>
             <p class="lead"><em>Pre-Seed Capital</em></p>
             <br>
             <p>
-              Greenseed is an equity-based Angel Fund created to fund and grow early stage,
-              tech-based companies.
+              Great Lakes Angels Fund is an equity-based Angel Fund created to fund and grow early
+              stage, tech-based companies.
             </p>
             <router-link
-              :to="{ name: 'Greenseed' }"
+              :to="{ name: 'GreatLakes' }"
               class="button button-red"
             >
               Learn More
@@ -307,9 +307,6 @@ export default {
       }
     }
     &:nth-child(2) {
-      p {
-        color: $white;
-      }
       .overlay {
         @include background-opacity($goldendream, 0.9);
       }

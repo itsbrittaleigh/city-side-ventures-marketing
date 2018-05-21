@@ -13,7 +13,7 @@ import Process from '../pages/Process';
 import Team from '../pages/Team';
 
 import BlueVenture from '../pages/funds/BlueVenture';
-import Greenseed from '../pages/funds/Greenseed';
+import GreatLakes from '../pages/funds/GreatLakes';
 import Venture248 from '../pages/funds/Venture248';
 import CityX from '../pages/funds/CityX';
 
@@ -62,9 +62,9 @@ export default new Router({
       },
     },
     {
-      path: '/funds/greenseed',
-      name: 'Greenseed',
-      component: Greenseed,
+      path: '/funds/great-lakes-angels-fund',
+      name: 'GreatLakes',
+      component: GreatLakes,
       meta: {
         title: '',
         description: '',

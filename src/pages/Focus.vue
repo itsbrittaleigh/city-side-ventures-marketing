@@ -23,15 +23,15 @@
             deleniti!
           </p>
         </div>
-        <div class="box image">
-          <img src="../assets/images/focus/automotive.jpg" alt="">
+        <div class="box image automotive">
+          <!-- <img src="../assets/images/icons/focus-automotive-white.svg" alt=""> -->
         </div>
         <div class="box label box-blue">
           <img src="../assets/images/icons/focus-b2b-white.svg" alt="">
           <p>B2B, B2C, &amp; H2H Platforms</p>
         </div>
-        <div class="box image">
-          <img src="../assets/images/focus/b2b.jpg" alt="">
+        <div class="box image b2b">
+          <!-- <img src="../assets/images/icons/focus-b2b-white.svg" alt=""> -->
         </div>
         <div class="box content content-blue">
           <h2>Headline</h2>
@@ -55,15 +55,15 @@
             deleniti!
           </p>
         </div>
-        <div class="box image">
-          <img src="../assets/images/focus/fintech.jpg" alt="">
+        <div class="box image fintech">
+          <!-- <img src="../assets/images/icons/focus-fintech-white.svg" alt=""> -->
         </div>
         <div class="box label box-light-gray">
           <img src="../assets/images/icons/focus-wearable-white.svg" alt="">
           <p>Wearable Tech</p>
         </div>
-        <div class="box image">
-          <img src="../assets/images/focus/wearable.jpg" alt="">
+        <div class="box image wearable">
+          <!-- <img src="../assets/images/icons/focus-wearable-white.svg" alt=""> -->
         </div>
         <div class="box content content-light-gray">
           <h2>Headline</h2>
@@ -87,15 +87,15 @@
             deleniti!
           </p>
         </div>
-        <div class="box image">
-          <img src="../assets/images/focus/techmotion.jpg" alt="">
+        <div class="box image techmotion">
+          <!-- <img src="../assets/images/icons/focus-techinmotion-white.svg" alt=""> -->
         </div>
         <div class="box label box-yellow">
           <img src="../assets/images/icons/focus-medical-white.svg" alt="">
           <p>Medical &amp; Health</p>
         </div>
-        <div class="box image">
-          <img src="../assets/images/focus/medical.jpg" alt="">
+        <div class="box image medical">
+          <!-- <img src="../assets/images/icons/focus-medical-white.svg" alt=""> -->
         </div>
         <div class="box content content-yellow">
           <h2>Headline</h2>
@@ -141,12 +141,17 @@ export default {
     &.content {
       justify-content: flex-end;
       padding: 40px;
+      p {
+        margin: 0;
+      }
     }
     &.label {
       justify-content: center;
       align-items: center;
+      padding: 40px;
       p {
         font-size: 36px;
+        margin: 20px 0 0;
         color: $white;
         font-weight: 100;
         text-align: center;
@@ -190,14 +195,52 @@ export default {
     }
   }
   .box.image {
+    min-height: 200px;
+    position: relative;
+    overflow: hidden;
+    &.automotive {
+      background: url('../assets/images/focus/automotive.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    &.b2b {
+      background: url('../assets/images/focus/b2b.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    &.fintech {
+      background: url('../assets/images/focus/fintech.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    &.wearable {
+      background: url('../assets/images/focus/wearable.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    &.techmotion {
+      background: url('../assets/images/focus/techmotion.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    &.medical {
+      background: url('../assets/images/focus/medical.jpg') no-repeat center center;
+      background-size: cover;
+    }
     img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+      height: 100px;
+      width: auto;
+      opacity: 0.2;
     }
   }
   @media only screen and (min-width: $medium) {
-    @include grid-boxes(3, 6, (100vw / 3), (100vw / 3), 0);
+    @include grid-boxes(3, 6, 1fr, auto, 0);
+    .box.image {
+      min-height: 400px;
+      img {
+        bottom: -50px;
+        right: -50px;
+        height: 250px;
+      }
+    }
   }
   @media only screen and (min-width: $xxlarge) {
     .box:not(.image) {
