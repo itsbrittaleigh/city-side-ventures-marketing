@@ -22,7 +22,7 @@ const INITIAL_ARTICLES = [
     title: 'Cash is not the Everything - Cash is the Only Thing',
     date: '2017-09-12 00:00:00 Z',
     author: 'Doron York',
-    category: CATEGORIES[2],
+    category: CATEGORIES[0],
     slug: '2017/09/12/cash-is-not-the-everything-cash-is-the-only-thing',
     image: {
       image: require('../../assets/images/covers/news/cash.jpg'),

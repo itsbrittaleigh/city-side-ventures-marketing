@@ -96,7 +96,6 @@ export default {
 @import "../assets/styles/variables";
 .navigation {
   padding: 20px;
-  background: $wildsand;
   h3 {
     @include title-font;
     color: $danube;

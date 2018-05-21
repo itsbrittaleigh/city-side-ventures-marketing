@@ -9,25 +9,32 @@
       <div class="news">
         <blog-sidebar></blog-sidebar>
         <div class="box articles">
-          <router-link
+          <div
             v-for="(article, index) in articles"
             :key="index"
-            class="box"
-            :to="{
-              name: 'Post',
-              params: {
-                year: getYear(article.date),
-                month: getMonth(article.date),
-                date: getDate(article.date),
-                title: slugify(article.title),
-              },
-            }"
+            :class="`box ${article.category.slug}`"
           >
             <img :src="article.image.image" :alt="article.image.alt">
-            <div class="title-container">
+            <div class="content">
+              <p class="tag">{{ article.category.name }}</p>
               <h2 class="title">{{ article.title }}</h2>
+              <p>{{ stripHTML(article.content).substr(0, index === 0 ? 250 : 100) }}...</p>
+              <router-link
+                :to="{
+                  name: 'Post',
+                  params: {
+                    year: getYear(article.date),
+                    month: getMonth(article.date),
+                    date: getDate(article.date),
+                    title: slugify(article.title),
+                  },
+                }"
+              >
+                <span class="overlay"></span>
+                Read More
+              </router-link>
             </div>
-          </router-link>
+          </div>
         </div>
       </div>
     </template>
@@ -87,6 +94,11 @@ export default {
         .replace(/^-+/, '')
         .replace(/-+$/, '');
     },
+    stripHTML(html) {
+      const temporalDivElement = document.createElement('div');
+      temporalDivElement.innerHTML = html;
+      return temporalDivElement.textContent || temporalDivElement.innerText || '';
+    },
   },
   mounted() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -109,32 +121,100 @@ export default {
 }
 .articles {
   @include grid-boxes(1, 1, 1fr, auto, 0);
-  .title-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 10px;
-    @include background-opacity($cod, 0.8);
-    h2 {
-      @include title-font;
-      color: $white;
-      text-align: center;
-    }
-  }
   img {
     display: block;
     height: 300px;
     width: 100%;
     object-fit: cover;
   }
+  .box {
+    display: flex;
+    flex-direction: column;
+    &.business {
+      .tag {
+        color: $danube;
+      }
+      a {
+        background: $danube;
+      }
+    }
+    &.management {
+      .tag {
+        color: $goldendream;
+      }
+      a {
+        background: $goldendream;
+      }
+    }
+    &.press-room-and-news {
+      .tag {
+        color: $nightshadz;
+      }
+      a {
+        background: $nightshadz;
+      }
+    }
+    .content {
+      background: #f5f5f5;
+      padding: 20px 20px 100px;
+      position: relative;
+      flex: 1;
+      .tag {
+        @include title-font;
+      }
+      a {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        color: $white;
+        text-decoration: none;
+        @include title-font;
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 10px;
+          background: rgba($white, 0.2);
+          transition: 0.4s;
+        }
+        &:hover {
+          .overlay {
+            width: 100%;
+          }
+        }
+      }
+      h2,
+      p {
+        color: #747474;
+      }
+    }
+    &:nth-child(even) {
+      .content {
+        background: #ebebeb;
+      }
+    }
+    &:first-of-type {
+      .content {
+        padding: 20px 40px 80px;
+        a {
+          justify-content: center;
+        }
+      }
+    }
+  }
   @media only screen and (min-width: $medium) {
     @include grid-boxes(2, auto, 1fr, auto, 0);
+    .box {
+      &:first-of-type {
+        grid-column: 1 / 3;
+      }
+    }
   }
   @media only screen and (min-width: $large) {
     @include grid-boxes(3, auto, 1fr, auto, 0);
