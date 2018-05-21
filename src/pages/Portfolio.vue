@@ -10,7 +10,11 @@
       >
       </hero-section>
       <section class="portfolio">
-        <template v-for="(project, index) in portfolio">
+        <div
+          v-for="(project, index) in portfolio"
+          :key="index"
+          class="project"
+        >
           <div
             :class="{
               'box logo': true,
@@ -44,7 +48,7 @@
               </a>
             </div>
           </div>
-        </template>
+        </div>
       </section>
     </template>
   </base-page>
@@ -110,12 +114,6 @@ export default {
       filter: grayscale(100%);
       transition: 0.3s;
     }
-    &:hover {
-      .logo {
-        filter: grayscale(0%);
-        transform: scale(1.2);
-      }
-    }
   }
   .box.content {
     padding: 30px 0;
@@ -127,13 +125,16 @@ export default {
       }
     }
     .button {
-      height: 32px;
-      padding: 0 10px;
+      height: auto;
+      padding: 5px 10px;
       margin-top: 15px;
     }
   }
   @media only screen and (min-width: $medium) {
-    @include grid-boxes(2, 12, 1fr, 200px, 0);
+    @include grid-boxes(1, 12, 1fr, 200px, 0);
+    .project {
+      @include grid-boxes(2, 1, 1fr, auto, 0);
+    }
     .box.content {
       padding: 20px;
       > .container {
@@ -147,13 +148,13 @@ export default {
     }
   }
   @media only screen and (min-width: $large) {
-    @include grid-boxes(6, 4, 1fr, 300px, 0);
+    @include grid-boxes(3, 4, 1fr, 300px, 0);
     .box.bkg-offset-desktop {
       background: $wildsand;
     }
   }
   @media only screen and (min-width: $large) {
-    @include grid-boxes(6, 4, 100vw / 6, 100vw / 6, 0);
+    @include grid-boxes(3, 4, 100vw / 3, 100vw / 6, 0);
   }
 }
 </style>
