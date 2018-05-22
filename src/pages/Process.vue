@@ -99,7 +99,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/styles/variables";
-$bullet_width: 50px;
+$bullet_width: 40px;
 .process {
   @include grid-boxes(1, 2, 1fr, auto, 0);
   .box:not(.image) {
@@ -169,9 +169,10 @@ $bullet_width: 50px;
   @media only screen and (min-width: $large) {
     @include grid-boxes(2, 1, 1fr, auto, 0);
     .box:not(.image) {
+      padding: 100px 20px;
       h2,
       p {
-        padding-left: 82px;
+        padding-left: 72px;
       }
       > .container {
         width: 100%;
@@ -267,9 +268,13 @@ $bullet_width: 50px;
   @media only screen and (min-width: $large) {
     @include grid-boxes(2, 1, 1fr, auto, 0);
     .box:not(.image) {
+      padding: 100px 20px;
       h2,
       p {
-        padding-left: 82px;
+        padding-left: 72px;
+      }
+      .button {
+        margin-left: 72px;
       }
       .step p {
         padding-left: 0;
@@ -285,4 +290,3 @@ $bullet_width: 50px;
   }
 }
 </style>
-

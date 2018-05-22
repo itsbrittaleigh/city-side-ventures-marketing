@@ -68,7 +68,6 @@ form {
 input,
 textarea {
   background: $wildsand;
-  border: 1px solid #d7d7d7;
 }
 button {
   position: absolute;

@@ -455,7 +455,7 @@ export default {
 }
 .focus {
   background: $goldendream;
-  padding: 30px 0;
+  padding: 40px 0;
   h2 {
     color: #323232;
   }
@@ -502,6 +502,7 @@ export default {
 }
 .funds {
   background: $danube;
+  padding-bottom: 30px;
   .box {
     padding: 20px 30px 120px 30px;
     position: relative;
@@ -530,6 +531,7 @@ export default {
     margin: 0 0 8px;
     font-size: 27px;
     color: #565656;
+    line-height: 1.1;
   }
   img {
     position: absolute;
@@ -549,6 +551,7 @@ export default {
     height: 40px;
   }
   @media only screen and (min-width: $medium) {
+    padding-bottom: 0;
     > .container {
       width: 100%;
       max-width: 100%;
@@ -564,6 +567,15 @@ export default {
           font-size: 34px;
         }
       }
+      &:not(:nth-child(1)) {
+        p.lead {
+          font-size: 18px;
+        }
+        p:not(.lead) {
+          font-size: 14px;
+          margin-top: 20px;
+        }
+      }
       img {
         position: static;
       }
@@ -574,10 +586,6 @@ export default {
       h3,
       p {
         order: 1;
-      }
-      p:not(.lead) {
-        font-size: 14px;
-        margin-top: 20px;
       }
     }
   }

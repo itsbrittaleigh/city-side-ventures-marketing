@@ -134,10 +134,7 @@ h2 {
   }
   @media only screen and (min-width: $xlarge) {
     .box {
-      padding: 170px 50px 50px;
-      h3, p, address, a {
-        font-size: 16px;
-      }
+      padding: 170px 100px 50px 50px;
       img {
         left: 50px;
         top: 50px;

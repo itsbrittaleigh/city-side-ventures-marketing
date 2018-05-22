@@ -24,6 +24,9 @@
   height: 500px;
   &.funds {
     padding: 0;
+    h1 {
+      line-height: 1.1;
+    }
     .container {
       display: flex;
       align-items: center;

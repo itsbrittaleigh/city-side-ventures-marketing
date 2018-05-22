@@ -16,8 +16,9 @@
           <li
             @click="toggleAbout"
             :class="{'open': aboutIsOpen, 'router-link-active': aboutIsActive}"
+            v-click-outside="closeAbout"
           >
-            <span class="heading" v-click-outside="closeAbout">
+            <span class="heading">
               About Us
               <img src="../assets/images/icons/arrow-down.svg" alt="down arrow">
             </span>
@@ -42,8 +43,9 @@
           <li
             @click="toggleFunds"
             :class="{'open': fundsAreOpen, 'router-link-active': fundsAreActive}"
+            v-click-outside="closeFunds"
           >
-            <span class="heading" v-click-outside="closeFunds">
+            <span class="heading">
               Investment Funds
               <img src="../assets/images/icons/arrow-down.svg" alt="down arrow">
             </span>

@@ -122,16 +122,17 @@ ul {
   }
 }
 .secondary {
-  padding: 20px 0;
+  padding: 5px 0;
   background: $cod;
   p {
-    color: #c9d8de;
+    color: #9f9f9f;
     font-size: 12px;
     text-align: center;
   }
 }
 @media only screen and (min-width: $medium) {
   .primary {
+    padding: 55px 0;
     .container {
       display: flex;
       justify-content: center;

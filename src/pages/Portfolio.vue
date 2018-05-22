@@ -21,6 +21,7 @@
                 :class="{
                   'box logo': true,
                   'bkg-offset-desktop': isEvenRowedOnDesktop(index + 1),
+                  'bkg-offset-small-desktop': isEvenRowedOnSmallDesktop(index + 1),
                 }"
                 :key="index"
               >
@@ -43,8 +44,10 @@
                   <p class="title">{{ project[0].name }}</p>
                   <p>{{ project[0].description }}</p>
                   <a
+                    v-if="project[0].link"
                     :href="project[0].link"
                     class="button"
+                    target="_blank"
                   >
                     View website
                   </a>
@@ -52,19 +55,6 @@
               </div>
             </div>
             <div class="back">
-              <div
-                :class="{
-                  'box logo': true,
-                  'bkg-offset-desktop': isEvenRowedOnDesktop(index + 1),
-                }"
-                :key="index"
-              >
-                <img
-                  class="logo"
-                  :src="project[1].logo"
-                  :alt="project[1].company + ' logo'"
-                >
-              </div>
               <div
                 :class="{
                   'box content': true,
@@ -79,11 +69,27 @@
                   <p>{{ project[1].description }}</p>
                   <a
                     :href="project[1].link"
+                    v-if="project[1].link"
                     class="button"
+                    target="_blank"
                   >
                     View website
                   </a>
                 </div>
+              </div>
+              <div
+                :class="{
+                  'box logo': true,
+                  'bkg-offset-desktop': isEvenRowedOnDesktop(index + 1),
+                  'bkg-offset-small-desktop': isEvenRowedOnSmallDesktop(index + 1),
+                }"
+                :key="index"
+              >
+                <img
+                  class="logo"
+                  :src="project[1].logo"
+                  :alt="project[1].company + ' logo'"
+                >
               </div>
             </div>
           </div>
@@ -123,6 +129,9 @@ export default {
     isEvenRowedOnDesktop(index) {
       return (((Math.ceil(index / 3) * 3) % 6) === 0);
     },
+    isEvenRowedOnSmallDesktop(index) {
+      return (((Math.ceil(index / 2) * 2) % 4) === 0);
+    },
   },
 };
 </script>
@@ -153,6 +162,7 @@ export default {
     align-items: center;
     justify-content: center;
     padding: 10px;
+    min-height: 170px;
     .logo {
       max-height: 50px;
       max-width: 55%;
@@ -176,8 +186,14 @@ export default {
       margin-top: 15px;
     }
   }
-  @media only screen and (min-width: $medium) {
-    @include grid-boxes(1, 6, 1fr, 200px, 0);
+  @media only screen and (min-width: $small) {
+    .front,
+    .back {
+      @include grid-boxes(2, 1, 1fr, auto, 0);
+    }
+  }
+  @media only screen and (min-width: $large) {
+    @include grid-boxes(2, 3, 1fr, 200px, 0);
     .project {
       perspective: 1000px;
       width: 100%;
@@ -222,9 +238,15 @@ export default {
         align-items: flex-start;
       }
     }
+    .box.bkg-offset-small-desktop {
+      background: $wildsand;
+    }
   }
-  @media only screen and (min-width: $large) {
+  @media only screen and (min-width: $xlarge) {
     @include grid-boxes(3, 2, 1fr, 350px, 0);
+    .box.bkg-offset-small-desktop {
+      background: none;
+    }
     .box.bkg-offset-desktop {
       background: $wildsand;
     }

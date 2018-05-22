@@ -37,12 +37,12 @@ button,
     }
   }
   &.button-black {
-    background: $cod;
+    background: #313131;
     color: $white;
-    border: 1px solid $cod;
+    border: 1px solid #313131;
     &:hover {
       background: $white;
-      color: $cod;
+      color: #313131;
     }
   }
 }

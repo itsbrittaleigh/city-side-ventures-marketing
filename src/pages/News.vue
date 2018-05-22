@@ -157,7 +157,7 @@ export default {
     }
     .content {
       background: #f5f5f5;
-      padding: 20px 20px 100px;
+      padding: 30px 30px 100px;
       position: relative;
       flex: 1;
       .tag {
@@ -202,7 +202,7 @@ export default {
     }
     &:first-of-type {
       .content {
-        padding: 20px 40px 80px;
+        padding: 30px 40px 140px;
         a {
           justify-content: center;
         }
