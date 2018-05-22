@@ -121,6 +121,16 @@
         </div>
       </div>
     </section>
+    <section class="portfolio padded-section">
+      <div class="container">
+        <h2>The {{ fund.name }} Portfolio</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi vero ea labore eveniet,
+          cum distinctio sunt quisquam, delectus deserunt quidem ut? Quaerat reprehenderit
+          asperiores molestiae, ullam debitis consequatur quidem numquam.
+        </p>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -280,6 +290,7 @@ export default {
   }
 }
 .app-process {
+  background: $wildsand;
   $bullet_width: 40px;
   .bar-graph {
     width: 220px;
