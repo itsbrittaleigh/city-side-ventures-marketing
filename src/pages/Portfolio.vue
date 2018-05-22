@@ -224,13 +224,13 @@ export default {
     }
   }
   @media only screen and (min-width: $large) {
-    @include grid-boxes(3, 2, 1fr, 300px, 0);
+    @include grid-boxes(3, 2, 1fr, 350px, 0);
     .box.bkg-offset-desktop {
       background: $wildsand;
     }
   }
-  @media only screen and (min-width: $large) {
-    @include grid-boxes(3, 2, 100vw / 3, 100vw / 6, 0);
+  @media only screen and (min-width: $xlarge) {
+    @include grid-boxes(3, 2, 100vw / 3, 300px, 0);
   }
 }
 </style>
