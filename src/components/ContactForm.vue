@@ -22,7 +22,7 @@
         <textarea name="message" id="message" rows="10" v-model="message"></textarea>
       </div>
       <p v-if="showSuccess">Your message was sent successfully</p>
-      <button type="submit" class="button button-red">Submit</button>
+      <button type="submit" class="button button-black">Submit</button>
     </div>
   </form>
 </template>

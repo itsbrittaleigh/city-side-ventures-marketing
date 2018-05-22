@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <section :class="`hero bkg-${color}`">
     <div class="container">
       <h1>{{ heading }}</h1>
       <p
@@ -55,6 +55,9 @@ export default {
     },
     alt: {
       default: 'Skyline of downtown Detroit on a sunny, clear day',
+    },
+    color: {
+      default: 'yellow',
     },
   },
   data() {

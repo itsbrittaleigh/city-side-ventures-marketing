@@ -191,7 +191,7 @@ const state = {
         color: 'red',
       },
       icon: {
-        image: require('../assets/images/icons/fund-venture248-white.svg'),
+        image: require('../assets/images/icons/fund-venture248-black.svg'),
         alt: '',
       },
       intro: 'Venture (248) is an equity-based Venture Capital Fund that was created to fund and grow second stage, Michigan-based technology companies. Its sole purpose is to help grow the Michigan tech startup ecosystem. Venture (248) is an equity-based Venture Capital Fund that was created to fund and grow Second Stage Michigan Tech companies. Its sole purpose is to grow the Michigan Tech Startup Ecosystem. The fund provides equity-based capital investment of up to $500K per deal for qualified startups.',
@@ -224,7 +224,7 @@ const state = {
         color: 'blue',
       },
       icon: {
-        image: require('../assets/images/icons/fund-blueventure-white.svg'),
+        image: require('../assets/images/icons/fund-blueventure-black.svg'),
         alt: '',
       },
       intro: 'Blue Venture is a Michigan-based Venture Capital Fund that was established to invest in fast growing, scalable, and post-revenue tech companies located in the US and North America. Blue Venture Fund is an equity-based Venture Capital Fund. It was created to provide capital investments for fast-growing scalable post revenue Tech companies in North America. The sole purpose of the Blue Venture Fund is to grow the North American startup ecosystem. The fund will make capital investments up to $5M per deal for qualified companies.',
@@ -259,7 +259,7 @@ const state = {
         color: 'black',
       },
       icon: {
-        image: require('../assets/images/icons/fund-cityx-white.svg'),
+        image: require('../assets/images/icons/fund-cityx-black.svg'),
         alt: '',
       },
       intro: 'City[X] is a Michigan-based Private Equity Fund that was established to invest in fast growing, scalable, and post-revenue tech companies located in the US and North America. City[X] Fund is an equity-based Private Equity Fund. It was created to provide capital investments for fast-growing scalable post revenue Tech companies in North America. The sole purpose of City[X] Fund is to grow the North American Startup ecosystem. The fund will make capital investments up to $10M per deal for qualified companies.',

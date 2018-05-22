@@ -36,4 +36,13 @@ button,
       color: $nightshadz;
     }
   }
+  &.button-black {
+    background: $cod;
+    color: $white;
+    border: 1px solid $cod;
+    &:hover {
+      background: $white;
+      color: $cod;
+    }
+  }
 }

@@ -5,16 +5,20 @@
       <div class="overlay"></div>
       <div class="container">
         <div class="information-box">
-          <img :src="fund.icon.image" :alt="fund.icon.alt">
-          <h1>{{ fund.name }}</h1>
-          <p><em>{{ fund.market }}</em></p>
-          <a
-            href="https://app.sidepitch.com/auth/register"
-            class="button inverse"
-            target="_blank"
-          >
-            Apply with City Side
-          </a>
+          <div class="logo-container">
+            <img :src="fund.icon.image" :alt="fund.icon.alt">
+          </div>
+          <div class="content">
+            <h1>{{ fund.name }}</h1>
+            <p><em>{{ fund.market }}</em></p>
+            <a
+              href="https://app.sidepitch.com/auth/register"
+              class="button inverse"
+              target="_blank"
+            >
+              Apply with City Side
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -23,12 +27,12 @@
         <p>{{ fund.intro }}</p>
         <div class="statistics">
           <div class="box">
-            <p class="large color-blue">{{ fund.investmentCapital }}</p>
-            <p class="small color-blue">in investment capital</p>
+            <p :class="`large color-${fund.hero.color}`">{{ fund.investmentCapital }}</p>
+            <p class="small">in investment capital</p>
           </div>
           <div class="box">
-            <p class="large color-red">{{ fund.maxInvestmentSize }}</p>
-            <p class="small color-red">maximum investment size</p>
+            <p :class="`large color-${fund.hero.color}`">{{ fund.maxInvestmentSize }}</p>
+            <p class="small">maximum investment size</p>
           </div>
         </div>
       </div>
@@ -36,7 +40,7 @@
     <section class="qualifications">
       <div class="box">
         <div class="container">
-          <h2 class="color-blue">Minimum Qualifications</h2>
+          <h2 :class="`color-${fund.hero.color}`">Minimum Qualifications</h2>
           <p>
             <em>
               Companies that are considering applying must be qualified based on the following:
@@ -54,7 +58,7 @@
       </div>
       <div class="box">
         <div class="container">
-          <h2 class="color-blue">Funding Requirements</h2>
+          <h2 :class="`color-${fund.hero.color}`">Funding Requirements</h2>
           <p>
             <em>
               Companies that will qualify for the fund will agree to the following conditions:
@@ -179,6 +183,12 @@ export default {
     }
     &.color-blue {
       color: $danube;
+    }
+    &.color-yellow {
+      color: $goldendream;
+    }
+    &.color-black {
+      color: $cod;
     }
   }
   .statistics {

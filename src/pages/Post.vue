@@ -5,6 +5,7 @@
         :heading="post.title"
         :description="'by ' + post.author"
         :name="post.image.name"
+        color="black"
       >
       </hero-section>
       <div class="news">

@@ -4,6 +4,7 @@
       <hero-section
         heading="News, Thoughts, and Updates"
         name="news"
+        color="black"
       >
       </hero-section>
       <div class="news">
