@@ -62,10 +62,10 @@
               </li>
             </ul>
           </li>
-          <li>
+          <li :class="{ 'router-link-active': newsIsActive }">
             <router-link :to="{ name: 'News' }">News</router-link>
           </li>
-          <li>
+          <li :class="{ 'router-link-active': contactIsActive }">
             <router-link :to="{ name: 'Contact' }">Contact Us</router-link>
           </li>
         </span>
@@ -115,6 +115,15 @@ export default {
         this.$route.name === 'Venture248' ||
         this.$route.name === 'CityX'
       );
+    },
+    newsIsActive() {
+      return (
+        this.$route.name === 'News' ||
+        this.$route.name === 'Post'
+      );
+    },
+    contactIsActive() {
+      return this.$route.name === 'Contact';
     },
   },
   methods: {
@@ -246,7 +255,6 @@ button {
       img {
         margin-left: 8px;
         transform: rotate(0);
-        transform-origin: top;
         transition: 0.4s;
       }
     }
@@ -287,6 +295,7 @@ button {
   .nav-right {
     li {
       a {
+        width: 150px;
         height: 44px;
         display: inline-flex;
         align-items: center;
@@ -341,6 +350,7 @@ button {
       display: flex;
       align-items: center;
       position: relative;
+      transition: 0.4s;
       @media only screen and (min-width: $xlarge) {
         padding: 0 30px;
       }
@@ -348,10 +358,8 @@ button {
         justify-content: flex-start;
         font-size: 12px;
       }
-      .router-link-active,
       &.router-link-active {
         background: #e8e8e8;
-        padding: 0 20px;
       }
       ul {
         position: absolute;
@@ -362,7 +370,7 @@ button {
         padding: 0;
         overflow: visible;
         li {
-          width: 200px;
+          width: 250px;
           margin: 0;
           padding: 0;
           transition: 0.3s;
@@ -391,6 +399,9 @@ button {
         width: 100%;
       }
       &.open {
+        background: #cfcfcf;
+      }
+      &:hover {
         background: #cfcfcf;
       }
     }
