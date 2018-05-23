@@ -106,6 +106,22 @@
             deleniti!
           </p>
         </div>
+        <div class="box label box-blue">
+          <img src="https://fillmurray.com/400/400" alt="">
+          <p>Blockchain</p>
+        </div>
+        <div class="box content content-blue">
+          <h2>Headline</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus labore
+            quia cum inventore pariatur facere dolorum officia error, quis laudantium
+            soluta architecto quas earum laboriosam rem voluptatibus mollitia maiores
+            deleniti!
+          </p>
+        </div>
+        <div class="box image blockchain">
+          <!-- <img src="../assets/images/icons/focus-b2b-white.svg" alt=""> -->
+        </div>
       </div>
     </template>
   </base-page>
@@ -220,6 +236,10 @@ export default {
     }
     &.medical {
       background: url('../assets/images/focus/medical.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    &.blockchain {
+      background: url('https://fillmurray.com/800/400') no-repeat center center;
       background-size: cover;
     }
     img {

@@ -255,25 +255,26 @@ export default {
     }
   }
   .logos {
-    padding: 50px 25px;
-    @include grid-boxes(3, 3, 1fr, 1fr, 30px);
+    @include grid-boxes(3, 3, (100vw / 3), (100vw / 3), 0);
     .box {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      &:nth-child(odd) {
+        background: $wildsand;
+      }
     }
     img {
       max-height: 75px;
       max-width: 80%;
       object-fit: contain;
-      filter: grayscale(1);
     }
     p {
       text-align: center;
     }
     @media only screen and (min-width: $large) {
-      @include grid-boxes(3, 3, 1fr, 1fr, 50px);
+      @include grid-boxes(3, 3, (100vw / 6), 1fr, 0);
     }
   }
   @media only screen and (min-width: $large) {

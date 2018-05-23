@@ -170,7 +170,7 @@ export default {
         background: $goldendream;
       }
     }
-    &.press-room-and-news {
+    &.press {
       .tag {
         color: $nightshadz;
       }

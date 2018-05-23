@@ -227,11 +227,13 @@ export default {
     }
   }
   @media only screen and (min-width: $large) {
-    .navigation-container {
-      padding: 20px 40px;
-    }
     .stick {
       width: 25vw;
+    }
+  }
+  @media only screen and (min-width: $xxlarge) {
+    .navigation-container {
+      padding-left: 60px;
     }
   }
 }
