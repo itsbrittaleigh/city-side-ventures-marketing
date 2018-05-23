@@ -5,50 +5,52 @@
       :class="{ 'navigation-container': true, 'stick': isStuck }"
       :style="`height: ${footerToTop}px`"
     >
-      <h3 class="color-blue">Business</h3>
-      <ul>
-        <li
-          v-for="(article, index) in businessArticles"
-          :key="index"
-          @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
-        >
-          <img src="../assets/images/icons/bullet-small.svg" alt="">
-          {{ article.title }}
-        </li>
-      </ul>
-      <h3 class="color-yellow">Management</h3>
-      <ul>
-        <li
-          v-for="(article, index) in managementArticles"
-          :key="index"
-          @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
-        >
-          <img src="../assets/images/icons/bullet-small.svg" alt="">
-          {{ article.title }}
-        </li>
-      </ul>
-      <h3 class="color-red">Press Room &amp; News</h3>
-      <ul>
-        <li
-          v-for="(article, index) in pressArticles"
-          :key="index"
-          @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
-        >
-          <img src="../assets/images/icons/bullet-small.svg" alt="">
-          {{ article.title }}
-        </li>
-      </ul>
-      <h3 class="color-gray">Archives</h3>
-      <ul>
-        <li
-          v-for="(value, key) in archives"
-          :key="key"
-          @click="redirectTo(`/news?month=${key}`)"
-        >
-          <img src="../assets/images/icons/bullet-small.svg" alt="">
-          {{ key }} ({{ value.length }})
-        </li>
-      </ul>
+      <div class="inner-container">
+        <h3 class="color-blue">Business</h3>
+        <ul>
+          <li
+            v-for="(article, index) in businessArticles"
+            :key="index"
+            @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
+          >
+            <img src="../assets/images/icons/bullet-small.svg" alt="">
+            {{ article.title }}
+          </li>
+        </ul>
+        <h3 class="color-yellow">Management</h3>
+        <ul>
+          <li
+            v-for="(article, index) in managementArticles"
+            :key="index"
+            @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
+          >
+            <img src="../assets/images/icons/bullet-small.svg" alt="">
+            {{ article.title }}
+          </li>
+        </ul>
+        <h3 class="color-red">Press Room &amp; News</h3>
+        <ul>
+          <li
+            v-for="(article, index) in pressArticles"
+            :key="index"
+            @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
+          >
+            <img src="../assets/images/icons/bullet-small.svg" alt="">
+            {{ article.title }}
+          </li>
+        </ul>
+        <h3 class="color-gray">Archives</h3>
+        <ul>
+          <li
+            v-for="(value, key) in archives"
+            :key="key"
+            @click="redirectTo(`/news?month=${key}`)"
+          >
+            <img src="../assets/images/icons/bullet-small.svg" alt="">
+            {{ key }} ({{ value.length }})
+          </li>
+        </ul>
+      </div>
     </div>
   </aside>
 </template>
@@ -157,6 +159,13 @@ export default {
   .navigation-container {
     padding: 20px;
     max-height: 100vh;
+    overflow: hidden;
+  }
+  .inner-container {
+    height: 100%;
+    width: calc(100% + 50px);
+    overflow-y: scroll;
+    padding-right: 30px;
   }
   h3 {
     @include title-font;
@@ -208,13 +217,13 @@ export default {
     top: 0;
     bottom: 0;
     left: 0;
-    overflow-y: scroll;
     width: 0;
   }
   @media only screen and (min-width: $medium) {
     display: block;
     .stick {
       width: calc(100vw / 3);
+      padding-right: 20px;
     }
   }
   @media only screen and (min-width: $large) {
