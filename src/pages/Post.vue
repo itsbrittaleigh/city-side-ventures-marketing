@@ -9,8 +9,10 @@
       >
       </hero-section>
       <div class="news">
-        <blog-sidebar></blog-sidebar>
-        <div class="post padded-section" v-html="post.content"></div>
+        <blog-sidebar :is-stuck="isStuck"></blog-sidebar>
+        <div id="content">
+          <div class="post padded-section" v-html="post.content"></div>
+        </div>
       </div>
     </template>
   </base-project>
@@ -26,7 +28,15 @@ export default {
   name: 'Post',
   data() {
     return {
-      post: {},
+      post: {
+        title: '',
+        image: {
+          name: '',
+        },
+        author: '',
+      },
+      isMobile: window.innerWidth < 768,
+      isPastContent: false,
     };
   },
   components: {
@@ -38,6 +48,9 @@ export default {
     ...mapGetters([
       'articles',
     ]),
+    isStuck() {
+      return !this.isMobile && this.isPastContent;
+    },
   },
   methods: {
     getPostBySlug(slug) {
@@ -45,15 +58,27 @@ export default {
     },
     parseHTML(content) {
       const doc = new DOMParser().parseFromString(content, 'text/html');
-      // eslint-disable-next-line
-      console.log(doc.body);
       return doc;
+    },
+    updateContentToTop() {
+      const contentToTop = document.getElementById('content').getBoundingClientRect().top;
+      this.isPastContent = contentToTop <= 0;
     },
   },
   mounted() {
     this.post = this.getPostBySlug(
       `${this.$route.params.year}/${this.$route.params.month}/${this.$route.params.date}/${this.$route.params.title}`,
     );
+
+    this.updateContentToTop(window.scrollY);
+
+    window.addEventListener('scroll', () => {
+      this.updateContentToTop();
+    });
+
+    window.addEventListener('resize', () => {
+      this.isMobile = (window.innerWidth < 768);
+    });
   },
 };
 </script>

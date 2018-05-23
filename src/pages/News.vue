@@ -8,8 +8,8 @@
       >
       </hero-section>
       <div class="news">
-        <blog-sidebar></blog-sidebar>
-        <div class="box articles">
+        <blog-sidebar :is-stuck="isStuck"></blog-sidebar>
+        <div class="box articles" id="articles">
           <div
             v-for="(article, index) in articles"
             :key="index"
@@ -52,7 +52,10 @@ import Sidebar from '../components/BlogSidebar';
 export default {
   name: 'News',
   data() {
-    return {};
+    return {
+      isMobile: window.innerWidth < 768,
+      isPastArticles: false,
+    };
   },
   components: {
     'base-page': Base,
@@ -63,6 +66,9 @@ export default {
     ...mapGetters([
       'articles',
     ]),
+    isStuck() {
+      return !this.isMobile && this.isPastArticles;
+    },
   },
   methods: {
     ...mapActions([
@@ -100,11 +106,25 @@ export default {
       temporalDivElement.innerHTML = html;
       return temporalDivElement.textContent || temporalDivElement.innerText || '';
     },
+    updateArticlesToTop() {
+      const articlesToTop = document.getElementById('articles').getBoundingClientRect().top;
+      this.isPastArticles = articlesToTop <= 0;
+    },
   },
   mounted() {
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('tag')) this.filterByCategory(urlParams.get('tag'));
     if (urlParams.has('month')) this.filterByMonth(urlParams.get('month'));
+
+    this.updateArticlesToTop(window.scrollY);
+
+    window.addEventListener('scroll', () => {
+      this.updateArticlesToTop();
+    });
+
+    window.addEventListener('resize', () => {
+      this.isMobile = (window.innerWidth < 768);
+    });
   },
 };
 </script>

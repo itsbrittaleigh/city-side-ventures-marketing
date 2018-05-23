@@ -1,50 +1,55 @@
 <!-- eslint-disable max-len -->
 <template>
   <aside class="box navigation">
-    <h3 class="color-blue">Business</h3>
-    <ul>
-      <li
-        v-for="(article, index) in businessArticles.splice(0, 3)"
-        :key="index"
-        @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
-      >
-        <img src="../assets/images/icons/bullet-small.svg" alt="">
-        {{ article.title }}
-      </li>
-    </ul>
-    <h3 class="color-yellow">Management</h3>
-    <ul>
-      <li
-        v-for="(article, index) in managementArticles.splice(0, 3)"
-        :key="index"
-        @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
-      >
-        <img src="../assets/images/icons/bullet-small.svg" alt="">
-        {{ article.title }}
-      </li>
-    </ul>
-    <h3 class="color-red">Press Room &amp; News</h3>
-    <ul>
-      <li
-        v-for="(article, index) in pressArticles.splice(0, 3)"
-        :key="index"
-        @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
-      >
-        <img src="../assets/images/icons/bullet-small.svg" alt="">
-        {{ article.title }}
-      </li>
-    </ul>
-    <h3 class="color-gray">Archives</h3>
-    <ul>
-      <li
-        v-for="(value, key) in archives"
-        :key="key"
-        @click="redirectTo(`/news?month=${key}`)"
-      >
-        <img src="../assets/images/icons/bullet-small.svg" alt="">
-        {{ key }} ({{ value.length }})
-      </li>
-    </ul>
+    <div
+      :class="{ 'navigation-container': true, 'stick': isStuck }"
+      :style="`height: ${footerToTop}px`"
+    >
+      <h3 class="color-blue">Business</h3>
+      <ul>
+        <li
+          v-for="(article, index) in localBusinessArticles"
+          :key="index"
+          @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
+        >
+          <img src="../assets/images/icons/bullet-small.svg" alt="">
+          {{ article.title }}
+        </li>
+      </ul>
+      <h3 class="color-yellow">Management</h3>
+      <ul>
+        <li
+          v-for="(article, index) in localManagementArticles"
+          :key="index"
+          @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
+        >
+          <img src="../assets/images/icons/bullet-small.svg" alt="">
+          {{ article.title }}
+        </li>
+      </ul>
+      <h3 class="color-red">Press Room &amp; News</h3>
+      <ul>
+        <li
+          v-for="(article, index) in localPressArticles"
+          :key="index"
+          @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
+        >
+          <img src="../assets/images/icons/bullet-small.svg" alt="">
+          {{ article.title }}
+        </li>
+      </ul>
+      <h3 class="color-gray">Archives</h3>
+      <ul>
+        <li
+          v-for="(value, key) in archives"
+          :key="key"
+          @click="redirectTo(`/news?month=${key}`)"
+        >
+          <img src="../assets/images/icons/bullet-small.svg" alt="">
+          {{ key }} ({{ value.length }})
+        </li>
+      </ul>
+    </div>
   </aside>
 </template>
 
@@ -54,8 +59,14 @@ import moment from 'moment';
 
 export default {
   name: 'BlogSidebar',
+  props: ['isStuck'],
   data() {
-    return {};
+    return {
+      localBusinessArticles: [],
+      localManagementArticles: [],
+      localPressArticles: [],
+      footerToTop: 0,
+    };
   },
   computed: {
     ...mapGetters([
@@ -100,6 +111,22 @@ export default {
     redirectTo(location) {
       window.location = location;
     },
+    updateFooterToTop() {
+      this.footerToTop = document.getElementById('footer').getBoundingClientRect().top;
+    },
+  },
+  mounted() {
+    this.localBusinessArticles = this.businessArticles.splice(0, 3);
+    this.localManagementArticles = this.managementArticles.splice(0, 3);
+    this.localPressArticles = this.pressArticles.splice(0, 3);
+
+    this.updateFooterToTop();
+    window.addEventListener('resize', () => {
+      this.updateFooterToTop();
+    });
+    window.addEventListener('scroll', () => {
+      this.updateFooterToTop();
+    });
   },
 };
 </script>
@@ -107,7 +134,11 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/styles/variables";
 .navigation {
-  padding: 20px;
+  display: none;
+  .navigation-container {
+    padding: 20px;
+    max-height: 100vh;
+  }
   h3 {
     @include title-font;
     margin-bottom: 5px;
@@ -153,8 +184,27 @@ export default {
       }
     }
   }
+  .stick {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;
+    width: 0;
+  }
+  @media only screen and (min-width: $medium) {
+    display: block;
+    .stick {
+      width: calc(100vw / 3);
+    }
+  }
   @media only screen and (min-width: $large) {
-    padding: 20px 40px;
+    .navigation-container {
+      padding: 20px 40px;
+    }
+    .stick {
+      width: 25vw;
+    }
   }
 }
 </style>

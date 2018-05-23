@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer id="footer">
     <div class="primary">
       <div class="container">
         <router-link :to="{ name: 'Home' }" class="logo">
