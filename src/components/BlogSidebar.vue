@@ -8,7 +8,7 @@
       <h3 class="color-blue">Business</h3>
       <ul>
         <li
-          v-for="(article, index) in localBusinessArticles"
+          v-for="(article, index) in businessArticles"
           :key="index"
           @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
         >
@@ -19,7 +19,7 @@
       <h3 class="color-yellow">Management</h3>
       <ul>
         <li
-          v-for="(article, index) in localManagementArticles"
+          v-for="(article, index) in managementArticles"
           :key="index"
           @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
         >
@@ -30,7 +30,7 @@
       <h3 class="color-red">Press Room &amp; News</h3>
       <ul>
         <li
-          v-for="(article, index) in localPressArticles"
+          v-for="(article, index) in pressArticles"
           :key="index"
           @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
         >
@@ -56,27 +56,50 @@
 <script>
 import { mapGetters, mapActions } from 'vuex';
 import moment from 'moment';
+import _ from 'lodash';
 
 export default {
   name: 'BlogSidebar',
   props: ['isStuck'],
   data() {
     return {
-      localBusinessArticles: [],
-      localManagementArticles: [],
-      localPressArticles: [],
       footerToTop: 0,
     };
   },
   computed: {
     ...mapGetters([
+      'initialArticles',
       'articles',
       'categories',
       'archives',
-      'businessArticles',
-      'managementArticles',
-      'pressArticles',
     ]),
+    businessArticles() {
+      const articles = [];
+      _.forEach(this.initialArticles, (article) => {
+        if (article.category.slug === 'business') {
+          articles.push(article);
+        }
+      });
+      return articles;
+    },
+    managementArticles() {
+      const articles = [];
+      _.forEach(this.initialArticles, (article) => {
+        if (article.category.slug === 'management') {
+          articles.push(article);
+        }
+      });
+      return articles;
+    },
+    pressArticles() {
+      const articles = [];
+      _.forEach(this.initialArticles, (article) => {
+        if (article.category.slug === 'press') {
+          articles.push(article);
+        }
+      });
+      return articles;
+    },
   },
   methods: {
     ...mapActions([
@@ -116,10 +139,6 @@ export default {
     },
   },
   mounted() {
-    this.localBusinessArticles = this.businessArticles.splice(0, 3);
-    this.localManagementArticles = this.managementArticles.splice(0, 3);
-    this.localPressArticles = this.pressArticles.splice(0, 3);
-
     this.updateFooterToTop();
     window.addEventListener('resize', () => {
       this.updateFooterToTop();

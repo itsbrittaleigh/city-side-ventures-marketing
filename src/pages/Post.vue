@@ -70,7 +70,7 @@ export default {
       `${this.$route.params.year}/${this.$route.params.month}/${this.$route.params.date}/${this.$route.params.title}`,
     );
 
-    this.updateContentToTop(window.scrollY);
+    this.updateContentToTop();
 
     window.addEventListener('scroll', () => {
       this.updateContentToTop();

@@ -108,8 +108,10 @@ export default {
       return temporalDivElement.textContent || temporalDivElement.innerText || '';
     },
     updateArticlesToTop() {
-      const articlesToTop = document.getElementById('articles').getBoundingClientRect().top;
-      this.isPastArticles = articlesToTop <= 0;
+      if (document.getElementById('articles')) {
+        const articlesToTop = document.getElementById('articles').getBoundingClientRect().top;
+        this.isPastArticles = articlesToTop <= 0;
+      } else this.isPastArticles = false;
     },
   },
   mounted() {
@@ -117,7 +119,7 @@ export default {
     if (urlParams.has('tag')) this.filterByCategory(urlParams.get('tag'));
     if (urlParams.has('month')) this.filterByMonth(urlParams.get('month'));
 
-    this.updateArticlesToTop(window.scrollY);
+    this.updateArticlesToTop();
 
     window.addEventListener('scroll', () => {
       this.updateArticlesToTop();

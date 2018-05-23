@@ -13,7 +13,7 @@ const CATEGORIES = [
   },
   {
     name: 'Press Room & News',
-    slug: 'press-room-and-news',
+    slug: 'press',
   },
 ];
 const INITIAL_ARTICLES = [
@@ -201,6 +201,7 @@ const state = {
 };
 
 const getters = {
+  initialArticles: state => state.initialArticles,
   articles: state => state.articles,
   categories: state => state.categories,
   recentArticles: (state) => {
@@ -222,9 +223,6 @@ const getters = {
     });
     return archives;
   },
-  businessArticles: state => _.filter(state.initialArticles, article => article.category.slug === 'business'),
-  managementArticles: state => _.filter(state.initialArticles, article => article.category.slug === 'management'),
-  pressArticles: state => _.filter(state.initialArticles, article => article.category.slug === 'press-room-and-news'),
 };
 
 const actions = {
