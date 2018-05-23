@@ -154,6 +154,7 @@ $bullet_width: 40px;
   .box.image {
     background: url('../assets/images/about-process.jpg') no-repeat center center;
     background-size: cover;
+    min-height: 300px;
   }
   @media only screen and (min-width: $medium) {
     .box:not(.image) {
@@ -169,7 +170,7 @@ $bullet_width: 40px;
   @media only screen and (min-width: $large) {
     @include grid-boxes(2, 1, 1fr, auto, 0);
     .box:not(.image) {
-      padding: 100px 20px;
+      padding: 50px 80px 50px 40px;
       h2,
       p {
         padding-left: 72px;
@@ -217,6 +218,7 @@ $bullet_width: 40px;
   .box.image {
     background: url('../assets/images/sidepitch.jpg') no-repeat center center;
     background-size: cover;
+    min-height: 300px;
   }
   .box:not(.image) {
     background: $goldendream;
@@ -268,7 +270,7 @@ $bullet_width: 40px;
   @media only screen and (min-width: $large) {
     @include grid-boxes(2, 1, 1fr, auto, 0);
     .box:not(.image) {
-      padding: 100px 20px;
+      padding: 50px 80px 50px 40px;
       h2,
       p {
         padding-left: 72px;

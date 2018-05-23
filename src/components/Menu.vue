@@ -64,10 +64,16 @@
               </li>
             </ul>
           </li>
-          <li :class="{ 'router-link-active': newsIsActive }">
+          <li
+            :class="{ 'router-link-active': newsIsActive }"
+            @click="redirectTo('/news')"
+          >
             <router-link :to="{ name: 'News' }">News</router-link>
           </li>
-          <li :class="{ 'router-link-active': contactIsActive }">
+          <li
+            :class="{ 'router-link-active': contactIsActive }"
+            @click="redirectTo('/contact')"
+          >
             <router-link :to="{ name: 'Contact' }">Contact Us</router-link>
           </li>
         </span>
@@ -144,6 +150,9 @@ export default {
     },
     closeFunds() {
       this.fundsAreOpen = false;
+    },
+    redirectTo(location) {
+      window.location = location;
     },
   },
   directives: {
@@ -339,7 +348,7 @@ button {
       height: 100%;
       width: 100%;
       flex: 1;
-      padding-right: 5%;
+      padding-right: 2%;
     }
     .nav-left {
       display: flex;
@@ -348,7 +357,7 @@ button {
     li {
       height: 100%;
       text-align: left;
-      padding: 0 20px;
+      padding: 0 10px;
       display: flex;
       align-items: center;
       position: relative;
@@ -361,7 +370,7 @@ button {
         font-size: 12px;
       }
       &.router-link-active {
-        background: #e8e8e8;
+        background: #f1f1f1;
       }
       ul {
         position: absolute;
@@ -404,7 +413,7 @@ button {
         background: #cfcfcf;
       }
       &:hover {
-        background: #cfcfcf;
+        background: #e9e9e9;
       }
     }
     .nav-right {

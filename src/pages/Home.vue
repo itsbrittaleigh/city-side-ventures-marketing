@@ -570,6 +570,7 @@ export default {
       &:not(:nth-child(1)) {
         p.lead {
           font-size: 18px;
+          line-height: 1.2;
         }
         p:not(.lead) {
           font-size: 14px;

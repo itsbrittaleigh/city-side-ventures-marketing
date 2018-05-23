@@ -38,7 +38,7 @@ header {
     > .container {
       width: 100%;
       max-width: 100%;
-      padding-left: 5%;
+      padding-left: 2%;
       justify-content: flex-start;
       .menu {
         margin-left: 30px;
@@ -48,6 +48,7 @@ header {
   }
   @media only screen and (min-width: $xlarge) {
     > .container {
+      padding-left: 5%;
       .menu {
         margin-left: 40px;
       }

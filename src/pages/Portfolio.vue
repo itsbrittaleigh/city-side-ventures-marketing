@@ -254,5 +254,17 @@ export default {
   @media only screen and (min-width: $xlarge) {
     @include grid-boxes(3, 2, 100vw / 3, 300px, 0);
   }
+  @media only screen and (max-width: $medium) {
+    .back {
+      display: flex;
+      flex-direction: column;
+      .box.content {
+        order: 2;
+      }
+      .box.logo {
+        order: 1;
+      }
+    }
+  }
 }
 </style>

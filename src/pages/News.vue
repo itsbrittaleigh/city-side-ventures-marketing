@@ -32,6 +32,7 @@
                 }"
               >
                 <span class="overlay"></span>
+                <img src="../assets/images/icons/news.svg" alt="">
                 Read More
               </router-link>
             </div>
@@ -194,6 +195,11 @@ export default {
         padding: 0 20px;
         color: $white;
         text-decoration: none;
+        img {
+          height: 25px;
+          width: auto;
+          margin: 0 15px 0 20px;
+        }
         @include title-font;
         .overlay {
           position: absolute;
@@ -223,9 +229,6 @@ export default {
     &:first-of-type {
       .content {
         padding: 30px 40px 140px;
-        a {
-          justify-content: center;
-        }
       }
     }
   }

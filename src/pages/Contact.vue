@@ -33,7 +33,7 @@
           <a href="mailto:contact@citysideventures.com">contact@citysideventures.com</a>
         </div>
         <div class="box box-blue">
-          <img src="../assets/images/icons/letter-white.svg" alt="email icon">
+          <img src="../assets/images/icons/letter-white.svg" alt="email icon" class="news">
           <h3>Newsletter</h3>
           <p>Sign up to receive updates about City Side Ventures</p>
           <newsletter-form></newsletter-form>
@@ -94,6 +94,9 @@ h2 {
     img {
       height: 50px;
       width: auto;
+      &.news {
+        height: 40px;
+      }
     }
     p, address, a {
       color: $white;
