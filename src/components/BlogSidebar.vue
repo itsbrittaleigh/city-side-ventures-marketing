@@ -165,7 +165,7 @@ export default {
     height: 100%;
     width: calc(100% + 50px);
     overflow-y: scroll;
-    padding-right: 30px;
+    padding-right: 50px;
   }
   h3 {
     @include title-font;
