@@ -82,7 +82,7 @@ export default {
           articles.push(article);
         }
       });
-      return articles;
+      return articles.splice(0, 3);
     },
     managementArticles() {
       const articles = [];
@@ -91,7 +91,7 @@ export default {
           articles.push(article);
         }
       });
-      return articles;
+      return articles.splice(0, 3);
     },
     pressArticles() {
       const articles = [];
@@ -100,7 +100,7 @@ export default {
           articles.push(article);
         }
       });
-      return articles;
+      return articles.splice(0, 3);
     },
   },
   methods: {
