@@ -362,6 +362,9 @@ button {
       align-items: center;
       position: relative;
       transition: 0.4s;
+      @media only screen and (min-width: 1071px) {
+        padding: 0 20px;
+      }
       @media only screen and (min-width: $xlarge) {
         padding: 0 30px;
       }
