@@ -9,17 +9,23 @@
     color: #808080;
   }
   .network.icon {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     margin-left: 20px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     &.twitter {
-      background-image: url('https://fillmurray.com/100/100');
+      background-image: url('/assets/images/icons/social-share-twitter.svg');
     }
     &.facebook {
-      background-image: url('https://fillmurray.com/100/100');
+      background-image: url('/assets/images/icons/social-share-facebook.svg');
+    }
+    &.link {
+      background-image: url('/assets/images/icons/social-share-link.svg');
+    }
+    &.email {
+      background-image: url('/assets/images/icons/social-share-email.svg');
     }
   }
 }

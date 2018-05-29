@@ -27,6 +27,11 @@
         .overlay {
           @include background-opacity(#343434, 0.9);
         }
+        p {
+          color: #dfdfdf;
+          font-size: 22px;
+          font-weight: 100;
+        }
       }
       &:nth-child(2) {
         .overlay {
@@ -81,9 +86,17 @@
   }
   .statistics {
     .outer-box {
-      @include grid-boxes(2, 2, 50vw, 50vw, 0);
+      @include grid-boxes(2, 2, 50vw, auto, 0);
     }
     .box {
+      h2 {
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      &.padded {
+        padding: 30px;
+      }
       &.image {
         img {
           height: 100%;
@@ -217,8 +230,24 @@
     }
     &.statistics2 {
       @include grid-boxes(1, 2, 100vw, 100vw, 0);
+      > .box:nth-child(1) {
+        h2 {
+          z-index: 10;
+          color: $goldendream;
+        }
+        img.svg-overlay {
+          width: auto;
+          height: auto;
+          position: relative;
+          z-index: 10;
+          object-fit: contain;
+        }
+        .overlay {
+          @include background-opacity(#3d3d3d, 0.95);
+        }
+      }
       > .box:nth-child(2) {
-        @include grid-boxes(2, 2, 50vw, 50vw, 0);
+        @include grid-boxes(2, 2, 50vw, 50%, 0);
         align-items: initial;
         .box {
           align-items: center;
@@ -260,7 +289,13 @@
       height: 44px;
     }
     .foci {
-      @include grid-boxes(2, 3, 1fr, auto, 25px);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .box {
+        width: 30%;
+        margin: 20px 5px;
+      }
       padding: 50px 0;
       img {
         height: 60px;
@@ -276,7 +311,10 @@
         color: #313131;
       }
       @media only screen and (min-width: $medium) {
-        @include grid-boxes(3, 2, 1fr, auto, 25px);
+        .box {
+          width: 23%;
+          margin: 0 5px 20px;
+        }
       }
     }
     @media only screen and (min-width: $large) {
