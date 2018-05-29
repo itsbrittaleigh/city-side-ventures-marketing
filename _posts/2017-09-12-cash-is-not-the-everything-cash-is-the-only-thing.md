@@ -2,7 +2,7 @@
 title: Cash Is Not the Everything, Cash Is the Only Thing
 date: 2017-09-12 00:00:00 Z
 tag: business
-author: doronyork
+author: Doron York
 layout: post
 image: "/uploads/cash.jpg"
 ---

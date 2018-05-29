@@ -2,7 +2,7 @@
 title: Press Release - Portfolio Update
 date: 2017-07-10 00:00:00 Z
 tag: press
-author: doronyork
+author: Doron York
 layout: post
 image: "/uploads/press.jpg"
 ---

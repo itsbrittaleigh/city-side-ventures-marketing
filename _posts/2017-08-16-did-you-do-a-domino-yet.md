@@ -2,7 +2,7 @@
 title: Did You Do a Domino Yet?
 date: 2017-08-16 00:00:00 Z
 tag: business
-author: doronyork
+author: Doron York
 layout: post
 image: "/uploads/domino.jpeg"
 ---

@@ -2,7 +2,7 @@
 title: You Cannot Save Your Business into Success
 date: 2017-08-14 00:00:00 Z
 tag: management
-author: doronyork
+author: Doron York
 layout: post
 image: "/uploads/save.jpeg"
 ---

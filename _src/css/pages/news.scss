@@ -1,114 +1,117 @@
-.page.news {
-  .news-grid {
-    @include grid-boxes(1, 1, 1fr, auto, 0);
-    @media only screen and (min-width: $medium) {
-      @include grid-boxes(2, 1, (100vw / 3) ((100vw / 3) * 2), auto, 0);
-    }
-    @media only screen and (min-width: $large) {
-      @include grid-boxes(2, 1, 25vw 75vw, auto, 0);
+.news-grid {
+  @include grid-boxes(1, 1, 1fr, auto, 0);
+  @media only screen and (min-width: $medium) {
+    @include grid-boxes(2, 1, (100vw / 3) ((100vw / 3) * 2), auto, 0);
+  }
+  @media only screen and (min-width: $large) {
+    @include grid-boxes(2, 1, 25vw 75vw, auto, 0);
+    .post {
+      margin: 0 auto;
+      width: 80%;
+      max-width: 992px;
     }
   }
-  .articles {
-    @include grid-boxes(1, 1, 1fr, auto, 0);
-    img {
-      display: block;
-      height: 300px;
-      width: 100%;
-      object-fit: cover;
+}
+.articles {
+  @include grid-boxes(1, 1, 1fr, auto, 0);
+  img {
+    display: block;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    &.business {
+      .tag {
+        color: $danube;
+      }
+      a {
+        background: $danube;
+      }
     }
-    .box {
-      display: flex;
-      flex-direction: column;
-      &.business {
-        .tag {
-          color: $danube;
-        }
-        a {
-          background: $danube;
-        }
+    &.management {
+      .tag {
+        color: $goldendream;
       }
-      &.management {
-        .tag {
-          color: $goldendream;
-        }
-        a {
-          background: $goldendream;
-        }
+      a {
+        background: $goldendream;
       }
-      &.press {
-        .tag {
-          color: $nightshadz;
-        }
-        a {
-          background: $nightshadz;
-        }
+    }
+    &.press {
+      .tag {
+        color: $nightshadz;
       }
-      .content {
-        background: #f5f5f5;
-        padding: 30px 30px 100px;
-        position: relative;
-        flex: 1;
-        .tag {
-          @include title-font;
+      a {
+        background: $nightshadz;
+      }
+    }
+    .content {
+      background: #f5f5f5;
+      padding: 30px 30px 100px;
+      position: relative;
+      flex: 1;
+      .tag {
+        @include title-font;
+      }
+      a {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        color: $white;
+        text-decoration: none;
+        img {
+          height: 25px;
+          width: auto;
+          margin: 0 15px 0 20px;
         }
-        a {
+        @include title-font;
+        .overlay {
           position: absolute;
-          bottom: 0;
+          top: 0;
           left: 0;
-          right: 0;
-          height: 70px;
-          display: flex;
-          align-items: center;
-          padding: 0 20px;
-          color: $white;
-          text-decoration: none;
-          img {
-            height: 25px;
-            width: auto;
-            margin: 0 15px 0 20px;
-          }
-          @include title-font;
+          height: 100%;
+          width: 10px;
+          background: rgba($white, 0.2);
+          transition: 0.4s;
+        }
+        &:hover {
           .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 10px;
-            background: rgba($white, 0.2);
-            transition: 0.4s;
-          }
-          &:hover {
-            .overlay {
-              width: 100%;
-            }
+            width: 100%;
           }
         }
-        h2,
-        p {
-          color: #747474;
-        }
       }
-      &:nth-child(even) {
-        .content {
-          background: #ebebeb;
-        }
+      h2,
+      p {
+        color: #747474;
       }
+    }
+    &:nth-child(even) {
+      .content {
+        background: #ebebeb;
+      }
+    }
+    &:first-of-type {
+      .content {
+        padding: 30px 40px 140px;
+      }
+    }
+  }
+  @media only screen and (min-width: $medium) {
+    @include grid-boxes(2, auto, 1fr, auto, 0);
+    .box {
       &:first-of-type {
-        .content {
-          padding: 30px 40px 140px;
-        }
+        grid-column: 1 / 3;
       }
     }
-    @media only screen and (min-width: $medium) {
-      @include grid-boxes(2, auto, 1fr, auto, 0);
-      .box {
-        &:first-of-type {
-          grid-column: 1 / 3;
-        }
-      }
-    }
-    @media only screen and (min-width: $large) {
-      @include grid-boxes(3, auto, 1fr, auto, 0);
-    }
+  }
+  @media only screen and (min-width: $large) {
+    @include grid-boxes(3, auto, 1fr, auto, 0);
   }
 }
