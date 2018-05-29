@@ -2,18 +2,19 @@
 layout: default
 ---
 
-<section class="hero bkg-{{ post.tag }}" style="background-image: url('{{ page.image }}');">
+<section class="hero post-hero bkg-{{ page.tag }}" style="background-image: url('{{ page.image }}');">
   <div class="container">
+    <p class="title">{{ page.tag }}</p>
     <h1>{{ page.title }}</h1>
-    <p>by {{ page.author }}</p>
   </div>
   <div class="overlay"></div>
 </section>
 
-<div class="news-grid">
+<div class="news-grid post-page">
   {% include blog-sidebar.html %}
   <div id="content">
     <div class="post padded-section">
+      By {{ page.author }}
       {{ content }}
     </div>
   </div>

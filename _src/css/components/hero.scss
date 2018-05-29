@@ -10,6 +10,36 @@
   > .container {
     z-index: 10;
   }
+  &.bkg-business {
+    h1,
+    p {
+      color: white;
+    }
+    .overlay {
+      @include background-opacity($danube, 0.9);
+    }
+  }
+  &.bkg-management {
+    .overlay {
+      @include background-opacity($goldendream, 0.9);
+    }
+  }
+  &.bkg-press {
+    h1,
+    p {
+      color: white;
+    }
+    .overlay {
+      @include background-opacity($nightshadz, 0.9);
+    }
+  }
+  &.post-hero {
+    @media only screen and (min-width: $large) {
+      > .container {
+        margin-left: calc(25vw + 50px);
+      }
+    }
+  }
   > img {
     position: absolute;
     top: 0;
@@ -42,6 +72,9 @@
     &.large {
       font-size: 22px;
       margin-bottom: 15px;
+    }
+    &.title {
+      @include title-font;
     }
   }
   &.bkg-black {

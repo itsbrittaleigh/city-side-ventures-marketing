@@ -2,7 +2,7 @@
   &.navigation {
     display: none;
     .navigation-container {
-      padding: 20px;
+      padding: 50px 20px;
       max-height: 100vh;
       overflow: hidden;
     }
@@ -14,7 +14,7 @@
     }
     h3 {
       @include title-font;
-      margin-bottom: 5px;
+      margin: 0 0 5px 0;
       &.color-red {
         color: $nightshadz;
       }
@@ -80,6 +80,14 @@
       .navigation-container {
         padding-left: 60px;
       }
+    }
+  }
+}
+
+.post-page {
+  .blog-sidebar {
+    &.navigation {
+      background: #e9e9e9;
     }
   }
 }
