@@ -21,7 +21,7 @@ title: news
         <div class="content">
           <p class="tag">{{ post.tag }}</p>
           <h2 class="title">{{ post.title }}</h2>
-          <p>{{ post | slice: 0,250 }}...</p>
+          <p>{{ post.content | slice: 0,250 }}...</p>
           <a href="">
             <span class="overlay"></span>
             <img src="/assets/images/icons/news.svg" alt="">
