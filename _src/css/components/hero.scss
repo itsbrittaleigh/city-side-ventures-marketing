@@ -61,6 +61,15 @@
   &.process {
     background-image: url('~/assets/images/covers/process.jpg');
   }
+  &.team {
+    background-image: url('~/assets/images/covers/team.jpg');
+  }
+  &.focus {
+    background-image: url('~/assets/images/covers/focus.jpg');
+  }
+  &.contact {
+    background-image: url('~/assets/images/covers/contact.jpg');
+  }
 }
 
 @media only screen and (min-width: $medium) {

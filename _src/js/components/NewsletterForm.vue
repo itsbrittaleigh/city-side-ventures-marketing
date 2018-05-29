@@ -1,5 +1,5 @@
 <template>
-<div class="form-container">
+<div class="newsletter-form form-container">
   <!-- Begin MailChimp Signup Form -->
   <div id="mc_embed_signup">
     <form
@@ -68,16 +68,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 15px;
-  input,
-  button {
-    height: 40px;
-  }
-}
-</style>
-

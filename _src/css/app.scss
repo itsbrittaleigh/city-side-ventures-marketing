@@ -1,12 +1,19 @@
 @import "variables";
 @import "theme/base";
 
+@import "templates/funds";
+
 @import "pages/home";
 @import "pages/about";
 @import "pages/process";
+@import "pages/focus";
+@import "pages/contact";
 
 @import "components/header";
 @import "components/menu";
 @import "components/hero";
 @import "components/footer";
 @import "components/portfolio-grid";
+@import "components/team-grid";
+@import "components/contact-form";
+@import "components/newsletter-form";

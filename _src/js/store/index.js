@@ -231,42 +231,37 @@ const state = {
     {
       name: 'Doron York',
       title: 'Chairman / CEO',
-      // photo: require('../assets/images/team/doron.jpg'),
+      photo: require('../../../assets/images/team/doron.jpg'),
     },
     {
       name: 'Kevin Yang',
       title: 'President',
-      // photo: require('../assets/images/team/kevin.jpg'),
+      photo: require('../../../assets/images/team/kevin.jpg'),
     },
     {
       name: 'Brandon Shamoun',
       title: 'General Counsel',
-      // photo: require('../assets/images/team/brandon.jpg'),
+      photo: require('../../../assets/images/team/brandon.jpg'),
     },
     {
       name: 'Anthony Steffens',
       title: 'Chief Information Officer',
-      // photo: require('../assets/images/team/anthony.jpg'),
+      photo: require('../../../assets/images/team/anthony.jpg'),
     },
     {
       name: 'Bryan Culver',
       title: 'Chief Technology Officer',
-      // photo: require('../assets/images/team/bryan.jpg'),
+      photo: require('../../../assets/images/team/bryan.jpg'),
     },
-    // {
-    //   name: 'Kendra Corman',
-    //   title: 'Chief Marketing Officer',
-    //   photo: require('../assets/images/team/default.jpg'),
-    // },
     {
       name: 'Jay Patel',
       title: 'SVP / IoT',
-      // photo: require('../assets/images/team/jay.jpg'),
+      photo: require('../../../assets/images/team/jay.jpg'),
     },
     {
       name: 'Zoe (Ziva) Chen, PhD',
       title: 'SVP / Intellectual Property',
-      // photo: require('../assets/images/team/zoe.jpg'),
+      photo: require('../../../assets/images/team/zoe.jpg'),
     },
   ],
 };

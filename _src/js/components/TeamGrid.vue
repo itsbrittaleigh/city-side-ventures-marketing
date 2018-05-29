@@ -1,0 +1,84 @@
+<template>
+  <div class="the-team">
+    <div class="team-grid" id="team">
+      <div
+        v-for="(member, index) in team"
+        :key="index"
+        class="member box"
+      >
+        <img :src="member.photo" :alt="member.name">
+        <div class="label">
+          <p class="name">{{ member.name }}</p>
+          <p><em>{{ member.title }}</em></p>
+        </div>
+      </div>
+    </div>
+    <div id="quote1" class="box">
+      <p>I am a super interesting quote about stuff.</p>
+      <p class="title">Some guy</p>
+    </div>
+    <div id="quote2" class="box">
+      <p>I am a super interesting quote about stuff.</p>
+      <p class="title">Some guy</p>
+    </div>
+    <div id="quote3" class="box">
+      <p>I am a super interesting quote about stuff.</p>
+      <p class="title">Some guy</p>
+    </div>
+  </div>
+</template>
+
+<script>
+import { mapGetters } from 'vuex';
+
+export default {
+  name: 'TeamGrid',
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapGetters([
+      'team',
+    ]),
+  },
+  methods: {
+    isEvenRowedOnDesktop(index) {
+      return (((Math.ceil(index / 4) * 4) % 8) === 0);
+    },
+    updateColors() {
+      const boxes = document.getElementsByClassName('box');
+      for (let i = 0; i < boxes.length; i += 1) {
+        if (this.isEvenRowedOnDesktop(i + 1)) {
+          boxes.item(i).classList.add('bkg-offset');
+        }
+      }
+    },
+  },
+  mounted() {
+    const teamContainer = document.getElementById('team');
+    const members = document.getElementsByClassName('member');
+    const quote1 = document.getElementById('quote1');
+    const quote2 = document.getElementById('quote2');
+    const quote3 = document.getElementById('quote3');
+
+    if (this.team.length % 4 === 1) {
+      if (this.team.length <= 10) {
+        teamContainer.classList += ' restructured';
+      } else {
+        teamContainer.insertBefore(quote1, members[members.length - 2]);
+        teamContainer.insertBefore(quote3, members[10]);
+        teamContainer.insertBefore(quote2, members[6]);
+        this.updateColors();
+      }
+    } else if (this.team.length % 4 === 2) {
+      teamContainer.insertBefore(quote1, members[members.length - 2]);
+      teamContainer.insertBefore(quote2, members[6]);
+      this.updateColors();
+    } else if (this.team.length % 4 === 3) {
+      teamContainer.insertBefore(quote1, members[members.length - 2]);
+      this.updateColors();
+    }
+    this.updateColors();
+  },
+};
+</script>

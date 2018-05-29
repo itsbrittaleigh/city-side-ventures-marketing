@@ -1,0 +1,127 @@
+.page.focus {
+  .focus-grid {
+    @include grid-boxes(1, 18, 100vw, 100vw, 0);
+    h2 {
+      @include title-font;
+    }
+    .box:not(.image) {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      &.content {
+        justify-content: flex-end;
+        padding: 40px;
+        p {
+          margin: 0;
+        }
+      }
+      &.label {
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        p {
+          font-size: 36px;
+          margin: 20px 0 0;
+          color: $white;
+          font-weight: 100;
+          text-align: center;
+        }
+        img {
+          height: 100px;
+          width: auto;
+        }
+      }
+      &.box-dark-gray {
+        background: $cod;
+      }
+      &.box-yellow {
+        background: $goldendream;
+      }
+      &.box-light-gray {
+        background: $gray;
+      }
+      &.box-blue {
+        background: $danube;
+      }
+      &.content-dark-gray {
+        h2 {
+          color: $cod;
+        }
+      }
+      &.content-yellow {
+        h2 {
+          color: $goldendream;
+        }
+      }
+      &.content-light-gray {
+        h2 {
+          color: $gray;
+        }
+      }
+      &.content-blue {
+        h2 {
+          color: $danube;
+        }
+      }
+    }
+    .box.image {
+      min-height: 200px;
+      position: relative;
+      overflow: hidden;
+      &.automotive {
+        background: url('/assets/images/focus/automotive.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      &.b2b {
+        background: url('/assets/images/focus/b2b.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      &.fintech {
+        background: url('/assets/images/focus/fintech.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      &.wearable {
+        background: url('/assets/images/focus/wearable.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      &.techmotion {
+        background: url('/assets/images/focus/techmotion.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      &.medical {
+        background: url('/assets/images/focus/medical.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      &.blockchain {
+        background: url('https://fillmurray.com/800/400') no-repeat center center;
+        background-size: cover;
+      }
+      img {
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+        height: 100px;
+        width: auto;
+        opacity: 0.2;
+      }
+    }
+    @media only screen and (min-width: $medium) {
+      @include grid-boxes(3, 6, 1fr, auto, 0);
+      .box.image {
+        min-height: 400px;
+        img {
+          bottom: -50px;
+          right: -50px;
+          height: 250px;
+        }
+      }
+    }
+    @media only screen and (min-width: $xxlarge) {
+      .box:not(.image) {
+        &.content {
+          padding: 70px 45px;
+        }
+      }
+    }
+  }
+}

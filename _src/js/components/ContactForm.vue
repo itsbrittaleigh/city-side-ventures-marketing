@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="submitForm" id="contact" class="hidden">
+  <form @submit.prevent="submitForm" id="contact" class="hidden contact-form">
     <div class="fields">
       <div class="field">
         <label for="name">Your Name</label>
@@ -58,39 +58,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-@import "../assets/styles/variables";
-form {
-  padding-bottom: 50px;
-  position: relative;
-}
-input,
-textarea {
-  background: $wildsand;
-}
-button {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.fields {
-  display: flex;
-  flex-wrap: wrap;
-  .field {
-    width: 100%;
-  }
-}
-@media only screen and (min-width: $medium) {
-  .fields {
-    justify-content: space-between;
-    .field {
-      width: calc(50% - 20px);
-      &:last-of-type {
-        width: 100%;
-      }
-    }
-  }
-}
-</style>
-
