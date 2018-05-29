@@ -1,6 +1,9 @@
 .page.home {
   .intro {
     @include grid-boxes(1, 2, 1fr, 450px, 0);
+    h1 {
+      margin: 0;
+    }
     .box {
       img {
         position: absolute;
@@ -87,6 +90,69 @@
           width: 100%;
           object-fit: cover;
         }
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          z-index: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: 0.4s;
+          p {
+            color: white;
+            opacity: 0;
+            transition: 0.4s;
+            &.large {
+              font-size: 48px;
+              font-weight: 100;
+              margin: 0;
+              @media only screen and (min-width: 1800px) {
+                font-size: 68px;
+              }
+            }
+            &.small {
+              @include title-font;
+              @media only screen and (min-width: 1800px) {
+                font-size: 15px;
+              }
+            }
+          }
+          &.yellow {
+            background: rgba($goldendream, 0.3);
+          }
+          &.blue {
+            background: rgba($danube, 0.3);
+          }
+          &.black {
+            background: rgba($cod, 0.3);
+          }
+          &.red {
+            background: rgba($nightshadz, 0.3);
+          }
+        }
+        &:hover {
+          .overlay {
+            p {
+              opacity: 1;
+            }
+            &.yellow {
+              background: rgba($goldendream, 0.8);
+            }
+            &.blue {
+              background: rgba($danube, 0.8);
+            }
+            &.black {
+              background: rgba($cod, 0.8);
+            }
+            &.red {
+              background: rgba($nightshadz, 0.8);
+            }
+          }
+        }
       }
       &.image-background {
         img {
@@ -119,6 +185,14 @@
         p {
           margin: 0;
           text-align: center;
+        }
+        blockquote,
+        cite {
+          font-style: normal;
+          color: white;
+        }
+        cite {
+          @include title-font;
         }
         .large {
           font-size: 48px;
