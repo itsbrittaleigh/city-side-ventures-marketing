@@ -1,0 +1,31 @@
+
+# Info
+title: CitySide Ventures
+baseurl: ""
+
+# Collections
+collections:
+  posts:
+    title: Posts
+    output: true
+    permalink: "/news/:title"
+
+# Settings
+markdown: kramdown
+plugins:
+excerpt_seperator: "<!--more-->"
+destination: "./dist"
+permalink: "/:title"
+exclude:
+- Gemfile
+- Gemfile.lock
+- ".gitignore"
+- node_modules
+- webpack.config.js
+- package.json
+- package-lock.json
+- .jshintrc
+- .sass-cache
+- browsersync.config.js
+- npm-debug.log
+- README.md
