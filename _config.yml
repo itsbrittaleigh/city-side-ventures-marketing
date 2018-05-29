@@ -11,10 +11,7 @@ collections:
 
 # Settings
 markdown: kramdown
-plugins:
-excerpt_seperator: "<!--more-->"
-destination: "./dist"
-permalink: "/:title"
+destination: dist
 exclude:
 - Gemfile
 - Gemfile.lock
