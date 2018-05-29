@@ -70,6 +70,9 @@
   &.contact {
     background-image: url('~/assets/images/covers/contact.jpg');
   }
+  &.news {
+    background-image: url('~/assets/images/covers/news.jpg');
+  }
 }
 
 @media only screen and (min-width: $medium) {

@@ -1,6 +1,6 @@
 <!-- eslint-disable max-len -->
 <template>
-  <aside class="box navigation">
+  <aside class="blog-sidebar box navigation">
     <div
       :class="{ 'navigation-container': true, 'stick': isStuck }"
       :style="`height: ${footerToTop}px`"
@@ -13,7 +13,7 @@
             :key="index"
             @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
           >
-            <img src="../assets/images/icons/bullet-small.svg" alt="">
+            <img src="/assets/images/icons/bullet-small.svg" alt="">
             {{ article.title }}
           </li>
         </ul>
@@ -24,7 +24,7 @@
             :key="index"
             @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
           >
-            <img src="../assets/images/icons/bullet-small.svg" alt="">
+            <img src="/assets/images/icons/bullet-small.svg" alt="">
             {{ article.title }}
           </li>
         </ul>
@@ -35,7 +35,7 @@
             :key="index"
             @click="redirectTo(`/news/${getYear(article.date)}/${getMonth(article.date)}/${getDate(article.date)}/${slugify(article.title)}`)"
           >
-            <img src="../assets/images/icons/bullet-small.svg" alt="">
+            <img src="/assets/images/icons/bullet-small.svg" alt="">
             {{ article.title }}
           </li>
         </ul>
@@ -46,7 +46,7 @@
             :key="key"
             @click="redirectTo(`/news?month=${key}`)"
           >
-            <img src="../assets/images/icons/bullet-small.svg" alt="">
+            <img src="/assets/images/icons/bullet-small.svg" alt="">
             {{ key }} ({{ value.length }})
           </li>
         </ul>
@@ -62,7 +62,7 @@ import _ from 'lodash';
 
 export default {
   name: 'BlogSidebar',
-  props: ['isStuck'],
+  props: ['articles', 'anchor'],
   data() {
     return {
       footerToTop: 0,
@@ -71,14 +71,13 @@ export default {
   computed: {
     ...mapGetters([
       'initialArticles',
-      'articles',
       'categories',
       'archives',
     ]),
     businessArticles() {
       const articles = [];
-      _.forEach(this.initialArticles, (article) => {
-        if (article.category.slug === 'business') {
+      _.forEach(this.articles, (article) => {
+        if (article.tag === 'business') {
           articles.push(article);
         }
       });
@@ -86,8 +85,8 @@ export default {
     },
     managementArticles() {
       const articles = [];
-      _.forEach(this.initialArticles, (article) => {
-        if (article.category.slug === 'management') {
+      _.forEach(this.articles, (article) => {
+        if (article.tag === 'management') {
           articles.push(article);
         }
       });
@@ -95,8 +94,8 @@ export default {
     },
     pressArticles() {
       const articles = [];
-      _.forEach(this.initialArticles, (article) => {
-        if (article.category.slug === 'press') {
+      _.forEach(this.articles, (article) => {
+        if (article.tag === 'press') {
           articles.push(article);
         }
       });
@@ -151,91 +150,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-@import "../assets/styles/variables";
-.navigation {
-  display: none;
-  .navigation-container {
-    padding: 20px;
-    max-height: 100vh;
-    overflow: hidden;
-  }
-  .inner-container {
-    height: 100%;
-    width: calc(100% + 50px);
-    overflow-y: scroll;
-    padding-right: 50px;
-  }
-  h3 {
-    @include title-font;
-    margin-bottom: 5px;
-    &.color-red {
-      color: $nightshadz;
-    }
-    &.color-yellow {
-      color: $goldendream;
-    }
-    &.color-blue {
-      color: $danube;
-    }
-    &.color-gray {
-      color: #808080;
-    }
-  }
-  ul {
-    padding-left: 5px;
-    margin: 5px 0 50px;
-    list-style-type: none;
-    li {
-      margin-bottom: 10px;
-      display: flex;
-      cursor: pointer;
-      transition: 0.4s;
-      color: #808080;
-      img {
-        width: 3px;
-        height: 3px;
-        display: block;
-        margin-top: 12px;
-        margin-right: 10px;
-      }
-      &:hover {
-        color: $nightshadz;
-      }
-    }
-    a {
-      text-decoration: none;
-      transition: 0.4s;
-      &:hover {
-        color: $nightshadz;
-      }
-    }
-  }
-  .stick {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 0;
-  }
-  @media only screen and (min-width: $medium) {
-    display: block;
-    .stick {
-      width: calc(100vw / 3);
-      padding-right: 20px;
-    }
-  }
-  @media only screen and (min-width: $large) {
-    .stick {
-      width: 25vw;
-    }
-  }
-  @media only screen and (min-width: $xxlarge) {
-    .navigation-container {
-      padding-left: 60px;
-    }
-  }
-}
-</style>
-

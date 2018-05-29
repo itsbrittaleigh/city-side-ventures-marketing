@@ -1,0 +1,37 @@
+<aside class="blog-sidebar box navigation" id="blog-sidebar">
+  <div class="navigation-container">
+    <div class="inner-container">
+      <h3 class="color-blue">Business</h3>
+      <ul>
+        {% assign businessPosts = site.posts | where: 'tag', 'business' %}
+        {% for post in businessPosts limit:3 %}
+          <li>
+            <img src="/assets/images/icons/bullet-small.svg" alt="">
+            <a href="/news{{ post.url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <h3 class="color-yellow">Management</h3>
+      <ul>
+        {% assign managementPosts = site.posts | where: 'tag', 'management' %}
+        {% for post in managementPosts limit:3 %}
+          <li>
+            <img src="/assets/images/icons/bullet-small.svg" alt="">
+            <a href="/news{{ post.url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <h3 class="color-red">Press Room &amp; News</h3>
+      <ul>
+        {% assign pressPosts = site.posts | where: 'tag', 'press' %}
+        {% for post in pressPosts limit:3 %}
+          <li>
+            <img src="/assets/images/icons/bullet-small.svg" alt="">
+            <a href="/news{{ post.url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <!-- <h3 class="color-gray">Archives</h3> -->
+    </div>
+  </div>
+</aside>

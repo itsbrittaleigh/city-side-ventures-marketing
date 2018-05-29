@@ -1,0 +1,21 @@
+---
+layout: default
+meta_title: 
+meta_description: 
+---
+
+<hero-section
+  heading="{{ post.title }}"
+  description="by {{ post.author }}"
+  color="{{ post.tag }}"
+>
+</hero-section>
+
+<div class="news-grid">
+  {% include blog-sidebar.html %}
+  <div id="content">
+    <div class="post padded-section">
+      {{ content }}
+    </div>
+  </div>
+</div>

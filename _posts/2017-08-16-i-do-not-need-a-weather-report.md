@@ -1,3 +1,12 @@
+---
+title: I Do Not Need a Weather Report
+date: 2017-08-16 00:00:00 Z
+tag: management
+author: doronyork
+layout: post
+image: "/uploads/weather.png"
+---
+
 One successful corporate executive recently stated to me; “I do not need my people to give me a weather report; I need them to tell me how we can make umbrellas.” Inside the corporate culture for many years people that reach a high-level position in many organizations, carry with them the privilege and the entitlement that comes with it. Part of the trend we see in the market is that many companies have realized that they are true, “Top Heavy.” We see more and more high-level positions being eliminated daily.
 
 My notion is that it relates to the above statement. With today’s advanced technological capabilities, companies are in less of a need of layers of people to transfer and carry information internally from one level to another and attend endless numbers of weekly meetings.

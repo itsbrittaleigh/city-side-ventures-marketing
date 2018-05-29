@@ -1,3 +1,12 @@
+---
+title: Press Release - Portfolio Update
+date: 2017-08-18 00:00:00 Z
+tag: press
+author: doronyork
+layout: post
+image: "/uploads/press.jpg"
+---
+
 CSV announced today the onboarding of SafeWhistle as a new portfolio company – SafeWhistle –  [www.safewhistle.com](https://www.safewhistle.com) headquartered in Farmington Hills, Michigan is a game-changer in the corporate whistle blowing space.  The company’s platform is a fully encrypted, anonymous, and highly-secure solution that is designed to address various industry standards, especially the automotive sector.
 
 The Transaction: CSV joined as a Venture Partner with a significant equity position in return for full involvement in mapping, building, and launching of the company.

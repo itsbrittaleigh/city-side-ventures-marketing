@@ -1,0 +1,34 @@
+---
+layout: default
+meta_title: News, Thoughts, and Updates | CitySide Ventures
+meta_description: 
+title: news
+---
+
+<hero-section
+  heading="News, Thoughts, and Updates"
+  name="news"
+  color="black"
+>
+</hero-section>
+
+<div class="news-grid">
+  {% include blog-sidebar.html %}
+  <div class="articles">
+    {% for post in site.posts %}
+      <div class="box {{ post.tag }}">
+        <img src="{{ post.image }}" alt="">
+        <div class="content">
+          <p class="tag">{{ post.tag }}</p>
+          <h2 class="title">{{ post.title }}</h2>
+          <p>{{ post | slice: 0,250 }}...</p>
+          <a href="">
+            <span class="overlay"></span>
+            <img src="/assets/images/icons/news.svg" alt="">
+            Read More
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

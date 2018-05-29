@@ -1,3 +1,12 @@
+---
+title: Did You Do a Domino Yet?
+date: 2017-08-16 00:00:00 Z
+tag: business
+author: doronyork
+layout: post
+image: "/uploads/domino.jpeg"
+---
+
 I had the privilege to attend an event that tells the story of the remarkable Domino’s Pizza Turnaround, Very inspiring. It inspired me to write this briefing. It is a story of courage of leadership that was willing to risk it all for a better future.
 
 This amazing turnaround is a display a classic case of Disruptive approach for business reinvention. Although it is not a recipe, it can be valuable to other companies to take the fundamental elements and apply them as appropriate to them.

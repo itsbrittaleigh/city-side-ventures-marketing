@@ -11,6 +11,7 @@ Vue.component('portfolio-grid', require('./components/PortfolioGrid.vue').defaul
 Vue.component('team-grid', require('./components/TeamGrid.vue').default);
 Vue.component('contact-form', require('./components/ContactForm.vue').default);
 Vue.component('newsletter-form', require('./components/NewsletterForm.vue').default);
+Vue.component('blog-sidebar', require('./components/BlogSidebar.vue').default);
 
 /* eslint-disable no-new */
 new Vue({

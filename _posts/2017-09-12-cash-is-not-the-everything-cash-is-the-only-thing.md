@@ -1,3 +1,12 @@
+---
+title: Cash Is Not the Everything, Cash Is the Only Thing
+date: 2017-09-12 00:00:00 Z
+tag: business
+author: doronyork
+layout: post
+image: "/uploads/cash.jpg"
+---
+
 I have learned from my 25 years of business experience that companies do not go out of business because they are losing money or not making money. They are going out of business because they are running out of cash!
 I have heard many time the saying; “When the fats will get skinny, the skinny will die”. In many conversations, I had over the years with startup founders say; “We expect to have enough revenue to support our growth”. Well, this the first critical mistake in business thinking.
 

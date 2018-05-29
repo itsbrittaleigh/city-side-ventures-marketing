@@ -1,0 +1,85 @@
+.blog-sidebar {
+  &.navigation {
+    display: none;
+    .navigation-container {
+      padding: 20px;
+      max-height: 100vh;
+      overflow: hidden;
+    }
+    .inner-container {
+      height: 100%;
+      width: calc(100% + 50px);
+      overflow-y: scroll;
+      padding-right: 50px;
+    }
+    h3 {
+      @include title-font;
+      margin-bottom: 5px;
+      &.color-red {
+        color: $nightshadz;
+      }
+      &.color-yellow {
+        color: $goldendream;
+      }
+      &.color-blue {
+        color: $danube;
+      }
+      &.color-gray {
+        color: #808080;
+      }
+    }
+    ul {
+      padding-left: 5px;
+      margin: 5px 0 50px;
+      list-style-type: none;
+      li {
+        margin-bottom: 10px;
+        display: flex;
+        cursor: pointer;
+        transition: 0.4s;
+        color: #808080;
+        img {
+          width: 3px;
+          height: 3px;
+          display: block;
+          margin-top: 12px;
+          margin-right: 10px;
+        }
+        &:hover {
+          color: $nightshadz;
+        }
+      }
+      a {
+        text-decoration: none;
+        transition: 0.4s;
+        &:hover {
+          color: $nightshadz;
+        }
+      }
+    }
+    .stick {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 0;
+    }
+    @media only screen and (min-width: $medium) {
+      display: block;
+      .stick {
+        width: calc(100vw / 3);
+        padding-right: 20px;
+      }
+    }
+    @media only screen and (min-width: $large) {
+      .stick {
+        width: 25vw;
+      }
+    }
+    @media only screen and (min-width: $xxlarge) {
+      .navigation-container {
+        padding-left: 60px;
+      }
+    }
+  }
+}

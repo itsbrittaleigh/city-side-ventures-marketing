@@ -1,3 +1,12 @@
+---
+title: You Cannot Save Your Business into Success
+date: 2017-08-14 00:00:00 Z
+tag: management
+author: doronyork
+layout: post
+image: "/uploads/save.jpeg"
+---
+
 No one knows what will happen next. It is important to preserve cash, to exercise a calculated expense management, not to indulge yourself with unnecessary spending.
 
 Yes, we are living in tough and uncertain times, and the media is not helping, if anything, the media channels make it look worse than it is. My grandfather said to me once, in a similar economic condition; “If you do not read the newspaper or watch TV, life is not bad” The reality is that you cannot “save” your business into a success. Your business is like your car; it needs gas. The “gas” for your business is money and resources; it will not move. Moreover, if you are not moving forward in business, you are moving backwards.
