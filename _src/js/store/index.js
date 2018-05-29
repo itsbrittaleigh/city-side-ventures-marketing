@@ -125,10 +125,34 @@ const state = {
       photo: require('../../../assets/images/team/zoe.jpg'),
     },
   ],
+  socialSharing: {
+    facebook: {
+      base: 'https://www.facebook.com/sharer/sharer.php?u=@url&title=@title&description=@description',
+      type: 'popup'
+    },
+    linkedin: {
+      base: 'https://www.linkedin.com/shareArticle?mini=true&url=@url&title=@title&summary=@description',
+      type: 'popup'
+    },
+    twitter: {
+      base: 'https://twitter.com/intent/tweet?text=@title&url=@url@twitteruser',
+      type: 'popup'
+    },
+    whatsapp: {
+      base: 'whatsapp://send?text=@description%0D%0A@url',
+      type: 'direct',
+      action: 'share/whatsapp/share'
+    },
+    email: {
+      base: 'mailto:?subject=@title&body=@url%20@description',
+      type: ''
+    },
+  },
 };
 const getters = {
   portfolio: state => state.portfolio,
   team: state => state.team,
+  socialSharing: state => state.socialSharing,
 };
 const actions = {};
 const mutations = {};

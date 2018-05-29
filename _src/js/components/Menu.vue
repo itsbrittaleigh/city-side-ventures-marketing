@@ -20,7 +20,7 @@
           >
             <span class="heading">
               About Us
-              <!-- <img src="../assets/images/icons/arrow-down.svg" alt="down arrow"> -->
+              <img src="/assets/images/icons/arrow-down.svg" alt="down arrow">
             </span>
             <ul>
               <li>
@@ -47,7 +47,7 @@
           >
             <span class="heading">
               Investment Funds
-              <!-- <img src="../assets/images/icons/arrow-down.svg" alt="down arrow"> -->
+              <img src="/assets/images/icons/arrow-down.svg" alt="down arrow">
             </span>
             <ul>
               <li>
