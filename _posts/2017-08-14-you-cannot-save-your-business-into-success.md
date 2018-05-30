@@ -4,7 +4,7 @@ date: 2017-08-14 00:00:00 Z
 tag: management
 author: Doron York
 layout: post
-image: "/uploads/save.jpeg"
+image: "/uploads/adult-business-casual.jpg"
 ---
 
 No one knows what will happen next. It is important to preserve cash, to exercise a calculated expense management, not to indulge yourself with unnecessary spending.

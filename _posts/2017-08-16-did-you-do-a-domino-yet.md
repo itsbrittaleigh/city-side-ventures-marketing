@@ -4,7 +4,7 @@ date: 2017-08-16 00:00:00 Z
 tag: business
 author: Doron York
 layout: post
-image: "/uploads/domino.jpeg"
+image: "/uploads/dominos.jpg"
 ---
 
 I had the privilege to attend an event that tells the story of the remarkable Domino’s Pizza Turnaround, Very inspiring. It inspired me to write this briefing. It is a story of courage of leadership that was willing to risk it all for a better future.

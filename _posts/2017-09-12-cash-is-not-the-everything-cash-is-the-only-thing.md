@@ -4,7 +4,7 @@ date: 2017-09-12 00:00:00 Z
 tag: business
 author: Doron York
 layout: post
-image: "/uploads/cash.jpg"
+image: "/uploads/analysis-business.jpg"
 ---
 
 I have learned from my 25 years of business experience that companies do not go out of business because they are losing money or not making money. They are going out of business because they are running out of cash!
