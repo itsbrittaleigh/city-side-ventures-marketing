@@ -4,7 +4,7 @@ date: 2016-11-18 00:00:00 Z
 tag: press
 author: Doron York
 layout: post
-image: "/uploads/press.jpg"
+image: "/uploads/portfolio-sidepitch.png"
 ---
 
 CSV announced today the onboarding of Sidepitch as a new portfolio company – Sidepitch –  [www.sidepitch.com](https://www.sidepitch.com) headquartered in Farmington Hills, Michigan, is introducing a platform for venture management. Sidepitch is an end-to-end Venture Management System, or VMS, that simplifies and streamlines the venture investment process. The use case is designed both for investors and startups to closely collaborate, and significantly reduce the time cycle of closing a deal.

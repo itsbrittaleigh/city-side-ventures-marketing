@@ -4,7 +4,7 @@ date: 2017-07-10 00:00:00 Z
 tag: press
 author: Doron York
 layout: post
-image: "/uploads/press.jpg"
+image: "/uploads/portfolio-ensureum.jpg"
 ---
 
 CSV announced today the onboarding of ensureum as a new portfolio company –  [www.ensureum.com](https://www.ensureum.com) headquartered in Farmington Hills, Michigan, is a game changer in the application of Blockchain technology into the Automotive Industry and International Trading space.
