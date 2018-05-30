@@ -17,16 +17,17 @@ title: news
   <div class="articles">
     {% for post in site.posts %}
       <div class="box {{ post.tag }}">
+        <a href="{{ post.url }}"></a>
         <img src="{{ post.image }}" alt="">
         <div class="content">
           <p class="tag">{{ post.tag }}</p>
           <h2 class="title">{{ post.title }}</h2>
           <p>{{ post.content | markdownify | strip_html | slice: 0,250 }}...</p>
-          <a href="{{ post.url }}">
+          <div class="read-more" href="{{ post.url }}">
             <span class="overlay"></span>
             <img src="/assets/images/icons/news.svg" alt="">
             Read More
-          </a>
+          </div>
         </div>
       </div>
     {% endfor %}

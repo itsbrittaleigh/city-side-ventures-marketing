@@ -89,13 +89,19 @@
       @include grid-boxes(2, 2, 50vw, auto, 0);
     }
     .box {
+      h3 {
+        text-align: center;
+        margin-bottom: 40px;
+      }
       h2 {
-        font-size: 26px;
         text-align: center;
         margin-bottom: 40px;
       }
       &.padded {
         padding: 30px;
+        img {
+          width: 70%;
+        }
       }
       &.image {
         img {
@@ -292,11 +298,11 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      .box {
-        width: 30%;
-        margin: 20px 5px;
-      }
       padding: 50px 0;
+      .box {
+        width: 40%;
+        margin: 20px 10px;
+      }
       img {
         height: 60px;
         width: auto;
@@ -313,7 +319,10 @@
       @media only screen and (min-width: $medium) {
         .box {
           width: 23%;
-          margin: 0 5px 20px;
+          margin: 0 5px;
+          &:first-of-type {
+            margin-bottom: 60px;
+          }
         }
       }
     }

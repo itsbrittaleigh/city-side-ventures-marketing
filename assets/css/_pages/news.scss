@@ -22,11 +22,32 @@
   .box {
     display: flex;
     flex-direction: column;
+    position: relative;
+    a {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      text-decoration: none;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      cursor: pointer;
+    }
+    &:hover {
+      h2 {
+        text-decoration: underline;
+      }
+      .content .read-more {
+        .overlay {
+          width: 100%;
+        }
+      }
+    }
     &.business {
       .tag {
         color: $danube;
       }
-      a {
+      .read-more {
         background: $danube;
       }
     }
@@ -34,7 +55,7 @@
       .tag {
         color: $goldendream;
       }
-      a {
+      .read-more {
         background: $goldendream;
       }
     }
@@ -42,7 +63,7 @@
       .tag {
         color: $nightshadz;
       }
-      a {
+      .read-more {
         background: $nightshadz;
       }
     }
@@ -54,7 +75,7 @@
       .tag {
         @include title-font;
       }
-      a {
+      .read-more {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -65,6 +86,7 @@
         padding: 0 20px;
         color: $white;
         text-decoration: none;
+        z-index: 10;
         img {
           height: 25px;
           width: auto;
@@ -79,11 +101,6 @@
           width: 10px;
           background: rgba($white, 0.2);
           transition: 0.4s;
-        }
-        &:hover {
-          .overlay {
-            width: 100%;
-          }
         }
       }
       h2,
