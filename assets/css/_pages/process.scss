@@ -52,7 +52,7 @@
       }
     }
     .box.image {
-      background: url('~/assets/images/about-process.jpg') no-repeat center center;
+      background: url('/assets/images/about-process.jpg') no-repeat center center;
       background-size: cover;
       min-height: 300px;
     }
@@ -116,7 +116,7 @@
   .sidepitch {
     @include grid-boxes(1, 2, 1fr, auto, 0);
     .box.image {
-      background: url('~/assets/images/sidepitch.jpg') no-repeat center center;
+      background: url('/assets/images/sidepitch.jpg') no-repeat center center;
       background-size: cover;
       min-height: 300px;
     }
