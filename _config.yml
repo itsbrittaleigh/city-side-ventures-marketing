@@ -12,6 +12,9 @@ collections:
 # Settings
 markdown: kramdown
 destination: dist
+sass:
+  sass_dir: assets/css
+  style: compressed
 exclude:
 - Gemfile
 - Gemfile.lock

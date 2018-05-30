@@ -14,4 +14,5 @@ yarn-error.log*
 *.sln
 
 .jekyll-metadata
+.sass-cache
 bundle.js

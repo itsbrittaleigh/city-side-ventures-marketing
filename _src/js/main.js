@@ -1,8 +1,6 @@
 import Vue from 'vue';
 import store from './store';
 
-require('../css/app.scss');
-
 Vue.config.productionTip = false;
 
 Vue.component('app-menu', require('./components/Menu.vue').default);
