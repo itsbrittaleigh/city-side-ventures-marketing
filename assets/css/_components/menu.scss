@@ -88,7 +88,7 @@
       text-align: right;
       cursor: pointer;
       .heading {
-        padding: 15px 0;
+        padding: 20px 0;
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -104,7 +104,7 @@
         font-weight: 600;
         text-decoration: none;
         color: $cod;
-        padding: 15px 0;
+        padding: 20px 0;
         display: block;
         font-size: 12px;
       }
@@ -155,7 +155,7 @@
           }
         }
         &:nth-child(1) {
-          margin-bottom: 15px;
+          margin: 20px 0;
         }
       }
     }
