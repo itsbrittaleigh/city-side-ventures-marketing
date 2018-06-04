@@ -4,13 +4,16 @@
       v-for="(project, index) in portfolio"
       :key="index"
       :class="{
-        'project': true,
+        'project hidden': true,
         'even-mobile': isEvenRowedMobile(index + 1),
         'even-tablet': isEvenRowedTablet(index + 1),
         'even-desktop': isEvenRowedDesktop(index + 1),
         'last-row-mobile': isLastRowMobile(index),
         'last-row-tablet': isLastRowTablet(index),
         'last-row-desktop': isLastRowDesktop(index),
+        'last-column-mobile': isLastColumnMobile(index + 1),
+        'last-column-tablet': isLastColumnTablet(index + 1),
+        'last-column-desktop': isLastColumnDesktop(index + 1),
       }"
     >
       <div class="box logo">
@@ -66,6 +69,15 @@ export default {
     },
     isLastRowDesktop(index) {
       return this.portfolio.length - index <= 6;
+    },
+    isLastColumnMobile(index) {
+      return index / 2;
+    },
+    isLastColumnTablet(index) {
+      return index / 4
+    },
+    isLastColumnDesktop(index) {
+      return index / 6;
     },
   },
 };

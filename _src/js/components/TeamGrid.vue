@@ -4,7 +4,7 @@
       <div
         v-for="(member, index) in team"
         :key="index"
-        class="member box"
+        class="member box hidden"
       >
         <img :src="member.photo" :alt="member.name">
         <div class="label">
