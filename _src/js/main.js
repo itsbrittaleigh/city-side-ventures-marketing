@@ -1,6 +1,12 @@
 import Vue from 'vue';
 import store from './store';
 
+import siteData from '../../dist/data/data.json';
+
+import CountUpModule from './modules/count-up.module';
+import StickToTopModule from './modules/stick-to-top.module';
+import ScrollAnimationModule from './modules/scroll-animation.module';
+
 Vue.config.productionTip = false;
 
 Vue.component('app-menu', require('./components/Menu.vue').default);
@@ -19,4 +25,12 @@ new Vue({
   data() {
     return {};
   },
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  ScrollAnimationModule();
+  StickToTopModule();
+  document.addEventListener('scroll', () => {
+    StickToTopModule();
+  });
 });

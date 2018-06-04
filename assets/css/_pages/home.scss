@@ -249,7 +249,7 @@
           object-fit: contain;
         }
         .overlay {
-          @include background-opacity(#3d3d3d, 0.95);
+          @include background-opacity(#3d3d3d, 0.85);
         }
       }
       > .box:nth-child(2) {

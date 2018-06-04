@@ -37,6 +37,14 @@
           .equation {
             margin: 40px 0 0;
             width: 250px;
+            p {
+              padding: 10px 0 10px 30px;
+              position: relative;
+              span {
+                position: absolute;
+                left: 4px;
+              }
+            }
           }
           p {
             margin: 0;
@@ -44,7 +52,6 @@
             &.title {
               @include title-font;
               color: white;
-              padding: 10px 0;
             }
             &.yellow {
               color: $goldendream;

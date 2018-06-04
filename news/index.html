@@ -14,7 +14,7 @@ title: news
 
 <div class="news-grid">
   {% include blog-sidebar.html %}
-  <div class="articles">
+  <div class="articles" id="relative-anchor-for-stick">
     {% for post in site.posts %}
       <div class="box {{ post.tag }}">
         <a href="{{ post.url }}"></a>

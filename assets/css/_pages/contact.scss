@@ -73,6 +73,18 @@
           }
         }
       }
+      @media only screen and (min-width: $xxlarge) {
+        .box {
+          h3 {
+            font-size: 16px;
+          }
+          p,
+          address,
+          a {
+            font-size: 18px;
+          }
+        }
+      }
     }
   }
 }

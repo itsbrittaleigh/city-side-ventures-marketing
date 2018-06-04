@@ -1,6 +1,7 @@
 .funds-template {
   // container overrides
-  .container {
+  .container,
+  .wide-container {
     width: 90%;
     margin: 0 auto;
     position: relative;
@@ -18,7 +19,15 @@
 
   @include container-width($small);
   @include container-width($medium);
-  @include container-width($large);
+
+  @media only screen and (min-width: $large) {
+    .wide-container {
+      width: 962px;
+    }
+    .container {
+      width: 842px;
+    }
+  }
 
   // hero overrides
   .hero {
@@ -250,90 +259,148 @@
   .app-process {
     background: $wildsand;
     $bullet_width: 40px;
-    .bar-graph {
-      width: 220px;
-      margin: $bullet_width auto 0;
-      .section {
-        &.border-yellow {
-          border-left: 2px solid $goldendream;
-          p.days {
-            color: $goldendream;
-          }
+    .graph-container {
+      &.border-yellow {
+        p.days {
+          color: $goldendream;
         }
-        &.border-red {
-          border-left: 2px solid $nightshadz;
-          p.days {
-            color: $nightshadz;
-          }
+      }
+      &.border-red {
+        p.days {
+          color: $nightshadz;
         }
-        &.border-gray {
-          border-left: 2px solid $cod;
-          p.days {
-            color: $cod;
-          }
+      }
+      &.border-black {
+        p.days {
+          color: $cod;
         }
-        &.border-blue {
-          border-left: 2px solid $danube;
-          p.days {
-            color: $danube;
-          }
+      }
+      &.border-blue {
+        p.days {
+          color: $danube;
         }
-        position: relative;
-        margin-left: ($bullet_width / 2);
-        padding: 0 0 60px $bullet_width;
-        &:last-of-type {
-          border-left: none;
-        }
-        img {
-          position: absolute;
-          top: 0;
-          left: -20px;
-          width: $bullet_width;
-          height: $bullet_width;
-        }
-        p {
-          margin: 0;
-          &.days {
-            @include title-font;
-            font-size: 14px;
-          }
+      }
+      p {
+        margin: 0;
+        &.days {
+          @include title-font;
+          font-size: 14px;
         }
       }
     }
+    .bar-graph {
+      width: 220px;
+      margin: $bullet_width auto 0;
+      img {
+        position: absolute;
+        top: 0;
+        left: -20px;
+        width: $bullet_width;
+        height: $bullet_width;
+      }
+    }
     @media only screen and (min-width: $large) {
-      .bar-graph {
-        display: flex;
-        width: 100%;
+      .graph-container {
         margin: 80px 0 0;
-        .section {
-          &.border-yellow {
-            border-top: 2px solid $goldendream;
-            border-left: none;
+        &.border-yellow {
+          .line {
+            background: $goldendream;
           }
-          &.border-red {
-            border-top: 2px solid $nightshadz;
-            border-left: none;
+        }
+        &.border-red {
+          .line {
+            background: $nightshadz;
           }
-          &.border-blue {
-            border-top: 2px solid $danube;
-            border-left: none;
+        }
+        &.border-blue {
+          .line {
+            background: $danube;
           }
-          &.border-black {
-            border-top: 2px solid $cod;
-            border-left: none;
+        }
+        &.border-black {
+          .line {
+            background: $cod;
           }
-          padding: $bullet_width 10px 0;
-          margin: 0;
-          width: calc(100% / 6);
-          img {
+        }
+        .container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: relative;
+          .svg-container {
+            width: 100%;
             position: absolute;
-            top: -($bullet_width / 2);
-            left: 50%;
-            margin-left: -($bullet_width / 2);
+            height: 100%;
+            top: 50%;
+            margin-top: -16px;
+            svg {
+              width: 0;
+              height: 2px;
+              top: 20px;
+              left: 0;
+              transition: width 2.9s linear;
+            }
+            &.visible {
+              svg {
+                width: 100%;
+              }
+            }
           }
-          p {
-            text-align: center;
+          .img-container {
+            position: relative;
+            img {
+              top: -20px;
+              left: 0;
+              width: 40px;
+              height: 40px;
+              opacity: 0;
+              &.visible {
+                opacity: 1;
+              }
+            }
+            &:nth-child(2) {
+              img {
+                transition: opacity 0.4s ease-in;
+              }
+            }
+            &:nth-child(3) {
+              img {
+                transition: opacity 0.4s ease-in 0.5s;
+              }
+            }
+            &:nth-child(4) {
+              img {
+                transition: opacity 0.4s ease-in 1.0s;
+              }
+            }
+            &:nth-child(5) {
+              img {
+                transition: opacity 0.4s ease-in 1.5s;
+              }
+            }
+            &:nth-child(6) {
+              img {
+                transition: opacity 0.4s ease-in 2.0s;
+              }
+            }
+            &:nth-child(7) {
+              img {
+                transition: opacity 0.4s ease-in 2.5s;
+              }
+            }
           }
+        }
+      }
+      .bar-graph {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .step {
+          padding: 0 5px;
+          width: calc(100% / 6);
+        }
+        p {
+          text-align: center;
         }
       }
     }
