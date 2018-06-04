@@ -149,12 +149,15 @@ const state = {
     },
   },
 };
+
 const getters = {
   portfolio: state => state.portfolio,
   team: state => state.team,
   socialSharing: state => state.socialSharing,
 };
+
 const actions = {};
+
 const mutations = {};
 
 export default new Vuex.Store({

@@ -1,87 +1,35 @@
 <template>
   <section class="portfolio-grid">
     <div
-      v-for="(project, index) in splitPortfolio"
+      v-for="(project, index) in portfolio"
       :key="index"
-      class="project"
+      :class="{
+        'project': true,
+        'even-mobile': isEvenRowedMobile(index + 1),
+        'even-tablet': isEvenRowedTablet(index + 1),
+        'even-desktop': isEvenRowedDesktop(index + 1),
+        'last-row-mobile': isLastRowMobile(index),
+        'last-row-tablet': isLastRowTablet(index),
+        'last-row-desktop': isLastRowDesktop(index),
+      }"
     >
-      <div class="project-container">
-        <div class="front">
-          <div
-            :class="{
-              'box logo': true,
-              'bkg-offset-desktop': isEvenRowedOnDesktop(index + 1),
-              'bkg-offset-small-desktop': isEvenRowedOnSmallDesktop(index + 1),
-            }"
-            :key="index"
-          >
-            <img
-              class="logo"
-              :src="project[0].logo"
-              :alt="project[0].name + ' logo'"
-            >
-          </div>
-          <div
-            :class="{
-              'box content': true,
-              'box-blue': project[0].color === 'blue',
-              'box-yellow': project[0].color === 'yellow',
-              'box-gray': project[0].color === 'gray',
-            }"
-            :key="`front-${index}`"
-          >
-            <div class="container">
-              <p class="title">{{ project[0].name }}</p>
-              <p>{{ project[0].description }}</p>
-              <a
-                v-if="project[0].link"
-                :href="project[0].link"
-                class="button"
-                target="_blank"
-              >
-                View website
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="back">
-          <div
-            :class="{
-              'box content': true,
-              'box-blue': project[1].color === 'blue',
-              'box-yellow': project[1].color === 'yellow',
-              'box-gray': project[1].color === 'gray',
-            }"
-            :key="index"
-          >
-            <div class="container">
-              <p class="title">{{ project[1].name }}</p>
-              <p>{{ project[1].description }}</p>
-              <a
-                :href="project[1].link"
-                v-if="project[1].link"
-                class="button"
-                target="_blank"
-              >
-                View website
-              </a>
-            </div>
-          </div>
-          <div
-            :class="{
-              'box logo': true,
-              'bkg-offset-desktop': isEvenRowedOnDesktop(index + 1),
-              'bkg-offset-small-desktop': isEvenRowedOnSmallDesktop(index + 1),
-            }"
-            :key="`back-${index}`"
-          >
-            <img
-              class="logo"
-              :src="project[1].logo"
-              :alt="project[1].name + ' logo'"
-            >
-          </div>
-        </div>
+      <div class="box logo">
+        <img :src="project.logo" :alt="`${project.name} logo`">
+      </div>
+      <div :class="{
+        'box content': true,
+        'bkg-blue': project.color === 'blue',
+        'bkg-yellow': project.color === 'yellow',
+        'bkg-gray': project.color === 'gray',
+      }">
+        <h3 class="title">{{ project.name }}</h3>
+        <p>{{ project.description }}</p>
+        <a
+          v-if="project.link"
+          :href="project.link" class="button" target="_blank"
+        >
+          Visit Website
+        </a>
       </div>
     </div>
   </section>
@@ -99,20 +47,25 @@ export default {
     ...mapGetters([
       'portfolio',
     ]),
-    splitPortfolio() {
-      const splitPortfolio = [];
-      for (let i = 0, j = this.portfolio.length; i < j; i += 2) {
-        splitPortfolio.push(this.portfolio.slice(i, i + 2));
-      }
-      return splitPortfolio;
-    },
   },
   methods: {
-    isEvenRowedOnDesktop(index) {
-      return (((Math.ceil(index / 3) * 3) % 6) === 0);
-    },
-    isEvenRowedOnSmallDesktop(index) {
+    isEvenRowedMobile(index) {
       return (((Math.ceil(index / 2) * 2) % 4) === 0);
+    },
+    isEvenRowedTablet(index) {
+      return (((Math.ceil(index / 4) * 4) % 8) === 0);
+    },
+    isEvenRowedDesktop(index) {
+      return (((Math.ceil(index / 6) * 6) % 12) === 0);
+    },
+    isLastRowMobile(index) {
+      return this.portfolio.length - index <= 2;
+    },
+    isLastRowTablet(index) {
+      return this.portfolio.length - index <= 4;
+    },
+    isLastRowDesktop(index) {
+      return this.portfolio.length - index <= 6;
     },
   },
 };
