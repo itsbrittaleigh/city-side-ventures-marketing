@@ -17,6 +17,10 @@
       width: 100%;
     }
   }
+  .error {
+    color: $nightshadz;
+    margin: 0 0 20px;
+  }
   @media only screen and (min-width: $medium) {
     .fields {
       justify-content: space-between;
