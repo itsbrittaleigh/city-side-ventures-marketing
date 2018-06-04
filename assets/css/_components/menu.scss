@@ -132,6 +132,31 @@
       }
     }
   }
+  .call {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $cod;
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      padding: 15px;
+      justify-content: center;
+      align-items: center;
+      @include title-font;
+    }
+    img {
+      height: 20px;
+      margin-right: 10px;
+    }
+    @media only screen and (min-width: $large) {
+      display: none;
+      visibility: hidden;
+    }
+  }
   // nav-right
   .base-menu {
     .nav-right {

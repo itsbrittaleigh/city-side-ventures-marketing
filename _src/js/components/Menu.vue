@@ -86,6 +86,12 @@
           </li>
         </span>
       </span>
+      <span class="call">
+        <a href="tel:+12484304336">
+          <img src="/assets/images/icons/phone-white.svg" alt="">
+          Give us a call
+        </a>
+      </span>
     </ul>
   </div>
 </template>
