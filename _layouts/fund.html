@@ -14,13 +14,13 @@ layout: default
         <div class="content">
           <h1>{{ page.fund.name }}</h1>
           <p><em>{{ page.fund.market }}</em></p>
-          <a
+          <!-- <a
             href="https://app.sidepitch.com/auth/register"
             class="button inverse"
             target="_blank"
           >
             Apply with City Side
-          </a>
+          </a> -->
         </div>
       </div>
     </div>
@@ -70,23 +70,6 @@ layout: default
           {% endfor %}
         </ul>
       </div>
-    </div>
-  </section>
-  <section class="apply">
-    <div class="box bkg-{{ page.fund.color }}">
-      <div class="container">
-        <h2>How to Apply</h2>
-        <p>
-          To make sure that we process your request quickly and efficiently, we will be
-          using Sidepitch as our venture fund management system. Please read the instructions
-          and follow the process for quick turn around. We will not respond until the
-          application process is complete and submitted. Please use our unique Pitchmark.
-        </p>
-        <a href="" class="button inverse">Apply with City Side</a>
-      </div>
-    </div>
-    <div class="box image">
-      <img src="{{ page.fund.contentImage.image }}" alt="{{ page.fund.contentImage.alt }}">
     </div>
   </section>
   <section class="app-process padded-section">
@@ -152,6 +135,23 @@ layout: default
           </div>
         </div>
       </div>
+    </div>
+  </section>
+  <section class="apply">
+    <div class="box bkg-{{ page.fund.color }}">
+      <div class="container">
+        <h2>How to Apply</h2>
+        <p>
+          To make sure that we process your request quickly and efficiently, we will be
+          using Sidepitch as our venture fund management system. Please read the instructions
+          and follow the process for quick turn around. We will not respond until the
+          application process is complete and submitted. Please use our unique Pitchmark.
+        </p>
+        <a href="" class="button inverse">Apply with City Side</a>
+      </div>
+    </div>
+    <div class="box image">
+      <img src="{{ page.fund.contentImage.image }}" alt="{{ page.fund.contentImage.alt }}">
     </div>
   </section>
   <!-- <section class="portfolio padded-section">
