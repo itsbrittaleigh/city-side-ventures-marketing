@@ -4,7 +4,7 @@
       <div
         v-for="(member, index) in team"
         :key="index"
-        class="member box hidden"
+        class="member box visible"
       >
         <img :src="member.photo" :alt="member.name">
         <div class="label">
@@ -13,15 +13,15 @@
         </div>
       </div>
     </div>
-    <div id="quote1" class="box">
+    <div id="quote1" class="box visible">
       <p>I am a super interesting quote about stuff.</p>
       <p class="title">Some guy</p>
     </div>
-    <div id="quote2" class="box">
+    <div id="quote2" class="box visible">
       <p>I am a super interesting quote about stuff.</p>
       <p class="title">Some guy</p>
     </div>
-    <div id="quote3" class="box">
+    <div id="quote3" class="box visible">
       <p>I am a super interesting quote about stuff.</p>
       <p class="title">Some guy</p>
     </div>

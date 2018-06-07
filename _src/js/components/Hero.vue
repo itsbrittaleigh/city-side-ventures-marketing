@@ -1,14 +1,14 @@
 <template>
   <section :class="`hero bkg-${color} ${name}`">
     <div class="container">
-      <h1>{{ heading }}</h1>
+      <h1 class="visible">{{ heading }}</h1>
       <p
         v-if="lead"
-        class="large"
+        class="large visible"
       >
         <em>{{ lead }}</em>
       </p>
-      <p v-if="description">{{ description }}</p>
+      <p v-if="description" class="visible">{{ description }}</p>
     </div>
     <div class="overlay"></div>
   </section>
