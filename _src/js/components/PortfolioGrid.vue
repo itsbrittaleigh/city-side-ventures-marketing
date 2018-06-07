@@ -71,13 +71,13 @@ export default {
       return this.portfolio.length - index <= 6;
     },
     isLastColumnMobile(index) {
-      return index / 2;
+      return index % 2 === 0;
     },
     isLastColumnTablet(index) {
-      return index / 4
+      return index % 4 === 0;
     },
     isLastColumnDesktop(index) {
-      return index / 6;
+      return ((index % 6) === 0);
     },
   },
 };
