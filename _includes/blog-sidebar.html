@@ -3,7 +3,7 @@
     <div class="inner-container">
       <h3 class="color-blue">Business</h3>
       <ul>
-        {% assign businessPosts = site.posts | where: 'tag', 'business' %}
+        {% assign businessPosts = site.posts | where: 'category', 'business' %}
         {% for post in businessPosts limit:3 %}
           <li>
             <img src="/assets/images/icons/bullet-small.svg" alt="">
@@ -13,7 +13,7 @@
       </ul>
       <h3 class="color-yellow">Management</h3>
       <ul>
-        {% assign managementPosts = site.posts | where: 'tag', 'management' %}
+        {% assign managementPosts = site.posts | where: 'category', 'management' %}
         {% for post in managementPosts limit:3 %}
           <li>
             <img src="/assets/images/icons/bullet-small.svg" alt="">
@@ -23,7 +23,7 @@
       </ul>
       <h3 class="color-red">Press Room &amp; News</h3>
       <ul>
-        {% assign pressPosts = site.posts | where: 'tag', 'press' %}
+        {% assign pressPosts = site.posts | where: 'category', 'press' %}
         {% for post in pressPosts limit:3 %}
           <li>
             <img src="/assets/images/icons/bullet-small.svg" alt="">

@@ -1,7 +1,7 @@
 ---
-title: Press Release - Portfolio Update
+title: Portfolio Update - Ensureum
 date: 2017-07-10 00:00:00 Z
-tag: press
+category: press
 author: Doron York
 layout: post
 image: "/uploads/portfolio-ensureum.jpg"

@@ -1,7 +1,7 @@
 ---
-title: Press Release - Portfolio Update
+title: Portfolio Update - SafeWhistle
 date: 2017-08-18 00:00:00 Z
-tag: press
+category: press
 author: Doron York
 layout: post
 image: "/uploads/portfolio-safewhistle.jpg"
