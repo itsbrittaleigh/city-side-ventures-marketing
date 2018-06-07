@@ -11,6 +11,24 @@
         opacity: 1;
       }
     }
+    &:nth-child(odd) {
+      .box.content {
+        background: $danube;
+        h3,
+        p {
+          color: white;
+        }
+      }
+    }
+    &:nth-child(even) {
+      .box.content {
+        background: $gray;
+        h3,
+        p {
+          color: white;
+        }
+      }
+    }
   }
   .box.logo {
     display: flex;
@@ -35,34 +53,6 @@
     overflow: hidden;
     opacity: 0;
     transition: 0.4s;
-    &.bkg-blue {
-      background: $danube;
-      h3,
-      p {
-        color: white;
-      }
-    }
-    &.bkg-yellow {
-      background: $goldendream;
-      h3,
-      p {
-        color: $cod;
-      }
-    }
-    &.bkg-red {
-      background: $nightshadz;
-      h3,
-      p {
-        color: white;
-      }
-    }
-    &.bkg-gray {
-      background: $gray;
-      h3,
-      p {
-        color: white;
-      }
-    }
     .title {
       @include title-font;
     }

@@ -4,7 +4,7 @@
       v-for="(project, index) in portfolio"
       :key="index"
       :class="{
-        'project hidden': true,
+        'project visible': true,
         'even-mobile': isEvenRowedMobile(index + 1),
         'even-tablet': isEvenRowedTablet(index + 1),
         'even-desktop': isEvenRowedDesktop(index + 1),
@@ -19,12 +19,7 @@
       <div class="box logo">
         <img :src="project.logo" :alt="`${project.name} logo`">
       </div>
-      <div :class="{
-        'box content': true,
-        'bkg-blue': project.color === 'blue',
-        'bkg-yellow': project.color === 'yellow',
-        'bkg-gray': project.color === 'gray',
-      }">
+      <div class="box content">
         <h3 class="title">{{ project.name }}</h3>
         <p>{{ project.description }}</p>
         <a
