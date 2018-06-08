@@ -152,7 +152,16 @@
     }
   }
   .introduction {
-    padding-top: 60px;
+    > .container {
+      @media only screen and (min-width: $large) {
+        width: 90%;
+        max-width: 1200px;
+        display: flex;
+        .col-lt {
+          margin-right: 100px;
+        }
+      }
+    }
     p {
       color: #747474;
       &.color-red {
@@ -169,10 +178,67 @@
       }
     }
     .statistics {
+      .box {
+        background: $goldendream;
+        padding: 40px;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p {
+          color: $cod;
+        }
+        &.bkg-yellow {
+          background: $goldendream;
+          p {
+            color: $cod;
+          }
+        }
+        &.bkg-red {
+          background: $nightshadz;
+          p {
+            color: $white;
+          }
+        }
+        &.bkg-blue {
+          background: $danube;
+          p {
+            color: $white;
+          }
+        }
+        &.bkg-black {
+          background: $cod;
+          p {
+            color: $white;
+          }
+        }
+        &.border-blue {
+          border: 2px solid $danube;
+        }
+        &.border-yellow {
+          border: 2px solid $goldendream;
+        }
+        &.border-red {
+          border: 2px solid $nightshadz;
+        }
+        &.border-black {
+          border: 2px solid $cod;
+        }
+        &:first-of-type {
+          margin-bottom: 30px;
+          background: none;
+          p {
+            color: $cod;
+          }
+        }
+      }
       p.large {
         font-size: 70px;
         font-weight: 100;
-        margin: 40px 0 0;
+        margin: 0;
         text-align: center;
       }
       p.small {
@@ -182,12 +248,16 @@
       }
     }
     @media only screen and (min-width: $medium) {
-      padding-top: 120px;
       .statistics {
         display: flex;
         justify-content: center;
-        .box:first-of-type {
-          margin-right: 90px;
+        .box {
+          width: 250px;
+          height: 250px;
+          &:first-of-type {
+            margin-bottom: 0;
+            margin-right: 30px;
+          }
         }
       }
     }
@@ -259,7 +329,6 @@
   }
   
   .app-process {
-    background: $wildsand;
     $bullet_width: 40px;
     .graph-container {
       &.border-yellow {

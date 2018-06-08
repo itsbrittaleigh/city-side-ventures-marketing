@@ -3,36 +3,36 @@ layout: default
 ---
 
 <div class="funds-template">
-  <section class="hero funds bkg-{{ page.fund.color }}">
+  <section class="hero bkg-{{ page.fund.color }}">
     <img src="{{ page.fund.hero.image }}" alt="{{ page.fund.hero.alt }}">
     <div class="overlay"></div>
     <div class="container">
-      <div class="information-box">
-        <div class="logo-container">
-          <img src="{{ page.fund.icon.image }}" alt="{{ page.fund.icon.alt }}" class="visible">
-        </div>
-        <div class="content">
-          <h1 class="visible">{{ page.fund.name }}</h1>
-          <p class="visible"><em>{{ page.fund.market }}</em></p>
-        </div>
+      <div class="content">
+        <h1 class="visible">{{ page.fund.name }}</h1>
+        <p class="visible"><em>{{ page.fund.market }}</em></p>
       </div>
     </div>
   </section>
+
   <section class="introduction padded-section">
     <div class="container">
-      <p class="visible">{{ page.fund.intro }}</p>
-      <div class="statistics">
-        <div class="box hidden">
-          <p id="capital" class="large color-{{ page.fund.color }}">{{ page.fund.investmentCapital }}</p>
+      <div class="col-lt">
+        <!-- logo -->
+        <p class="visible">{{ page.fund.intro }}</p>
+      </div>
+      <div class="col-rt statistics">
+        <div class="box visible border-{{ page.fund.color }}">
+          <p class="large">{{ page.fund.investmentCapital }}</p>
           <p class="small">in investment capital</p>
         </div>
-        <div class="box hidden">
-          <p id="investment" class="large color-{{ page.fund.color }}">{{ page.fund.maxInvestmentSize }}</p>
+        <div class="box visible bkg-{{ page.fund.color }}">
+          <p class="large">{{ page.fund.maxInvestmentSize }}</p>
           <p class="small">maximum investment size</p>
         </div>
       </div>
     </div>
   </section>
+
   <section class="qualifications">
     <div class="box hidden">
       <div class="container">
@@ -49,7 +49,7 @@ layout: default
         </ul>
       </div>
     </div>
-    {% if page.fundingRequirements %}
+    {% if page.fund.fundingRequirements %}
       <div class="box hidden">
         <div class="container">
           <h2 class="color-{{ page.fund.color }}">Funding Requirements</h2>
@@ -83,6 +83,7 @@ layout: default
       </div>
     {% endif %}
   </section>
+
   <section class="app-process padded-section">
     <div class="wide-container">
       <h2 class="hidden">The application process</h2>
@@ -148,6 +149,7 @@ layout: default
       </div>
     </div>
   </section>
+
   <section class="apply">
     <div class="box bkg-{{ page.fund.color }}">
       <div class="container">
@@ -165,6 +167,7 @@ layout: default
       <img src="{{ page.fund.contentImage.image }}" alt="{{ page.fund.contentImage.alt }}">
     </div>
   </section>
+
   <!-- <section class="portfolio padded-section">
     <div class="container">
       <h2>The {{ page.fund.name }} Portfolio</h2>
