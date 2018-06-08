@@ -14,13 +14,6 @@ layout: default
         <div class="content">
           <h1 class="visible">{{ page.fund.name }}</h1>
           <p class="visible"><em>{{ page.fund.market }}</em></p>
-          <!-- <a
-            href="https://app.sidepitch.com/auth/register"
-            class="button inverse"
-            target="_blank"
-          >
-            Apply with City Side
-          </a> -->
         </div>
       </div>
     </div>
@@ -56,21 +49,39 @@ layout: default
         </ul>
       </div>
     </div>
-    <div class="box hidden">
-      <div class="container">
-        <h2 class="color-{{ page.fund.color }}">Funding Requirements</h2>
-        <p>
-          <em>
-            Companies that will qualify for the fund will agree to the following conditions:
-          </em>
-        </p>
-        <ul>
-          {% for requirement in page.fund.fundingRequirements %}
-            <li>{{ requirement }}</li>
-          {% endfor %}
-        </ul>
+    {% if page.fundingRequirements %}
+      <div class="box hidden">
+        <div class="container">
+          <h2 class="color-{{ page.fund.color }}">Funding Requirements</h2>
+          <p>
+            <em>
+              Companies that will qualify for the fund will agree to the following conditions:
+            </em>
+          </p>
+          <ul>
+            {% for requirement in page.fund.fundingRequirements %}
+              <li>{{ requirement }}</li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
-    </div>
+    {% elsif page.fund.fundingApplications %}
+    <div class="box hidden">
+        <div class="container">
+          <h2 class="color-{{ page.fund.color }}">Funding Applications</h2>
+          <p>
+            <em>
+              Companies will qualify for the following funding instruments:
+            </em>
+          </p>
+          <ul>
+            {% for application in page.fund.fundingApplications %}
+              <li>{{ application }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    {% endif %}
   </section>
   <section class="app-process padded-section">
     <div class="wide-container">

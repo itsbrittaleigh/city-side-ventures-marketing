@@ -19,7 +19,7 @@
       @mouseout="hideDescription(index)"
     >
       <div class="box logo">
-        <img :src="project.logo" :alt="`${project.name} logo`">
+        <img :src="project.logo" :alt="`${project.name}`">
       </div>
       <div
         :class="{

@@ -14,16 +14,13 @@
       </div>
     </div>
     <div id="quote1" class="box visible">
-      <p>I am a super interesting quote about stuff.</p>
-      <p class="title">Some guy</p>
+      <p>We are Business builders, innovators, disrupters, and game-changing investors.</p>
     </div>
     <div id="quote2" class="box visible">
-      <p>I am a super interesting quote about stuff.</p>
-      <p class="title">Some guy</p>
+      <p>Our venture group is more than just traditional investors.</p>
     </div>
     <div id="quote3" class="box visible">
-      <p>I am a super interesting quote about stuff.</p>
-      <p class="title">Some guy</p>
+      <p>It takes a village to launch a startup.</p>
     </div>
   </div>
 </template>
@@ -62,7 +59,7 @@ export default {
     const quote3 = document.getElementById('quote3');
 
     if (this.team.length % 4 === 1) {
-      if (this.team.length <= 10) {
+      if (this.team.length <= 8) {
         teamContainer.classList += ' restructured';
       } else {
         teamContainer.insertBefore(quote1, members[members.length - 2]);
