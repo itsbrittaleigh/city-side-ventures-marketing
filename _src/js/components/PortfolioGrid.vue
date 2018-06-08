@@ -15,11 +15,18 @@
         'last-column-tablet': isLastColumnTablet(index + 1),
         'last-column-desktop': isLastColumnDesktop(index + 1),
       }"
+      @mouseover="showDescription(index)"
+      @mouseout="hideDescription(index)"
     >
       <div class="box logo">
         <img :src="project.logo" :alt="`${project.name} logo`">
       </div>
-      <div class="box content">
+      <div
+        :class="{
+          'box content': true,
+          'show': project.showDescription,
+        }"
+      >
         <h3 class="title">{{ project.name }}</h3>
         <p>{{ project.description }}</p>
         <a
@@ -28,6 +35,7 @@
         >
           Visit Website
         </a>
+        <i class="close" @click="hideDescription(index)">X</i>
       </div>
     </div>
   </section>
@@ -73,6 +81,14 @@ export default {
     },
     isLastColumnDesktop(index) {
       return ((index % 6) === 0);
+    },
+    showDescription(index) {
+      /* eslint-disable-next-line */
+      console.log(index);
+      this.portfolio[index].showDescription = true;
+    },
+    hideDescription(index) {
+      this.portfolio[index].showDescription = false;
     },
   },
 };

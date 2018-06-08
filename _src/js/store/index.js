@@ -16,12 +16,14 @@ const state = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
       color: 'blue',
       link: 'https://www.buildamtech.com/',
+      showDescription: false,
     },
     {
       name: 'Analyteum',
       logo: require('../../../assets/images/logos/analyteum.png'),
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
       color: 'blue',
+      showDescription: false,
     },
     {
       name: 'Argonomo',
@@ -29,12 +31,14 @@ const state = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
       color: 'gray',
       link: 'https://www.argonomo.com/',
+      showDescription: false,
     },
     {
       name: 'Coaching Standard',
       logo: require('../../../assets/images/logos/coaching-standard.png'),
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
       color: 'gray',
+      showDescription: false,
     },
     {
       name: 'Ensureum',
@@ -42,12 +46,14 @@ const state = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
       color: 'blue',
       link: 'https://ensureum.com/',
+      showDescription: false,
     },
     {
       name: 'Mtech[IQ]',
       logo: require('../../../assets/images/logos/mtech-iq.png'),
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
       color: 'blue',
+      showDescription: false,
     },
     {
       name: 'SafeWhistle',
@@ -55,6 +61,7 @@ const state = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
       color: 'yellow',
       link: 'https://safewhistle.com/',
+      showDescription: false,
     },
     {
       name: 'Sidepitch',
@@ -62,30 +69,35 @@ const state = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
       color: 'yellow',
       link: 'https://sidepitch.com/',
+      showDescription: false,
     },
     {
       name: 'Sidepitch Media',
       logo: require('../../../assets/images/logos/sidepitch-media.png'),
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
       color: 'blue',
+      showDescription: false,
     },
     {
       name: 'TM',
       logo: require('../../../assets/images/logos/tm.png'),
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
       color: 'blue',
+      showDescription: false,
     },
     {
       name: 'Wearli',
       logo: require('../../../assets/images/logos/wearli.png'),
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
       color: 'yellow',
+      showDescription: false,
     },
     {
       name: 'WeConduct',
       logo: require('../../../assets/images/logos/we-conduct.png'),
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum rolo sit.',
       color: 'yellow',
+      showDescription: false,
     },
   ],
   team: [

@@ -2,8 +2,8 @@
   @include grid-boxes(2, 6, 1fr, 200px, 0);
   .project {
     position: relative;
-    &:hover {
-      .box.content {
+    .show {
+      &.box.content {
         width: 200%;
         height: 200%;
         z-index: 10;
@@ -59,6 +59,13 @@
     .button {
       height: 32px;
       padding: 0 15px;
+    }
+    .close {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      color: white;
+      font-style: normal;
     }
   }
   @media only screen and (min-width: $medium) {
