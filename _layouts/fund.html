@@ -3,32 +3,30 @@ layout: default
 ---
 
 <div class="funds-template">
-  <section class="hero bkg-{{ page.fund.color }}">
+  <section class="hero funds bkg-{{ page.fund.color }}">
     <img src="{{ page.fund.hero.image }}" alt="{{ page.fund.hero.alt }}">
     <div class="overlay"></div>
     <div class="container">
       <div class="content">
-        <h1 class="visible">{{ page.fund.name }}</h1>
+        <h1 class="visible color-{{ page.fund.color }}">{{ page.fund.name }}</h1>
         <p class="visible"><em>{{ page.fund.market }}</em></p>
       </div>
     </div>
   </section>
 
-  <section class="introduction padded-section">
-    <div class="container">
-      <div class="col-lt">
-        <!-- logo -->
-        <p class="visible">{{ page.fund.intro }}</p>
+  <section class="introduction">
+    <div class="box col-lt">
+      <!-- logo -->
+      <p class="visible">{{ page.fund.intro }}</p>
+    </div>
+    <div class="box statistics">
+      <div class="box visible bkg-black">
+        <p class="large color-{{ page.fund.color }}">{{ page.fund.investmentCapital }}</p>
+        <p class="small color-{{ page.fund.color }}">in investment capital</p>
       </div>
-      <div class="col-rt statistics">
-        <div class="box visible border-{{ page.fund.color }}">
-          <p class="large">{{ page.fund.investmentCapital }}</p>
-          <p class="small">in investment capital</p>
-        </div>
-        <div class="box visible bkg-{{ page.fund.color }}">
-          <p class="large">{{ page.fund.maxInvestmentSize }}</p>
-          <p class="small">maximum investment size</p>
-        </div>
+      <div class="box visible bkg-{{ page.fund.color }}">
+        <p class="large">{{ page.fund.maxInvestmentSize }}</p>
+        <p class="small">maximum investment size</p>
       </div>
     </div>
   </section>
@@ -36,7 +34,7 @@ layout: default
   <section class="qualifications">
     <div class="box hidden">
       <div class="container">
-        <h2 class="color-{{ page.fund.color }}">Minimum Qualifications</h2>
+        <h2>Minimum Qualifications</h2>
         <p>
           <em>
             Companies that are considering applying must be qualified based on the following:
@@ -52,7 +50,7 @@ layout: default
     {% if page.fund.fundingRequirements %}
       <div class="box hidden">
         <div class="container">
-          <h2 class="color-{{ page.fund.color }}">Funding Requirements</h2>
+          <h2>Funding Requirements</h2>
           <p>
             <em>
               Companies that will qualify for the fund will agree to the following conditions:
@@ -66,9 +64,9 @@ layout: default
         </div>
       </div>
     {% elsif page.fund.fundingApplications %}
-    <div class="box hidden">
+      <div class="box hidden">
         <div class="container">
-          <h2 class="color-{{ page.fund.color }}">Funding Applications</h2>
+          <h2>Funding Applications</h2>
           <p>
             <em>
               Companies will qualify for the following funding instruments:
@@ -160,7 +158,7 @@ layout: default
           and follow the process for quick turn around. We will not respond until the
           application process is complete and submitted. Please use our unique Pitchmark.
         </p>
-        <a href="" class="button inverse">Apply with City Side</a>
+        <a href="https://app.sidepitch.com/auth/register" class="button inverse" target="_blank">Apply with City Side</a>
       </div>
     </div>
     <div class="box image">

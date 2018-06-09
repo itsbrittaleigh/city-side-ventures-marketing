@@ -102,6 +102,9 @@
         padding: 30px;
         img {
           width: 70%;
+          &.shrink {
+            width: 60%;
+          }
         }
       }
       &.image {
@@ -228,6 +231,30 @@
           }
         }
       }
+      .service {
+        display: flex;
+        margin-bottom: 20px;
+        span {
+          color: white;
+          background: $cod;
+          height: 25px;
+          width: 25px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+        }
+        .content {
+          flex: 1;
+        }
+        p {
+          text-align: left;
+          &.title {
+            @include title-font;
+            margin-bottom: 5px;
+          }
+        }
+      }
     }
     @media only screen and (min-width: $large) {
       @include grid-boxes(2, 1, 50vw, 50vw, 0);
@@ -259,12 +286,15 @@
         .box {
           align-items: center;
           justify-content: center;
+          &:not(.image) {
+            padding: 20px 40px;
+          }
         }
       }
       .box-yellow {
         background: $goldendream;
         p {
-          color: $white;
+          color: $cod;
         }
       }
       .box-blue {
@@ -474,6 +504,7 @@
         max-width: 55%;
         max-height: 45px;
         display: block;
+        filter: grayscale(1.0);
       }
     }
     @media only screen and (min-width: $medium) {
