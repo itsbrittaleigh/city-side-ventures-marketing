@@ -2,25 +2,17 @@
   @include grid-boxes(2, auto, 1fr, 1fr, 0);
   .box {
     &:nth-child(even) {
-      .label {
-        background: $danube;
-      }
+      background: $danube;
     }
     &:nth-child(odd) {
-      .label {
-        background: $goldendream;
-      }
+      background: $goldendream;
     }
     &.bkg-offset {
       &:nth-child(even) {
-        .label {
-          background: $goldendream;
-        }
+        background: $goldendream;
       }
       &:nth-child(odd) {
-        .label {
-          background: $danube;
-        }
+        background: $danube;
       }
     }
   }
