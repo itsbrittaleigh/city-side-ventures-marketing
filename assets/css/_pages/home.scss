@@ -263,7 +263,7 @@
       }
     }
     &.statistics2 {
-      @include grid-boxes(1, 2, 100vw, 100vw, 0);
+      @include grid-boxes(1, 2, 100vw, auto, 0);
       > .box:nth-child(1) {
         h2 {
           z-index: 10;
@@ -281,13 +281,13 @@
         }
       }
       > .box:nth-child(2) {
-        @include grid-boxes(2, 2, 50vw, 50%, 0);
+        @include grid-boxes(1, 4, 1fr, auto, 0);
         align-items: initial;
         .box {
           align-items: center;
           justify-content: center;
           &:not(.image) {
-            padding: 20px 40px;
+            padding: 40px 40px 20px;
           }
         }
       }
@@ -304,10 +304,16 @@
         }
       }
       @media only screen and (min-width: $medium) {
-        @include grid-boxes(2, 1, 50vw, 50vw, 0);
+        @include grid-boxes(1, 2, 1fr, auto, 0);
         > .box:nth-child(2) {
-          @include grid-boxes(2, 2, 25vw, 25vw, 0);
+          @include grid-boxes(2, 2, 1fr, auto, 0);
           width: auto;
+        }
+      }
+      @media only screen and (min-width: $xlarge) {
+        @include grid-boxes(2, 1, 1fr, auto, 0);
+        > .box:nth-child(2) {
+          @include grid-boxes(2, 2, 1fr, auto, 0);
         }
       }
     }
