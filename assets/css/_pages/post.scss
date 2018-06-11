@@ -1,0 +1,8 @@
+#post-content {
+  @media only screen and (min-width: $large) {
+    .container {
+      width: auto;
+      margin: 0;
+    }
+  }
+}
