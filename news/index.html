@@ -16,7 +16,7 @@ title: news
   {% include blog-sidebar.html %}
   <div class="articles" id="relative-anchor-for-stick">
     {% for post in site.posts %}
-      <div class="box {{ post.tag }} visible">
+      <div class="box {{ post.category }} visible">
         <a href="{{ post.url }}"></a>
         <img src="{{ post.image }}" alt="">
         <div class="content">
