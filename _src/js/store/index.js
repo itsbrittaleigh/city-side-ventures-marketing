@@ -212,7 +212,7 @@ const state = {
     {
       name: 'David Weaver',
       title: 'Chief Investment Officer',
-      photo: require('../../../assets/images/team/default.jpg'),
+      photo: require('../../../assets/images/team/david.jpg'),
     },
     {
       name: 'Tom Coke',
