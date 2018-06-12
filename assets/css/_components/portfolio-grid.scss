@@ -75,6 +75,15 @@
     .button {
       height: 32px;
       padding: 0 15px;
+      &.muted {
+        background: lightgray;
+        border-color: lightgray;
+        cursor: not-allowed;
+        &:hover {
+          background: lightgray;
+          color: $cod;
+        }
+      }
     }
     .close {
       position: absolute;

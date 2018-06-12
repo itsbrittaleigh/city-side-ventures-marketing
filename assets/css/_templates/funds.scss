@@ -67,7 +67,11 @@
         p {
           color: $white;
           text-align: center;
+          font-size: 24px;
         }
+      }
+      @media only screen and (min-width: $large) {
+        min-height: 400px;
       }
     }
   }
@@ -78,6 +82,7 @@
     }
     p {
       color: #747474;
+      font-size: 18px;
       &.color-red {
         color: $nightshadz;
       }
@@ -147,6 +152,9 @@
       }
     }
     @media only screen and (min-width: $medium) {
+      .col-lt {
+        padding: 80px;
+      }
       .statistics {
         @include grid-boxes(2, 1, 1fr, auto, 0);
       }
@@ -219,6 +227,9 @@
     @media only screen and (min-width: $large) {
       .box:not(.image) {
         padding: 70px;
+        p {
+          font-size: 20px;
+        }
       }
     }
   }

@@ -25,7 +25,7 @@
       &:nth-child(1) {
         color: $goldendream;
         .overlay {
-          @include background-opacity(#343434, 0.9);
+          @include background-opacity(#343434, 0.8);
         }
         p {
           color: #dfdfdf;
@@ -123,6 +123,7 @@
         padding: 30px;
         img {
           width: 70%;
+          filter: grayscale(1.0);
           &.shrink {
             width: 60%;
           }
@@ -296,6 +297,7 @@
           position: relative;
           z-index: 10;
           object-fit: contain;
+          filter: none;
         }
         .overlay {
           @include background-opacity(#3d3d3d, 0.85);
@@ -334,7 +336,7 @@
       @media only screen and (min-width: $xlarge) {
         @include grid-boxes(2, 1, 1fr, auto, 0);
         > .box:nth-child(2) {
-          @include grid-boxes(2, 2, 1fr, auto, 0);
+          @include grid-boxes(2, 2, 1fr, 50%, 0);
         }
       }
     }
@@ -395,6 +397,9 @@
     @media only screen and (min-width: $xxlarge) {
       > .container {
         width: calc(100vw - 120px);
+      }
+      p {
+        font-size: 20px;
       }
     }
   }
@@ -577,6 +582,9 @@
     }
     @media only screen and (min-width: $xlarge) {
       @include grid-boxes(2, 1, 1fr, 400px, 0);
+      p {
+        font-size: 20px;
+      }
       grid-template-columns: auto 800px;
       .upper,
       .lower {

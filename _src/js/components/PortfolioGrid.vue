@@ -64,6 +64,7 @@
         >
           Visit Website
         </a>
+        <span v-else class="button muted">Website coming soon...</span>
         <i class="close" @click="hideDescription(index)">X</i>
       </div>
     </div>
