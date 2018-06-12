@@ -28,7 +28,36 @@
         }"
       >
         <h3 class="title">{{ project.name }}</h3>
-        <p>{{ project.description }}</p>
+        <ul>
+          <li>
+            <strong>Industry: </strong>
+            {{ project.industry }}
+          </li>
+          <li>
+            <strong>Investment Category: </strong>
+            {{ project.category }}
+          </li>
+          <li>
+            <strong>Transaction Date: </strong>
+            {{ project.transactionDate }}
+          </li>
+          <li>
+            <strong>Investment: </strong>
+            {{ project.investment }}
+          </li>
+          <li>
+            <strong>Equity Position: </strong>
+            {{ project.equityPosition }}
+          </li>
+          <li>
+            <strong>Investment Stage: </strong>
+            {{ project.investmentStage }}
+          </li>
+          <li>
+            <strong>Current Valuation: </strong>
+            {{ project.currentValuation }}
+          </li>
+        </ul>
         <a
           v-if="project.link"
           :href="project.link" class="button" target="_blank"

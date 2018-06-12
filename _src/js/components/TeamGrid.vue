@@ -14,7 +14,7 @@
       </div>
     </div>
     <div id="quote1" class="box visible">
-      <p>We are Business builders, innovators, disrupters, and game-changing investors.</p>
+      <p>We are business builders, innovators, disrupters, and game-changing investors.</p>
     </div>
     <div id="quote2" class="box visible">
       <p>Our venture group is more than just traditional investors.</p>

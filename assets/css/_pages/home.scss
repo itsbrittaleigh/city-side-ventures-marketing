@@ -5,7 +5,7 @@
       margin: 0;
     }
     .box {
-      img {
+      img:not(.bullet) {
         position: absolute;
         top: 0;
         left: 0;
@@ -37,6 +37,24 @@
         .overlay {
           @include background-opacity($goldendream, 0.9);
         }
+        p.flex {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          span {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            &:not(:last-of-type) {
+              margin-right: 20px;
+            }
+          }
+        }
+        .bullet {
+          height: 20px;
+          width: 20px;
+          margin: 0 5px;
+        }
       }
       > .container {
         position: absolute;
@@ -55,7 +73,10 @@
         font-weight: 100;
       }
       a {
-        margin-top: 20px;
+        margin-top: 5px;
+        @media only screen and (min-width: $large) {
+          margin-top: 20px;
+        }
       }
     }
     @media only screen and (min-width: $medium) {
