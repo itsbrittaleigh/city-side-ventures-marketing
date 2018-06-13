@@ -1,3 +1,58 @@
 ---
 layout: default
 ---
+
+<section class="hero bkg-blue bio-hero">
+  <div class="container">
+    <h1 class="visible">{{ page.first_name }} {{ page.last_name }}</h1>
+    <p class="large visible">
+      <em>{{ page.position }}</em>
+    </p>
+  </div>
+  <div class="overlay"></div>
+</section>
+
+<div class="bio-grid">
+  <aside>
+    <img src="{{ page.photo }}" alt="" class="avatar">
+    <a href="mailto:{{ page.email }}" class="email">
+      <div class="overlay"></div>
+      <div class="icon-container">
+        <img src="/assets/images/icons/email-outline-black.png" alt="">
+      </div>
+      <span>
+        {{ page.email }}
+      </span>
+    </a>
+    <a href="tel:+{{ page.phone }}" class="phone">
+      <div class="overlay"></div>
+      <div class="icon-container">
+        <img src="/assets/images/icons/phone-white.png" alt="">
+      </div>
+      <span>
+        {{ page.phone }}
+      </span>
+    </a>
+    <a href="{{ page.linkedin }}" class="linkedin">
+      <div class="overlay"></div>
+      <div class="icon-container">
+        <img src="/assets/images/icons/linkedin-white.svg" alt="">
+      </div>
+      <span>
+        LinkedIn
+      </span>
+    </a>
+  </aside>
+  <section class="bio">
+    {{ page.content }}
+    {% if page.publications.size > 0 %}
+      <h2>Blog posts and updates from {{ page.first_name }} {{ page.last_name }}</h2>
+      {% for publication in page.publications %}
+        <div class="publication">
+          <a href="{{ publication.url }}"><strong>{{ publication.title }}</strong></a>
+          <p>{{ publication.snippet }}</p>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </section>
+</div>

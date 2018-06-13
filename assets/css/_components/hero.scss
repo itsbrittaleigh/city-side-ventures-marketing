@@ -11,7 +11,8 @@
   > .container {
     z-index: 10;
   }
-  &.bkg-business {
+  &.bkg-business,
+  &.bkg-blue {
     h1,
     p {
       color: white;
@@ -38,6 +39,13 @@
     @media only screen and (min-width: $large) {
       > .container {
         margin-left: calc(25vw + 50px);
+      }
+    }
+  }
+  &.bio-hero {
+    @media only screen and (min-width: $large) {
+      > .container {
+        margin-left: 370px;
       }
     }
   }
