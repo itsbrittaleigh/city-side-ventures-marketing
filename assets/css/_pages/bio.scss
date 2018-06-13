@@ -2,7 +2,7 @@
   @include grid-boxes(1, 2, 1fr, auto, 0);
   @media only screen and (min-width: $medium) {
     @include grid-boxes(2, 1, 1fr, auto, 0);
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 380px 1fr;
   }
   aside {
     padding: 30px;

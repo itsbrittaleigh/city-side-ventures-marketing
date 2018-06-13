@@ -5,12 +5,14 @@
         v-for="(member, index) in team"
         :key="index"
         class="member box visible"
+        @click="redirectTo(`${member.firstName.toLowerCase()}-${member.lastName.toLowerCase()}`)"
       >
         <img :src="member.photo" :alt="member.name">
         <div class="label">
           <p class="name">{{ member.name }}</p>
           <p><em>{{ member.title }}</em></p>
         </div>
+        <div class="overlay"></div>
       </div>
     </div>
     <div id="quote1" class="box visible">
@@ -49,6 +51,9 @@ export default {
           boxes.item(i).classList.add('bkg-offset');
         }
       }
+    },
+    redirectTo(name) {
+      window.location = `/team/${name}`;
     },
   },
   mounted() {

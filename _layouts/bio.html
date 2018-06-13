@@ -14,8 +14,8 @@ layout: default
 
 <div class="bio-grid">
   <aside>
-    <img src="{{ page.photo }}" alt="" class="avatar">
-    <a href="mailto:{{ page.email }}" class="email">
+    <img src="{{ page.photo }}" alt="" class="avatar visible">
+    <a href="mailto:{{ page.email }}" class="email visible">
       <div class="overlay"></div>
       <div class="icon-container">
         <img src="/assets/images/icons/email-outline-black.png" alt="">
@@ -24,7 +24,7 @@ layout: default
         {{ page.email }}
       </span>
     </a>
-    <a href="tel:+{{ page.phone }}" class="phone">
+    <a href="tel:+{{ page.phone }}" class="phone visible">
       <div class="overlay"></div>
       <div class="icon-container">
         <img src="/assets/images/icons/phone-white.png" alt="">
@@ -33,7 +33,7 @@ layout: default
         {{ page.phone }}
       </span>
     </a>
-    <a href="{{ page.linkedin }}" class="linkedin">
+    <a href="{{ page.linkedin }}" class="linkedin visible">
       <div class="overlay"></div>
       <div class="icon-container">
         <img src="/assets/images/icons/linkedin-white.svg" alt="">
@@ -43,7 +43,7 @@ layout: default
       </span>
     </a>
   </aside>
-  <section class="bio">
+  <section class="bio visible">
     {{ page.content }}
     {% if page.publications.size > 0 %}
       <h2>Blog posts and updates from {{ page.first_name }} {{ page.last_name }}</h2>
