@@ -29,8 +29,9 @@
       }
     }
     ul {
-      padding-left: 5px;
+      padding: 0 0 35px;
       margin: 5px 0 50px;
+      border-bottom: 1px solid #cecece;
       list-style-type: none;
       li {
         margin-bottom: 10px;
@@ -38,15 +39,29 @@
         cursor: pointer;
         transition: 0.4s;
         color: #808080;
-        img {
-          width: 3px;
-          height: 3px;
-          display: block;
-          margin-top: 12px;
-          margin-right: 10px;
-        }
         &:hover {
           color: $nightshadz;
+        }
+        &.all {
+          &.color-red {
+            a {
+              color: $nightshadz;
+            }
+          }
+          &.color-yellow {
+            a {
+              color: $goldendream;
+            }
+          }
+          &.color-blue {
+            a {
+              color: $danube;
+            }
+          }
+          a {
+            font-weight: bold;
+            font-size: 14px;
+          }
         }
       }
       a {

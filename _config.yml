@@ -2,16 +2,20 @@
 # Info
 title: CitySide Ventures
 baseurl: ""
+url: https://www.citysideventures.com
 
 # Collections
 collections:
   posts:
     title: Posts
     output: true
-    permalink: /news/:categories/:title:output_ext
   bios:
     title: Bios
     output: true
+
+# Gems
+plugins:
+- jekyll/tagging
 
 # Settings
 markdown: kramdown
@@ -19,6 +23,16 @@ destination: dist
 sass:
   sass_dir: assets/css
   style: compressed
+tag_page_layout: tags
+tag_page_dir: news/tags
+tag_permalink_style: pretty
+autopages:
+  enabled: true
+  tags:
+    layouts:
+    - tags.html
+    title: Posts tagged with :tag
+    permalink: "/news/tags/:tag"
 exclude:
 - Gemfile
 - Gemfile.lock

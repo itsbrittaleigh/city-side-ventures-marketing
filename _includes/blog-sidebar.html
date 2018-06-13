@@ -1,35 +1,52 @@
 <aside class="blog-sidebar box navigation">
   <div class="navigation-container" id="container-to-stick">
     <div class="inner-container">
-      <h3 class="color-blue">Business</h3>
+      {% assign businessPosts = site.posts | where: 'tags', 'business' %}
+      <h3 class="color-blue">
+        Business
+        <span><em>({{ businessPosts.size }})</em></span>
+      </h3>
       <ul>
-        {% assign businessPosts = site.posts | where: 'category', 'business' %}
         {% for post in businessPosts limit:3 %}
           <li>
-            <img src="/assets/images/icons/bullet-small.svg" alt="">
             <a href="{{ post.url }}">{{ post.title }}</a>
           </li>
         {% endfor %}
+        <li class="all color-blue">
+          <a href="/{{ site.tag_page_dir }}/business">See all business posts</a>
+        </li>
       </ul>
-      <h3 class="color-yellow">Management</h3>
+
+      {% assign managementPosts = site.posts | where: 'tags', 'management' %}
+      <h3 class="color-yellow">
+        Management
+        <span><em>({{ managementPosts.size }})</em></span>
+      </h3>
       <ul>
-        {% assign managementPosts = site.posts | where: 'category', 'management' %}
         {% for post in managementPosts limit:3 %}
           <li>
-            <img src="/assets/images/icons/bullet-small.svg" alt="">
             <a href="{{ post.url }}">{{ post.title }}</a>
           </li>
         {% endfor %}
+        <li class="all color-yellow">
+          <a href="/{{ site.tag_page_dir }}/management">See all management posts</a>
+        </li>
       </ul>
-      <h3 class="color-red">Press Room &amp; News</h3>
+
+      {% assign pressPosts = site.posts | where: 'tags', 'press' %}
+      <h3 class="color-red">
+        Press Room &amp; News
+        <span><em>({{ pressPosts.size }})</em></span>
+      </h3>
       <ul>
-        {% assign pressPosts = site.posts | where: 'category', 'press' %}
         {% for post in pressPosts limit:3 %}
           <li>
-            <img src="/assets/images/icons/bullet-small.svg" alt="">
             <a href="{{ post.url }}">{{ post.title }}</a>
           </li>
         {% endfor %}
+        <li class="all color-red">
+          <a href="/{{ site.tag_page_dir }}/press">See all press releases</a>
+        </li>
       </ul>
     </div>
   </div>

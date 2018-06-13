@@ -1,7 +1,7 @@
 ---
 title: I Do Not Need a Weather Report
 date: 2017-08-16 00:00:00 Z
-category: management
+tags: management
 author: Doron York
 layout: post
 image: "/uploads/weather.png"
