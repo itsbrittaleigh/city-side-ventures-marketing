@@ -14,12 +14,17 @@ strong {
 }
 
 p, 
-li, 
-a,
+li,
 address {
   font-size: 15px;
   line-height: 1.7;
   color: $cod;
+}
+
+a {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 h1 {

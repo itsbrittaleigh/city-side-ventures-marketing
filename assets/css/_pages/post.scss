@@ -6,3 +6,55 @@
     }
   }
 }
+
+.news-grid.post-page {
+  .additional-articles {
+    display: none;
+    visibility: hidden;
+  }
+  @media only screen and (min-width: $xxlarge) {
+    @include grid-boxes(3, 1, 1fr, auto, 0);
+    grid-template-columns: 25vw 50vw 25vw;
+    .additional-articles {
+      display: block;
+      visibility: visible;
+      background: $wildsand;
+      padding: 50px;
+      p.title {
+        @include title-font;
+        &.business {
+          color: $danube;
+        }
+        &.press {
+          color: $nightshadz;
+        }
+        &.management {
+          color: $goldendream;
+        }
+      }
+      .additional-post {
+        margin-bottom: 70px;
+        .img-container {
+          overflow: hidden;
+          max-width: 100%;
+        }
+        img {
+          max-width: 100%;
+          transition: 0.4s;
+        }
+        h2,
+        p {
+          color: #747474;
+        }
+        a {
+          text-decoration: none;
+          &:hover {
+            img {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
