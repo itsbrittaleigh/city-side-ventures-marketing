@@ -1,9 +1,12 @@
 import Vue from 'vue';
+import VueCarousel from 'vue-carousel';
 import store from './store';
 
 // import CountUpModule from './modules/count-up.module';
 import StickToTopModule from './modules/stick-to-top.module';
 import ScrollAnimationModule from './modules/scroll-animation.module';
+
+Vue.use(VueCarousel);
 
 Vue.config.productionTip = false;
 

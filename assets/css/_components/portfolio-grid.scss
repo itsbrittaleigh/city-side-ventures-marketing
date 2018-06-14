@@ -23,7 +23,7 @@
     }
     &:nth-child(even) {
       .box.content {
-        background: $gray;
+        background: lighten($gray, 10%);
         h3,
         p,
         li {
@@ -98,6 +98,25 @@
   }
   @media only screen and (min-width: $large) {
     @include grid-boxes(6, 2, 1fr, 200px, 0);
+    .project {
+      .show.box.content {
+        padding: 30px;
+      }
+    }
+  }
+  @media only screen and (min-width: $xlarge) {
+    .project {
+      .show.box.content {
+        padding: 30px 50px;
+      }
+    }
+  }
+  @media only screen and (min-width: $xxlarge) {
+    .project {
+      .show.box.content {
+        padding: 40px 80px;
+      }
+    }
   }
   @media only screen and (max-width: 767px) {
     .project {

@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "vue": "^2.5.2",
+    "vue-carousel": "^0.8.1",
     "vue-markdown-loader": "^2.4.1",
     "vue-router": "^3.0.1"
   },

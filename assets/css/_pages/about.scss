@@ -3,7 +3,8 @@
   .culture {
     @include grid-boxes(1, 2, 1fr, auto, 0);
     .box.image {
-      img {
+      img,
+      video {
         min-width: 100%;
         min-height: 100%;
         max-height: 400px;
