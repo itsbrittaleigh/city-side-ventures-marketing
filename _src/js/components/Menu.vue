@@ -87,7 +87,7 @@
         </span>
       </span>
       <span class="call">
-        <a href="tel:+12484304336">
+        <a href="tel:+2482367005">
           <img src="/assets/images/icons/phone-white.svg" alt="">
           Give us a call
         </a>
