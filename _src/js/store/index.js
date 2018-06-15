@@ -218,8 +218,8 @@ const state = {
       photo: require('../../../assets/images/team/jay.jpg'),
     },
     {
-      name: 'Zoe (Ziva) Chen, PhD',
-      firstName: 'Zoe',
+      name: 'Ziva (Zoe) Chen, PhD',
+      firstName: 'Ziva',
       lastName: 'Chen',
       title: 'SVP / Intellectual Property',
       photo: require('../../../assets/images/team/zoe.jpg'),
