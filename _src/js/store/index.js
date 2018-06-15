@@ -232,8 +232,8 @@ const state = {
       photo: require('../../../assets/images/team/david.jpg'),
     },
     {
-      name: 'Tom Coke',
-      firstName: 'Tom',
+      name: 'Thomas Coke',
+      firstName: 'Thomas',
       lastName: 'Coke',
       title: 'Chief Compliance Officer',
       photo: require('../../../assets/images/team/default.jpg'),
