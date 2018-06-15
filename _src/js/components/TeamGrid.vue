@@ -16,13 +16,13 @@
       </div>
     </div>
     <div id="quote1" class="box visible">
-      <p>We are business builders, innovators, disrupters, and game-changing investors.</p>
+      <p>We are operational-oriented investors, deploying a high-impact invest-and-build model.</p>
     </div>
     <div id="quote2" class="box visible">
-      <p>Our venture group is more than just traditional investors.</p>
+      <p>We are business builders, innovators, disrupters, and game-changing investors.</p>
     </div>
     <div id="quote3" class="box visible">
-      <p>It takes a village to launch a startup.</p>
+      <p>We are willing to grind and get our hands dirty; we understand that it takes a village to launch a startup.</p>
     </div>
   </div>
 </template>
