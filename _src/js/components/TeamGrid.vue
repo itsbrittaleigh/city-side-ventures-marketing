@@ -5,8 +5,9 @@
         v-for="(member, index) in team"
         :key="index"
         class="member box visible"
-        @click="redirectTo(`${member.firstName.toLowerCase()}-${member.lastName.toLowerCase()}`)"
+        style="cursor: default;"
       >
+      <!-- @click="redirectTo(`${member.firstName.toLowerCase()}-${member.lastName.toLowerCase()}`)" -->
         <img :src="member.photo" :alt="member.name">
         <div class="label">
           <p class="name">{{ member.name }}</p>
