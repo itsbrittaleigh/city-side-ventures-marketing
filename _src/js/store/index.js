@@ -12,7 +12,7 @@ const state = {
   portfolio: [
     {
       name: 'Amtech Electronics, LLC',
-      logo: require('../../../assets/images/logos/amtech.png'),
+      logo: require('../../../assets/images/logos/amtech.svg'),
       color: 'blue',
       link: 'https://www.buildamtech.com/',
       showDescription: false,
@@ -26,7 +26,7 @@ const state = {
     },
     {
       name: 'Analyteum, LLC',
-      logo: require('../../../assets/images/logos/analyteum.png'),
+      logo: require('../../../assets/images/logos/analyteum.svg'),
       color: 'blue',
       showDescription: false,
       industry: 'Data Analytics & Management',
@@ -39,7 +39,7 @@ const state = {
     },
     {
       name: 'Argonomo, LLC',
-      logo: require('../../../assets/images/logos/argonomo.png'),
+      logo: require('../../../assets/images/logos/argonomo.svg'),
       color: 'gray',
       link: 'https://www.argonomo.com/',
       showDescription: false,
@@ -66,7 +66,7 @@ const state = {
     },
     {
       name: 'SafeWhistle, LLC',
-      logo: require('../../../assets/images/logos/safewhistle.png'),
+      logo: require('../../../assets/images/logos/safewhistle.svg'),
       color: 'yellow',
       link: 'https://safewhistle.com/',
       showDescription: false,
@@ -80,7 +80,7 @@ const state = {
     },
     {
       name: 'Sidepitch, LLC',
-      logo: require('../../../assets/images/logos/sidepitch.png'),
+      logo: require('../../../assets/images/logos/sidepitch.svg'),
       color: 'yellow',
       link: 'https://sidepitch.com/',
       showDescription: false,
@@ -107,7 +107,7 @@ const state = {
     },
     {
       name: 'Ensureum, LLC',
-      logo: require('../../../assets/images/logos/ensureum.png'),
+      logo: require('../../../assets/images/logos/ensureum.svg'),
       color: 'blue',
       link: 'https://ensureum.com/',
       showDescription: false,
@@ -121,6 +121,7 @@ const state = {
     },
     {
       name: 'MedDomo, LLC',
+      logo: require('../../../assets/images/logos/meddomo.svg'),
       color: 'blue',
       showDescription: false,
       industry: 'Health Care',
@@ -160,7 +161,7 @@ const state = {
     },
     {
       name: 'Argonize',
-      logo: require('../../../assets/images/logos/argonize.png'),
+      logo: require('../../../assets/images/logos/argonize.svg'),
       color: 'blue',
       link: 'https://argonize.com/',
       showDescription: false,
