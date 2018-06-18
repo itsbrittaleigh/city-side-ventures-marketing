@@ -3,6 +3,7 @@
   .culture {
     @include grid-boxes(1, 2, 1fr, auto, 0);
     .box.image {
+      max-height: 300px;
       img,
       video {
         min-width: 100%;
@@ -25,6 +26,9 @@
     }
     @media only screen and (min-width: $large) {
       @include grid-boxes(2, 1, 1fr, auto, 0);
+      .box.image {
+        max-height: 660px;
+      }
       .box:not(.image) {
         padding: 0;
         > .container {
@@ -32,6 +36,11 @@
           max-width: 100%;
           padding: 100px 80px;
         }
+      }
+    }
+    @media only screen and (min-width: $xlarge) {
+      .box.image {
+        max-height: 560px;
       }
     }
   }

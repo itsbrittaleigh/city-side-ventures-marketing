@@ -88,9 +88,11 @@
       padding: 40px;
     }
     img {
-      float: left;
-      width: 175px;
-      margin-right: 25px;
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 25px;
+      object-fit: contain;
     }
     p {
       color: #747474;
