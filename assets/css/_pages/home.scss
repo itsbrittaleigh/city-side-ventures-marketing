@@ -122,10 +122,19 @@
       &.padded {
         padding: 30px;
         img {
-          width: 70%;
+          width: 100%;
           filter: grayscale(1.0);
           &.shrink {
-            width: 60%;
+            width: 90%;
+          }
+        }
+        @media only screen and (min-width: $medium) {
+          img {
+            width: 70%;
+            filter: grayscale(1.0);
+            &.shrink {
+              width: 60%;
+            }
           }
         }
       }
@@ -287,6 +296,7 @@
     &.statistics2 {
       @include grid-boxes(1, 2, 100vw, auto, 0);
       > .box:nth-child(1) {
+        max-height: 380px;
         h2 {
           z-index: 10;
           color: $goldendream;
@@ -294,6 +304,7 @@
         img.svg-overlay {
           width: auto;
           height: auto;
+          max-height: 240px;
           position: relative;
           z-index: 10;
           object-fit: contain;
@@ -328,6 +339,12 @@
       }
       @media only screen and (min-width: $medium) {
         @include grid-boxes(1, 2, 1fr, auto, 0);
+        > .box:nth-child(1) {
+          max-height: 100%;
+          img.svg-overlay {
+            max-height: 400px;
+          }
+        }
         > .box:nth-child(2) {
           @include grid-boxes(2, 2, 1fr, auto, 0);
           width: auto;
