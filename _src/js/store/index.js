@@ -236,7 +236,7 @@ const state = {
       firstName: 'Thomas',
       lastName: 'Coke',
       title: 'Chief Compliance Officer',
-      photo: require('../../../assets/images/team/default.jpg'),
+      photo: require('../../../assets/images/team/tom.jpg'),
     },
   ],
   socialSharing: {
