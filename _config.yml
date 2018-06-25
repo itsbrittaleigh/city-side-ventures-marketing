@@ -46,3 +46,4 @@ exclude:
 - browsersync.config.js
 - npm-debug.log
 - README.md
+- buildspec.yml
