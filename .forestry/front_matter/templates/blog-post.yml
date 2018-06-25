@@ -30,3 +30,5 @@ fields:
 - type: file
   name: image
   label: Image
+pages:
+- _posts/testing123.md
