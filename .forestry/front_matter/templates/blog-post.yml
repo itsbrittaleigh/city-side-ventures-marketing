@@ -1,0 +1,32 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: Title
+  name: title
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: Date
+  config:
+    required: true
+- type: tag_list
+  name: tags
+  label: Tags
+- type: text
+  label: Author
+  name: author
+  config:
+    required: true
+- type: text
+  name: layout
+  label: Layout
+  default: post
+  config:
+    required: true
+  hidden: true
+- type: file
+  name: image
+  label: Image
