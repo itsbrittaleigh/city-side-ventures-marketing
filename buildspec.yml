@@ -1,0 +1,25 @@
+# buildspec
+version: 0.2
+
+SITEBUILD: "yes"
+phases:
+  install:
+    commands:
+      - echo install phase
+      - apt-get update -y
+      - apt-get install awscli -y
+  pre_build:
+    commands:
+      - echo prebuild phase
+      - gem install bundler
+      - bundle install
+      - npm install
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run startOnce
+      - aws s3 sync dist/ s3://citysideventures-landing-m5
+  post_build:
+    commands:
+      - aws cloudfront create-invalidation --distribution-id E145FASR9Z1ZU6 --paths *
+      - echo Build completed on `date`
