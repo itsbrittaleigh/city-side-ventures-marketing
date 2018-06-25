@@ -17,10 +17,11 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - npm run startOnce
+      - npm run packOnce
+      - bundle exec jekyll build
       - aws s3 sync dist/ s3://citysideventures-landing-m5
   post_build:
     commands:
       - aws configure set preview.cloudfront true
-      - aws cloudfront create-invalidation --distribution-id E145FASR9Z1ZU6 --paths *
+      - aws cloudfront create-invalidation --distribution-id E145FASR9Z1ZU6
       - echo Build completed on `date`
