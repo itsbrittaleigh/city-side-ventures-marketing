@@ -8,7 +8,10 @@
     "pack": "webpack --watch",
     "build": "bundle exec jekyll build --watch --incremental",
     "serve": "browser-sync start --config browsersync.config.js",
-    "start": "npm run pack & npm run build & npm run serve"
+    "start": "npm run pack & npm run build & npm run serve",
+    "buildOnce": "bundle exec jekyll build",
+    "packOnce": "webpack",
+    "startOnce": "npm run packOnce & npm run buildOnce"
   },
   "dependencies": {
     "vue": "^2.5.2",
