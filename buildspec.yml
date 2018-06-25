@@ -23,5 +23,5 @@ phases:
   post_build:
     commands:
       - aws configure set preview.cloudfront true
-      - aws cloudfront create-invalidation --distribution-id E145FASR9Z1ZU6
+      - aws cloudfront create-invalidation --distribution-id E145FASR9Z1ZU6 --paths "/*"
       - echo Build completed on `date`
