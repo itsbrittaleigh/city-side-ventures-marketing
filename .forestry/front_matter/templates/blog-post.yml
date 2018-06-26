@@ -31,4 +31,5 @@ fields:
   name: image
   label: Image
 pages:
+- _posts/media-alert.md
 - _posts/2018-06-26-media-advisory.md
