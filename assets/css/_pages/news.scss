@@ -43,9 +43,15 @@
         }
       }
     }
+    .tag {
+      color: $nightshadz;
+    }
+    .read-more {
+      background: $nightshadz;
+    }
     &.business {
       .tag {
-        color: $danube;
+        color: $nightshadz;
       }
       .read-more {
         background: $danube;
