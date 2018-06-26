@@ -4,7 +4,7 @@ layout: default
 
 <section class="hero post-hero" style="background-image: url('{{ page.image }}');">
   <div class="container">
-    <span class="title bkg-{{ page.tags[0] }}">{{ page.tags[0] }}</span>
+    <span class="title bkg-{{ page.tags[0] }}">{{ page.tags[0] | downcase }}</span>
     <h1 class="color-{{ page.tags[0] }}">{{ page.title }}</h1>
   </div>
 </section>
