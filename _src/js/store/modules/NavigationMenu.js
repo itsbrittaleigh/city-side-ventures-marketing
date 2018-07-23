@@ -1,7 +1,7 @@
 /* eslint-disable no-shadow */
 
 const state = {
-  menuIsMobile: window.innerWidth < 992,
+  menuIsMobile: window.innerWidth < 1200,
   menuIsOpen: false,
 };
 
@@ -27,7 +27,7 @@ const mutations = {
     state.menuIsOpen = !state.menuIsOpen;
   },
   resizeScreen(state) {
-    state.menuIsMobile = window.innerWidth < 992;
+    state.menuIsMobile = window.innerWidth < 1200;
   },
   closeMenu(state) {
     state.menuIsOpen = false;

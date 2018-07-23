@@ -12,7 +12,7 @@ header {
     align-items: center;
     z-index: 100;
   }
-  @media only screen and (min-width: $large) {
+  @media only screen and (min-width: $xlarge) {
     height: 100px;
     > .container {
       width: 100%;
@@ -26,7 +26,7 @@ header {
       }
     }
   }
-  @media only screen and (min-width: $xlarge) {
+  @media only screen and (min-width: $xxlarge) {
     > .container {
       padding-left: 5%;
       .menu {

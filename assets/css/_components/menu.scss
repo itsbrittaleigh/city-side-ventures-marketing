@@ -12,7 +12,7 @@
     border: none;
     background: none;
     padding: 0;
-    @media only screen and (min-width: 980px) {
+    @media only screen and (min-width: $xlarge) {
       display: none;
       visibility: hidden;
     }
@@ -152,7 +152,7 @@
       height: 20px;
       margin-right: 10px;
     }
-    @media only screen and (min-width: $large) {
+    @media only screen and (min-width: $xlarge) {
       display: none;
       visibility: hidden;
     }
@@ -186,7 +186,7 @@
     }
   }
   // desktop
-  @media only screen and (min-width: $large) {
+  @media only screen and (min-width: $xlarge) {
     .base-menu {
       position: static;
       height: 100%;
@@ -215,18 +215,18 @@
         align-items: center;
         position: relative;
         transition: 0.4s;
-        .heading,
-        a {
-          font-size: 10px;
+        @media only screen and (min-width: $xlarge) {
+          .heading,
+          a {
+            font-size: 11px;
+          }
+          padding: 0 20px;
         }
-        @media only screen and (min-width: 1116px) {
+        @media only screen and (min-width: $xxlarge) {
           .heading,
           a {
             font-size: 12px;
           }
-          padding: 0 20px;
-        }
-        @media only screen and (min-width: 1247px) {
           padding: 0 30px;
         }
         .heading {

@@ -1,4 +1,5 @@
-.page.focus {
+.page.focus,
+.page.services {
   .focus-grid {
     @include grid-boxes(1, 24, 100vw, 100vw, 0);
     h2 {
@@ -8,11 +9,15 @@
       padding: 25px;
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       &.content {
         justify-content: flex-end;
         padding: 40px;
         p {
           margin: 0;
+        }
+        .button {
+          margin-top: 15px;
         }
       }
       &.label {
@@ -30,9 +35,26 @@
           height: 100px;
           width: auto;
         }
+        .number {
+          font-size: 60px;
+          border: 2px solid $white;
+          border-radius: 100%;
+          height: 150px;
+          width: 150px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $white;
+        }
       }
       &.box-dark-gray {
         background: $cod;
+      }
+      &.box-red {
+        background: $nightshadz;
+      }
+      &.box-gray {
+        background: $gray;
       }
       &.box-yellow {
         background: $goldendream;
@@ -46,6 +68,16 @@
       &.content-dark-gray {
         h2 {
           color: $cod;
+        }
+      }
+      &.content-gray {
+        h2 {
+          color: $gray;
+        }
+      }
+      &.content-red {
+        h2 {
+          color: $nightshadz;
         }
       }
       &.content-yellow {
@@ -68,6 +100,13 @@
       min-height: 200px;
       position: relative;
       overflow: hidden;
+      .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
       &.automotive {
         background: url('/assets/images/focus/automotive.jpg') no-repeat center center;
         background-size: cover;
@@ -100,6 +139,41 @@
         background: url('/assets/images/focus/agritech.png') no-repeat center center;
         background-size: cover;
       }
+      &.early-stage {
+        background: url('/assets/images/services/early-stage-capital.jpg') no-repeat center center;
+        background-size: cover;
+        .overlay {
+          background: rgba($cod, 0.6);
+        }
+      }
+      &.tech-licensing {
+        background: url('/assets/images/services/technology-licensing.jpg') no-repeat center center;
+        background-size: cover;
+        .overlay {
+          background: rgba($danube, 0.6);
+        }
+      }
+      &.syndication {
+        background: url('/assets/images/services/syndication-fund-management.jpg') no-repeat center center;
+        background-size: cover;
+        .overlay {
+          background: rgba($nightshadz, 0.6);
+        }
+      }
+      &.venture {
+        background: url('/assets/images/services/venture-studio-technology-lab.jpg') no-repeat center center;
+        background-size: cover;
+        .overlay {
+          background: rgba($goldendream, 0.6);
+        }
+      }
+      &.startup {
+        background: url('/assets/images/services/interim-startup-management.jpg') no-repeat center center;
+        background-size: cover;
+        .overlay {
+          background: rgba($gray, 0.6);
+        }
+      }
       img {
         position: absolute;
         bottom: -30px;
@@ -130,6 +204,18 @@
           h2 {
             font-size: 20px;
           }
+        }
+      }
+    }
+  }
+}
+
+.page.services {
+  .focus-grid {
+    .box {
+      &:nth-child(even) {
+        &.content {
+          background: #f2f2f2;
         }
       }
     }

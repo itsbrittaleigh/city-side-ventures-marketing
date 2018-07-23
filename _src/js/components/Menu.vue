@@ -41,6 +41,12 @@
             </ul>
           </li>
           <li
+            :class="{ 'router-link-active': servicesIsActive }"
+            @click="redirectTo('/services')"
+          >
+            <a href="/services">Services</a>
+          </li>
+          <li
             @click="toggleFunds"
             :class="{'open': fundsAreOpen, 'router-link-active': fundsAreActive}"
             v-click-outside="closeFunds"
@@ -135,6 +141,9 @@ export default {
     },
     contactIsActive() {
       return window.location.pathname === '/contact';
+    },
+    servicesIsActive() {
+      return window.location.pathname === '/services';
     },
   },
   methods: {

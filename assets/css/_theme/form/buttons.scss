@@ -45,4 +45,22 @@ button,
       color: #313131;
     }
   }
+  &.button-yellow {
+    background: $goldendream;
+    color: $white;
+    border: 1px solid $goldendream;
+    &:hover {
+      background: $white;
+      color: $goldendream;
+    }
+  }
+  &.button-gray {
+    background: $gray;
+    color: $white;
+    border: 1px solid $gray;
+    &:hover {
+      background: $white;
+      color: $gray;
+    }
+  }
 }
