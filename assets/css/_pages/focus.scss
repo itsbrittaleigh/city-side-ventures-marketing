@@ -26,6 +26,7 @@
         padding: 40px;
         p {
           font-size: 36px;
+          line-height: 1.1;
           margin: 20px 0 0;
           color: $white;
           font-weight: 100;
@@ -45,6 +46,7 @@
           align-items: center;
           justify-content: center;
           color: $white;
+          flex-shrink: 0;
         }
       }
       &.box-dark-gray {
@@ -212,12 +214,16 @@
 
 .page.services {
   .focus-grid {
+    @include grid-boxes(1, 15, 100vw, 100vw, 0);
     .box {
       &:nth-child(even) {
         &.content {
           background: #f2f2f2;
         }
       }
+    }
+    @media only screen and (min-width: $medium) {
+      @include grid-boxes(3, 5, 1fr, auto, 0);
     }
   }
 }
