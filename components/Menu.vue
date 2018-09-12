@@ -16,7 +16,6 @@
           <li
             @click="toggleAbout"
             :class="{'open': aboutIsOpen}"
-            v-click-outside="closeAbout"
           >
             <span class="heading">
               About Us
@@ -48,7 +47,6 @@
           <li
             @click="toggleFunds"
             :class="{'open': fundsAreOpen}"
-            v-click-outside="closeFunds"
           >
             <span class="heading">
               Investment Funds
