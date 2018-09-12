@@ -19,7 +19,10 @@ collections:
       - {label: "Body", name: "content", widget: "markdown"}
   - name: "bios"
     label: "Team Members"
+    folder: "content/bios"
     create: true
+    slug: "{{slug}}"
+    format: "json"
     fields:
       - {label: "First Name", name: "firstName", widget: "string"}
       - {label: "Last Name", name: "lastName", widget: "string"}
@@ -32,7 +35,10 @@ collections:
       - {label: "Bio", name: "content", widget: "markdown"}
   - name: "funds"
     label: "Investment Funds"
+    folder: "content/funds"
     create: true
+    slug: "{{slug}}"
+    format: "json"
     fields:
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Accent Color", name: "color", widget: "select", options: ["red", "blue", "yellow"]}
