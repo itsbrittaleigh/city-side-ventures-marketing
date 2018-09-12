@@ -47,7 +47,7 @@ collections:
       - {label: "Introduction", name: "intro", widget: "markdown"}
       - {label: "Investment Capital", name: "investmentCapital", widget: "string"}
       - {label: "Maximum Investment Size", name: "maxInvestmentSize", widget: "string"}
-      - {label: "Minimum Qualifications", name: "minimumQualification", widget: "list"}
+      - {label: "Minimum Qualifications", name: "minimumQualifications", widget: "list"}
       - {label: "Funding Requirements", name: "fundingRequirements", widget: "list"}
       - {label: "Header Image", name: "heroImage", widget: "image"}
       - {label: "Icon", name: "icon", widget: "image"}
