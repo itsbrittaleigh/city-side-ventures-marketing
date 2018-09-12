@@ -1,6 +1,7 @@
 .DS_Store
 node_modules/
-/dist/
+
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -13,6 +14,8 @@ yarn-error.log*
 *.njsproj
 *.sln
 
-.jekyll-metadata
-.sass-cache
-bundle.js
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist

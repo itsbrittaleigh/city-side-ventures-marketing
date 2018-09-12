@@ -1,0 +1,127 @@
+<template>
+  <div class="page about">
+    <hero-section
+      heading="About Us"
+      description="City Side Ventures is an operations-oriented investment group committed to fund and grow tech-based startups and middle-market companies through a high-impact invest-and-build strategy."
+      name="about"
+    >
+    </hero-section>
+
+    <section class="overview">
+      <div class="box">
+        <div class="container">
+          <p class="hidden" v-in-viewport.once>Since our inception in 2015, our strategy has been to launch and build great companies. We acknowledge that startups operate in different steps along their journey, therefore our funds range from Angel Funding all the way to Growth Capital Investments. Having started in Farmington Hills, Michigan, we are focused on creating equity investment relationships in promising Michigan companies through all our various funds.</p>
+          <ul class="hidden" v-in-viewport.once>
+            <li>Angel Funding – “Crawling” (pre-seed capital)</li>
+            <li>Venture Capital – “Walking” (seed to series D capital)</li>
+            <li>Private Equity – “Running” (Growth Capital). </li>
+          </ul>
+          <nuxt-link to="/contact" class="button hidden button-red" v-in-viewport.once>Get in touch</nuxt-link>
+        </div>
+      </div>
+      <div class="box image hidden" v-in-viewport.once>
+        <img src="~/assets/images/about.jpg" alt="">
+      </div>
+    </section>
+
+    <section class="principles">
+      <div class="principles-boxes">
+        <div class="box box-dark-gray intro hidden" v-in-viewport.once>
+          <h2>Our Operating Principles</h2>
+          <p>
+            Our managing partners are multi-generational and highly diverse with over 100+ years
+            of combined business success.
+          </p>
+          <div class="equation">
+            <p class="title">
+              <span>+</span>
+              Accountability
+            </p>
+            <p class="title">
+              <span>+</span>
+              Discipline
+            </p>
+            <p class="title">
+              <span>+</span>
+              Execution
+            </p>
+            <p class="title yellow">
+              <span>=</span>
+              Performance
+            </p>
+          </div>
+        </div>
+        <div class="principle box box-blue hidden" v-in-viewport.once>
+          <p class="number">1</p>
+          <p class="title">Integrity</p>
+          <p>Doing business in an open, honest, and transparent way that is completely visible to our stakeholders and venture partners.</p>
+        </div>
+        <div class="principle box box-yellow hidden" v-in-viewport.once>
+          <p class="number">2</p>
+          <p class="title">Courage and Drive</p>
+          <p>Boldly forging companies and moving ahead with full force and high velocity. We take bold and calculated risks that will yield a high level of return on equity.</p>
+        </div>
+        <div class="principle box box-red hidden" v-in-viewport.once>
+          <p class="number">3</p>
+          <p class="title">Making an Impact</p>
+          <p>Positively influencing communities across the globe. Investing in businesses that create an economic impact, creating jobs, and expanding ecosystems across the country is our mission.</p>
+        </div>
+        <div class="principle box box-red hidden" v-in-viewport.once>
+          <p class="number">4</p>
+          <p class="title">Fiscal Responsibility</p>
+          <p>To be aggressive while watching the bottom-line. By being calculative, we are responsible with our decision-making process and provide the most progressive risk management output.</p>
+        </div>
+        <div class="principle box box-light-gray hidden" v-in-viewport.once>
+          <p class="number">5</p>
+          <p class="title">Doing the Impossible</p>
+          <p>Moving beyond "impossible" with power and ease. Taking on an industry with game-changing companies. We operate inside a “can do” mindset. if it is impossible, we “can do” it.</p>
+        </div>
+        <div class="principle box box-blue hidden" v-in-viewport.once>
+          <p class="number">6</p>
+          <p class="title">We Think Big!</p>
+          <p>We have the vision and the foresight to take on big dreams. Patient and resilient, we know that it takes a village to launch a successful business.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="culture">
+      <div class="box image hidden" v-in-viewport.once>
+        <video src="~/assets/videos/culture.mp4" autoplay loop></video>
+      </div>
+      <div class="box hidden" v-in-viewport.once>
+        <div class="container">
+          <h2>Our Culture</h2>
+          <carousel
+            :per-page="1"
+            pagination-color="#808080"
+            pagination-active-color="#9b2859"
+          >
+            <slide>
+              <p>We are a distinct and highly diverse group of seasoned and accomplished entrepreneurs. With our deep understanding and appreciation for building businesses, we are an ideal partner for early-stage tech-based startup companies that are growing and scaling. As “Game Changers” and disruptors, we are more than traditional investors, we look deeper, wider, and bigger in all opportunities.</p>
+            </slide>
+            <slide>
+              <p>Unlike many investment groups that are chasing the next “Unicorns,” we like to get involved on the ground floor. We are a business-oriented group and have a tolerance for high-risks. We know how to find great drivers and are willing to put our experience, expertise, and capital to work.</p>
+            </slide>
+            <slide>
+              <p>We are not looking to invest in cars, we are looking to invest in drivers. We encourage and support confident, aggressive, and open-minded entrepreneurs with endless energy and passion for success.</p>
+              <p>City Side Ventures and their managing partners and employees are committed in making the Michigan startup ecosystem stronger and better.</p>
+            </slide>
+          </carousel>
+        </div>
+      </div>
+    </section>
+  </div>
+</template>
+
+<script>
+import HeroSection from '~/components/Hero.vue';
+
+export default {
+  data() {
+    return {};
+  },
+  components: {
+    'hero-section': HeroSection,
+  }
+}
+</script>

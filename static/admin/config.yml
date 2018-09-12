@@ -1,0 +1,82 @@
+backend:
+  name: git-gateway
+  branch: development
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    format: "json"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "date"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "content", widget: "markdown"}
+  - name: "bios"
+    label: "Team Members"
+    create: true
+    fields:
+      - {label: "First Name", name: "firstName", widget: "string"}
+      - {label: "Last Name", name: "lastName", widget: "string"}
+      - {label: "Position", name: "title", widget: "string"}
+      - {label: "Email Address", name: "email", widget: "string"}
+      - {label: "Phone Extension", name: "phoneExt", widget: "string"}
+      - {label: "LinkedIn URL", name: "linkedin", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Introduction Paragraph", name: "intro", widget: "markdown"}
+      - {label: "Bio", name: "content", widget: "markdown"}
+  - name: "funds"
+    label: "Investment Funds"
+    create: true
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Accent Color", name: "color", widget: "select", options: ["red", "blue", "yellow"]}
+      - {label: "Market", name: "market", widget: "string"}
+      - {label: "When will this be active?", name: "toMarket", widget: "string"}
+      - {label: "Introduction", name: "intro", widget: "markdown"}
+      - {label: "Investment Capital", name: "investmentCapital", widget: "string"}
+      - {label: "Maximum Investment Size", name: "maxInvestmentSize", widget: "string"}
+      - {label: "Minimum Qualifications", name: "minimumQualification", widget: "list"}
+      - {label: "Funding Requirements", name: "fundingRequirements", widget: "list"}
+      - {label: "Header Image", name: "heroImage", widget: "image"}
+      - {label: "Icon", name: "icon", widget: "image"}
+      - {label: "Content Image", name: "contentImage", widget: "image"}
+  - name: "pages"
+    label: "Pages"
+    create: false
+    files:
+      - name: "home"
+        label: "Home"
+        file: "content/pages/index.json"
+      - name: "about"
+        label: "About CitySide"
+        file: "content/pages/about.json"
+      - name: "process"
+        label: "Our Process"
+        file: "content/pages/process.json"
+      - name: "portfolio"
+        label: "Our Portfolio"
+        file: "content/pages/portfolio.json"
+      - name: "focus"
+        label: "Our Focus"
+        file: "content/pages/focus.json"
+      - name: "team"
+        label: "Our Team"
+        file: "content/pages/team.json"
+      - name: "services"
+        label: "Services"
+        file: "content/pages/services.json"
+      - name: "news"
+        label: "News Index"
+        file: "content/pages/news.json"
+      - name: "contact"
+        label: "Contact"
+        file: "content/pages/contact.json"
+      - name: "legal"
+        label: "Legal"
+        file: "content/pages/legal.json"
