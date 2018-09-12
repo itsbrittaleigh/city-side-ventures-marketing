@@ -1,18 +1,9 @@
 {
-  "name": "Venture248",
+  "heroImage": "/images/uploads/venture248-hero.jpg",
+  "contentImage": "/images/uploads/venture248.jpg",
   "color": "red",
-  "market": "Venture Capital Fund, Seed Capital",
-  "toMarket": "Open for investments Q2 2019!",
+  "name": "Venture248",
   "intro": "Venture248 is an equity-based Venture Capital Fund that was created to fund and grow second-stage, Michigan-based technology companies. The purpose of the fund is to help grow the Michigan tech startup ecosystem. This is our highly-attractive hybrid investment model. The fund will match the founder(s) capital investment of up to $1M in mix resources per deal for qualified startups. City Side Ventures will provide support with resources such as a full-stack development team, seasoned go-to-market management advisors, Board of Directors, business coaching and mentoring, and startup capital to the selected portfolio company.",
-  "investmentCapital": "$36M",
-  "maxInvestmentSize": "$1M",
-  "minimumQualifications": [
-    "The company must be a tech-based company",
-    "Provide a solid and fully developed business & execution plan",
-    "Must be a for-profit entity",
-    "Must have a developed Minimum Viable Product (MVP)",
-    "Must be market-ready or already in the market"
-  ],
   "fundingRequirements": [
     "Must operate and/or have a physical presence in the State of Michigan (or plans to)",
     "Business is registered in the U.S.",
@@ -21,5 +12,17 @@
     "Have an advisory board",
     "Must have raised previous investments",
     "Pass our due-diligence process"
-  ]
+  ],
+  "minimumQualifications": [
+    "The company must be a tech-based company",
+    "Provide a solid and fully developed business & execution plan",
+    "Must be a for-profit entity",
+    "Must have a developed Minimum Viable Product (MVP)",
+    "Must be market-ready or already in the market"
+  ],
+  "investmentCapital": "$36M",
+  "toMarket": "Open for investments Q2 2019!",
+  "maxInvestmentSize": "$1M",
+  "icon": "/images/uploads/asset-1.png",
+  "market": "Venture Capital Fund, Seed Capital"
 }
