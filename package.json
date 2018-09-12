@@ -21,7 +21,8 @@
     "sass-loader": "^7.1.0",
     "v-click-outside": "^1.0.5",
     "vue-carousel": "^0.8.1",
-    "vue-in-viewport-directive": "^1.1.4"
+    "vue-in-viewport-directive": "^1.1.4",
+    "vue-markdown": "^2.2.4"
   },
   "devDependencies": {
     "axios": "^0.18.0",

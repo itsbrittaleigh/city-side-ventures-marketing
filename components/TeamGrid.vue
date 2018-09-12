@@ -2,36 +2,44 @@
   <div class="the-team">
     <div class="team-grid" id="team">
       <div
-        v-for="(member, index) in team"
+        v-for="(member, index) in orderedTeam"
         :key="index"
-        class="member box visible"
-        @click="redirectTo(`${member.firstName.toLowerCase()}-${member.lastName.toLowerCase()}`)"
+        class="member box hidden"
+        @click="redirectTo(member._path)"
+        v-in-viewport.once
       >
-        <!-- <img :src="member.photo" :alt="member.name"> -->
+        <img :src="member.image" :alt="member.title">
         <div class="label">
-          <p class="name">{{ member.firstName }} {{member.lastName }}</p>
-          <p><em>{{ member.title }}</em></p>
+          <p class="name">{{ member.title }}</p>
+          <p><em>{{ member.position }}</em></p>
         </div>
         <div class="overlay"></div>
       </div>
     </div>
-    <div id="quote1" class="box visible">
+    <div id="quote1" class="box">
       <p>We are operational-oriented investors, deploying a high-impact invest-and-build model.</p>
     </div>
-    <div id="quote2" class="box visible">
+    <div id="quote2" class="box">
       <p>We are business builders, innovators, disrupters, and game-changing investors.</p>
     </div>
-    <div id="quote3" class="box visible">
+    <div id="quote3" class="box">
       <p>We are willing to grind and get our hands dirty; we understand that it takes a village to launch a startup.</p>
     </div>
   </div>
 </template>
 
 <script>
+import _ from 'lodash';
+
 export default {
   props: ['team'],
   data() {
     return {};
+  },
+  computed: {
+    orderedTeam() {
+      return _.orderBy(this.team, 'order', 'asc');
+    }
   },
   methods: {
     isEvenRowedOnDesktop(index) {
@@ -45,9 +53,17 @@ export default {
         }
       }
     },
-    redirectTo(name) {
-      window.location = `/team/${name}`;
+    redirectTo(path) {
+      window.location = path;
     },
+    slugify(text) {
+      return text.toString().toLowerCase()
+        .replace(/\s+/g, '-')           // Replace spaces with -
+        .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+        .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+        .replace(/^-+/, '')             // Trim - from start of text
+        .replace(/-+$/, '');            // Trim - from end of text
+    }
   },
   mounted() {
     const teamContainer = document.getElementById('team');

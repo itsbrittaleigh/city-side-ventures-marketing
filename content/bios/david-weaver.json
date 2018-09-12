@@ -1,11 +1,11 @@
 {
-  "lastName": "Weaver",
+  "title": "David Weaver",
   "intro": "A results-driven leader and innovative problem solver with an entrepreneurial spirit and sense of urgency. David Weaver is CEO / President of [Aimattech Consulting LLC](http://www.aimattech.com/), whose consulting practice was founded in 1985. He has over 35 years diversified management experience, which includes: global profit/loss responsibility (Johnson & Johnson), turning around troubled business operations (Warner-Lambert). Developed and negotiated Joint Venture R&D Agreement with major Japanese Trading Company. While as VP of Sales & Marketing at Somanetics Corp. (SMTS) he successfully launched the first Cerebral Oximeter in the global market. He has helped raise private (angel), venture (VC) and public (IPO) capital of over $35 million.",
   "phoneExt": "704",
-  "title": "Chief Investment Officer",
+  "position": "Chief Investment Officer",
   "content": "David most recently was CEO of [Blaze Medical Devices, LLC](http://www.blazemedicaldevices.com/) an early stage medical device company. Blaze will offer the first standardized and commercial device that can be used to measure sub-hemolytic damage of red blood cells. This is important to the medical industry for better quality control and the transfusion market for measuring the quality of donated blood in storage awaiting transfusion was achieved. Currently there is no objective metric for knowing the quality of blood prior to transfusion and consequently, there are many adverse events. He moved Blaze from “concept” to achieving “proof of concept” and a working prototype, secured 4 issued patents, 2 NIH Grants and $1.3 M in angel funding in a billion-dollar underserved market. Set up conversations with several potential acquiring companies to follow Blaze.\n\nMr. Weaver served as an Executive-in-Residence (Standby CEO, 2007 - 2009) at the [Pittsburgh Life Science Greenhouse](https://www.plsg.com/) where he was responsible for global recruiting, mentoring, analyzing business plans and strategies and making funding recommendations for growing life science companies in the Pittsburgh area. Mr. Weaver met with institutional and angel investors to review potential Pittsburgh investments and assisted companies in Business Plan preparation and investor presentations.\n\nIn the past, David served as a Board Member for the Detroit chapter of Association for Corporate Growth and is still active in M&A activities.\n\nHe is Founder/Chairman of [Great Lakes Angels](https://www.citysideventures.com/funds/great-lakes-angels-fund/) the first angel group in Michigan, a Founding Member for the MIT Enterprise Forum of the Great Lakes, Founding Member of [Michigan Venture Capital Association](http://michiganvca.org/), Charter Member of the [Angel Capital Association](https://www.angelcapitalassociation.org/).",
   "image": "/images/uploads/index7.jpg",
-  "firstName": "David",
   "email": "dweaver@citysideventures.com",
-  "linkedin": "https://www.linkedin.com/in/davidpweaver/"
+  "linkedin": "https://www.linkedin.com/in/davidpweaver/",
+  "order": 8
 }

@@ -1,11 +1,11 @@
 {
-  "lastName": "Shamoun",
-  "intro": "Coming shortly!",
+  "title": "Brandon Shamoun",
+  "intro": "Brandon Shamoun",
   "phoneExt": "702",
-  "title": "General Counsel",
+  "position": "General Counsel",
   "content": "Coming shortly!",
   "image": "/images/uploads/index2.jpg",
-  "firstName": "Brandon",
   "email": "bshamoun@citysideventures.com",
-  "linkedin": "https://www.linkedin.com/in/brandon-shamoun-93483636/"
+  "linkedin": "https://www.linkedin.com/in/brandon-shamoun-93483636/",
+  "order": 3
 }

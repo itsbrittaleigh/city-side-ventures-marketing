@@ -2,9 +2,9 @@
   <div class="page bio">
     <section class="hero bkg-blue bio-hero">
       <div class="container">
-        <h1 class="hidden" v-in-viewport.once>{{ firstName }} {{ lastName }}</h1>
+        <h1 class="hidden" v-in-viewport.once>{{ title }}</h1>
         <p class="large hidden" v-in-viewport.once>
-          <em>{{ title }}</em>
+          <em>{{ position }}</em>
         </p>
       </div>
       <div class="overlay"></div>
@@ -42,8 +42,8 @@
         </a>
       </aside>
       <section class="bio">
-        <p class="lead hidden" v-in-viewport.once>{{ intro }}</p>
-        <!-- {{ content }} -->
+        <vue-markdown class="lead hidden" v-in-viewport.once>{{ intro }}</vue-markdown>
+        <vue-markdown class="hidden" v-in-viewport.once>{{ content }}</vue-markdown>
         <template v-if="publications">
           <h2 class="hidden" v-in-viewport.once>Blog posts and updates from {{ firstName }} {{ lastName }}</h2>
           <div
@@ -62,10 +62,18 @@
 </template>
 
 <script>
+import VueMarkdown from 'vue-markdown';
+
 export default {
   async asyncData({ params }) {
     const pageData = await import(`~/content/bios/${params.slug}.json`);
     return pageData;
-  }
+  },
+  data() {
+    return {};
+  },
+  components: {
+    'vue-markdown': VueMarkdown,
+  },
 }
 </script>

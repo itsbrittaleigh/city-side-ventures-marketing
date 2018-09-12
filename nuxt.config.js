@@ -46,6 +46,9 @@ module.exports = {
     {
       src: '~/plugins/vue-carousel',
       ssr: false,
+    },
+    {
+      src: '~/plugins/vue-markdown',
     }
   ],
 };
