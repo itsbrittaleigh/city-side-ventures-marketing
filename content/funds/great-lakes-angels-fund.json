@@ -1,22 +1,25 @@
 {
-  "name": "Great Lakes Angels Fund",
+  "heroImage": "/images/uploads/greatlakes-hero.jpg",
+  "contentImage": "/images/uploads/greatlakes.jpg",
   "color": "yellow",
-  "market": "Angel Fun, Pre-Seed Capital",
-  "toMarket": "ACTIVE!",
-  "intro": "Great Lakes Angels Fund is an early-stage, equity-based investment fund that was created to seed and grow early-stage tech-based companies. The fund will make a capital investment of up to $1.0M per deal for qualified startups. City Side Ventures will provide support with resources such as a full-stack development team, seasoned go-to-market management advisors, Board of Directors, business coaching and mentoring, and startup capital to the selected portfolio company.",
-  "investmentCapital": "$18M",
-  "maxInvestmentSize": "$1M",
-  "minimumQualifications": [
-    "The company must be a tech-based company",
-    "Provide a fully developed business plan",
-    "Must be a for-profit entity",
-    "Must have a developed or a final stage of Proof of Concept (POC)"
-  ],
+  "name": "Great Lakes Angels Fund",
+  "intro": "![](/images/uploads/great-lakes-angels-fund.png)\n\nGreat Lakes Angels Fund is an early-stage, equity-based investment fund that was created to seed and grow early-stage tech-based companies. The fund will make a capital investment of up to $1.0M per deal for qualified startups. City Side Ventures will provide support with resources such as a full-stack development team, seasoned go-to-market management advisors, Board of Directors, business coaching and mentoring, and startup capital to the selected portfolio company.",
   "fundingRequirements": [
     "Must operate and/or have a physical presence in the State of Michigan",
     "Business is registered in the U.S.",
     "Must be a pre-seed and/or seed stage company",
     "At least one full-time team member and growing management team",
     "Pass our due-diligence process"
-  ]
+  ],
+  "minimumQualifications": [
+    "The company must be a tech-based company",
+    "Provide a fully developed business plan",
+    "Must be a for-profit entity",
+    "Must have a developed or a final stage of Proof of Concept (POC)"
+  ],
+  "investmentCapital": "$18M",
+  "toMarket": "ACTIVE!",
+  "maxInvestmentSize": "$1M",
+  "icon": "/images/uploads/asset-2.png",
+  "market": "Angel Fund, Pre-Seed Capital"
 }
