@@ -1,11 +1,17 @@
 {
-  "name": "City[X]",
+  "heroImage": "/images/uploads/cityx-hero.jpg",
+  "contentImage": "/images/uploads/cityx.jpg",
   "color": "yellow",
-  "market": "Private Equity Fund, Growth Capital",
-  "toMarket": "ACTIVE!",
+  "name": "City[X]",
   "intro": "City[X] is a Michigan-based limited partner's Private Equity Fund that was established to invest in fast-growing, scalable tech companies located in the US and North America and Fund to Fund Investments. The purpose of City[X] Fund is to grow the North American tech startup ecosystem and will provide capital investments of up to $10M per deal to qualified companies.",
-  "investmentCapital": "$180M",
-  "maxInvestmentSize": "$10M",
+  "fundingRequirements": [
+    "M&A Capital",
+    "Major or Minority Recap",
+    "Leverage Buyout",
+    "Growth Capital",
+    "Real Estate Transaction",
+    "Mezzanine Capital"
+  ],
   "minimumQualifications": [
     "The company must be registered in the United States.",
     "The company must be in located and operated within the United States.",
@@ -14,12 +20,9 @@
     "Must have a fully functioning product/service that is ready to scale.",
     "The company revenue is at $18M and is profitable."
   ],
-  "fundingRequirements": [
-    "M&A Capital",
-    "Major or Minority Recap",
-    "Leverage Buyout",
-    "Growth Capital",
-    "Real Estate Transaction",
-    "Mezzanine Capital"
-  ]
+  "investmentCapital": "$180M",
+  "toMarket": "ACTIVE!",
+  "maxInvestmentSize": "$10M",
+  "icon": "/images/uploads/asset-3.png",
+  "market": "Private Equity Fund, Growth Capital"
 }
