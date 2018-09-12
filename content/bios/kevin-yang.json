@@ -1,9 +1,11 @@
 {
-  "firstName": "Kevin",
   "lastName": "Yang",
-  "title": "President",
-  "email": "kyang@citysideventures.com",
+  "intro": "From a research background in medical labs to building businesses in the field, Kevin has always been a self-starter with a world vision. With a passion for learning and a drive to make a change, he took on the challenge of an entrepreneurial journey in everything I did.",
   "phoneExt": "701",
-  "linkedin": "https://linkedin.com/in/yang-kevin",
-  "intro": "From a research background in medical labs to building businesses in the field, Kevin has always been a self-starter with a world vision. With a passion for learning and a drive to make a change, he took on the challenge of an entrepreneurial journey in everything I did."
+  "title": "President",
+  "content": "Always involved in becoming a resource, Kevin participated in leadership roles for many organizations. From learning to programme in university courses and day-to-day research in a lab to participating in speaking at national events and participating as a judge or mentor in hackathons, Kevin has grasped experiences from everything I could.\n\nAfter graduating the University of Illinois at Urbana-Champaign and fast-forward to today, he has been focusing on serial entrepreneurship in Michigan to impact today's startup and venture scene. Starting from my hometown in Metro Detroit, He co-founds success in one of my first ventures, Argonomo — a venture studio.\n\nAs a full-time entrepreneur building Argonomo and as a partner in the venture group, City Side Ventures, Kevin co-founded several startups as part of the portfolio of companies including up-and-coming companies such as Sidepitch, SafeWhistle, and Ensureum. Kevin is well involved in the entrepreneurial ecosystem of Michigan and participate in many organizations and events as a member, mentor, investor, judge, and speaker. Not only Michigan, he helped judge competitions and pitch events for international startups as well as venture firms on the west coast. Kevin is instrumental in helping to emerge early-stage startup companies connect with the right resources and provide actionable advice for ambitious entrepreneurs.\n\nWith the passion for networking and having the ability to meet with both startup founders and investors, his goal is to unite investors locally and globally to fund, launch, and scale industry-changing technologies and companies together.",
+  "image": "/images/uploads/index1.jpg",
+  "firstName": "Kevin",
+  "email": "kyang@citysideventures.com",
+  "linkedin": "https://linkedin.com/in/yang-kevin"
 }
