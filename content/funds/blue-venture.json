@@ -1,11 +1,16 @@
 {
-  "name": "Blue Venture",
+  "heroImage": "/images/uploads/blueventure-hero.jpg",
+  "contentImage": "/images/uploads/blueventure.jpg",
   "color": "blue",
-  "market": "Venture Capital Fund, Series A - C",
-  "toMarket": "Open for investments Q2 2019!",
+  "name": "Blue Venture",
   "intro": "Blue Venture is a Michigan-based venture capital fund established to invest in fast-growing, scalable, and post-revenue tech companies located in the U.S. and North America. The purpose of the Blue Venture Fund is to grow the North American startup ecosystem and will provide capital investments of up to $5M per deal to qualified and approved companies.",
-  "investmentCapital": "$100M",
-  "maxInvestmentSize": "$5M",
+  "fundingRequirements": [
+    "The company must have at a minimum of $2M in annual revenue",
+    "The company is at a profitable stage",
+    "Have a fully-developed management team.",
+    "Have a complete advisory board.",
+    "Pass our due-diligence Process."
+  ],
   "minimumQualifications": [
     "The company must be registered in the United States.",
     "The company must be in located and operate within the United States.",
@@ -14,11 +19,9 @@
     "Must have a fully functioning product or service.",
     "The company is post-revenue."
   ],
-  "fundingRequirements": [
-    "The company must have at a minimum of $2M in annual revenue",
-    "The company is at a profitable stage",
-    "Have a fully-developed management team.",
-    "Have a complete advisory board.",
-    "Pass our due-diligence Process."
-  ]
+  "investmentCapital": "$100M",
+  "toMarket": "Open for investments Q2 2019!",
+  "maxInvestmentSize": "$5M",
+  "icon": "/images/uploads/asset-4.png",
+  "market": "Venture Capital Fund, Series A - C"
 }
