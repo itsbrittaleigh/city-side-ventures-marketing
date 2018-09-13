@@ -1,3 +1,60 @@
 {
-  
+  "header": {
+    "headline": "About Us",
+    "description": "CitySide Ventures is an operations-oriented investment group committed to fund and grow tech-based startups and middle-market companies through a high-impact invest-and-build strategy.",
+    "color": "yellow"
+  },
+  "overview": {
+    "buttonText": "Get in Touch"
+  },
+  "principles": {
+    "headline": "Our Operating Principles",
+    "description": "Our managing partners are multi-generational and highly diverse with over 100+ years of combined business success.",
+    "principles": [
+      {
+        "title": "Integrity",
+        "description": "Doing business in an open, honest, and transparent way that is completely visible to our stakeholders and venture partners.",
+        "color": "blue"
+      },
+      {
+        "title": "Courage and Drive",
+        "description": "Boldly forging companies and moving ahead with full force and high velocity. We take bold and calculated risks that will yield a high level of return on equity.",
+        "color": "yellow"
+      },
+      {
+        "title": "Making an Impact",
+        "description": "Positively influencing communities across the globe. Investing in businesses that create an economic impact, creating jobs, and expanding ecosystems across the country is our mission.",
+        "color": "red"
+      },
+      {
+        "title": "Fiscal Responsibility",
+        "description": "To be aggressive while watching the bottom-line. By being calculative, we are responsible with our decision-making process and provide the most progressive risk management output.",
+        "color": "red"
+      },
+      {
+        "title": "Doing the Impossible",
+        "description": "Moving beyond \"impossible\" with power and ease. Taking on an industry with game-changing companies. We operate inside a \"can do\" mindset. If it is impossible, we \"can do\" it.",
+        "color": "light-gray"
+      },
+      {
+        "title": "We Think Big!",
+        "description": "We have the vision and the foresight to take on big dreams. Patient and resilient, we know that it takes a village to launch a successful business.",
+        "color": "blue"
+      }
+    ]
+  },
+  "culture": {
+    "headline": "Our Culture",
+    "description": [
+      {
+        "description": "We are a distinct and highly diverse group of seasoned and accomplished entrepreneurs. With our deep understanding and appreciation for building businesses, we are an ideal partner for early-stage tech-based startup companies that are growing and scaling. As “Game Changers” and disruptors, we are more than traditional investors, we look deeper, wider, and bigger in all opportunities."
+      },
+      {
+        "description": "Unlike many investment groups that are chasing the next “Unicorns,” we like to get involved on the ground floor. We are a business-oriented group and have a tolerance for high-risks. We know how to find great drivers and are willing to put our experience, expertise, and capital to work."
+      },
+      {
+        "description": "We are not looking to invest in cars, we are looking to invest in drivers. We encourage and support confident, aggressive, and open-minded entrepreneurs with endless energy and passion for success.\n\nCity Side Ventures and their managing partners and employees are committed in making the Michigan startup ecosystem stronger and better."
+      }
+    ]
+  }
 }

@@ -142,6 +142,46 @@ collections:
       - name: "about"
         label: "About CitySide"
         file: "content/pages/about.json"
+        fields:
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
+          - label: "Overview"
+            name: "overview"
+            widget: "object"
+            fields:
+              - {label: "Introduction", name: "introduction", widget: "markdown"}
+              - {label: "Button Text", name: "buttonText", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+          - label: "Principles"
+            name: "principles"
+            widget: "object"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}
+              - label: "Principles"
+                name: "principles"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "string"}
+                  - {label: "Background Color", name: "color", widget: "select", options: ["yellow", "red", "blue", "light-gray"]}
+          - label: "Culture"
+            name: "culture"
+            widget: "object"
+            fields:
+              - {label: "Video", name: "video", widget: "file"}
+              - {label: "Headline", name: "headline", widget: "string"}
+              - label: "Description"
+                name: "description"
+                widget: "list"
+                fields:
+                  - {label: "Description", name: "description", widget: "markdown"}
       - name: "process"
         label: "Our Process"
         file: "content/pages/process.json"
