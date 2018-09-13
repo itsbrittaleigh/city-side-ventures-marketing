@@ -67,6 +67,78 @@ collections:
       - name: "home"
         label: "Home"
         file: "content/pages/index.json"
+        fields:
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Subhead", name: "subhead", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}
+              - label: "Investment Types"
+                name: "types"
+                widget: "list"
+                fields:
+                  - {label: "Investment Type", name: "type", widget: "string"}
+              - {label: "Button Text", name: "buttonText", widget: "string"}
+              - {label: "Background Image #1 (left)", name: "image1", widget: "image"}
+              - {label: "Background Image #2 (right)", name: "image2", widget: "image"}
+          - label: "Statistics"
+            name: "statistics"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Chart", name: "chart", widget: "image"}
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Number", name: "number", widget: "string"}
+              - {label: "Label", name: "label", widget: "string"}
+          - label: "Focus"
+            name: "focus"
+            widget: "object"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}
+              - {label: "Button Text", name: "buttonText", widget: "string"}
+              - label: "Foci"
+                name: "foci"
+                widget: "list"
+                fields:
+                  - {label: "Icon", name: "icon", widget: "image"}
+                  - {label: "Title", name: "title", widget: "string"}
+          - label: "Investments"
+            name: "investments"
+            widget: "object"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}
+          - label: "Services"
+            name: "services"
+            widget: "object"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Background Image", name: "backgroundImage", widget: "image"}
+              - {label: "Featured Image", name: "featuredImage", widget: "image"}
+              - {label: "Service Image #1", name: "serviceImage1", widget: "image"}
+              - {label: "Service Image #2", name: "serviceImage2", widget: "image"}
+              - label: "Services"
+                name: "services"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "string"}
+          - label: "Portfolio"
+            name: "portfolio"
+            widget: "object"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}
+              - {label: "Button Text", name: "buttonText", widget: "string"}
+              - label: "Investments"
+                name: "investments"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Logo", name: "logo", widget: "image"}
       - name: "about"
         label: "About CitySide"
         file: "content/pages/about.json"

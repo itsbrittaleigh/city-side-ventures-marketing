@@ -1,3 +1,128 @@
 {
-  
+  "header": {
+    "headline": "A different kind of venture group",
+    "subhead": "We are willing to look deeper, wider, and bigger with all investment opportunities!",
+    "description": "CitySide Ventures is a driven venture group comprised of experienced business builders, die-hard serial entrepreneurs, disrupters, innovators, and technologists.\n\nWe are more than just traditional investors, we are a different investment management firm that creates and manages high-risk venture investment funds.",
+    "investmentTypes": [
+      {
+        "type": "Angel Funding"
+      },
+      {
+        "type": "Venture Capital"
+      },
+      {
+        "type": "Private Equity"
+      }
+    ],
+    "buttonText": "Learn about CitySide Ventures"
+  },
+  "statistics": [
+    {
+      "title": "Access Capital",
+      "number": "$330M",
+      "label": "in access capital"
+    },
+    {
+      "title": "Active Investments",
+      "number": "16",
+      "label": "active investments"
+    },
+    {
+      "title": "Venture Partners",
+      "number": "24",
+      "label": "venture partners"
+    },
+    {
+      "title": "Portfolio Performance",
+      "number": "24x",
+      "label": "return on equity"
+    }
+  ],
+  "focus": {
+    "headline": "Our Focus",
+    "description": "Our investment group’s sole focus is to identify and fund scalable tech companies in a variety of stages, industries, and market verticals. We hold our portfolio companies to a high level of integrity and if your company is legal, morally, and ethically sound, we are ready to explore!",
+    "buttonText": "Learn More",
+    "foci": [
+      {
+        "title": "Automotive Tech"
+      },
+      {
+        "title": "B2B, B2C, & H2H Platforms"
+      },
+      {
+        "title": "Fintech"
+      },
+      {
+        "title": "Wearable Tech"
+      },
+      {
+        "title": "Technology in Motion"
+      },
+      {
+        "title": "Medical & Health"
+      },
+      {
+        "title": "Blockchain"
+      },
+      {
+        "title": "Agri-tech"
+      }
+    ]
+  },
+  "investments": {
+    "headline": "Our Investment Platforms",
+    "description": "We have created the following investment tracks to accommodate tech companies from a startup stage to navigate seamlessly between Angel Funding to Seed Capital to Growth Capital."
+  },
+  "services": {
+    "headline": "Our Global Reach and Services",
+    "services": [
+      {
+        "title": "Early Stage Capital",
+        "description": "$150K - $5M in available funding for early-stage investments in tech-based companies."
+      },
+      {
+        "title": "Technology Licensing",
+        "description": "Complete licensing, deal-making and structuring, negotiating, and closing services."
+      },
+      {
+        "title": "Syndication & Fund Management",
+        "description": "Join a large syndicate of investors to lower risk and increase investment success."
+      },
+      {
+        "title": "Venture Studio & Tech Lab",
+        "description": "A complete technology development studio with top talent of today’s market."
+      }
+    ]
+  },
+  "portfolio": {
+    "headline": "Our Recent Investments",
+    "description": "Our diverse portfolio represents a progressive family of companies with a mission to balance and make a positive impact on everyday life with high potential of return on equity for its shareholders.",
+    "buttonText": "View our Portfolio",
+    "investments": [
+      {
+        "name": "Wearli"
+      },
+      {
+        "name": "Coaching Standard"
+      },
+      {
+        "name": "Amtech"
+      },
+      {
+        "name": "Analyteum"
+      },
+      {
+        "name": "Cozilo"
+      },
+      {
+        "name": "SafeWhistle"
+      },
+      {
+        "name": "Argonomo"
+      },
+      {
+        "name": "WeConduct"
+      }
+    ]
+  }
 }

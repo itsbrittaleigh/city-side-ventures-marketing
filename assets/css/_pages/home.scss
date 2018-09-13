@@ -107,7 +107,58 @@
   }
   .statistics {
     .outer-box {
-      @include grid-boxes(2, 2, 50vw, auto, 0);
+      @include grid-boxes(1, 4, 100vw, auto, 0);
+      .inner-box {
+        @include grid-boxes(2, 1, 50vw, auto, 0);
+        &:nth-child(even) {
+          .box:not(.image) {
+            order: 2;
+          }
+          .box.image {
+            order: 1;
+          }
+        }
+        &:nth-child(1) {
+          .overlay {
+            background: rgba($goldendream, 0.3);
+          }
+          &:hover {
+            .overlay {
+              background: rgba($goldendream, 0.8);
+            }
+          }
+        }
+        &:nth-child(2) {
+          .overlay {
+            background: rgba($danube, 0.3);
+          }
+          &:hover {
+            .overlay {
+              background: rgba($danube, 0.8);
+            }
+          }
+        }
+        &:nth-child(3) {
+          .overlay {
+            background: rgba($nightshadz, 0.3);
+          }
+          &:hover {
+            .overlay {
+              background: rgba($nightshadz, 0.8);
+            }
+          }
+        }
+        &:nth-child(4) {
+          .overlay {
+            background: rgba($cod, 0.3);
+          }
+          &:hover {
+            .overlay {
+              background: rgba($cod, 0.8);
+            }
+          }
+        }
+      }
     }
     .box {
       h3 {
@@ -288,9 +339,28 @@
       }
     }
     @media only screen and (min-width: $large) {
-      @include grid-boxes(2, 1, 50vw, 50vw, 0);
       .outer-box {
-        @include grid-boxes(2, 2, 25vw, 25vw, 0);
+        @include grid-boxes(2, 2, 50vw, 25vw, 0);
+        .inner-box {
+          @include grid-boxes(2, 1, 25vw, 25vw, 0);
+          &:nth-child(even) {
+            .box:not(.image) {
+              order: 1;
+            }
+            .box.image {
+              order: 2;
+            }
+          }
+          &:nth-child(3),
+          &:nth-child(4) {
+            .box:not(.image) {
+              order: 2;
+            }
+            .box.image {
+              order: 1;
+            }
+          }
+        }
       }
     }
     &.statistics2 {
@@ -341,7 +411,6 @@
       @media only screen and (min-width: $medium) {
         @include grid-boxes(1, 2, 1fr, auto, 0);
         > .box:nth-child(1) {
-          max-height: 100%;
           img.svg-overlay {
             max-height: 400px;
           }
@@ -353,6 +422,9 @@
       }
       @media only screen and (min-width: $xlarge) {
         @include grid-boxes(2, 1, 1fr, auto, 0);
+        > .box:nth-child(1) {
+          max-height: 100%;
+        }
         > .box:nth-child(2) {
           @include grid-boxes(2, 2, 1fr, 50%, 0);
         }

@@ -4,6 +4,7 @@ const PATH = require('path');
 let dynamicRoutes = getDynamicPaths({
   '/team': '/content/bios/*.json',
   '/news': '/content/posts/*.json',
+  '/funds': '/content/funds/*.json',
 });
 
 module.exports = {

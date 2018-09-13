@@ -3,142 +3,80 @@
     <section class="intro">
       <div class="box">
         <div class="container">
-          <h1 class="hidden" v-in-viewport.once>A different kind of <strong>venture group</strong></h1>
-          <p class="hidden" v-in-viewport.once>We are willing to look deeper, wider, and bigger with all investment opportunities!</p>
+          <h1 class="hidden" v-in-viewport.once>{{ header.headline }}</h1>
+          <p class="hidden" v-in-viewport.once>{{ header.subhead }}</p>
         </div>
-        <img src="~/assets/images/home/private-equity.jpg" alt="">
+        <img src="https://placekitten.com/800/800" alt="">
         <div class="overlay"></div>
       </div>
       <div class="box">
         <div class="container">
-          <p class="hidden" v-in-viewport.once>City Side Ventures is a driven venture group comprised of experienced business builders, die-hard serial entrepreneurs, disrupters, innovators, and technologists.</p>
-          <p class="hidden" v-in-viewport.once>We are more than just traditional investors, we are a different investment management firm that creates and manages high-risk venture investment funds.</p>
+          <vue-markdown>{{ header.description }}</vue-markdown>
           <p class="flex">
-            <span class="hidden" v-in-viewport.once>
+            <span
+              v-for="(type, index) in header.investmentTypes"
+              :key="index"
+              class="hidden"
+              v-in-viewport.once
+            >
               <img class="bullet" src="~/assets/images/icons/bullet-darkgray.svg" alt="">
-              Angel Funding
-            </span>
-            <span class="hidden" v-in-viewport.once>
-              <img class="bullet" src="~/assets/images/icons/bullet-darkgray.svg" alt="">
-              Venture Capital
-            </span>
-            <span class="hidden" v-in-viewport.once>
-              <img class="bullet" src="~/assets/images/icons/bullet-darkgray.svg" alt="">
-              Private Equity
+              {{ type.type }}
             </span>
           </p>
-          <nuxt-link to="/about" class="button inverse hidden" v-in-viewport.once>Learn about City Side Ventures</nuxt-link>
+          <nuxt-link to="/about" class="button inverse hidden" v-in-viewport.once>{{ header.buttonText }}</nuxt-link>
         </div>
-        <img src="~/assets/images/home/about.jpg" alt="">
+        <img src="https://placekitten.com/800/800" alt="">
         <div class="overlay"></div>
       </div>
     </section>
-
     <section class="statistics">
       <div class="outer-box">
-        <div class="box padded hidden" v-in-viewport.once>
-          <h2>Access Capital</h2>
-          <img src="~/assets/images/home/chart-access-capital-bw.svg" alt="">
-        </div>
-        <div class="box image hidden" v-in-viewport.once>
-          <img src="~/assets/images/home/stats1.jpg" alt="">
-          <div class="overlay yellow hidden" v-in-viewport.once>
-            <p class="large">$330M</p>
-            <p class="small">in access capital</p>
+        <div
+          v-for="(statistic, index) in statistics"
+          :key="index"
+          class="inner-box"
+        >
+          <div class="box padded hidden" v-in-viewport.once>
+            <h2>{{ statistic.title }}</h2>
+            <img src="https://placekitten.com/800/800" alt="">
           </div>
-        </div>
-        <div class="box image hidden" v-in-viewport.once>
-          <img src="~/assets/images/home/stats3.jpg" alt="">
-          <div class="overlay red">
-              <p class="large color-blue">24</p>
-              <p class="small color-blue">venture partners</p>
+          <div class="box image hidden" v-in-viewport.once>
+            <img src="https://placekitten.com/800/800" alt="">
+            <div class="overlay hidden" v-in-viewport.once>
+              <p class="large">{{ statistic.number }}</p>
+              <p class="small">{{ statistic.label }}</p>
+            </div>
           </div>
-        </div>
-        <div class="box padded hidden" v-in-viewport.once>
-          <h2>Venture Partners</h2>
-          <img src="~/assets/images/home/chart-venture-partners-bw.svg" alt="">
-        </div>
-      </div>
-      <div class="outer-box">
-        <div class="box padded hidden" v-in-viewport.once>
-          <h2>Active Investments</h2>
-          <img src="~/assets/images/home/chart-active-investments-bw.svg" alt="">
-        </div>
-        <div class="box image hidden" v-in-viewport.once>
-          <img src="~/assets/images/home/stats2.jpg" alt="">
-          <div class="overlay blue">
-            <p class="large color-red">16</p>
-            <p class="small color-red">active investments</p>
-          </div>
-        </div>
-        <div class="box image hidden" v-in-viewport.once>
-          <img src="~/assets/images/home/stats4.jpg" alt="">
-          <div class="overlay black">
-            <p class="large color-yellow">24x</p>
-            <p class="small color-yellow">return on equity</p>
-          </div>
-        </div>
-        <div class="box padded hidden" v-in-viewport.once>
-          <h2>Portfolio Performance</h2>
-          <img class="shrink" src="~/assets/images/home/chart-returns-bw.svg" alt="">
         </div>
       </div>
     </section>
-
     <section class="focus">
       <div class="container">
         <div class="box hidden" v-in-viewport.once>
-          <h2>Our Focus</h2>
+          <h2>{{ focus.headline }}</h2>
           <p>
-              Our investment group’s sole focus is to identify and fund scalable tech companies in a variety of stages, industries, and market verticals. We hold our portfolio companies to a high level of integrity and if your company is legal, morally, and ethically sound, we are ready to explore!
-            <br>
+            <vue-markdown>{{ focus.description }}</vue-markdown>
             <nuxt-link to="/focus" class="button inverse">Learn more</nuxt-link>
           </p>
         </div>
         <div class="box foci">
-          <div class="box hidden" v-in-viewport.once>
-            <img src="~/assets/images/icons/focus-automotive-black.svg" alt="">
-            <p>Automotive Tech</p>
-          </div>
-          <div class="box hidden" v-in-viewport.once>
-            <img src="~/assets/images/icons/focus-b2b-black.svg" alt="">
-            <p>B2B, B2C, &amp; H2H Platforms</p>
-          </div>
-          <div class="box hidden" v-in-viewport.once>
-            <img src="~/assets/images/icons/focus-fintech-black.svg" alt="">
-            <p>Fintech</p>
-          </div>
-          <div class="box hidden" v-in-viewport.once>
-            <img src="~/assets/images/icons/focus-wearable-black.svg" alt="">
-            <p>Wearable Tech</p>
-          </div>
-          <div class="box hidden" v-in-viewport.once>
-            <img src="~/assets/images/icons/focus-techinmotion-black.svg" alt="">
-            <p>Technology in Motion</p>
-          </div>
-          <div class="box hidden" v-in-viewport.once>
-            <img src="~/assets/images/icons/focus-medical-black.svg" alt="">
-            <p>Medical &amp; Health</p>
-          </div>
-          <div class="box hidden" v-in-viewport.once>
-            <img src="~/assets/images/icons/focus-blockchain-black.svg" alt="">
-            <p>Blockchain</p>
-          </div>
-          <div class="box hidden" v-in-viewport.once>
-            <img src="~/assets/images/icons/focus-agritech-black.svg" alt="">
-            <p>Agri-tech</p>
+          <div
+            v-for="(focus, index) in focus.foci"
+            :key="index"
+            class="box hidden"
+            v-in-viewport.once
+          >
+            <img src="https://placekitten.com/800/800" alt="">
+            <p>{{ focus.title }}</p>
           </div>
         </div>
       </div>
     </section>
-
     <section class="funds">
       <div class="container">
         <div class="box hidden" v-in-viewport.once>
-          <h2>Our Investment Platforms</h2>
-          <p class="lead">
-              We have created the following investment tracks to accommodate tech companies from a startup stage to navigate seamlessly between Angel Funding to Seed Capital to Growth Capital.
-          </p>
+          <h2>{{ investments.headline }}</h2>
+          <vue-markdown class="lead">{{ investments.description }}</vue-markdown>
         </div>
         <div class="box hidden" v-in-viewport.once>
           <h3>Great Lakes Angels Fund</h3>
@@ -190,93 +128,75 @@
         </div>
       </div>
     </section>
-
     <section class="statistics statistics2">
       <div class="box image-background large padded hidden" v-in-viewport.once>
-        <h2>Our Global Reach and Services</h2>
-        <img src="~/assets/images/home/stats7.jpg" alt="">
+        <h2>{{ services.headline }}</h2>
+        <img src="https://placekitten.com/800/800" alt="">
         <div class="overlay"></div>
-        <img src="~/assets/images/home/map.svg" alt="" class="svg-overlay">
+        <img src="https://placekitten.com/800/800" alt="" class="svg-overlay">
       </div>
       <div class="box">
         <div class="box image hidden" v-in-viewport.once>
-          <img src="~/assets/images/home/stats6.jpg" alt="">
+          <img src="https://placekitten.com/800/800" alt="">
         </div>
         <div class="box box-yellow hidden" v-in-viewport.once>
-          <div class="service">
-            <span>1</span>
+          <div
+            v-for="(service, index) in services.services.slice(0, Math.floor(services.services.length / 2))"
+            :key="index"
+            class="service"
+          >
+            <span>{{ index + 1 }}</span>
             <div class="content">
-              <p class="title">Early Stage Capital</p>
-              <p>$150K - $5M in available funding for early-stage investments in tech-based companies.</p>
-            </div>
-          </div>
-          <div class="service">
-            <span>2</span>
-            <div class="content">
-              <p class="title">Technology Licensing</p>
-              <p>Complete licensing, deal-making and structuring, negotiating, and closing services.</p>
+              <p class="title">{{ service.title }}</p>
+              <p>{{ service.description }}</p>
             </div>
           </div>
         </div>
         <div class="box box-blue hidden" v-in-viewport.once>
-          <div class="service">
-            <span>3</span>
+          <div
+            v-for="(service, index) in services.services.slice(Math.floor(services.services.length / 2))"
+            :key="index"
+            class="service"
+          >
+            <span>{{ Math.floor(services.services.length / 2) + index + 1 }}</span>
             <div class="content">
-              <p class="title">Syndication &amp; Fund Management</p>
-              <p>Join a large syndicate of investors to lower risk and increase investment success.</p>
-            </div>
-          </div>
-          <div class="service">
-            <span>4</span>
-            <div class="content">
-              <p class="title">Venture Studio &amp; Tech Lab</p>
-              <p>A complete technology development studio with top talent of today’s market.</p>
+              <p class="title">{{ service.title }}</p>
+              <p>{{ service.description }}</p>
             </div>
           </div>
         </div>
         <div class="box image hidden" v-in-viewport.once>
-          <img src="~/assets/images/home/stats5.jpg" alt="">
+          <img src="https://placekitten.com/800/800" alt="">
         </div>
       </div>
     </section>
-
     <section class="portfolio">
       <div class="box hidden" v-in-viewport.once>
         <div class="container">
-          <h2>Our Recent Investments</h2>
-          <p>
-            Our diverse portfolio represents a progressive family of companies with a mission to balance and make a positive impact on everyday life with high potential of return on equity for its shareholders.
-          </p>
-          <nuxt-link to="/portfolio" class="button inverse">View our Portfolio</nuxt-link>
+          <h2>{{ portfolio.headline }}</h2>
+          <vue-markdown>{{ portfolio.description }}</vue-markdown>
+          <nuxt-link to="/portfolio" class="button inverse">{{ portfolio.buttonText }}</nuxt-link>
         </div>
       </div>
       <div class="box">
         <div class="upper">
-          <div class="box hidden" v-in-viewport.once>
-            <img src="~/assets/images/logos/wearli.png" alt="">
-          </div>
-          <div class="box hidden" v-in-viewport.once>
-            <img src="~/assets/images/logos/coaching-standard.png" alt="">
-          </div>
-          <div class="box hidden" v-in-viewport.once>
-            <img src="~/assets/images/logos/amtech.svg" alt="">
-          </div>
-          <div class="box hidden" v-in-viewport.once>
-            <img src="~/assets/images/logos/analyteum.svg" alt="">
+          <div
+            v-for="(investment, index) in portfolio.investments.slice(0, Math.floor(portfolio.investments.length / 2))"
+            :key="index"
+            class="box hidden"
+            v-in-viewport.once
+          >
+            <img src="https://placekitten.com/800/800" alt="">
           </div>
         </div>
         <div class="lower">
-          <div class="box hidden" v-in-viewport.once>
-            <img src="~/assets/images/logos/cozilo.svg" alt="">
-          </div>
-          <div class="box hidden" v-in-viewport.once>
-            <img src="~/assets/images/logos/safewhistle.svg" alt="">
-          </div>
-          <div class="box hidden" v-in-viewport.once>
-            <img src="~/assets/images/logos/argonomo.svg" alt="">
-          </div>
-          <div class="box hidden" v-in-viewport.once>
-            <img src="~/assets/images/logos/we-conduct.png" alt="">
+          <div
+            v-for="(investment, index) in portfolio.investments.slice(Math.floor(portfolio.investments.length / 2))"
+            :key="index"
+            class="box hidden"
+            v-in-viewport.once
+          >
+            <img src="https://placekitten.com/800/800" alt="">
           </div>
         </div>
       </div>
@@ -285,9 +205,18 @@
 </template>
 
 <script>
+import VueMarkdown from 'vue-markdown';
+
 export default {
+  async asyncData({ params }) {
+    const pageData = await import('~/content/pages/index.json');
+    return pageData;
+  },
   data() {
     return {};
+  },
+  components: {
+    'vue-markdown': VueMarkdown,
   },
   head() {
     return {
