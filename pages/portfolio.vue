@@ -4,6 +4,8 @@
       :heading="header.headline"
       :description="header.description"
       :color="header.color"
+      :image="header.image"
+      :lead="header.subhead"
     >
     </hero-section>
     <portfolio-grid :portfolio="investments"></portfolio-grid>
