@@ -3,7 +3,7 @@
     "headline": "A different kind of venture group",
     "subhead": "We are willing to look deeper, wider, and bigger with all investment opportunities!",
     "description": "CitySide Ventures is a driven venture group comprised of experienced business builders, die-hard serial entrepreneurs, disrupters, innovators, and technologists.\n\nWe are more than just traditional investors, we are a different investment management firm that creates and manages high-risk venture investment funds.",
-    "investmentTypes": [
+    "types": [
       {
         "type": "Angel Funding"
       },
@@ -14,26 +14,36 @@
         "type": "Private Equity"
       }
     ],
-    "buttonText": "Learn about CitySide Ventures"
+    "buttonText": "Learn about CitySide Ventures",
+    "image1": "/images/uploads/private-equity.jpg",
+    "image2": "/images/uploads/about.jpg"
   },
   "statistics": [
     {
       "title": "Access Capital",
+      "chart": "/images/uploads/chart-access-capital-bw.svg",
+      "image": "/images/uploads/stats1.jpg",
       "number": "$330M",
       "label": "in access capital"
     },
     {
       "title": "Active Investments",
+      "chart": "/images/uploads/chart-active-investments-bw.svg",
+      "image": "/images/uploads/stats2.jpg",
       "number": "16",
       "label": "active investments"
     },
     {
       "title": "Venture Partners",
+      "chart": "/images/uploads/chart-venture-partners-bw.svg",
+      "image": "/images/uploads/stats3.jpg",
       "number": "24",
       "label": "venture partners"
     },
     {
       "title": "Portfolio Performance",
+      "chart": "/images/uploads/chart-returns-bw.svg",
+      "image": "/images/uploads/stats4.jpg",
       "number": "24x",
       "label": "return on equity"
     }
@@ -44,27 +54,35 @@
     "buttonText": "Learn More",
     "foci": [
       {
+        "icon": "/images/uploads/focus-automotive-black.svg",
         "title": "Automotive Tech"
       },
       {
+        "icon": "/images/uploads/focus-b2b-black.svg",
         "title": "B2B, B2C, & H2H Platforms"
       },
       {
+        "icon": "/images/uploads/focus-fintech-black.svg",
         "title": "Fintech"
       },
       {
+        "icon": "/images/uploads/focus-wearable-black.svg",
         "title": "Wearable Tech"
       },
       {
+        "icon": "/images/uploads/focus-techinmotion-black.svg",
         "title": "Technology in Motion"
       },
       {
+        "icon": "/images/uploads/focus-medical-black.svg",
         "title": "Medical & Health"
       },
       {
+        "icon": "/images/uploads/focus-blockchain-black.svg",
         "title": "Blockchain"
       },
       {
+        "icon": "/images/uploads/focus-agritech-black.svg",
         "title": "Agri-tech"
       }
     ]
@@ -75,6 +93,10 @@
   },
   "services": {
     "headline": "Our Global Reach and Services",
+    "backgroundImage": "/images/uploads/stats7.jpg",
+    "featuredImage": "/images/uploads/map.svg",
+    "serviceImage1": "/images/uploads/stats6.jpg",
+    "serviceImage2": "/images/uploads/stats5.jpg",
     "services": [
       {
         "title": "Early Stage Capital",
@@ -100,28 +122,36 @@
     "buttonText": "View our Portfolio",
     "investments": [
       {
-        "name": "Wearli"
+        "name": "Wearli",
+        "logo": "/images/uploads/wearli.png"
       },
       {
-        "name": "Coaching Standard"
+        "name": "Coaching Standard",
+        "logo": "/images/uploads/coaching-standard.png"
       },
       {
-        "name": "Amtech"
+        "name": "Amtech",
+        "logo": "/images/uploads/amtech.svg"
       },
       {
-        "name": "Analyteum"
+        "name": "Analyteum",
+        "logo": "/images/uploads/analyteum.svg"
       },
       {
-        "name": "Cozilo"
+        "name": "Cozilo",
+        "logo": "/images/uploads/cozilo.svg"
       },
       {
-        "name": "SafeWhistle"
+        "name": "SafeWhistle",
+        "logo": "/images/uploads/safewhistle.svg"
       },
       {
-        "name": "Argonomo"
+        "name": "Argonomo",
+        "logo": "/images/uploads/argonomo.svg"
       },
       {
-        "name": "WeConduct"
+        "name": "WeConduct",
+        "logo": "/images/uploads/we-conduct.png"
       }
     ]
   }
