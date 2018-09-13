@@ -6,7 +6,7 @@
           <h1 class="hidden" v-in-viewport.once>{{ header.headline }}</h1>
           <p class="hidden" v-in-viewport.once>{{ header.subhead }}</p>
         </div>
-        <img src="https://placekitten.com/800/800" alt="">
+        <img :src="header.image1" alt="">
         <div class="overlay"></div>
       </div>
       <div class="box">
@@ -14,7 +14,7 @@
           <vue-markdown>{{ header.description }}</vue-markdown>
           <p class="flex">
             <span
-              v-for="(type, index) in header.investmentTypes"
+              v-for="(type, index) in header.types"
               :key="index"
               class="hidden"
               v-in-viewport.once
@@ -25,7 +25,7 @@
           </p>
           <nuxt-link to="/about" class="button inverse hidden" v-in-viewport.once>{{ header.buttonText }}</nuxt-link>
         </div>
-        <img src="https://placekitten.com/800/800" alt="">
+        <img :src="header.image2" alt="">
         <div class="overlay"></div>
       </div>
     </section>
@@ -38,10 +38,10 @@
         >
           <div class="box padded hidden" v-in-viewport.once>
             <h2>{{ statistic.title }}</h2>
-            <img src="https://placekitten.com/800/800" alt="">
+            <img :src="statistic.chart" alt="">
           </div>
           <div class="box image hidden" v-in-viewport.once>
-            <img src="https://placekitten.com/800/800" alt="">
+            <img :src="statistic.image" alt="">
             <div class="overlay hidden" v-in-viewport.once>
               <p class="large">{{ statistic.number }}</p>
               <p class="small">{{ statistic.label }}</p>
@@ -56,7 +56,7 @@
           <h2>{{ focus.headline }}</h2>
           <p>
             <vue-markdown>{{ focus.description }}</vue-markdown>
-            <nuxt-link to="/focus" class="button inverse">Learn more</nuxt-link>
+            <nuxt-link to="/focus" class="button inverse">{{ focus.buttonText }}</nuxt-link>
           </p>
         </div>
         <div class="box foci">
@@ -66,7 +66,7 @@
             class="box hidden"
             v-in-viewport.once
           >
-            <img src="https://placekitten.com/800/800" alt="">
+            <img :src="focus.icon" alt="">
             <p>{{ focus.title }}</p>
           </div>
         </div>
@@ -131,13 +131,13 @@
     <section class="statistics statistics2">
       <div class="box image-background large padded hidden" v-in-viewport.once>
         <h2>{{ services.headline }}</h2>
-        <img src="https://placekitten.com/800/800" alt="">
+        <img :src="services.backgroundImage" alt="">
         <div class="overlay"></div>
-        <img src="https://placekitten.com/800/800" alt="" class="svg-overlay">
+        <img :src="services.featuredImage" alt="" class="svg-overlay">
       </div>
       <div class="box">
         <div class="box image hidden" v-in-viewport.once>
-          <img src="https://placekitten.com/800/800" alt="">
+          <img :src="services.serviceImage1" alt="">
         </div>
         <div class="box box-yellow hidden" v-in-viewport.once>
           <div
@@ -166,7 +166,7 @@
           </div>
         </div>
         <div class="box image hidden" v-in-viewport.once>
-          <img src="https://placekitten.com/800/800" alt="">
+          <img :src="services.serviceImage2" alt="">
         </div>
       </div>
     </section>
@@ -186,7 +186,7 @@
             class="box hidden"
             v-in-viewport.once
           >
-            <img src="https://placekitten.com/800/800" alt="">
+            <img :src="investment.logo" alt="">
           </div>
         </div>
         <div class="lower">
@@ -196,7 +196,7 @@
             class="box hidden"
             v-in-viewport.once
           >
-            <img src="https://placekitten.com/800/800" alt="">
+            <img :src="investment.logo" alt="">
           </div>
         </div>
       </div>
