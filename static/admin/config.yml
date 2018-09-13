@@ -250,8 +250,7 @@ collections:
               - {label: "Equity Position", name: "equity", widget: "string"}
               - {label: "Investment Stage", name: "stage", widget: "string"}
               - {label: "Current Valuation", name: "valuation", widget: "string"}
-              - {label: "Website", name: "website", widget: "string"}
-              - {label: "Color", name: "color", widget: "select", options: ["yellow", "red", "blue"]}
+              - {label: "Website", name: "website", widget: "string", required: false}
       - name: "focus"
         label: "Our Focus"
         file: "content/pages/focus.json"
