@@ -1,10 +1,10 @@
 <template>
   <section class="portfolio-grid">
     <div
-      v-for="(project, index) in portfolio"
+      v-for="(project, index) in localPortfolio"
       :key="index"
       :class="{
-        'project visible': true,
+        'project': true,
         'even-mobile': isEvenRowedMobile(index + 1),
         'even-tablet': isEvenRowedTablet(index + 1),
         'even-desktop': isEvenRowedDesktop(index + 1),
@@ -15,18 +15,12 @@
         'last-column-tablet': isLastColumnTablet(index + 1),
         'last-column-desktop': isLastColumnDesktop(index + 1),
       }"
-      @mouseover="showDescription(index)"
-      @mouseout="hideDescription(index)"
+      v-in-viewport.once
     >
       <div class="box logo">
         <img :src="project.logo" :alt="`${project.name}`">
       </div>
-      <div
-        :class="{
-          'box content': true,
-          'show': project.showDescription,
-        }"
-      >
+      <div class="box content">
         <h3 class="title">{{ project.name }}</h3>
         <ul>
           <li>
@@ -39,7 +33,7 @@
           </li>
           <li>
             <strong>Transaction Date: </strong>
-            {{ project.transactionDate }}
+            {{ project.date }}
           </li>
           <li>
             <strong>Investment: </strong>
@@ -47,20 +41,20 @@
           </li>
           <li>
             <strong>Equity Position: </strong>
-            {{ project.equityPosition }}
+            {{ project.equity }}
           </li>
           <li>
             <strong>Investment Stage: </strong>
-            {{ project.investmentStage }}
+            {{ project.stage }}
           </li>
           <li>
             <strong>Current Valuation: </strong>
-            {{ project.currentValuation }}
+            {{ project.valuation }}
           </li>
         </ul>
         <a
-          v-if="project.link"
-          :href="project.link" class="button" target="_blank"
+          v-if="project.website"
+          :href="project.website" class="button" target="_blank"
         >
           Visit Website
         </a>
@@ -72,13 +66,13 @@
 </template>
 
 <script>
+import _ from 'lodash';
+
 export default {
-  async asyncData({ params }) {
-    
-  },
+  props: ['portfolio'],
   data() {
     return {
-      portfolio: [],
+      localPortfolio: this.portfolio,
     };
   },
   methods: {
@@ -92,13 +86,13 @@ export default {
       return (((Math.ceil(index / 6) * 6) % 12) === 0);
     },
     isLastRowMobile(index) {
-      return this.portfolio.length - index <= 2;
+      return this.localPortfolio.length - index <= 2;
     },
     isLastRowTablet(index) {
-      return this.portfolio.length - index <= 4;
+      return this.localPortfolio.length - index <= 4;
     },
     isLastRowDesktop(index) {
-      return this.portfolio.length - index <= 6;
+      return this.localPortfolio.length - index <= 6;
     },
     isLastColumnMobile(index) {
       return index % 2 === 0;
@@ -110,11 +104,16 @@ export default {
       return ((index % 6) === 0);
     },
     showDescription(index) {
-      this.portfolio[index].showDescription = true;
+      this.localPortfolio[index].showDescription = true;
     },
     hideDescription(index) {
-      this.portfolio[index].showDescription = false;
+      this.localPortfolio[index].showDescription = false;
     },
+  },
+  mounted() {
+    _.forEach(this.localPortfolio, (project) => {
+      project.showDescription = false;
+    });
   },
 };
 </script>

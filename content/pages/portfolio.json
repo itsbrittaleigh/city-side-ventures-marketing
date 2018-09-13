@@ -1,3 +1,124 @@
 {
-  
+  "header": {
+    "headline": "Our Investment Portfolio",
+    "description": "Our diverse portfolio represents a family of progressive tech-based companies in fast-growing market verticals with high potential return on equity for its shareholders.",
+    "color": "yellow"
+  },
+  "investments": [
+    {
+      "name": "Amtech Electronics, LLC",
+      "industry": "Electronics Manufacturing & Assembly",
+      "category": "Industrial",
+      "investment": "N/A",
+      "equity": "10%",
+      "stage": "Post revenue - Growth Capital",
+      "valuation": "$5M",
+      "website": "https://buildamtech.com"
+    },
+    {
+      "name": "Analyteum, LLC",
+      "industry": "Data Analytics & Management",
+      "category": "B2B",
+      "investment": "$250K - Seed capital",
+      "equity": "70%",
+      "stage": "Pre-revenue - In Development",
+      "valuation": "$1.2M"
+    },
+    {
+      "name": "Argonomo, LLC",
+      "industry": "Venture Studio",
+      "category": "B2B",
+      "investment": "$300K - Seed Capital",
+      "equity": "36%",
+      "stage": "Post revenue",
+      "valuation": "$2M",
+      "website": "https://argonomo.com"
+    },
+    {
+      "name": "Coaching Standard, LLC",
+      "industry": "Business & Executive Coaching",
+      "category": "B2B",
+      "investment": "N/A - Seed-Capital",
+      "equity": "36%",
+      "stage": "Pre-revenue",
+      "valuation": "$3.2M"
+    },
+    {
+      "name": "SafeWhistle, LLC",
+      "industry": "Human Resources",
+      "category": "B2B",
+      "investment": "$120K - Seed-Capital",
+      "equity": "60%",
+      "stage": "Post revenue",
+      "valuation": "$5M",
+      "website": "https://safewhistle.com"
+    },
+    {
+      "name": "Sidepitch, LLC",
+      "industry": "Venture Capital Management",
+      "category": "Fin-Tech",
+      "investment": "N/A - Blended Capital and Resources",
+      "equity": "10%",
+      "stage": "Post-revenue",
+      "valuation": "$3.6M",
+      "website": "https://sidepitch.com"
+    },
+    {
+      "name": "Wearli, LLC",
+      "industry": "Wearable Technology",
+      "category": "B2B",
+      "investment": "$300K - Blended Capital and Resources",
+      "equity": "80%",
+      "stage": "Pre-revenue",
+      "valuation": "$3.6M"
+    },
+    {
+      "name": "Ensureum, LLC",
+      "industry": "Blockchain & Data Management",
+      "category": "B2B",
+      "investment": "$500K - Blended Capital and Resources",
+      "equity": "100%",
+      "stage": "MVP Development",
+      "valuation": "$10M",
+      "website": "https://ensureum.com"
+    },
+    {
+      "name": "MedDomo, LLC",
+      "industry": "Healthcare",
+      "category": "MedTech",
+      "investment": "$120K - Blended Capital and Resources",
+      "equity": "30%",
+      "stage": "MVP Development",
+      "valuation": "$5M"
+    },
+    {
+      "name": "Cozilo, LLC",
+      "industry": "eCommerce",
+      "category": "B2B",
+      "investment": "N/A - Blended Capital and Resources",
+      "equity": "10%",
+      "stage": "MVP Development",
+      "valuation": "$3M",
+      "website": "https://cozilo.com"
+    },
+    {
+      "name": "WeConduct",
+      "industry": "Market Data Analysis",
+      "category": "B2B",
+      "investment": "N/A - Blended Capital and Resources",
+      "equity": "64%",
+      "stage": "MVP Development",
+      "valuation": "$1M"
+    },
+    {
+      "name": "Argonize",
+      "industry": "Project & Resource Management",
+      "category": "B2B",
+      "investment": "N/A - Blended Capital and Resources",
+      "equity": "20%",
+      "stage": "MVP Development",
+      "valuation": "$1M",
+      "website": "https://argonize.com"
+    }
+  ]
 }

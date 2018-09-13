@@ -2,8 +2,42 @@
   @include grid-boxes(2, 6, 1fr, 200px, 0);
   .project {
     position: relative;
-    .show {
-      &.box.content {
+    .box.content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: 0.4s;
+      .title {
+        @include title-font;
+      }
+      .button {
+        height: 32px;
+        padding: 0 15px;
+        &.muted {
+          background: lightgray;
+          border-color: lightgray;
+          cursor: not-allowed;
+          &:hover {
+            background: lightgray;
+            color: $cod;
+          }
+        }
+      }
+      .close {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        color: white;
+        font-style: normal;
+      }
+    }
+    &:hover {
+      overflow: visible;
+      .box.content {
         width: 200%;
         height: 200%;
         z-index: 10;
@@ -57,39 +91,6 @@
       max-height: 50px;
       max-width: 85%;
       object-fit: contain;
-    }
-  }
-  .box.content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: 0.4s;
-    .title {
-      @include title-font;
-    }
-    .button {
-      height: 32px;
-      padding: 0 15px;
-      &.muted {
-        background: lightgray;
-        border-color: lightgray;
-        cursor: not-allowed;
-        &:hover {
-          background: lightgray;
-          color: $cod;
-        }
-      }
-    }
-    .close {
-      position: absolute;
-      top: 8px;
-      right: 10px;
-      color: white;
-      font-style: normal;
     }
   }
   @media only screen and (min-width: $medium) {

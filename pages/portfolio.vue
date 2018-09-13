@@ -1,13 +1,12 @@
 <template>
   <div class="page portfolio">
     <hero-section
-      heading="Our Investment Portfolio"
-      description="Our diverse portfolio represents a family of progressive tech-based companies in fast-growing market verticals with high potential return on equity for its shareholders."
-      name="portfolio"
+      :heading="header.headline"
+      :description="header.description"
+      :color="header.color"
     >
     </hero-section>
-
-    <portfolio-grid></portfolio-grid>
+    <portfolio-grid :portfolio="investments"></portfolio-grid>
   </div>
 </template>
 
@@ -16,6 +15,10 @@ import HeroSection from '~/components/Hero.vue';
 import PortfolioGrid from '~/components/PortfolioGrid.vue';
 
 export default {
+  async asyncData({ params }) {
+    const pageData = await import('~/content/pages/portfolio.json');
+    return pageData;
+  },
   data() {
     return {};
   },

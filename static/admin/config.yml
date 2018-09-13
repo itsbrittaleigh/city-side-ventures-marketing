@@ -149,7 +149,7 @@ collections:
             fields:
               - {label: "Headline", name: "headline", widget: "string"}
               - {label: "Description", name: "description", widget: "string"}
-              - {label: "Subhead", name: "subhead", widget: "string"}
+              - {label: "Subhead", name: "subhead", widget: "string", required: false}
               - {label: "Background Image", name: "image", widget: "image"}
               - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
           - label: "Overview"
@@ -192,7 +192,7 @@ collections:
             widget: "object"
             fields:
               - {label: "Headline", name: "headline", widget: "string"}
-              - {label: "Subhead", name: "subhead", widget: "string"}
+              - {label: "Subhead", name: "subhead", widget: "string", required: false}
               - {label: "Description", name: "description", widget: "string"}
               - {label: "Background Image", name: "image", widget: "image"}
               - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
@@ -227,6 +227,31 @@ collections:
       - name: "portfolio"
         label: "Our Portfolio"
         file: "content/pages/portfolio.json"
+        fields:
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Subhead", name: "subhead", widget: "string", required: false}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
+          - label: "Investments"
+            name: "investments"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Logo", name: "logo", widget: "image"}
+              - {label: "Industry", name: "industry", widget: "string"}
+              - {label: "Investment Category", name: "category", widget: "string"}
+              - {label: "Transaction Date", name: "date", widget: "date"}
+              - {label: "Investment", name: "investment", widget: "string"}
+              - {label: "Equity Position", name: "equity", widget: "string"}
+              - {label: "Investment Stage", name: "stage", widget: "string"}
+              - {label: "Current Valuation", name: "valuation", widget: "string"}
+              - {label: "Website", name: "website", widget: "string"}
+              - {label: "Color", name: "color", widget: "select", options: ["yellow", "red", "blue"]}
       - name: "focus"
         label: "Our Focus"
         file: "content/pages/focus.json"
