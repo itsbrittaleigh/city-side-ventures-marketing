@@ -3,6 +3,7 @@
     <hero-section
       :heading="header.headline"
       :description="header.description"
+      :lead="header.subhead"
       :color="header.color"
       :image="header.image"
     >

@@ -1,5 +1,16 @@
 .page.process {
   $bullet_width: 40px;
+  .box.image {
+    min-height: 300px;
+    img {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
   .process {
     @include grid-boxes(1, 2, 1fr, auto, 0);
     .box:not(.image) {
@@ -51,11 +62,6 @@
           margin-bottom: 20px;
         }
       }
-    }
-    .box.image {
-      background: url('/assets/images/about-process.jpg') no-repeat center center;
-      background-size: cover;
-      min-height: 300px;
     }
     @media only screen and (min-width: $medium) {
       .box:not(.image) {

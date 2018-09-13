@@ -3,12 +3,15 @@
     <hero-section
       :heading="header.headline"
       :description="header.description"
-      :lead="header.lead"
+      :lead="header.subhead"
       :color="header.color"
+      :image="header.image"
     >
     </hero-section>
     <div class="sidepitch">
-      <div class="box image"></div>
+      <div class="box image">
+        <img :src="platform.image" alt="">
+      </div>
       <div class="box">
         <div class="container">
           <h2 class="hidden" v-in-viewport.once>{{ platform.headline }}</h2>
@@ -19,7 +22,7 @@
             class="step hidden"
             v-in-viewport.once
           >
-            <img src="~/assets/images/icons/bullet-yellow.svg" alt="">
+            <img src="~/assets/images/icons/bullet-dark-gray.svg" alt="">
             <p class="title">{{ step.title }}</p>
             <p>{{ step.description }}</p>
           </div>
@@ -38,14 +41,16 @@
             class="step hidden"
             v-in-viewport.once
           >
-            <img src="~/assets/images/icons/bullet-step-1.svg" alt="">
+            <img src="~/assets/images/icons/bullet-dark-gray.svg" alt="">
             <p class="title">{{ step.title }}</p>
             <p class="lead"><em>{{ step.subhead }}</em></p>
             <p>{{ step.description }}</p>
           </div>
         </div>
       </div>
-      <div class="box image"></div>
+      <div class="box image">
+        <img :src="overview.image" alt="">
+      </div>
     </section>
   </div>
 </template>
