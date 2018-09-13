@@ -125,30 +125,6 @@
       color: $white;
     }
   }
-  &.about {
-    background-image: url('/assets/images/covers/about.jpg');
-  }
-  &.process {
-    background-image: url('/assets/images/covers/process.jpg');
-  }
-  &.team {
-    background-image: url('/assets/images/covers/team.jpg');
-  }
-  &.focus {
-    background-image: url('/assets/images/covers/focus.jpg');
-  }
-  &.contact {
-    background-image: url('/assets/images/covers/contact.jpg');
-  }
-  &.news {
-    background-image: url('/assets/images/covers/news.jpg');
-  }
-  &.portfolio {
-    background-image: url('/assets/images/covers/portfolio.jpg');
-  }
-  &.services {
-    background-image: url('/assets/images/covers/services.jpg');
-  }
 }
 
 @media only screen and (min-width: $medium) {

@@ -4,28 +4,21 @@
       :heading="header.headline"
       :description="header.description"
       :color="header.color"
-      image="https://placekitten.com/800/800"
+      :image="header.image"
       name="about"
     >
     </hero-section>
-
     <section class="overview">
       <div class="box">
         <div class="container">
-          <p class="hidden" v-in-viewport.once>Since our inception in 2015, our strategy has been to launch and build great companies. We acknowledge that startups operate in different steps along their journey, therefore our funds range from Angel Funding all the way to Growth Capital Investments. Having started in Farmington Hills, Michigan, we are focused on creating equity investment relationships in promising Michigan companies through all our various funds.</p>
-          <ul class="hidden" v-in-viewport.once>
-            <li>Angel Funding – “Crawling” (pre-seed capital)</li>
-            <li>Venture Capital – “Walking” (seed to series D capital)</li>
-            <li>Private Equity – “Running” (Growth Capital). </li>
-          </ul>
+          <vue-markdown class="hidden" v-in-viewport.once>{{ overview.introduction }}</vue-markdown>
           <nuxt-link to="/contact" class="button hidden button-red" v-in-viewport.once>{{ overview.buttonText }}</nuxt-link>
         </div>
       </div>
       <div class="box image hidden" v-in-viewport.once>
-        <img src="https://placekitten.com/800/800" alt="">
+        <img :src="overview.image" alt="">
       </div>
     </section>
-
     <section class="principles">
       <div class="principles-boxes">
         <div class="box box-dark-gray intro hidden" v-in-viewport.once>
@@ -62,10 +55,9 @@
         </div>
       </div>
     </section>
-
     <section class="culture">
       <div class="box image hidden" v-in-viewport.once>
-        <video src="~/assets/videos/culture.mp4" autoplay loop></video>
+        <video :src="culture.video" autoplay loop></video>
       </div>
       <div class="box hidden" v-in-viewport.once>
         <div class="container">
@@ -102,6 +94,7 @@ export default {
   },
   components: {
     'hero-section': HeroSection,
-  }
+    'vue-markdown': VueMarkdown,
+  },
 }
 </script>
