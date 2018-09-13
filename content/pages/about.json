@@ -2,10 +2,13 @@
   "header": {
     "headline": "About Us",
     "description": "CitySide Ventures is an operations-oriented investment group committed to fund and grow tech-based startups and middle-market companies through a high-impact invest-and-build strategy.",
+    "image": "/images/uploads/about2.jpg",
     "color": "yellow"
   },
   "overview": {
-    "buttonText": "Get in Touch"
+    "introduction": "Since our inception in 2015, our strategy has been to launch and build great companies. We acknowledge that startups operate in different steps along their journey, therefore our funds range from Angel Funding all the way to Growth Capital Investments. Having started in Farmington Hills, Michigan, we are focused on creating equity investment relationships in promising Michigan companies through all our various funds.\n\n* Angel Funding – “Crawling” (pre-seed capital)\n* Venture Capital – “Walking” (seed to series D capital)\n* Private Equity – “Running” (Growth Capital).",
+    "buttonText": "Get in Touch",
+    "image": "/images/uploads/about3.jpg"
   },
   "principles": {
     "headline": "Our Operating Principles",
@@ -44,6 +47,7 @@
     ]
   },
   "culture": {
+    "video": "/images/uploads/culture.mp4",
     "headline": "Our Culture",
     "description": [
       {
