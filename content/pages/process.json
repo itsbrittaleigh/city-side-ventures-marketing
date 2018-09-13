@@ -3,12 +3,14 @@
     "headline": "Our Process",
     "subhead": "Business + Technology + Capital = Success",
     "description": "CitySide provides solutions to find and manage investments for investors and corporate ventures using today's technology. With the development of our online Venture Management System (VMS), we have automated the process of investments from start to finish.",
+    "image": "/images/uploads/process.jpg",
     "color": "yellow"
   },
   "platform": {
     "headline": "The Sidepitch Platform",
     "description": "Sidepitch is a Venture Management System (VMS) platform that is pioneering a new category within the financial technology market by leveraging a high-tech approach to the traditional venture capital market worldwide.",
     "buttonText": "Learn more about Sidepitch",
+    "image": "/images/uploads/sidepitch.png",
     "bullets": [
       {
         "title": "Deal flow highlighting the hottest startups",
@@ -27,6 +29,7 @@
   "overview": {
     "headline": "Pitch it. Fund it. Launch it.",
     "description": "We are business builders—not just traditional investors. We go all in or not at all.",
+    "image": "/images/uploads/about-process.jpg",
     "bullets": [
       {
         "title": "The Driver [The Entrepreneur]",
