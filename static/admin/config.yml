@@ -149,6 +149,7 @@ collections:
             fields:
               - {label: "Headline", name: "headline", widget: "string"}
               - {label: "Description", name: "description", widget: "string"}
+              - {label: "Subhead", name: "subhead", widget: "string"}
               - {label: "Background Image", name: "image", widget: "image"}
               - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
           - label: "Overview"
@@ -185,6 +186,43 @@ collections:
       - name: "process"
         label: "Our Process"
         file: "content/pages/process.json"
+        fields:
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Subhead", name: "subhead", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
+          - label: "Platform"
+            name: "platform"
+            widget: "object"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}
+              - {label: "Button Text", name: "buttonText", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+              - label: "Bullet Points"
+                name: "bullets"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "Description", widget: "string"}
+          - label: "Overview"
+            name: "overview"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}
+              - {label: "Image", name: "image", widget: "image"}
+              - label: "Bullet Points"
+                name: "bullets"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Subhead", name: "subhead", widget: "string"}
+                  - {label: "Description", name: "description", widget: "string"}
       - name: "portfolio"
         label: "Our Portfolio"
         file: "content/pages/portfolio.json"

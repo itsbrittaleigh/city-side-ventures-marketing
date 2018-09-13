@@ -5,7 +5,6 @@
       :description="header.description"
       :color="header.color"
       :image="header.image"
-      name="about"
     >
     </hero-section>
     <section class="overview">
