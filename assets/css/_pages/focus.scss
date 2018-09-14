@@ -10,10 +10,10 @@
       }
       .box {
         width: 100vw;
-        height: 100vw;
+        min-height: 100vw;
         @media only screen and (min-width: $medium) {
           width: calc(100vw / 3);
-          height: calc(100vw / 3);
+          min-height: calc(100vw / 3);
         }
       }
       &:nth-child(even) {
@@ -28,6 +28,10 @@
         h2 {
           color: $cod;
         }
+        .button {
+          background: $cod;
+          color: $white;
+        }
       }
       &:nth-child(4n - 2) {
         .box.label {
@@ -35,6 +39,10 @@
         }
         h2 {
           color: $danube;
+        }
+        .button {
+          background: $danube;
+          color: $white;
         }
       }
       &:nth-child(4n - 1) {
@@ -44,6 +52,9 @@
         h2 {
           color: $goldendream;
         }
+        .button {
+          background: $goldendream;
+        }
       }
       &:nth-child(4n) {
         .box.label {
@@ -51,6 +62,10 @@
         }
         h2 {
           color: $gray;
+        }
+        .button {
+          background: $gray;
+          color: $white;
         }
       }
     }
@@ -146,22 +161,6 @@
           }
         }
       }
-    }
-  }
-}
-
-.page.services {
-  .focus-grid {
-    @include grid-boxes(1, 15, 100vw, 100vw, 0);
-    .box {
-      &:nth-child(even) {
-        &.content {
-          background: #f2f2f2;
-        }
-      }
-    }
-    @media only screen and (min-width: $medium) {
-      @include grid-boxes(3, 5, 1fr, auto, 0);
     }
   }
 }

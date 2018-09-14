@@ -1,3 +1,29 @@
 {
-  
+  "header": {
+    "headline": "Our Services",
+    "description": "From startup management, technology development, and more, CitySide Ventures can provide your business with more than just investment.",
+    "color": "yellow"
+  },
+  "services": [
+    {
+      "title": "Early Stage Capital",
+      "description": "From pre-seed capital through growth capital, our various funds under management offer qualified tech based startup companies funding from $150K and up to $5M per deal."
+    },
+    {
+      "title": "IP & Technology Licensing",
+      "description": "Our exclusive network of corporate ventures provides an offering of complete technology & IP licensing services from perform a to close."
+    },
+    {
+      "title": "Syndication & Fund Management",
+      "description": "Using our exclusive and innovative tech platform, we provide syndication and fund management services to investors and investor groups. The services include fund formation, real time deal flow, due diligence, and portfolio management."
+    },
+    {
+      "title": "Venture Studio & Tech Lab",
+      "description": "We provide our portfolio of companies full access to our own multi-discipline venture studio. The services range from branding to full stack mobile, web, and software development. It is second to none."
+    },
+    {
+      "title": "Interim Startup Management",
+      "description": "Gain access to our readily available, exclusive, and highly qualified network of members, business advisors, and experienced business professionals to fill interim position on the management team of your company."
+    }
+  ]
 }
