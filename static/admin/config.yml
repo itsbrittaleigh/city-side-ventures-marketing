@@ -254,6 +254,24 @@ collections:
       - name: "focus"
         label: "Our Focus"
         file: "content/pages/focus.json"
+        fields:
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Subhead", name: "subhead", widget: "string", required: false}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
+          - label: "Foci"
+            name: "foci"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Icon", name: "icon", widget: "image"}
+              - {label: "Description", name: "description", widget: "markdown"}
+              - {label: "Image", name: "image", widget: "image"}
       - name: "team"
         label: "Our Team"
         file: "content/pages/team.json"

@@ -1,3 +1,41 @@
 {
-  
+  "header": {
+    "headline": "Our Focus",
+    "description": "Our investments are focused on fast-growing industries and market verticals that represent high potential return on equity.",
+    "color": "yellow"
+  },
+  "foci": [
+    {
+      "title": "Automotive Tech",
+      "description": "Automotive technology, primarily “Off Vehicle” Tech, that can be added to or integrated with the OEM platforms, or Automotive Technologies that can potentially be purchased by the automakers or the tier-one suppliers."
+    },
+    {
+      "title": "B2B, B2C, & H2H Platforms",
+      "description": "Business to Business scalable applications that are built on a SaaS (Software as a Service) platform for fast and easy adoption."
+    },
+    {
+      "title": "FinTech",
+      "description": "Scalable financial technology that aims to compete with traditional financial methods in delivery, process, and transaction, especially in the application of Machine Learning and Artificial Intelligence and their role in the future financial market."
+    },
+    {
+      "title": "Wearable Tech",
+      "description": "Specifically, technologies that are intended for commercial use by law enforcement, military personnel, and safety / high-risk construction and maintenance crews."
+    },
+    {
+      "title": "Technology in Motion & Mobility",
+      "description": "Software that is designed to be used on mobile devices that can be integrated with business systems that are in constant motion."
+    },
+    {
+      "title": "Medical & Health Tech",
+      "description": "Technology applications that are designed for pre- & post-procedural interactions. Applications that improve the patients' experience and reduce the cost of the health system while increasing revenue."
+    },
+    {
+      "title": "Blockchain",
+      "description": "Focusing on Blockchain applications in the decentralizing infrastructure space, streamlining a business process that is in a higher-level need of visibility and verification applications."
+    },
+    {
+      "title": "AgriTech",
+      "description": "Agri-Tech companies and technologies that introduce a new and innovative way to supplement and convert old-fashioned farming technology that increase yields, quality, and health of everyday produce while dramatically reducing traditional operating costs."
+    }
+  ]
 }

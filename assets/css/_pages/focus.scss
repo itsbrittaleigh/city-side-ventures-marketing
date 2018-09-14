@@ -1,7 +1,47 @@
 .page.focus,
 .page.services {
   .focus-grid {
-    @include grid-boxes(1, 24, 100vw, 100vw, 0);
+    .inner-box {
+      display: grid;
+      grid-gap: 0;
+      grid-template-columns: 1 100vw;
+      .box {
+        width: 100vw;
+        height: 100vw;
+      }
+      &:nth-child(4n - 3) {
+        .box.label {
+          background: $cod;
+        }
+        h2 {
+          color: $cod;
+        }
+      }
+      &:nth-child(4n - 2) {
+        .box.label {
+          background: $danube;
+        }
+        h2 {
+          color: $danube;
+        }
+      }
+      &:nth-child(4n - 1) {
+        .box.label {
+          background: $goldendream;
+        }
+        h2 {
+          color: $goldendream;
+        }
+      }
+      &:nth-child(4n) {
+        .box.label {
+          background: $gray;
+        }
+        h2 {
+          color: $gray;
+        }
+      }
+    }
     h2 {
       @include title-font;
     }
@@ -49,140 +89,24 @@
           flex-shrink: 0;
         }
       }
-      &.box-dark-gray {
-        background: $cod;
-      }
-      &.box-red {
-        background: $nightshadz;
-      }
-      &.box-gray {
-        background: $gray;
-      }
-      &.box-yellow {
-        background: $goldendream;
-      }
-      &.box-light-gray {
-        background: $gray;
-      }
-      &.box-blue {
-        background: $danube;
-      }
-      &.content-dark-gray {
-        h2 {
-          color: $cod;
-        }
-      }
-      &.content-gray {
-        h2 {
-          color: $gray;
-        }
-      }
-      &.content-red {
-        h2 {
-          color: $nightshadz;
-        }
-      }
-      &.content-yellow {
-        h2 {
-          color: $goldendream;
-        }
-      }
-      &.content-light-gray {
-        h2 {
-          color: $gray;
-        }
-      }
-      &.content-blue {
-        h2 {
-          color: $danube;
-        }
-      }
     }
     .box.image {
-      min-height: 200px;
-      position: relative;
-      overflow: hidden;
-      .overlay {
-        width: 100%;
-        height: 100%;
+      img {
         position: absolute;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
-      &.automotive {
-        background: url('/assets/images/focus/automotive.jpg') no-repeat center center;
-        background-size: cover;
-      }
-      &.b2b {
-        background: url('/assets/images/focus/b2b.jpg') no-repeat center center;
-        background-size: cover;
-      }
-      &.fintech {
-        background: url('/assets/images/focus/fintech.jpg') no-repeat center center;
-        background-size: cover;
-      }
-      &.wearable {
-        background: url('/assets/images/focus/wearable.jpg') no-repeat center center;
-        background-size: cover;
-      }
-      &.techmotion {
-        background: url('/assets/images/focus/techmotion.jpg') no-repeat center center;
-        background-size: cover;
-      }
-      &.medical {
-        background: url('/assets/images/focus/medical.jpg') no-repeat center center;
-        background-size: cover;
-      }
-      &.blockchain {
-        background: url('/assets/images/focus/blockchain.jpg') no-repeat center center;
-        background-size: cover;
-      }
-      &.agritech {
-        background: url('/assets/images/focus/agritech.png') no-repeat center center;
-        background-size: cover;
-      }
-      &.early-stage {
-        background: url('/assets/images/services/early-stage-capital.jpg') no-repeat center center;
-        background-size: cover;
-        .overlay {
-          background: rgba($cod, 0.6);
-        }
-      }
-      &.tech-licensing {
-        background: url('/assets/images/services/technology-licensing.jpg') no-repeat center center;
-        background-size: cover;
-        .overlay {
-          background: rgba($danube, 0.6);
-        }
-      }
-      &.syndication {
-        background: url('/assets/images/services/syndication-fund-management.jpg') no-repeat center center;
-        background-size: cover;
-        .overlay {
-          background: rgba($nightshadz, 0.6);
-        }
-      }
-      &.venture {
-        background: url('/assets/images/services/venture-studio-technology-lab.jpg') no-repeat center center;
-        background-size: cover;
-        .overlay {
-          background: rgba($goldendream, 0.6);
-        }
-      }
-      &.startup {
-        background: url('/assets/images/services/interim-startup-management.jpg') no-repeat center center;
-        background-size: cover;
-        .overlay {
-          background: rgba($gray, 0.6);
-        }
-      }
-      img {
+      .icon {
         position: absolute;
         bottom: -30px;
         right: -30px;
         height: 100px;
         width: auto;
         opacity: 0.2;
+        object-fit: initial;
       }
     }
     @media only screen and (min-width: $medium) {

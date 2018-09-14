@@ -1,6 +1,5 @@
 [build]
-  base = "cityside-ventures"
-  publish = "cityside-ventures/dist"
+  publish = "dist"
   command = "npm run generate"
 [build.environment]
   NODE_VERSION = "8"
