@@ -275,6 +275,16 @@ collections:
       - name: "team"
         label: "Our Team"
         file: "content/pages/team.json"
+        fields:
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Subhead", name: "subhead", widget: "string", required: false}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
       - name: "services"
         label: "Services"
         file: "content/pages/services.json"

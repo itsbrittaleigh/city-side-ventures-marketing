@@ -1,15 +1,13 @@
 <template>
   <div class="page team">
     <hero-section
-      heading="The Team"
-      description="We are active investors full of energy. A savvy tribe of
-        entrpreneurs ready to go to work with you in the trenches, in the mud,
-        and on the grind. Our managing partners are multi-generational and
-        highly diverse with over 100+ years of combined business success."
-      name="team"
+      :heading="header.headline"
+      :description="header.description"
+      :lead="header.subhead"
+      :image="header.image"
+      :color="header.color"
     >
     </hero-section>
-
     <team-grid :team="team"></team-grid>
   </div>
 </template>
@@ -20,6 +18,7 @@ import TeamGrid from '~/components/TeamGrid.vue';
 
 export default {
   async asyncData({ params }) {
+    const teamPageData = await import('~/content/pages/team.json');
     const BIOS = await require.context('~/content/bios/', false, /\.json$/);
     const SEARCH_BIOS = await BIOS.keys().map((key) => ({
       ...BIOS(key),
@@ -27,6 +26,7 @@ export default {
     }));
     const pageData = {
       team: SEARCH_BIOS,
+      ...teamPageData,
     }
     return pageData;
   },
