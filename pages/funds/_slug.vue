@@ -87,22 +87,22 @@
                 </svg>
               </div>
               <div class="img-container">
-                <img :src="bullet" alt="bullet point" class="hidden">
+                <img :src="bullet" alt="bullet point" class="hidden" v-in-viewport.once>
               </div>
               <div class="img-container">
-                <img :src="bullet" alt="bullet point" class="hidden">
+                <img :src="bullet" alt="bullet point" class="hidden" v-in-viewport.once>
               </div>
               <div class="img-container">
-                <img :src="bullet" alt="bullet point" class="hidden">
+                <img :src="bullet" alt="bullet point" class="hidden" v-in-viewport.once>
               </div>
               <div class="img-container">
-                <img :src="bullet" alt="bullet point" class="hidden">
+                <img :src="bullet" alt="bullet point" class="hidden" v-in-viewport.once>
               </div>
               <div class="img-container">
-                <img :src="bullet" alt="bullet point" class="hidden">
+                <img :src="bullet" alt="bullet point" class="hidden" v-in-viewport.once>
               </div>
               <div class="img-container">
-                <img :src="bullet" alt="bullet point" class="hidden">
+                <img :src="bullet" alt="bullet point" class="hidden" v-in-viewport.once>
               </div>
             </div>
             
