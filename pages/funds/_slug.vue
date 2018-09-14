@@ -12,7 +12,6 @@
           </div>
         </div>
       </section>
-
       <section class="introduction">
         <div class="box col-lt">
           <!-- logo -->
@@ -29,7 +28,6 @@
           </div>
         </div>
       </section>
-
       <section class="qualifications">
         <div class="box hidden" v-in-viewport.once>
           <div class="container">
@@ -68,7 +66,6 @@
           </div>
         </div>
       </section>
-
       <section class="app-process padded-section">
         <div class="wide-container">
           <h2 class="hidden" v-in-viewport.once>The application process</h2>
@@ -134,7 +131,6 @@
           </div>
         </div>
       </section>
-
       <section class="apply">
         <div :class="`box bkg-${color}`">
           <div class="container">

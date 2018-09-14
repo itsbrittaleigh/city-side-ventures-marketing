@@ -149,7 +149,7 @@ collections:
             widget: "object"
             fields:
               - {label: "Headline", name: "headline", widget: "string"}
-              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Description", name: "description", widget: "string", required: false}
               - {label: "Subhead", name: "subhead", widget: "string", required: false}
               - {label: "Background Image", name: "image", widget: "image"}
               - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
@@ -194,7 +194,7 @@ collections:
             fields:
               - {label: "Headline", name: "headline", widget: "string"}
               - {label: "Subhead", name: "subhead", widget: "string", required: false}
-              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Description", name: "description", widget: "string", required: false}
               - {label: "Background Image", name: "image", widget: "image"}
               - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
           - label: "Platform"
@@ -235,7 +235,7 @@ collections:
             fields:
               - {label: "Headline", name: "headline", widget: "string"}
               - {label: "Subhead", name: "subhead", widget: "string", required: false}
-              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Description", name: "description", widget: "string", required: false}
               - {label: "Background Image", name: "image", widget: "image"}
               - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
           - label: "Investments"
@@ -262,7 +262,7 @@ collections:
             fields:
               - {label: "Headline", name: "headline", widget: "string"}
               - {label: "Subhead", name: "subhead", widget: "string", required: false}
-              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Description", name: "description", widget: "string", required: false}
               - {label: "Background Image", name: "image", widget: "image"}
               - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
           - label: "Foci"
@@ -283,7 +283,7 @@ collections:
             fields:
               - {label: "Headline", name: "headline", widget: "string"}
               - {label: "Subhead", name: "subhead", widget: "string", required: false}
-              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Description", name: "description", widget: "string", required: false}
               - {label: "Background Image", name: "image", widget: "image"}
               - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
       - name: "services"
@@ -296,7 +296,7 @@ collections:
             fields:
               - {label: "Headline", name: "headline", widget: "string"}
               - {label: "Subhead", name: "subhead", widget: "string", required: false}
-              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Description", name: "description", widget: "string", required: false}
               - {label: "Background Image", name: "image", widget: "image"}
               - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
           - label: "Services"
@@ -309,6 +309,15 @@ collections:
       - name: "news"
         label: "News Index"
         file: "content/pages/news.json"
+        - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Subhead", name: "subhead", widget: "string", required: false}
+              - {label: "Description", name: "description", widget: "string", required: false}
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
       - name: "contact"
         label: "Contact"
         file: "content/pages/contact.json"

@@ -1,15 +1,6 @@
 <template>
   <div class="page bio">
-    <section class="hero bkg-blue bio-hero">
-      <div class="container">
-        <h1 class="hidden" v-in-viewport.once>{{ title }}</h1>
-        <p class="large hidden" v-in-viewport.once>
-          <em>{{ position }}</em>
-        </p>
-      </div>
-      <div class="overlay"></div>
-    </section>
-
+    <hero-section :header="header"></hero-section>
     <div class="bio-grid">
       <aside>
         <img :src="image" alt="" class="avatar hidden" v-in-viewport.once>
@@ -62,18 +53,28 @@
 </template>
 
 <script>
+import Hero from '~/components/Hero.vue';
 import VueMarkdown from 'vue-markdown';
 
 export default {
   async asyncData({ params }) {
-    const pageData = await import(`~/content/bios/${params.slug}.json`);
+    const bioData = await import(`~/content/bios/${params.slug}.json`);
+    const pageData = {
+      ...bioData,
+      header: {
+        headline: bioData.title,
+        subhead: bioData.position,
+        color: 'blue',
+      },
+    };
     return pageData;
   },
   data() {
     return {};
   },
   components: {
+    'hero-section': Hero,
     'vue-markdown': VueMarkdown,
   },
-}
+};
 </script>

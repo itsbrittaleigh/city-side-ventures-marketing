@@ -1,13 +1,6 @@
 <template>
   <div class="page portfolio">
-    <hero-section
-      :heading="header.headline"
-      :description="header.description"
-      :color="header.color"
-      :image="header.image"
-      :lead="header.subhead"
-    >
-    </hero-section>
+    <hero-section :header="header"></hero-section>
     <portfolio-grid :portfolio="investments"></portfolio-grid>
   </div>
 </template>

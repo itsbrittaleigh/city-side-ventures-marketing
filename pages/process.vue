@@ -1,13 +1,6 @@
 <template>
   <div class="page process">
-    <hero-section
-      :heading="header.headline"
-      :description="header.description"
-      :lead="header.subhead"
-      :color="header.color"
-      :image="header.image"
-    >
-    </hero-section>
+    <hero-section :header="header"></hero-section>
     <div class="sidepitch">
       <div class="box image">
         <img :src="platform.image" alt="">

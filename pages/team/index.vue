@@ -1,13 +1,6 @@
 <template>
   <div class="page team">
-    <hero-section
-      :heading="header.headline"
-      :description="header.description"
-      :lead="header.subhead"
-      :image="header.image"
-      :color="header.color"
-    >
-    </hero-section>
+    <hero-section :header="header"></hero-section>
     <team-grid :team="team"></team-grid>
   </div>
 </template>

@@ -1,25 +1,25 @@
 <template>
-  <section :class="`hero bkg-${color}`">
+  <section :class="`hero bkg-${header.color}`">
     <div class="container">
-      <h1 class="hidden" v-in-viewport.once>{{ heading }}</h1>
+      <h1 class="hidden" v-in-viewport.once>{{ header.headline }}</h1>
       <p
-        v-if="lead"
+        v-if="header.subhead"
         class="large hidden"
         v-in-viewport.once
       >
-        <em>{{ lead }}</em>
+        <em>{{ header.subhead }}</em>
       </p>
-      <p v-if="description" class="hidden" v-in-viewport.once>{{ description }}</p>
+      <p v-if="header.description" class="hidden" v-in-viewport.once>{{ header.description }}</p>
     </div>
     <div class="overlay"></div>
-    <img :src="image" alt="">
+    <img :src="header.image ? header.image : '~/assets/images/covers/team.jpg'" alt="">
   </section>
 </template>
 
 <script>
 export default {
   name: 'Hero',
-  props: ['heading', 'lead', 'description', 'color', 'image'],
+  props: ['header'],
   data() {
     return {};
   },

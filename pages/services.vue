@@ -1,14 +1,6 @@
 <template>
   <div class="page services">
-    <hero-section
-      :heading="header.headline"
-      :description="header.description"
-      :color="header.color"
-      :image="header.image"
-      :lead="header.subhead"
-      name="services"
-    >
-    </hero-section>
+    <hero-section :header="header"></hero-section>
     <section class="focus-grid">
       <div
         v-for="(service, index) in services"

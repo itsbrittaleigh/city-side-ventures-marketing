@@ -1,12 +1,6 @@
 <template>
   <div class="page news">
-    <hero-section
-      heading="News, Thoughts, and Updates"
-      name="news"
-      color="black"
-    >
-    </hero-section>
-
+    <hero-section :header="header"></hero-section>
     <div class="news-grid">
       <blog-sidebar :posts="posts"></blog-sidebar>
       <div class="articles" id="relative-anchor-for-stick">
@@ -17,7 +11,7 @@
           v-in-viewport.once
         >
           <nuxt-link :to="post._path"></nuxt-link>
-          <!-- <img src="{{ post.image }}" alt=""> -->
+          <img :src="post.image" alt="">
           <div class="content">
             <p
               v-for="(tag, index) in post.tags"
@@ -46,12 +40,14 @@ import HeroSection from '~/components/Hero.vue';
 
 export default {
   async asyncData({ params }) {
+    const newsPageData = await import('~/content/pages/news.json');
     const POSTS = await require.context('~/content/posts/', false, /\.json$/);
     const SEARCH_POSTS = await POSTS.keys().map((key) => ({
       ...POSTS(key),
       _path: `/news/${key.replace('.json', '').replace('./', '')}`
     }));
     const pageData = {
+      ...newsPageData,
       posts: SEARCH_POSTS.reverse(),
     }
     return pageData;

@@ -1,13 +1,6 @@
 <template>
   <div class="page focus">
-    <hero-section
-      :heading="header.headline"
-      :description="header.description"
-      :lead="header.subhead"
-      :color="header.color"
-      :image="header.image"
-    >
-    </hero-section>
+    <hero-section :header="header"></hero-section>
     <section class="focus-grid">
       <div
         v-for="(focus, index) in foci"

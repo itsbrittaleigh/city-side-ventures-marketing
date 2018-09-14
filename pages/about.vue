@@ -1,13 +1,6 @@
 <template>
   <div class="page about">
-    <hero-section
-      :heading="header.headline"
-      :description="header.description"
-      :lead="header.subhead"
-      :color="header.color"
-      :image="header.image"
-    >
-    </hero-section>
+    <hero-section :header="header"></hero-section>
     <section class="overview">
       <div class="box">
         <div class="container">
