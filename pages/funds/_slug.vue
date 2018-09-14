@@ -2,7 +2,7 @@
   <div class="page fund">
     <div class="funds-template">
       <section :class="`hero funds bkg-${color}`">
-        <!-- <img src="{{ page.fund.hero.image }}" alt="{{ page.fund.hero.alt }}"> -->
+        <img :src="heroImage" alt="">
         <div class="overlay"></div>
         <div class="container">
           <div class="content">
@@ -16,7 +16,7 @@
       <section class="introduction">
         <div class="box col-lt">
           <!-- logo -->
-          <p class="hidden" v-in-viewport.once>{{ intro }}</p>
+          <vue-markdown class="hidden" v-in-viewport.once>{{ intro }}</vue-markdown>
         </div>
         <div class="box statistics">
           <div class="box hidden bkg-black" v-in-viewport.once>
@@ -87,22 +87,22 @@
                 </svg>
               </div>
               <div class="img-container">
-                <!-- <img src="{{ page.fund.bullet }}" alt="bullet point" class="hidden"> -->
+                <img :src="bullet" alt="bullet point" class="hidden">
               </div>
               <div class="img-container">
-                <!-- <img src="{{ page.fund.bullet }}" alt="bullet point" class="hidden"> -->
+                <img :src="bullet" alt="bullet point" class="hidden">
               </div>
               <div class="img-container">
-                <!-- <img src="{{ page.fund.bullet }}" alt="bullet point" class="hidden"> -->
+                <img :src="bullet" alt="bullet point" class="hidden">
               </div>
               <div class="img-container">
-                <!-- <img src="{{ page.fund.bullet }}" alt="bullet point" class="hidden"> -->
+                <img :src="bullet" alt="bullet point" class="hidden">
               </div>
               <div class="img-container">
-                <!-- <img src="{{ page.fund.bullet }}" alt="bullet point" class="hidden"> -->
+                <img :src="bullet" alt="bullet point" class="hidden">
               </div>
               <div class="img-container">
-                <!-- <img src="{{ page.fund.bullet }}" alt="bullet point" class="hidden"> -->
+                <img :src="bullet" alt="bullet point" class="hidden">
               </div>
             </div>
             
@@ -149,7 +149,7 @@
           </div>
         </div>
         <div class="box image">
-          <!-- <img src="{{ page.fund.contentImage.image }}" alt="{{ page.fund.contentImage.alt }}"> -->
+          <img :src="contentImage" alt="">
         </div>
       </section>
     </div>
@@ -157,6 +157,8 @@
 </template>
 
 <script>
+import VueMarkdown from 'vue-markdown';
+
 export default {
   async asyncData({ params }) {
     const fund = await import(`~/content/funds/${params.slug}.json`);
@@ -164,6 +166,9 @@ export default {
   },
   data() {
     return {};
+  },
+  components: {
+    'vue-markdown': VueMarkdown,
   },
 };
 </script>

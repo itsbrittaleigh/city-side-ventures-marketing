@@ -60,6 +60,7 @@ collections:
       - {label: "Header Image", name: "heroImage", widget: "image"}
       - {label: "Icon", name: "icon", widget: "image"}
       - {label: "Content Image", name: "contentImage", widget: "image"}
+      - {label: "Bullet Point", name: "bullet", widget: "image"}
   - name: "pages"
     label: "Pages"
     create: false
