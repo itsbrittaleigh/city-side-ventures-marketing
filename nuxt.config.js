@@ -34,6 +34,7 @@ module.exports = {
         });
       }
     },
+    analyze: true,
     vendor: ['v-click-outside', 'vue-in-viewport-directive', 'vue-carousel'],
   },
   plugins: [
