@@ -6,9 +6,22 @@
     "color": "black"
   },
   "methods": {
-
-    "hqHeadline": "Headquarters",
+    "newsletterDescription": "Sign up to receive updates about City Side Ventures",
     "officesHeadline": "Offices Worldwide",
+    "newsletterIcon": "/images/uploads/letter-white.svg",
+    "methods": [
+      {
+        "title": "Phone",
+        "text": "(248) 236-7005",
+        "link": "tel:+12482367005"
+      },
+      {
+        "title": "Email",
+        "text": "contact@citysideventures.com",
+        "link": "mailto:contact@citysideventures.com"
+      }
+    ],
+    "officeIcon": "/images/uploads/location-pin-white.svg",
     "offices": [
       {
         "location": "Detroit"
@@ -23,20 +36,9 @@
         "location": "Tel Aviv"
       }
     ],
-    "methods": [
-      {
-        "title": "Phone",
-        "text": "(248) 236-7005",
-        "link": "tel:+12482367005"
-      },
-      {
-        "title": "Email",
-        "text": "contact@citysideventures.com",
-        "link": "mailto:contact@citysideventures.com"
-      }
-    ],
-    "newsletterHeadline": "Newsletter",
-    "newsletterDescription": "Sign up to receive updates about City Side Ventures"
+    "contactIcon": "/images/uploads/phone-white.svg",
+    "hqHeadline": "Headquarters",
+    "newsletterTitle": "Newsletter"
   },
   "formHeadline": "We would like to hear from you"
 }
