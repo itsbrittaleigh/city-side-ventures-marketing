@@ -23,9 +23,9 @@ export default {
   },
   head() {
     return {
-      title: 'Portfolio | CitySide Ventures',
+      title: this.meta.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'Our diverse portfolio represents a family of progressive tech-based companies in fast-growing market verticals with high potential return on equity for its shareholders.' },
+        { hid: 'description', name: 'description', content: this.meta.description },
       ],
     }
   },

@@ -63,9 +63,9 @@ export default {
   },
   head() {
     return {
-      title: 'Our Process | CitySide Ventures',
+      title: this.meta.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'CitySide provides solutions to find and manage investments for investors and corporate ventures using today\'s technology. With the development of our online Venture Management System (VMS), we have automated the process of investments from start to finish.' },
+        { hid: 'description', name: 'description', content: this.meta.description },
       ],
     }
   },

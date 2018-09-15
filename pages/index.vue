@@ -220,9 +220,9 @@ export default {
   },
   head() {
     return {
-      title: 'Welcome | CitySide Ventures',
+      title: this.meta.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'City Side Ventures is a driven venture group comprised of experienced business builders, die-hard serial entrepreneurs, disrupters, innovators, and technologists.' },
+        { hid: 'description', name: 'description', content: this.meta.description },
       ],
     }
   },

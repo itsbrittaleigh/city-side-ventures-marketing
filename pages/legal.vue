@@ -36,9 +36,9 @@ export default {
   },
   head() {
     return {
-      title: 'Legal | CitySide Ventures',
+      title: this.meta.title,
       meta: [
-        { hid: 'description', name: 'description', content: '' },
+        { hid: 'description', name: 'description', content: this.meta.description },
       ],
     }
   },

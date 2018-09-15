@@ -32,9 +32,9 @@ export default {
   },
   head() {
     return {
-      title: 'Our Team | CitySide Ventures',
+      title: this.meta.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'We are active investors full of energy. A savvy tribe of entrpreneurs ready to go to work with you in the trenches, in the mud, and on the grind. Our managing partners are multi-generational and highly diverse with over 100+ years of combined business success.' },
+        { hid: 'description', name: 'description', content: this.meta.description },
       ],
     }
   },

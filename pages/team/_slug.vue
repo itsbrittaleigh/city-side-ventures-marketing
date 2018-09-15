@@ -76,5 +76,13 @@ export default {
     'hero-section': Hero,
     'vue-markdown': VueMarkdown,
   },
+  head() {
+    return {
+      title: `${this.title} | City Side Ventures`,
+      meta: [
+        { hid: 'description', name: 'description', content: `${this.intro}` },
+      ],
+    }
+  },
 };
 </script>

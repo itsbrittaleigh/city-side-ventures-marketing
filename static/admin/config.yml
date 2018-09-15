@@ -69,6 +69,12 @@ collections:
         label: "Home"
         file: "content/pages/index.json"
         fields:
+          - label: "Meta Information"
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: "Meta Title", name: "title", widget: "string"}
+              - {label: "Meta Description", name: "description", widget: "string"}
           - label: "Header"
             name: "header"
             widget: "object"
@@ -144,6 +150,12 @@ collections:
         label: "About CitySide"
         file: "content/pages/about.json"
         fields:
+          - label: "Meta Information"
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: "Meta Title", name: "title", widget: "string"}
+              - {label: "Meta Description", name: "description", widget: "string"}
           - label: "Header"
             name: "header"
             widget: "object"
@@ -188,6 +200,12 @@ collections:
         label: "Our Process"
         file: "content/pages/process.json"
         fields:
+          - label: "Meta Information"
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: "Meta Title", name: "title", widget: "string"}
+              - {label: "Meta Description", name: "description", widget: "string"}
           - label: "Header"
             name: "header"
             widget: "object"
@@ -229,6 +247,12 @@ collections:
         label: "Our Portfolio"
         file: "content/pages/portfolio.json"
         fields:
+          - label: "Meta Information"
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: "Meta Title", name: "title", widget: "string"}
+              - {label: "Meta Description", name: "description", widget: "string"}
           - label: "Header"
             name: "header"
             widget: "object"
@@ -256,6 +280,12 @@ collections:
         label: "Our Focus"
         file: "content/pages/focus.json"
         fields:
+          - label: "Meta Information"
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: "Meta Title", name: "title", widget: "string"}
+              - {label: "Meta Description", name: "description", widget: "string"}
           - label: "Header"
             name: "header"
             widget: "object"
@@ -277,6 +307,12 @@ collections:
         label: "Our Team"
         file: "content/pages/team.json"
         fields:
+          - label: "Meta Information"
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: "Meta Title", name: "title", widget: "string"}
+              - {label: "Meta Description", name: "description", widget: "string"}
           - label: "Header"
             name: "header"
             widget: "object"
@@ -290,6 +326,12 @@ collections:
         label: "Services"
         file: "content/pages/services.json"
         fields:
+          - label: "Meta Information"
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: "Meta Title", name: "title", widget: "string"}
+              - {label: "Meta Description", name: "description", widget: "string"}
           - label: "Header"
             name: "header"
             widget: "object"
@@ -310,19 +352,31 @@ collections:
         label: "News Index"
         file: "content/pages/news.json"
         fields:
-        - label: "Header"
-          name: "header"
-          widget: "object"
-          fields:
-            - {label: "Headline", name: "headline", widget: "string"}
-            - {label: "Subhead", name: "subhead", widget: "string", required: false}
-            - {label: "Description", name: "description", widget: "string", required: false}
-            - {label: "Background Image", name: "image", widget: "image"}
-            - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
+          - label: "Meta Information"
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: "Meta Title", name: "title", widget: "string"}
+              - {label: "Meta Description", name: "description", widget: "string"}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Subhead", name: "subhead", widget: "string", required: false}
+              - {label: "Description", name: "description", widget: "string", required: false}
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
       - name: "contact"
         label: "Contact"
         file: "content/pages/contact.json"
         fields:
+          - label: "Meta Information"
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: "Meta Title", name: "title", widget: "string"}
+              - {label: "Meta Description", name: "description", widget: "string"}
           - label: "Header"
             name: "header"
             widget: "object"
@@ -360,6 +414,12 @@ collections:
         label: "Legal"
         file: "content/pages/legal.json"
         fields:
+          - label: "Meta Information"
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: "Meta Title", name: "title", widget: "string"}
+              - {label: "Meta Description", name: "description", widget: "string"}
           - label: "Header"
             name: "header"
             widget: "object"
@@ -372,3 +432,24 @@ collections:
           - {label: "Legal Disclaimer", name: "disclaimer", widget: "markdown"}
           - {label: "Privacy Policy", name: "policy", widget: "markdown"}
           - {label: "Terms and Conditions", name: "terms", widget: "markdown"}
+  - name: "settings"
+    label: "Site Settings"
+    folder: "content/settings"
+    create: false
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - {label: "Logo", name: "logo", widget: "image"}
+      - {label: "Logo - Alternate", name: "logoAlt", widget: "image"}
+      - label: "Address"
+        name: "address"
+        widget: "object"
+        fields:
+          - {label: "Street Address", name: "street", widget: "string"}
+          - {label: "Suite", name: "suite", widget: "string", required: false}
+          - {label: "City", name: "city", widget: "string"}
+          - {label: "State", name: "state", widget: "string"}
+          - {label: "Postal Code", name: "postal", widget: "string"}
+      - {label: "Email Address", name: "email", widget: "string"}
+      - {label: "Phone Number", name: "phone", widget: "string"}
+      - {label: "Copyright", name: "copyright", widget: "string"}

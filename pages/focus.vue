@@ -42,11 +42,11 @@ export default {
   },
   head() {
     return {
-      title: 'Our Focus | CitySide Ventures',
+      title: this.meta.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'Our investments are focused on fast-growing industries and market verticals that represent high potential return on equity.' },
+        { hid: 'description', name: 'description', content: this.meta.description },
       ],
     }
-  }
-}
+  },
+};
 </script>

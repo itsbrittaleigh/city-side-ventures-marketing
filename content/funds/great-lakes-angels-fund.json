@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Great Lakes Angels Fund | City Side Ventures",
+    "description": "Great Lakes Angels Fund is an early-stage, equity-based investment fund that was created to seed and grow early-stage tech-based companies. The fund will make a capital investment of up to $1.0M per deal for qualified startups. City Side Ventures will provide support with resources such as a full-stack development team, seasoned go-to-market management advisors, Board of Directors, business coaching and mentoring, and startup capital to the selected portfolio company."
+  },
   "heroImage": "/images/uploads/greatlakes-hero.jpg",
   "contentImage": "/images/uploads/greatlakes.jpg",
   "bullet": "/images/uploads/bullet-yellow.svg",

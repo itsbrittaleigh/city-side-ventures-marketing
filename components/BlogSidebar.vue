@@ -5,7 +5,8 @@
         <div
           v-for="(tag, index) in tags"
           :key="index"
-          class="category"
+          class="category hidden"
+          v-in-viewport.once
         >
           <h3>
             {{ index }}

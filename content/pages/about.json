@@ -1,7 +1,11 @@
 {
+  "meta": {
+    "title": "About Us | City Side Ventures",
+    "description": "City Side Ventures is an operations-oriented investment group committed to fund and grow tech-based startups and middle-market companies through a high-impact invest-and-build strategy."
+  },
   "header": {
     "headline": "About Us",
-    "description": "CitySide Ventures is an operations-oriented investment group committed to fund and grow tech-based startups and middle-market companies through a high-impact invest-and-build strategy.",
+    "description": "City Side Ventures is an operations-oriented investment group committed to fund and grow tech-based startups and middle-market companies through a high-impact invest-and-build strategy.",
     "image": "/images/uploads/about2.jpg",
     "color": "yellow"
   },

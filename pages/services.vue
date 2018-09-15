@@ -42,9 +42,9 @@ export default {
   },
   head() {
     return {
-      title: 'Our Services | CitySide Ventures',
+      title: this.meta.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'From startup management, technology development, and more, CitySide Ventures can provide your business with more than just investment.' },
+        { hid: 'description', name: 'description', content: this.meta.description },
       ],
     }
   },

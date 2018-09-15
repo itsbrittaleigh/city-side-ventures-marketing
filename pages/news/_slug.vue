@@ -6,22 +6,23 @@
           <span
             v-for="(tag, index) in tags"
             :key="index"
-            class="title bkg-management"
+            class="title bkg-management hidden"
+            v-in-viewport.once
           >
             {{ tag }}
           </span>
         </span>
-        <h1 class="color-yellow">{{ title }}</h1>
+        <h1 class="color-yellow hidden" v-in-viewport.once>{{ title }}</h1>
       </div>
-      <div class="overlay"></div>
+      <img :src="image" alt="">
     </section>
     <div class="news-grid post-page">
       <blog-sidebar :posts="posts"></blog-sidebar>
       <div id="post-content">
         <div class="post padded-section container">
-          By {{ author }}
-          <!-- {{ content }} -->
-          <div class="social-sharing">
+          <p class="hidden" v-in-viewport.once>By {{ author }}</p>
+          <vue-markdown class="hidden" v-in-viewport.once>{{ content }}</vue-markdown>
+          <div class="social-sharing hidden" v-in-viewport.once>
             <p class="title">Share this post</p>
             <social-sharing network="twitter"></social-sharing>
             <social-sharing network="facebook"></social-sharing>
@@ -39,10 +40,10 @@
           >
             <nuxt-link :to="post._path">
               <div class="img-container">
-                <!-- <img src="{{ post.image }}" alt=""> -->
+                <img :src="post.image" alt="">
               </div>
               <h2>{{ post.title }}</h2>
-              <!-- <p>{{ post.content | markdownify | strip_html | slice: 0,100 }}...</p> -->
+              <vue-markdown>{{ post.content.slice(0, 200) }}</vue-markdown>
             </nuxt-link>
           </div>
         </template>
@@ -55,6 +56,7 @@
 import _ from 'lodash';
 import BlogSidebar from '~/components/BlogSidebar.vue';
 import SocialSharing from '~/components/SocialSharing.vue';
+import VueMarkdown from 'vue-markdown';
 
 export default {
   async asyncData({ params }) {
@@ -76,6 +78,7 @@ export default {
   components: {
     'blog-sidebar': BlogSidebar,
     'social-sharing': SocialSharing,
+    'vue-markdown': VueMarkdown,
   },
   computed: {
     additionalArticles() {
@@ -87,6 +90,14 @@ export default {
       });
       return additionalArticles.slice(0, 2);
     },
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: this.content.slice(0, 100) },
+      ],
+    }
   },
 };
 </script>

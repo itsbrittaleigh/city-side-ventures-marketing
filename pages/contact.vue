@@ -56,7 +56,7 @@ import HeroSection from '~/components/Hero';
 import NewsletterForm from '~/components/NewsletterForm';
 
 export default {
-  async asyncData({ params}) {
+  async asyncData({ params }) {
     const pageData = await import('~/content/pages/contact.json');
     return pageData;
   },
@@ -70,9 +70,9 @@ export default {
   },
   head() {
     return {
-      title: 'Contact | CitySide Ventures',
+      title: this.meta.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'Our team of experienced, energetic and passionate serial entrepreneurs, know how to execute and do it well. We will go where no investor has gone before. Let’s get in touch.' },
+        { hid: 'description', name: 'description', content: this.meta.description },
       ],
     }
   },
