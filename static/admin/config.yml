@@ -321,6 +321,28 @@ collections:
       - name: "contact"
         label: "Contact"
         file: "content/pages/contact.json"
+        fields:
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Subhead", name: "subhead", widget: "string", required: false}
+              - {label: "Description", name: "description", widget: "string", required: false}
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
       - name: "legal"
         label: "Legal"
         file: "content/pages/legal.json"
+        fields:
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Headline", name: "headline", widget: "string"}
+              - {label: "Subhead", name: "subhead", widget: "string", required: false}
+              - {label: "Description", name: "description", widget: "string", required: false}
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
+          - {label: "Legal Disclaimer", name: "disclaimer", widget: "markdown"}
+          - {label: "Privacy Policy", name: "policy", widget: "markdown"}
