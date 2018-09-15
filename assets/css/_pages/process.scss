@@ -124,7 +124,6 @@
   .sidepitch {
     @include grid-boxes(1, 2, 1fr, auto, 0);
     .box.image {
-      background: #e6e7e9 url('/assets/images/sidepitch.jpg') no-repeat center center;
       background-size: contain;
       min-height: 300px;
     }

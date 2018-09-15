@@ -41,7 +41,7 @@
     </section>
 
     <div class="bkg-yellow">
-      <img src="~/assets/images/home/map-no-dots.svg" alt="">
+      <img src="~/assets/images/map-no-dots.svg" alt="">
       <div class="container padded-section">
         <h2 class="hidden" v-in-viewport.once>{{ formHeadline }}</h2>
         <contact-form></contact-form>

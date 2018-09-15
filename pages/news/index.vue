@@ -13,15 +13,17 @@
           <nuxt-link :to="post._path"></nuxt-link>
           <img :src="post.image" alt="">
           <div class="content">
-            <p
-              v-for="(tag, index) in post.tags"
-              :key="index"
-              class="tag"
-            >
-              {{ tag }}
+            <p>
+              <span
+                v-for="(tag, index) in post.tags"
+                :key="index"
+                class="tag"
+              >
+                {{ tag }}
+              </span>
             </p>
             <h2 class="title">{{ post.title }}</h2>
-            <!-- <p>{{ post.content | markdownify | strip_html | slice: 0,250 }}...</p> -->
+            <p>{{ removeMarkdown(post.content.slice(0,250)) }}...</p>
             <div class="read-more" :href="post._path">
               <span class="overlay"></span>
               <img src="~/assets/images/icons/news.svg" alt="">
@@ -37,6 +39,7 @@
 <script>
 import BlogSidebar from '~/components/BlogSidebar.vue';
 import HeroSection from '~/components/Hero.vue';
+import RemoveMD from 'remove-markdown';
 
 export default {
   async asyncData({ params }) {
@@ -81,6 +84,9 @@ export default {
         .replace(/\-\-+/g, '-')         // Replace multiple - with single -
         .replace(/^-+/, '')             // Trim - from start of text
         .replace(/-+$/, '');            // Trim - from end of text
+    },
+    removeMarkdown(text) {
+      return RemoveMD(text);
     },
   },
   mounted() {

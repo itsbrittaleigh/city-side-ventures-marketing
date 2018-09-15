@@ -43,7 +43,7 @@
                 <img :src="post.image" alt="">
               </div>
               <h2>{{ post.title }}</h2>
-              <vue-markdown>{{ post.content.slice(0, 200) }}</vue-markdown>
+              <p>{{ removeMarkdown(post.content.slice(0,250)) }}...</p>
             </nuxt-link>
           </div>
         </template>
@@ -56,6 +56,7 @@
 import _ from 'lodash';
 import BlogSidebar from '~/components/BlogSidebar.vue';
 import SocialSharing from '~/components/SocialSharing.vue';
+import RemoveMD from 'remove-markdown';
 import VueMarkdown from 'vue-markdown';
 
 export default {
@@ -89,6 +90,11 @@ export default {
         });
       });
       return additionalArticles.slice(0, 2);
+    },
+  },
+  methods: {
+    removeMarkdown(text) {
+      return RemoveMD(text);
     },
   },
   head() {
