@@ -3,28 +3,28 @@
     <hero-section :header="header"></hero-section>
     <section class="contact-methods">
       <div class="box box-red hidden" v-in-viewport.once>
-        <img :src="officeIcon" alt="">
-        <h3>{{ hqHeadline }}</h3>
+        <img :src="methods.officeIcon" alt="">
+        <h3>{{ methods.hqHeadline }}</h3>
         <address>
           37000 Grand River Avenue<br>
           Suite #310<br>
           Farmington Hills, MI 48335
         </address>
-        <h3>{{ officesHeadline }}</h3>
+        <h3>{{ methods.officesHeadline }}</h3>
         <p>
           <span
-            v-for="(office, index) in offices"
+            v-for="(office, index) in methods.offices"
             :key="index"
           >
             {{ office.location }}
-            <span v-if="index + 1 < offices.length">|</span>
+            <span v-if="index + 1 < methods.offices.length">|</span>
           </span>
         </p>
       </div>
       <div class="box box-light-gray hidden" v-in-viewport.once>
-        <img :src="contactIcon" alt="">
+        <img :src="methods.contactIcon" alt="">
         <div
-          v-for="(method, index) in methods"
+          v-for="(method, index) in methods.methods"
           :key="index"
         >
           <h3>{{ method.title }}</h3>
@@ -33,9 +33,9 @@
         </div>
       </div>
       <div class="box box-blue hidden" v-in-viewport.once>
-        <img :src="newsletterIcon" alt="">
-        <h3>{{ newsletterHeadline }}</h3>
-        <p>{{ newsletterDescription }}</p>
+        <img :src="methods.newsletterIcon" alt="">
+        <h3>{{ methods.newsletterHeadline }}</h3>
+        <p>{{ methods.newsletterDescription }}</p>
         <newsletter-form></newsletter-form>
       </div>
     </section>
