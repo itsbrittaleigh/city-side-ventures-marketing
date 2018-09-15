@@ -309,6 +309,7 @@ collections:
       - name: "news"
         label: "News Index"
         file: "content/pages/news.json"
+        fields:
         - label: "Header"
           name: "header"
           widget: "object"
