@@ -4,5 +4,36 @@
     "description": "Our team of experienced, energetic and passionate serial entrepreneurs, know how to execute and do it well. We will go where no investor has gone before. Let’s get in touch.",
     "image": "/images/uploads/contact.jpg",
     "color": "black"
-  }
+  },
+  "hqHeadline": "Headquarters",
+  "officesHeadline": "Offices Worldwide",
+  "offices": [
+    {
+      "location": "Detroit"
+    },
+    {
+      "location": "Palo Alto"
+    },
+    {
+      "location": "Chicago"
+    },
+    {
+      "location": "Tel Aviv"
+    }
+  ],
+  "methods": [
+    {
+      "title": "Phone",
+      "text": "(248) 236-7005",
+      "link": "tel:+12482367005"
+    },
+    {
+      "title": "Email",
+      "text": "contact@citysideventures.com",
+      "link": "mailto:contact@citysideventures.com"
+    }
+  ],
+  "newsletterHeadline": "Newsletter",
+  "newsletterDescription": "Sign up to receive updates about City Side Ventures",
+  "formHeadline": "We would like to hear from you"
 }

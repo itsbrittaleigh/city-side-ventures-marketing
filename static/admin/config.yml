@@ -332,6 +332,30 @@ collections:
               - {label: "Description", name: "description", widget: "string", required: false}
               - {label: "Background Image", name: "image", widget: "image"}
               - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
+          - label: "Contact Methods"
+            name: "methods"
+            widget: "object"
+            fields:
+              - {label: "Office Icon", name: "officeIcon", widget: "image"}
+              - {label: "Headquarters Headline", name: "hqHeadline", widget: "string"}
+              - {label: "Offices Headline", name: "officesHeadline", widget: "string"}
+              - label: "Offices"
+                name: "offices"
+                widget: "list"
+                fields:
+                  - {label: "Location", name: "location", widget: "string"}
+              - {label: "Contact Icon", name: "contactIcon", widget: "image"}
+              - label: "Contact Methods"
+                name: "methods"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Text", name: "text", widget: "string"}
+                  - {label: "Link", name: "link", widget: "string", required: false}
+              - {label: "Newsletter Icon", name: "newsletterIcon", widget: "image"}
+              - {label: "Newsletter Title", name: "newsletterTitle", widget: "string"}
+              - {label: "Newsletter Description", name: "newsletterDescription", widget: "string"}
+          - {label: "Form Headline", name: "formHeadline", widget: "string"}
       - name: "legal"
         label: "Legal"
         file: "content/pages/legal.json"
