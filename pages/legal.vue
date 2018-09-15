@@ -10,6 +10,10 @@
         <h2>Privacy Policy</h2>
         <vue-markdown>{{ policy }}</vue-markdown>
       </div>
+      <div class="padded-section">
+        <h2>Terms and Conditions</h2>
+        <vue-markdown>{{ terms }}</vue-markdown>
+      </div>
     </div>
   </div>
 </template>

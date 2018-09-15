@@ -347,3 +347,4 @@ collections:
               - {label: "Overlay Color", name: "color", widget: "select", options: ["yellow", "black", "blue", "red"]}
           - {label: "Legal Disclaimer", name: "disclaimer", widget: "markdown"}
           - {label: "Privacy Policy", name: "policy", widget: "markdown"}
+          - {label: "Terms and Conditions", name: "terms", widget: "markdown"}
