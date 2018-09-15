@@ -9,7 +9,7 @@ let dynamicRoutes = getDynamicPaths({
 
 module.exports = {
   head: {
-    title: 'Welcome | CitySide Ventures',
+    title: 'Welcome | City Side Ventures',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
