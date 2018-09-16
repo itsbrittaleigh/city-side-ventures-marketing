@@ -43,17 +43,17 @@ import RemoveMD from 'remove-markdown';
 
 export default {
   async asyncData({ params }) {
-    const newsPageData = await import('~/content/pages/news.json');
+    const NEWS_PAGE_DATA = await import('~/content/pages/news.json');
     const POSTS = await require.context('~/content/posts/', false, /\.json$/);
     const SEARCH_POSTS = await POSTS.keys().map((key) => ({
       ...POSTS(key),
       _path: `/news/${key.replace('.json', '').replace('./', '')}`
     }));
-    const pageData = {
-      ...newsPageData,
+    const PAGE_DATA = {
+      ...NEWS_PAGE_DATA,
       posts: SEARCH_POSTS.reverse(),
     }
-    return pageData;
+    return PAGE_DATA;
   },
   data() {
     return {

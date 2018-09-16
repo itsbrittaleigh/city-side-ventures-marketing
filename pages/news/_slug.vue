@@ -67,11 +67,11 @@ export default {
       ...POSTS(key),
       _path: `/news/${key.replace('.json', '').replace('./', '')}`
     }));
-    const pageData = {
+    const PAGE_DATA = {
       ...POST,
       posts: SEARCH_POSTS.reverse()
     };
-    return pageData;
+    return PAGE_DATA;
   },
   data() {
     return {};

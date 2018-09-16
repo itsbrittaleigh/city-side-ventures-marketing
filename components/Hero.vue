@@ -12,7 +12,7 @@
       <p v-if="header.description" class="hidden" v-in-viewport.once>{{ header.description }}</p>
     </div>
     <div class="overlay"></div>
-    <img :src="header.image ? header.image : '~/assets/images/covers/team.jpg'" alt="">
+    <img :src="header.image ? header.image : '/images/uploads/team.jpg'" alt="">
   </section>
 </template>
 

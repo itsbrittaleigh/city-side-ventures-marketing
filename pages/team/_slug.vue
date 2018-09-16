@@ -58,17 +58,16 @@ import VueMarkdown from 'vue-markdown';
 
 export default {
   async asyncData({ params }) {
-    const bioData = await import(`~/content/bios/${params.slug}.json`);
-  
-    const pageData = {
-      ...bioData,
+    const BIO_DATA = await import(`~/content/bios/${params.slug}.json`);
+    const PAGE_DATA = {
+      ...BIO_DATA,
       header: {
-        headline: bioData.title,
-        subhead: bioData.position,
+        headline: BIO_DATA.title,
+        subhead: BIO_DATA.position,
         color: 'blue',
       },
     };
-    return pageData;
+    return PAGE_DATA;
   },
   data() {
     return {};

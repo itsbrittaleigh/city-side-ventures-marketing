@@ -11,17 +11,17 @@ import TeamGrid from '~/components/TeamGrid.vue';
 
 export default {
   async asyncData({ params }) {
-    const teamPageData = await import('~/content/pages/team.json');
+    const TEAM_PAGE_DATA = await import('~/content/pages/team.json');
     const BIOS = await require.context('~/content/bios/', false, /\.json$/);
     const SEARCH_BIOS = await BIOS.keys().map((key) => ({
       ...BIOS(key),
       _path: `/team/${key.replace('.json', '').replace('./', '')}`
     }));
-    const pageData = {
+    const PAGE_DATA = {
       team: SEARCH_BIOS,
-      ...teamPageData,
+      ...TEAM_PAGE_DATA,
     }
-    return pageData;
+    return PAGE_DATA;
   },
   data() {
     return {};

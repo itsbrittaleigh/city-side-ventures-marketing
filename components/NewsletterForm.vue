@@ -60,8 +60,8 @@ export default {
   },
   methods: {
     submitForm(data) {
-      const config = { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } };
-      axios.post('', data, config)
+      const CONFIG = { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } };
+      axios.post('', data, CONFIG)
         .then(this.showSuccess = true)
         .catch(this.showError = true);
     },

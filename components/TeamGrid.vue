@@ -47,10 +47,10 @@ export default {
       return (((Math.ceil(index / 4) * 4) % 8) === 0);
     },
     updateColors() {
-      const boxes = document.getElementsByClassName('box');
-      for (let i = 0; i < boxes.length; i += 1) {
+      const BOXES = document.getElementsByClassName('box');
+      for (let i = 0; i < BOXES.length; i += 1) {
         if (this.isEvenRowedOnDesktop(i + 1)) {
-          boxes.item(i).classList.add('bkg-offset');
+          BOXES.item(i).classList.add('bkg-offset');
         }
       }
     },
@@ -67,27 +67,27 @@ export default {
     }
   },
   mounted() {
-    const teamContainer = document.getElementById('team');
-    const members = document.getElementsByClassName('member');
-    const quote1 = document.getElementById('quote1');
-    const quote2 = document.getElementById('quote2');
-    const quote3 = document.getElementById('quote3');
+    const TEAM_CONTAINER = document.getElementById('team');
+    const MEMBERS = document.getElementsByClassName('member');
+    const QUOTE_ONE = document.getElementById('quote1');
+    const QUOTE_TWO = document.getElementById('quote2');
+    const QUOTE_THREE = document.getElementById('quote3');
 
     if (this.team.length % 4 === 1) {
       if (this.team.length <= 8) {
-        teamContainer.classList += ' restructured';
+        TEAM_CONTAINER.classList += ' restructured';
       } else {
-        teamContainer.insertBefore(quote1, members[members.length - 2]);
-        teamContainer.insertBefore(quote3, members[10]);
-        teamContainer.insertBefore(quote2, members[6]);
+        TEAM_CONTAINER.insertBefore(QUOTE_ONE, MEMBERS[MEMBERS.length - 2]);
+        TEAM_CONTAINER.insertBefore(QUOTE_THREE, MEMBERS[10]);
+        TEAM_CONTAINER.insertBefore(QUOTE_TWO, MEMBERS[6]);
         this.updateColors();
       }
     } else if (this.team.length % 4 === 2) {
-      teamContainer.insertBefore(quote1, members[members.length - 2]);
-      teamContainer.insertBefore(quote2, members[6]);
+      TEAM_CONTAINER.insertBefore(QUOTE_ONE, MEMBERS[MEMBERS.length - 2]);
+      TEAM_CONTAINER.insertBefore(QUOTE_TWO, MEMBERS[6]);
       this.updateColors();
     } else if (this.team.length % 4 === 3) {
-      teamContainer.insertBefore(quote1, members[members.length - 2]);
+      TEAM_CONTAINER.insertBefore(QUOTE_ONE, MEMBERS[MEMBERS.length - 2]);
       this.updateColors();
     }
     this.updateColors();

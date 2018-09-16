@@ -157,8 +157,8 @@ import VueMarkdown from 'vue-markdown';
 
 export default {
   async asyncData({ params }) {
-    const fund = await import(`~/content/funds/${params.slug}.json`);
-    return fund;
+    const PAGE_DATA = await import(`~/content/funds/${params.slug}.json`);
+    return PAGE_DATA;
   },
   data() {
     return {};

@@ -57,8 +57,8 @@ import NewsletterForm from '~/components/NewsletterForm';
 
 export default {
   async asyncData({ params }) {
-    const pageData = await import('~/content/pages/contact.json');
-    return pageData;
+    const PAGE_DATA = await import('~/content/pages/contact.json');
+    return PAGE_DATA;
   },
   data() {
     return {};

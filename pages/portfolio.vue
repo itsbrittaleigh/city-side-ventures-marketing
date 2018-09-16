@@ -11,8 +11,8 @@ import PortfolioGrid from '~/components/PortfolioGrid.vue';
 
 export default {
   async asyncData({ params }) {
-    const pageData = await import('~/content/pages/portfolio.json');
-    return pageData;
+    const PAGE_DATA = await import('~/content/pages/portfolio.json');
+    return PAGE_DATA;
   },
   data() {
     return {};
