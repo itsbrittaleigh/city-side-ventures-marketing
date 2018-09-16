@@ -62,7 +62,7 @@ export default {
     const BIOS = await require.context('~/content/bios/', false, /\.json$/);
     const SEARCH_BIOS = await BIOS.keys().map((key) => ({
       ...BIOS(key),
-      _path: `/bios/${key.replace('.json', '').replace('./', '')}`
+      _path: `/team/${key.replace('.json', '').replace('./', '')}`
     }));
     const pageData = {
       ...bioData,
