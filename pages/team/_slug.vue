@@ -60,10 +60,14 @@ export default {
   async asyncData({ params }) {
     const bioData = await import(`~/content/bios/${params.slug}.json`);
     const BIOS = await require.context('~/content/bios/', false, /\.json$/);
-    const SEARCH_BIOS = await BIOS.keys().map((key) => ({
+    const SEARCH_BIOS = await BIOS.keys().map((key) => {
+      console.log('BIOS: ', ...BIOS)
+      console.log('Key :', key)
+      console.log('bioData: ', bioData)
+      return ({
       ...BIOS(key),
       _path: `/team/${key.replace('.json', '').replace('./', '')}`
-    }));
+    })});
     const pageData = {
       ...bioData,
       header: {
@@ -71,7 +75,6 @@ export default {
         subhead: bioData.position,
         color: 'blue',
       },
-      bios: SEARCH_BIOS.reverse()
     };
     return pageData;
   },
