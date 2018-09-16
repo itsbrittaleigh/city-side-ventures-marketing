@@ -8,6 +8,14 @@
 
 <body {{ BODY_ATTRS }}>
   {{ APP }}
+  <!-- Netlify bots find your forms by parsing the HTML of your site when the build completes. This means that if you’re using JavaScript to render a form client-side, their bots won’t find it in the pre-built files. You can work around this by creating a hidden HTML form with the netlify attribute and input fields with name attributes to match the inputs of your JavaScript-rendered form. -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="text" name="company" />
+    <input type="tel" name="phone" />
+    <input type="email" name="email" />
+    <textarea name="message"></textarea>
+  </form>
 </body>
 
 <script>

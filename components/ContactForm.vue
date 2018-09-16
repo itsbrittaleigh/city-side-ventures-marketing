@@ -1,34 +1,38 @@
 <template>
-  <form @submit.prevent="checkForm" id="contact" class="hidden contact-form" v-in-viewport.once>
-    <div class="fields">
-      <div class="field hidden" v-in-viewport.once>
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" v-model="contact.name">
-        <p class="error" v-if="errors.name">** {{ errors.name }}</p>
+  <div>
+    <p v-if="wasSuccessful">Thank you. We received your message and will be in touch shortly.</p>
+    <form v-else method="post" @submit.prevent="checkForm" id="contact" class="contact-form" v-in-viewport.once>
+      <div class="fields">
+        <input type="hidden" name="form-name" value="contact">
+        <div class="field hidden" v-in-viewport.once>
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" v-model="contact.name">
+          <p class="error" v-if="errors.name">** {{ errors.name }}</p>
+        </div>
+        <div class="field hidden" v-in-viewport.once>
+          <label for="company">Company Name</label>
+          <input type="text" id="company" name="company" v-model="contact.company">
+          <p class="error" v-if="errors.company">** {{ errors.company }}</p>
+        </div>
+        <div class="field hidden hidden" v-in-viewport.once>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" v-model="contact.phone">
+          <p class="error" v-if="errors.phone">** {{ errors.phone }}</p>
+        </div>
+        <div class="field hidden" v-in-viewport.once>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" v-model="contact.email">
+          <p class="error" v-if="errors.email">** {{ errors.email }}</p>
+        </div>
+        <div class="field hidden" v-in-viewport.once>
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="10" v-model="contact.message"></textarea>
+          <p class="error" v-if="errors.message">** {{ errors.message }}</p>
+        </div>
+        <button type="submit" class="button button-black hidden" v-in-viewport.once>Submit</button>
       </div>
-      <div class="field hidden" v-in-viewport.once>
-        <label for="company">Company Name</label>
-        <input type="text" id="company" name="company" v-model="contact.company">
-        <p class="error" v-if="errors.company">** {{ errors.company }}</p>
-      </div>
-      <div class="field hidden hidden" v-in-viewport.once>
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" v-model="contact.phone">
-        <p class="error" v-if="errors.phone">** {{ errors.phone }}</p>
-      </div>
-      <div class="field hidden" v-in-viewport.once>
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" v-model="contact.email">
-        <p class="error" v-if="errors.email">** {{ errors.email }}</p>
-      </div>
-      <div class="field hidden" v-in-viewport.once>
-        <label for="message">Message</label>
-        <textarea name="message" id="message" rows="10" v-model="contact.message"></textarea>
-        <p class="error" v-if="errors.message">** {{ errors.message }}</p>
-      </div>
-      <button type="submit" class="button button-black hidden" v-in-viewport.once>Submit</button>
-    </div>
-  </form>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -46,18 +50,23 @@ export default {
         message: '',
       },
       errors: {},
+      wasSuccessful: false,
     };
   },
   methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+        .join('&');
+    },
     submitForm() {
-      const config = { headers: { 'Content-Type': 'application/json' } };
-      axios
-        .post(
-          'https://aiol4k13t1.execute-api.us-east-1.amazonaws.com/prod',
-          JSON.stringify(this.contact),
-          config,
-        )
-        .then(window.location.href = '/contact/thank-you');
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({ 'form-name': 'contact', ...this.contact }),
+      })
+        .then(this.wasSuccessful = true)
+        .catch(error => this.errors.push(error));
     },
     checkForm(e) {
       this.errors = [];
