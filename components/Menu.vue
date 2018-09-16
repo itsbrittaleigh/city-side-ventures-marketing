@@ -54,16 +54,16 @@
             </span>
             <ul>
               <li>
-                <a href="/funds/great-lakes-angels-fund">Great Lakes Angels Fund</a>
+                <nuxt-link to="/funds/great-lakes-angels-fund">Great Lakes Angels Fund</nuxt-link>
               </li>
               <li>
-                <a href="/funds/venture-248">Venture 248 Fund</a>
+                <nuxt-link to="/funds/venture-248">Venture 248 Fund</nuxt-link>
               </li>
               <li>
-                <a href="/funds/blue-venture">Blue Venture Fund</a>
+                <nuxt-link to="/funds/blue-venture">Blue Venture Fund</nuxt-link>
               </li>
               <li>
-                <a href="/funds/city-x">City[X]</a>
+                <nuxt-link to="/funds/city-x">City[X]</nuxt-link>
               </li>
             </ul>
           </li>
