@@ -5,15 +5,16 @@
         v-for="(member, index) in orderedTeam"
         :key="index"
         class="member box hidden"
-        @click="redirectTo(member._path)"
         v-in-viewport.once
       >
-        <img :src="member.image" :alt="member.title">
-        <div class="label">
-          <p class="name">{{ member.title }}</p>
-          <p><em>{{ member.position }}</em></p>
-        </div>
-        <div class="overlay"></div>
+        <nuxt-link :to="member._path">
+          <img :src="member.image" :alt="member.title">
+          <div class="label">
+            <p class="name">{{ member.title }}</p>
+            <p><em>{{ member.position }}</em></p>
+          </div>
+          <div class="overlay"></div>
+        </nuxt-link>
       </div>
     </div>
     <div id="quote1" class="box">
