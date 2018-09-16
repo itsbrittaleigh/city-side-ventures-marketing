@@ -72,21 +72,13 @@ export default {
       this.errors = [];
       if(!this.contact.name) this.errors['name'] = 'Your name is required';
       if(!this.contact.company) this.errors['company'] = 'Company name is required';
-      if(!this.contact.email) {
-        this.errors['email'] = 'Email address is required';
-      } else if(!this.validEmail(this.email)) {
-        this.errors['email'] = 'Please use a valid email address';
-      }
+      if(!this.contact.email) this.errors['email'] = 'Email address is required';
       if(!this.contact.phone) this.errors['phone'] = 'Phone number is required';
       if(!this.contact.message) {
         this.errors['message'] = 'A message is required';
       }
       if(this.isEmpty(this.errors)) this.submitForm();
       e.preventDefault();
-    },
-    validEmail(email) {
-      let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(String(email).toLowerCase());
     },
     isEmpty(obj) {
       for (let key in obj) {
